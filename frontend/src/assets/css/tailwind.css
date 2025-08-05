@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Lora';
+  src: url('/src/assets/font/Lora/static/Lora-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Marcellus';
+  src: url('/src/assets/font/Marcellus/Marcellus-Regular.ttf') format('truetype'),
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -16,8 +26,14 @@ li {
   padding: 0;
   font-size: 16px;
   font-family: 'DM Sans', sans-serif;
+  color: #ddecef;
 }
 
 a {
   text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
 }

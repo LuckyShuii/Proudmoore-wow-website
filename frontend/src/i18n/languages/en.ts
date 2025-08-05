@@ -12,7 +12,7 @@ const enTranslation = {
         appeal: "Discord Ban Appeals"
     },
 
-    copyright: "© 2025 Proudmoore, in partnership with TwinStar-WoW. Not affiliated with Blizzard Entertainment. All rights reserved.",
+    copyright: "<strong>© 2025 Proudmoore, in partnership with TwinStar-WoW</strong>. Not affiliated with Blizzard Entertainment. All rights reserved.",
     copyrightExtraWarning: "The copyright in this website is owned by proudmoore.gg and its respective authors except trademarks and other items which are the properties of their respective owners. All rights reserved. Copying, modifying, transferring or distribution of the website's content in any form is not allowed without the permission of proudmoore.gg.",
 
     videoDescription: "A new era of Cataclysm is coming…",
