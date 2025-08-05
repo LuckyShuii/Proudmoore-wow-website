@@ -13,12 +13,14 @@ import Textarea from "primevue/textarea";
 import Checkbox from 'primevue/checkbox';
 import Dialog from 'primevue/dialog';
 
+import i18n from "./i18n"
+
 import ToastService from 'primevue/toastservice';
 import { createPinia } from 'pinia';
 import 'primevue/resources/themes/aura-light-green/theme.css'
 import 'primeicons/primeicons.css'
 
-const pinia = createPinia()
+const pinia = createPinia();
 const app = createApp(App);
 
 app.component('Button', Button);
@@ -34,6 +36,8 @@ app.component('Dialog', Dialog);
 app.use(pinia)
 app.use(PrimeVue);
 app.use(ToastService);
-app.use(router)
+app.use(router);
+app.use(i18n);
 
-app.mount('#app')
+
+app.mount('#app');

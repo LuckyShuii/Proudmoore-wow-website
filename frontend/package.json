@@ -17,6 +17,7 @@
     "primeicons": "^7.0.0",
     "primevue": "^3.52.0",
     "vue": "^3.4.21",
+    "vue-i18n": "^11.1.11",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
