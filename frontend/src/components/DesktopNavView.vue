@@ -6,10 +6,10 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-index-10 flex flex-col w-[300px] py-[70px] pl-1">
-        <div class="h-[600px] flex flex-col justify-center text-sm font-semibold">
-            <ul class="flex flex-col items-center space-y-7 font-semibold">
-                <li><a class="font-lora" href="#home" v-html="t('nav.home')"></a></li>
+    <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-index-10 flex flex-col w-[300px] py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
+        <div class="h-full flex flex-col justify-center text-sm font-semibold">
+            <ul class="flex flex-col items-center space-y-8 font-semibold">
+                <li><a class="font-lora hover:font-thin" href="#home" v-html="t('nav.home')"></a></li>
                 <li><a class="font-lora" href="#about" v-html="t('nav.about')"></a></li>
                 <li><a class="font-lora" href="#features" v-html="t('nav.features')"></a></li>
                 <li><a class="font-lora" href="#timeline" v-html="t('nav.timeline')"></a></li>
@@ -20,7 +20,7 @@ const { t } = useI18n();
             </ul>
         </div>
         <div class="px-[40px] pt-[40px]">
-            <div class="flex w-full justify-between mb-8 z-500">
+            <div class="flex w-full justify-between mb-6 z-500">
                 <!-- Social Media Links -->
 
                 <!-- Reddit -->
@@ -48,7 +48,7 @@ const { t } = useI18n();
                     <img src="/public/webp/insta-scaled-1.png" alt="Logo" class="w-[33px] h-[33px] mr-2">
                 </a>
             </div>
-            <p class="font-lora text-sm text-gray-500" v-html="t('copyright')"></p>
+            <p class="font-marcellus text-sm text-gray-400" v-html="t('copyright')"></p>
         </div>
     </nav>
 </template>
