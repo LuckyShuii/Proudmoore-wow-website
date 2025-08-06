@@ -7,7 +7,6 @@ const shadow = ref('drop-shadow(0 0 14px rgba(0,169,255,0.69)) drop-shadow(0 0 3
 const interval = ref<null | ReturnType<typeof setInterval>>(null)
 
 function randomGlow() {
-  // Valeurs de blur et alpha aléatoires pour chaque shadow
   const blur1 = (12 + Math.random() * 8).toFixed(1)
   const blur2 = (25 + Math.random() * 12).toFixed(1)
   const alpha1 = (0.5 + Math.random() * 0.3).toFixed(2)
@@ -26,14 +25,14 @@ onUnmounted(() => {
 
 <template>
     <!-- Background Jaina image -->
-    <div class="fixed inset-0 z-[-1] bg-[url('/public/webp/background-1.webp')] bg-cover bg-center bg-no-repeat pointer-events-none"></div>
+    <div id="home" class="fixed inset-0 z-[-1] bg-[url('/public/webp/background-1.webp')] bg-cover bg-center bg-no-repeat pointer-events-none"></div>
 
     <!-- Hero section -->
     <section class="relative h-screen w-full flex justify-start items-center px-4 mt-[-2rem]">
         <div class="flex flex-col items-center ml-4 w-full max-w-[700px] mr-[20rem]">
             
             <!-- Proudmoore LOGO -->
-            <div class="w-full max-w-[700px] drop-shadow-xl transition-filter duration-700" :style="{ filter: shadow }">
+            <div class="w-full max-w-[700px] drop-shadow-xl transition-filter duration-700 hover:scale-110" :style="{ filter: shadow }">
                 <img
                 src="/public/webp/logo_t.webp"
                 alt="Logo"
@@ -41,7 +40,7 @@ onUnmounted(() => {
                 />
             </div>
 
-            <div id="video" class="w-full max-w-[500px] mt-[-2rem] rounded-2xl overflow-hidden">
+            <div id="video" class="w-full max-w-[480px] mt-[-2rem] rounded-2xl overflow-hidden">
                 <div class="relative aspect-video">
                 <iframe
                     src="https://player.vimeo.com/video/1100298165?badge=0&autopause=0&title=0&byline=0&portrait=0&loop=0&quality=1080p&player_id=0&app_id=58479"
