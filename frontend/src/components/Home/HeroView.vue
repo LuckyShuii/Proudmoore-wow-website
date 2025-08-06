@@ -29,7 +29,7 @@ onUnmounted(() => {
 
     <!-- Hero section -->
     <section class="relative h-screen w-full flex justify-start items-center px-4">
-        <div class="flex flex-col items-center ml-4 w-full max-w-[700px] mr-[20rem]">
+        <div class="flex flex-col items-center ml-4 w-full max-w-[700px] mr-[20rem] mt-[-5rem]">
             
             <!-- Proudmoore LOGO -->
             <div class="w-full max-w-[700px] drop-shadow-xl transition-filter duration-700 hover:scale-110" :style="{ filter: shadow }">
@@ -40,7 +40,7 @@ onUnmounted(() => {
                 />
             </div>
 
-            <div id="video" class="w-full max-w-[480px] mt-[-2rem] rounded-2xl overflow-hidden">
+            <div id="video" class="w-full max-w-[520px] mt-[-2rem] rounded-2xl overflow-hidden">
                 <div class="relative aspect-video">
                 <iframe
                     src="https://player.vimeo.com/video/1100298165?badge=0&autopause=0&title=0&byline=0&portrait=0&loop=0&quality=1080p&player_id=0&app_id=58479"
