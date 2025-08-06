@@ -11,6 +11,7 @@ export default {
       fontFamily: {
         lora: ['Lora', 'Marcellus', 'serif'],
         marcellus: ['Marcellus', 'Lora', 'serif'],
+        condensed: ['Roboto Condensed', 'sans-serif'],
       },
     },
   },

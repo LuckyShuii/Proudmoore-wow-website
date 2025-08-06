@@ -12,13 +12,13 @@ const enTranslation = {
         appeal: "Discord Ban Appeals"
     },
 
-    copyright: "<span class='font-marcellus text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in partnership with TwinStar-WoW</span>. Not affiliated with Blizzard Entertainment. All rights reserved.",
+    copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in partnership with TwinStar-WoW</span>. Not affiliated with Blizzard Entertainment. All rights reserved.",
     copyrightExtraWarning: "The copyright in this website is owned by proudmoore.gg and its respective authors except trademarks and other items which are the properties of their respective owners. All rights reserved. Copying, modifying, transferring or distribution of the website's content in any form is not allowed without the permission of proudmoore.gg.",
 
     videoDescription: "A new era of Cataclysm is coming…",
 
     descriptionTitle: "What is Proudmoore?",
-    descriptionText: "Proudmoore is a <span class='italic'>handcrafted</span> Cataclysm server — built for players who want a modern experience that still feels like OG World of Warcraft.<br><br>No queues. No Pay-to-Win. No retail <strong>bloat</strong>.<br>Just smooth PvP, fully scripted PVE content, and a fresh start that respects your time.<br><br>If you’ve played private servers before, you’ll feel the difference.<br>If you haven’t — <strong>this is where to start.</strong>",
+    descriptionText: "Proudmoore is a <span class='italic'>handcrafted</span> Cataclysm server — built for players who want a modern experience that still feels like OG World of Warcraft.<br><br>No queues. No Pay-to-Win. No retail <span class='font-extrabold'>bloat</span>.<br>Just smooth PvP, fully scripted PVE content, and a fresh start that respects your time.<br><br>If you’ve played private servers before, you’ll feel the difference.<br>If you haven’t — <span class='font-extrabold'>this is where to start.</span>",
 
     features: {
         description: "Discover all the core gameplay features, our server rates, and the many fixes that make Proudmoore unique.",

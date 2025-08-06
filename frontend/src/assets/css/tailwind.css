@@ -3,24 +3,41 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Lora';
-  src: url('/src/assets/font/Lora/static/Lora-Regular.ttf') format('truetype'),
+  font-family: "Lora";
+  src: url("/src/assets/font/Lora/static/Lora-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'Marcellus';
-  src: url('/src/assets/font/Marcellus/Marcellus-Regular.ttf') format('truetype'),
+  font-family: "Marcellus";
+  src: url("/src/assets/font/Marcellus/Marcellus-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: url("/src/assets/font/Roboto_Condensed/static/RobotoCondensed-Regular.ttf")
+    format("truetype");
 }
 
 @keyframes scroll-runes {
-  0% { background-position-x: 0; }
-  100% { background-position-x: -50%; }
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -50%;
+  }
 }
 
 @keyframes pulse-glow {
-  0% { opacity: 0.2; }
-  50% { opacity: 0.35; }
-  100% { opacity: 0.2; }
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  100% {
+    opacity: 0.2;
+  }
 }
 
 html {
@@ -35,9 +52,7 @@ li {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  font-family: 'DM Sans', sans-serif;
-  color: #ddecef;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 a {
@@ -46,12 +61,15 @@ a {
 
 body {
   min-height: 100vh;
+  font-size: 16px;
   overflow-x: hidden;
+  color: #ddecef;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 /**
   * Hero Section Styles
-  */  
+  */
 
 .hero-trailer-thumb {
   z-index: 2;
@@ -72,9 +90,8 @@ body {
   */
 
 #server-description-title {
-  text-shadow:  0 3px rgba(0, 140, 255, 0.3), 
-                0 0 12px rgba(0, 180, 255, 0.4),
-                0 0 20px rgba(0, 200, 255, 0.25);
+  text-shadow: 0 3px rgba(0, 140, 255, 0.3), 0 0 12px rgba(0, 180, 255, 0.4),
+    0 0 20px rgba(0, 200, 255, 0.25);
   position: relative;
   font-size: 2.85rem;
 }
@@ -86,7 +103,7 @@ body {
     transparent 70%
   );
   filter: blur(20px);
-  content: '';
+  content: "";
   height: 100%;
   width: 180%;
   position: absolute;
@@ -97,6 +114,18 @@ body {
 #server-description-text {
   text-shadow: 0 0 4px rgba(0, 100, 180, 0.2);
   backdrop-filter: blur(10px);
+  color: #cdddfb;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  padding: clamp(0.75rem, 2.5vw, 20px);
+  padding-bottom: clamp(2rem, 5vh, 4rem);
+  padding-top: clamp(1rem, 3vh, 2rem);
+  line-height: 1.8;
+  border-bottom: 1px solid rgba(0, 150, 255, 0.1);
+}
+
+#server-description-text:hover {
+  box-shadow: 0 0 10px rgba(0, 140, 255, 0.3);
+  transition: box-shadow 0.2s ease-in-out;
 }
 
 /**
@@ -106,13 +135,13 @@ body {
 #scrolling-runes-top {
   box-sizing: border-box;
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 100px;
   z-index: 1;
 }
 
 #scrolling-runes-top:before {
-  background: url('/public/webp/scrollingrunes.webp') repeat-x center;
+  background: url("/webp/scrollingrunes.webp") repeat-x center;
   content: "";
   position: absolute;
   top: 0;
@@ -120,7 +149,8 @@ body {
   width: 200%;
   height: 100%;
   background-size: contain;
-  animation: scroll-runes 60s linear infinite, pulse-glow 3s ease-in-out infinite;
+  animation: scroll-runes 60s linear infinite,
+    pulse-glow 3s ease-in-out infinite;
   z-index: 0 !important;
   pointer-events: none;
   -webkit-mask-image: linear-gradient(
@@ -137,14 +167,17 @@ body {
 
 #scrolling-runes-bottom {
   box-sizing: border-box;
-  position: relative;
-  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
   height: 140px;
-  z-index: 1;
+  z-index: 45;
+  pointer-events: none;
 }
 
 #scrolling-runes-bottom:before {
-  background: url('/public/webp/scrollingrunes.webp') repeat-x center;
+  background: url("/webp/scrollingrunes.webp") repeat-x center;
   content: "";
   position: absolute;
   top: 0;
@@ -152,7 +185,8 @@ body {
   width: 200%;
   height: 100%;
   background-size: contain;
-  animation: scroll-runes 60s linear infinite, pulse-glow 3s ease-in-out infinite;
+  animation: scroll-runes 60s linear infinite,
+    pulse-glow 3s ease-in-out infinite;
   z-index: 0 !important;
   pointer-events: none;
   -webkit-mask-image: linear-gradient(
@@ -165,4 +199,19 @@ body {
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 1) 100%
   );
+}
+
+/**
+  * Deathwing Background Styles
+  */
+
+#deathwingback {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 98%;
+  max-height: 850px;      
+  min-height: 400px;      
+  object-fit: contain;
+  z-index: 40;
 }

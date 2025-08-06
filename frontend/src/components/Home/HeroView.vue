@@ -25,7 +25,7 @@ onUnmounted(() => {
 
 <template>
     <!-- Background Jaina image -->
-    <div id="home" class="fixed inset-0 z-[-1] bg-[url('/public/webp/background-1.webp')] bg-cover bg-center bg-no-repeat pointer-events-none"></div>
+    <div id="home" class="fixed inset-0 z-[-1] bg-[url('/webp/background-1.webp')] bg-cover bg-center bg-no-repeat pointer-events-none"></div>
 
     <!-- Hero section -->
     <section class="relative h-screen w-full flex justify-start items-center px-4 mt-[-2rem]">
@@ -34,7 +34,7 @@ onUnmounted(() => {
             <!-- Proudmoore LOGO -->
             <div class="w-full max-w-[700px] drop-shadow-xl transition-filter duration-700 hover:scale-110" :style="{ filter: shadow }">
                 <img
-                src="/public/webp/logo_t.webp"
+                src="/webp/logo_t.webp"
                 alt="Logo"
                 class="w-full h-auto object-contain"
                 />
