@@ -12,6 +12,17 @@
   src: url('/src/assets/font/Marcellus/Marcellus-Regular.ttf') format('truetype'),
 }
 
+@keyframes scroll-runes {
+  0% { background-position-x: 0; }
+  100% { background-position-x: -50%; }
+}
+
+@keyframes pulse-glow {
+  0% { opacity: 0.2; }
+  50% { opacity: 0.35; }
+  100% { opacity: 0.2; }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -54,4 +65,104 @@ body {
 
 #video {
   box-shadow: 0px 0px 20px #1d9eda;
+}
+
+/**
+  * Server Description Styles
+  */
+
+#server-description-title {
+  text-shadow:  0 3px rgba(0, 140, 255, 0.3), 
+                0 0 12px rgba(0, 180, 255, 0.4),
+                0 0 20px rgba(0, 200, 255, 0.25);
+  position: relative;
+  font-size: 2.85rem;
+}
+
+#server-description-title::before {
+  background: radial-gradient(
+    circle,
+    rgba(0, 150, 255, 0.1) 0%,
+    transparent 70%
+  );
+  filter: blur(20px);
+  content: '';
+  height: 100%;
+  width: 180%;
+  position: absolute;
+  top: 40%;
+  left: -40%;
+}
+
+#server-description-text {
+  text-shadow: 0 0 4px rgba(0, 100, 180, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/**
+  * Scrolling Runes Styles
+  */
+
+#scrolling-runes-top {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+#scrolling-runes-top:before {
+  background: url('/public/webp/scrollingrunes.webp') repeat-x center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-size: contain;
+  animation: scroll-runes 60s linear infinite, pulse-glow 3s ease-in-out infinite;
+  z-index: 0 !important;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+#scrolling-runes-bottom {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 140px;
+  z-index: 1;
+}
+
+#scrolling-runes-bottom:before {
+  background: url('/public/webp/scrollingrunes.webp') repeat-x center;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-size: contain;
+  animation: scroll-runes 60s linear infinite, pulse-glow 3s ease-in-out infinite;
+  z-index: 0 !important;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }

@@ -6,7 +6,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-index-10 flex flex-col w-[300px] py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
+    <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-50 flex flex-col w-[300px] py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
         <div class="h-full flex flex-col justify-center text-sm font-semibold">
             <ul class="flex flex-col items-center space-y-8 font-semibold">
                 <li><a class="font-lora hover:font-thin" href="#home" v-html="t('nav.home')"></a></li>
