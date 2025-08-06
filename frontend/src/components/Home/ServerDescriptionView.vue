@@ -6,7 +6,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <section class="bg-[#0E0E0E] relative h-[60vh] min-h-[750px] h-full">
+    <section class="bg-[#0E0E0E] relative min-h-[750px] h-full">
         <div id="scrolling-runes-top" class="w-[1860px] relative left-[-510px] max-w-[1860px]"></div>
         <img id="deathwingback" src="/webp/deathwingback.png" />
         <div class="text-center justify-between flex max-w-[1800px]">
