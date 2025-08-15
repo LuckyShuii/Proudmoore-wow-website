@@ -16,6 +16,23 @@ const flags = ref([
     { code: 'cz', src: '/icons/cz.svg', alt: 'Czech flag icon' },
 ]);
 
+const selectLanguageLabel = computed(() => {
+    switch (i18n.locale.value) {
+        case 'fr':
+            return "Sélectionner la langue";
+        case 'en':
+            return "Select Language";
+        case 'es':
+            return "Seleccionar idioma";
+        case 'de':
+            return "Sprache auswählen";
+        case 'cz':
+            return "Vybrat jazyk";
+        default:
+            return null;
+    }
+})
+
 const toggle = (event: Event) => {
     op.value.toggle(event);
 };
