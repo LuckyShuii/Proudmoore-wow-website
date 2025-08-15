@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import FeaturesView from '@/components/Home/FeaturesView.vue';
 import HeroView from '@/components/Home/HeroView.vue';
 import ServerDescriptionView from '@/components/Home/ServerDescriptionView.vue';
 import { useI18n } from 'vue-i18n';
@@ -10,4 +11,5 @@ const { t } = useI18n();
 <template>
     <HeroView />
     <ServerDescriptionView />
+    <FeaturesView />
 </template>

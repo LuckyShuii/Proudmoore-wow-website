@@ -20,96 +20,38 @@ const enTranslation = {
     descriptionTitle: "What is Proudmoore?",
     descriptionText: "Proudmoore is a <span class='italic'>handcrafted</span> Cataclysm server — built for players who want a modern experience that still feels like OG World of Warcraft.<br><br>No queues. No Pay-to-Win. No retail <span class='font-extrabold'>bloat</span>.<br>Just smooth PvP, fully scripted PVE content, and a fresh start that respects your time.<br><br>If you’ve played private servers before, you’ll feel the difference.<br>If you haven’t — <span class='font-extrabold'>this is where to start.</span>",
 
+    arrayTest: ['test'],
+
     features: {
+        title: "Features & Rates",
         description: "Discover all the core gameplay features, our server rates, and the many fixes that make Proudmoore unique.",
         nav: {
             features: "Features",
-            rates: "Rates & Settings",
+            rates: "Rates",
             bugfixes: "Bug Fixes"
         },
-        featuresList: [
-            {
-                mythicPlus: {
-                    title: "Mythic+ Dungeons",
-                    description: "Experience Mythic+ dungeons with time-based challenges & increasing difficulty."
-                },
-                soloQueue: {
-                    title: "Solo Queue Arena",
-                    description: "Queue on your own for arenas without needing a premade team."
-                },
-                crossFaction: {
-                    title: "Full Cross-Faction",
-                    description: "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc)."
-                },
-                transmogrification: {
-                    title: "Full Transmogrification",
-                    description: "Customize your look completely with full transmogrification options. (No limits)"
-                },
-                progressiveContent: {
-                    title: "Progressive Content",
-                    description: "Content is released in phases, replicating the original Cataclysm progression."
-                },
-                casualRaid: {
-                    title: "Casual Raid Difficulty",
-                    description: "More forgiving raid difficulties for casual and semi-hardcore players."
-                },
-                battlegroundLeveling: {
-                    title: "Battleground Leveling",
-                    description: "Maximizing the ways you can level starting at level 10."
-                },
-                weekendEvents: {
-                    title: "Weekend Events",
-                    description: "Enjoy weekend-only events that boost rewards and rates."
-                },
-                racialSwap: {
-                    title: "Racial Trait Swapping",
-                    description: "Customize your racial traits to suit your build."
-                },
-                xpRate: {
-                    title: "Adjustable XP Rates",
-                    description: "Choose how fast you want to level with adjustable experience gain, from 100% to 0%."
-                },
-                mopArena: {
-                    title: "MoP Arena Teams System",
-                    description: "Use Mists of Pandaria-style arena teams, prioritizing personal rating over team rating."
-                },
-                accountWide: {
-                    title: "Account Wide Mounts & Companions",
-                    description: "Earn and share vanity mounts & companions across all characters on your account."
-                },
-                antiBot: {
-                    title: "Modern Anti-Bot & Anti-Gold Seller Systems",
-                    description: "Aggressive systems will prevent botting and gold selling like no other server."
-                },
-                dualSpec: {
-                    title: "Early & Free Dual Spec",
-                    description: "Dual spec is unlocked from level 10 at no cost."
-                },
-                automaticSpell: {
-                    title: "Automatic Class Spell Learning",
-                    description: "No need to visit trainers — learn abilities automatically on level-up."
-                },
-                catchupMecanics: {
-                    title: "Catch-Up Mechanics",
-                    description: "Catch up quickly with systems designed to help new players jumping in after launch."
-                },
-                gatheringProfessions: {
-                    title: "Dynamic Gathering Professions",
-                    description: "Gathering nodes will prioritize both economic stability and zone population density."
-                },
-                lootRules: {
-                    title: "Fair Loot Rules",
-                    description: "Fair loot rules across all content to reduce ninja-looting."
-                },
-                altFriendly: {
-                    title: "Alt-Friendly Systems",
-                    description: "Designed so your alts can benefit from account progress."
-                },
-                playerFirst: {
-                    title: "Player-First GameMaster Support",
-                    description: "Player-First GameMaster Support. Our team prioritizes players & the community in every policy we implement."
-                }
-            }
+        items: [
+        { "id": "mythicPlus", "title": "Mythic+ Dungeons", "description": "Experience Mythic+ dungeons with time-based challenges & increasing difficulty." },
+        { "id": "soloQueue", "title": "Solo Queue Arena", "description": "Queue on your own for arenas without needing a premade team." },
+        { "id": "crossFaction", "title": "Full Cross-Faction", "description": "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc)." },
+        { "id": "transmogrification", "title": "Full Transmogrification", "description": "Customize your look completely with full transmogrification options. (No limits)" },
+        { "id": "progressiveContent", "title": "Progressive Content", "description": "Content is released in phases, replicating the original Cataclysm progression." },
+        { "id": "casualRaid", "title": "Casual Raid Difficulty", "description": "More forgiving raid difficulties for casual and semi-hardcore players." },
+        { "id": "battlegroundLeveling", "title": "Battleground Leveling", "description": "Maximizing the ways you can level starting at level 10." },
+        { "id": "weekendEvents", "title": "Weekend Events", "description": "Enjoy weekend-only events that boost rewards and rates." },
+        { "id": "racialSwap", "title": "Racial Trait Swapping", "description": "Customize your racial traits to suit your build." },
+        { "id": "xpRate", "title": "Adjustable XP Rates", "description": "Choose how fast you want to level with adjustable experience gain, from 100% to 0%." },
+        { "id": "mopArena", "title": "MoP Arena Teams System", "description": "Use Mists of Pandaria-style arena teams, prioritizing personal rating over team rating." },
+        { "id": "accountWide", "title": "Account Wide Mounts & Companions", "description": "Earn and share vanity mounts & companions across all characters on your account." },
+        { "id": "antiBot", "title": "Modern Anti-Bot & Anti-Gold Seller Systems", "description": "Aggressive systems will prevent botting and gold selling like no other server." },
+        { "id": "dualSpec", "title": "Early & Free Dual Spec", "description": "Dual spec is unlocked from level 10 at no cost." },
+        { "id": "automaticSpell", "title": "Automatic Class Spell Learning", "description": "No need to visit trainers — learn abilities automatically on level-up." },
+        { "id": "catchupMecanics", "title": "Catch-Up Mechanics", "description": "Catch up quickly with systems designed to help new players jumping in after launch." },
+        { "id": "gatheringProfessions", "title": "Dynamic Gathering Professions", "description": "Gathering nodes will prioritize both economic stability and zone population density." },
+        { "id": "lootRules", "title": "Fair Loot Rules", "description": "Fair loot rules across all content to reduce ninja-looting." },
+        { "id": "altFriendly", "title": "Alt-Friendly Systems", "description": "Designed so your alts can benefit from account progress." },
+        { 
+            "id": "playerFirst", "title": "Player-First GameMaster Support", "description": "Player-First GameMaster Support. Our team prioritizes players & the community in every policy we implement." }
         ]
     },
 
