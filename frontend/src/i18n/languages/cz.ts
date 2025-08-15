@@ -20,7 +20,6 @@ const enTranslation = {
     descriptionTitle: "What is Proudmoore?",
     descriptionText: "Proudmoore is a <span class='italic'>handcrafted</span> Cataclysm server — built for players who want a modern experience that still feels like OG World of Warcraft.<br><br>No queues. No Pay-to-Win. No retail <span class='font-extrabold'>bloat</span>.<br>Just smooth PvP, fully scripted PVE content, and a fresh start that respects your time.<br><br>If you’ve played private servers before, you’ll feel the difference.<br>If you haven’t — <span class='font-extrabold'>this is where to start.</span>",
 
-    arrayTest: ['test'],
 
     features: {
         title: "Features & Rates",
