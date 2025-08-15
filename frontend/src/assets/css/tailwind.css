@@ -286,7 +286,21 @@ body, html {
 
 .flipCard:hover {
   border: 2px solid #44cfff;
-  box-shadow: 0 0 25px rgba(0, 200, 255, 0.4),
-              0 0 50px rgba(0, 180, 255, 0.35),
-              inset 0 0 14px rgba(0, 200, 255, 0.08);
+  box-shadow: 0 0 35px rgba(0, 200, 255, 0.4),
+              0 0 60px rgba(0, 180, 255, 0.35),
+              inset 0 0 24px rgba(0, 200, 255, 0.08) !important;
+}
+
+.language-flag {
+  width: 40px;
+}
+
+.language-flag:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.p-popover:before, .p-popover:after {
+  display: none !important;
 }

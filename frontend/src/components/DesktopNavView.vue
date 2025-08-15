@@ -1,12 +1,94 @@
 <script setup lang="ts">
+import { computed, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
+const i18n = useI18n({ useScope: 'global' });
 
+const op = ref();
+const selectedLanguage = ref<{ code: string; src: string; alt: string } | null>(null);
+
+const flags = ref([
+    { code: 'fr', src: '/icons/fr.svg', alt: 'French flag icon' },
+    { code: 'en', src: '/icons/en.svg', alt: 'English flag icon' },
+    { code: 'es', src: '/icons/es.svg', alt: 'Spanish flag icon' },
+    { code: 'de', src: '/icons/de.svg', alt: 'German flag icon' },
+    { code: 'cz', src: '/icons/cz.svg', alt: 'Czech flag icon' },
+]);
+
+const selectLanguageLabel = computed(() => {
+    switch (i18n.locale.value) {
+        case 'fr':
+            return "Sélectionner la langue";
+        case 'en':
+            return "Select Language";
+        case 'es':
+            return "Seleccionar idioma";
+        case 'de':
+            return "Sprache auswählen";
+        case 'cz':
+            return "Vybrat jazyk";
+        default:
+            return null;
+    }
+})
+
+const toggle = (event: Event) => {
+    op.value.toggle(event);
+};
+
+const setLanguage = (lang: string) => {
+    if (!lang || !['fr', 'en', 'es', 'de', 'cz'].includes(lang)) {
+        i18n.locale.value = 'en';
+    } else {
+        i18n.locale.value = lang;
+    }
+};
+
+const selectLanguage = (lang: { code: string; src: string; alt: string }) => {
+    selectedLanguage.value = lang;
+    setLanguage(lang.code);
+    op.value.hide();
+};
+
+onMounted(() => {
+    const currentLang = i18n.locale.value;
+    const flag = flags.value.find(flag => flag.code === currentLang);
+    selectedLanguage.value = flag || flags.value[0];
+});
 </script>
 
 <template>
     <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-50 flex flex-col w-[300px] py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
+        <div class="card flex justify-center">
+            <!-- Button with selected flag or text -->
+            <Button type="button" @click="toggle" @mouseover="toggle" class="min-w-32 flex items-center gap-2 justify-center">
+                <template v-if="selectedLanguage">
+                    <img :src="selectedLanguage.src" :alt="selectedLanguage.alt" class="w-6 h-6" />
+                    {{ selectedLanguage.code.toUpperCase() }}
+                </template>
+                <template v-else>
+                    🌐 {{ selectLanguageLabel }}
+                </template>
+            </Button>
+
+            <!-- Popover PrimeVue -->
+            <Popover ref="op" class="w-[8rem]" dismissable closeOnEscape>
+                <div class="flex flex-col gap-4 items-center">
+                    <ul class="list-none p-0 m-0 flex flex-col">
+                        <li
+                            v-for="flag in flags"
+                            :key="flag.code"
+                            class="flex items-center gap-2 px-2 py-3 hover:bg-emphasis cursor-pointer rounded-border"
+                            @click="selectLanguage(flag)"
+                        >
+                            <img :src="flag.src" :alt="flag.alt" class="w-6 h-6" />
+                            <span class="font-medium">{{ flag.code.toUpperCase() }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </Popover>
+        </div>
         <div class="h-full flex flex-col justify-center text-sm font-semibold">
             <ul class="flex flex-col items-center space-y-8 font-semibold">
                 <li><a class="font-lora hover:font-thin" href="#home" v-html="t('nav.home')"></a></li>

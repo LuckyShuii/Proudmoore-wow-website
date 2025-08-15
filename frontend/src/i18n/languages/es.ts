@@ -2,14 +2,14 @@ const enTranslation = {
     welcome: "Welcome to the Proudmoore WoW Website",
 
     nav: {
-        home: "Accueil",
-        about: "Qu'est-ce que Proudmoore?",
-        features: "Fonctionnalités & Tarifs",
-        timeline: "Chronologie & Dates de Lancement",
-        discord: "Rejoindre la Communauté",
-        faq: "Questions Fréquemment Posées",
-        legal: "Légal & Droits des Joueurs",
-        appeal: "Demande de débannissement discord"
+        home: "Home",
+        about: "What is Proudmoore?",
+        features: "Features & Rates",
+        timeline: "Launch Timeline & Dates",
+        discord: "Join The Community",
+        faq: "Frequently Asked Questions",
+        legal: "Legality & Player Rights",
+        appeal: "Discord Ban Appeals"
     },
 
     copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in partnership with TwinStar-WoW</span>. Not affiliated with Blizzard Entertainment. All rights reserved.",
