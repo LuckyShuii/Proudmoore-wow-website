@@ -291,6 +291,10 @@ body, html {
               inset 0 0 24px rgba(0, 200, 255, 0.08) !important;
 }
 
+/**
+  * Language Flags Menu
+  */
+
 .language-flag {
   width: 40px;
 }

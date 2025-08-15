@@ -51,10 +51,20 @@ const selectLanguage = (lang: { code: string; src: string; alt: string }) => {
     op.value.hide();
 };
 
+const handleScroll = () => {
+    if (window.scrollY > 0) {
+        op.value.hide();
+    }
+};
+
+window.addEventListener('scroll', handleScroll);
+
 onMounted(() => {
     const currentLang = i18n.locale.value;
     const flag = flags.value.find(flag => flag.code === currentLang);
     selectedLanguage.value = flag || flags.value[0];
+
+    op.value.hide();
 });
 </script>
 
