@@ -19,6 +19,70 @@
     format("truetype");
 }
 
+@keyframes revealFootnote {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes sillyWiggleGold {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  10% {
+    transform: rotate(6deg) scale(1.05);
+  }
+
+  20% {
+    transform: rotate(-6deg) scale(1.05);
+  }
+
+  30% {
+    transform: rotate(6deg) scale(1.05);
+  }
+
+  40% {
+    transform: rotate(-6deg) scale(1.05);
+  }
+
+  50% {
+    transform: rotate(4deg) scale(1.04);
+  }
+
+  60% {
+    transform: rotate(-4deg) scale(1.04);
+  }
+
+  70% {
+    transform: rotate(2deg) scale(1.02);
+  }
+
+  80% {
+    transform: rotate(-2deg) scale(1.02);
+  }
+
+  90% {
+    transform: rotate(1deg) scale(1.1);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes fadeInUpLifted {
+  0% {
+    transform: translateY(clamp(1rem, 3vh, 1.5rem));
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @keyframes glowing-divider-line {
   0% {
     box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
@@ -307,4 +371,53 @@ body, html {
 
 .p-popover:before, .p-popover:after {
   display: none !important;
+}
+
+/**
+  * Rates
+  */
+
+#rate-animation {
+  font-size: 11.5rem;
+  font-weight: 900;
+  color: #ffd700;
+  display: inline-block;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7),
+      0 0 30px rgba(255, 215, 0, 0.4);
+  animation: sillyWiggleGold 2.5s infinite ease-in-out;
+}
+
+#rates-frame {
+  background: rgba(5, 15, 25, 0.4);
+  color: #c8e5ff;
+  font-size: 1.06rem;
+  text-shadow: 0 0 4px rgba(0, 140, 255, 0.25);
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  max-width: 440px;
+  animation: fadeInUpLifted 0.8s ease forwards;
+}
+
+#rates-frame ul li {
+  padding: 0.1rem 0;
+}
+
+#rates-comment {
+  font-size: 0.9rem;
+  color: #64bfff;
+  font-style: italic;
+  margin-top: 1.5rem;
+  animation: revealFootnote 1s ease-out forwards;
+  animation-delay: 1.4s;
+  background: rgba(5, 15, 25, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 180, 255, 0.08);
+  text-shadow: 0 0 4px rgba(0, 100, 180, 0.15);
+  max-width: 200px;
+  padding: 5px 10px;
+  opacity: 0;
+  transform: translateY(10px);
 }
