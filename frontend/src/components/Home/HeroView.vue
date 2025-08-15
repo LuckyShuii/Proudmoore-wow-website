@@ -24,11 +24,8 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <!-- Background Jaina image -->
-    <div id="home" class="fixed inset-0 z-[-1] bg-[url('/webp/background-1.webp')] bg-cover bg-center bg-no-repeat pointer-events-none"></div>
-
     <!-- Hero section -->
-    <section class="relative h-screen w-full flex justify-start items-center px-4">
+    <section class="relative h-screen w-full flex justify-start items-center px-4 bg-[url('/webp/background-1.webp')] bg-cover bg-center bg-no-repeat">
         <div class="flex flex-col items-center ml-4 w-full max-w-[700px] mr-[20rem] mt-[-5rem]">
             
             <!-- Proudmoore LOGO -->
