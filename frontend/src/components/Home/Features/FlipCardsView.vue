@@ -4,7 +4,8 @@ import { ref } from 'vue'
 const props = defineProps({
   front: String,
   back: String,
-  id: String
+  id: String,
+  isFav: Boolean
 })
 
 const flipped = ref(false)
@@ -29,6 +30,9 @@ const flipped = ref(false)
         class="absolute inset-0 grid place-items-center px-6 text-center [backface-visibility:hidden]
                rounded-2xl"
       >
+        <div v-if="props.isFav" class="absolute top-2 left-3 font-[700]">
+          ★
+        </div>
         <h3 class="text-lg font-semibold text-white tracking-wide">
           {{ props.front }}
         </h3>

@@ -9,6 +9,7 @@ interface Feature {
     title: string;
     description: string;
     id: string;
+    isFav: boolean;
 }
 
 const featuresList = ref<Feature[]>(tm('features.items'))
@@ -16,10 +17,11 @@ const featuresList = ref<Feature[]>(tm('features.items'))
 </script>
 
 <template>
-    <section class="flex flex-wrap gap-4 w-full max-w-[75rem] justify-center mt-4">
+    <section class="flex flex-wrap gap-8 w-[90%] max-w-[85rem] justify-center mt-4">
         <FlipCardsView v-for="feature in featuresList"
             :key="feature.id"
             :front="feature.title"
-            :back="feature.description" />
+            :back="feature.description"
+            :isFav="feature.isFav" />
     </section>
 </template>
