@@ -6,7 +6,7 @@ const enTranslation = {
         about: "What is Proudmoore?",
         features: "Features & Rates",
         timeline: "Launch Timeline & Dates",
-        discord: "Join The Community",
+        discord: "Join the Community",
         faq: "Frequently Asked Questions",
         legal: "Legality & Player Rights",
         appeal: "Discord Ban Appeals"
@@ -419,7 +419,28 @@ const enTranslation = {
                 answer: "Proudmoore is not an RP realm, but we would consider ourselves RP-friendly. If any RP group or guild wishes to join, feel free to reach out to our administration team and we’ll see what we can do for you."
             }
         ]
-    }
+    },
+
+    rates: "<li><span class='font-bold'>XP Rates:</span> 1x–3x (player-controlled toggle)</li><li><span class='font-bold'>Reputation:</span> 1x (& weekend bonuses)</li><li><span class='font-bold'>Loot & Gold:</span> 1x (balanced economy)</li><li><span class='font-bold'>Rare Materials:</span> ~1.2x in Heroics/Raids</li><li><span class='font-bold'>Professions:</span> 1x (& weekend bonuses)</li><li><span class='font-bold'>Honor:</span> 1.25x (& weekend bonuses)</li><li><span class='font-bold'>Justice / Valor Points:</span> 1x (& weekly activity bonus)</li>",
+
+    ratesComment: "Patience for escort quests: 0x",
+
+    bugFixes: [
+        {
+            title: "Core Revisions",
+            description: "Tailored server-side improvements to stability, accuracy, and core logic."
+        },
+        {
+            title: "Database Revisions",
+            description: "10,000+ DB enhancements to quests, NPCs, items, and mechanics."
+        },
+        {
+            title: "Years of Active Development",
+            description: "Consistent development — we build, polish, and iterate nonstop."
+        },
+    ],
+
+    bugFixesComment: "Yeah. We know what we're doing."
 };
 
 export default enTranslation;
