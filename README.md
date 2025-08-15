@@ -5,8 +5,9 @@ Refactor of the official [Proudmoore.gg](https://proudmoore.gg/) website, origin
 
 Afterwards, progressively add new features with:
 - **Node.js/Express** backend
-- Database
+- Postgres Database
 - Docker & Nginx for deployment
+- CI
 
 ---
 
