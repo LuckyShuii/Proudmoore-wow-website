@@ -40,7 +40,7 @@ const flipped = ref(false)
       <!-- Back Face -->
       <div
         class="absolute inset-0 grid place-items-center px-6 text-center [backface-visibility:hidden]
-               [transform:rotateY(180deg)] rounded-2xl bg-[#1c2e50]"
+               [transform:rotateY(180deg)] rounded-xl bg-[#1c2e50]"
       >
         <p class="text-sky-100/90 font-semibold text-sm">
           {{ props.back }}

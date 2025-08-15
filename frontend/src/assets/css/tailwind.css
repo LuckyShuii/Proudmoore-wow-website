@@ -281,6 +281,7 @@ body, html {
 
 .flipCard {
   animation: card-glow 5s infinite alternate;
+  padding: 2px;
 }
 
 .flipCard:hover {
