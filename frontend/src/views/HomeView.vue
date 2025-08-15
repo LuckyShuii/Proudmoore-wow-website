@@ -10,6 +10,7 @@ const { t } = useI18n();
 
 <template>
     <HeroView />
+    <div class="separator"></div>
     <ServerDescriptionView />
     <FeaturesView />
 </template>

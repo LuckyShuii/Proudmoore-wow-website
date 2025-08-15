@@ -16,7 +16,7 @@ const { t } = useI18n();
                 <li><a class="font-lora" href="#discord" v-html="t('nav.discord')"></a></li>
                 <li><a class="font-lora" href="#faq" v-html="t('nav.faq')"></a></li>
                 <li><a class="font-lora" href="#legal" v-html="t('nav.legal')"></a></li>
-                <li><a class="font-lora" href="#appeal" v-html="t('nav.appeal')"></a></li>
+                <li><a class="font-lora" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" v-html="t('nav.appeal')"></a></li>
             </ul>
         </div>
         <div class="px-[40px] pt-[40px]">

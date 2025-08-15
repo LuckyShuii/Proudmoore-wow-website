@@ -19,6 +19,18 @@
     format("truetype");
 }
 
+@keyframes glowing-divider-line {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.2);
+  }
+}
+
 @keyframes scroll-runes {
   0% {
     background-position-x: 0;
@@ -86,6 +98,22 @@ body, html {
 }
 
 /**
+  * Big Separator Styles
+  */
+
+.separator {
+  height: 2px;
+  background: linear-gradient(
+      to right,
+      rgba(0, 180, 255, 0.6),
+      rgba(0, 90, 200, 0.3),
+      rgba(0, 180, 255, 0.6)
+    );
+  border-radius: 1px; 
+  animation: glowing-divider-line 3s ease-in-out infinite;
+}
+
+/**
   * Hero Section Styles
   */
 
@@ -144,6 +172,19 @@ body, html {
 #server-description-text:hover {
   box-shadow: 0 0 10px rgba(0, 140, 255, 0.3);
   transition: box-shadow 0.2s ease-in-out;
+}
+
+#server-description-title:after {
+  content: "";
+  display: block;
+  width: clamp(2rem, 5vw, 7.75rem);
+  height: 3px;
+  background: linear-gradient(
+      to right,
+      rgba(0, 180, 255, 0.6),
+      rgba(0, 90, 200, 0.2)
+    );
+  left: 0;
 }
 
 /**

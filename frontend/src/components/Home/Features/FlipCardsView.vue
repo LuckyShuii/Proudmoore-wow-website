@@ -21,8 +21,7 @@ const flipped = ref(false)
     <div
       class="relative h-full w-full transition-transform duration-500 [transform-style:preserve-3d]
              rounded-2xl border border-[rgba(0,180,255,0.12)]
-             shadow-[0_0_4px_rgba(0,200,255,0.05),_inset_0_1px_3px_rgba(255,255,255,0.03)]
-             bg-black/40"
+             shadow-[0_0_4px_rgba(0,200,255,0.05),_inset_0_1px_3px_rgba(255,255,255,0.03)]"
       :class="flipped ? '[transform:rotateY(180deg)]' : ''"
     >
       <!-- Front Face -->
