@@ -53,184 +53,184 @@ const deTranslation = {
     },
 
     timeline: {
-        title: "Proudmoore begins",
-        description: "September 13th, 2025."
+        title: "Proudmoore beginnt",
+        description: "13. September 2025"
     },
 
-    discord: "Join our Discord",
+    discord: "Tritt unserem Discord bei",
 
-    faqTitle: "Frequently Asked Questions",
+    faqTitle: "Häufig gestellte Fragen",
 
     faqGeneral: {
-        title: "General Questions",
+        title: "Allgemeine Informationen",
         questions: [
             {
-                question: "What makes Proudmoore different from other Cataclysm servers?",
-                answer: "Proudmoore isn’t just another Cataclysm realm, it is expanding on well-tested concepts to make the expansion well rounded for hardcore and casual players alike.. We’re introducing Mythic+ dungeons, solo-rated PvP queues, a variety of new leveling paths, and cross-faction systems, all while preserving the core Cataclysm experience."
+                question: "Was unterscheidet Proudmoore von anderen Cataclysm Servern?",
+                answer: "Proudmoore ist nicht einfach nur ein weiterer Cataclysm Server, sondern baut auf bewährten Konzepten auf, um die Erweiterung für Hardcore- und Gelegenheitsspieler gleichermaßen abzurunden. Wir bieten mythische Dungeons, Solo-Wertung PvP Warteschlangen, eine Vielzahl neuer Levelpfade und fraktionsübergreifende Systeme an, während wir gleichzeitig das Kernerlebnis von Cataclysm bewahren."
             },
             {
-                question: "Who is running Proudmoore? Is it a new team or a revival?",
-                answer: "Proudmoore is a fresh project from experienced hands, a collaboration utilizing Twinstar’s infrastructure and a new team composed of private server veterans with years of experience managing projects. With heavy focus on community and quality, we aim to create the best Cataclysm project possible."
+                question: "Wer betreibt Proudmoore? Ist es ein neues Team oder eine Neuauflage?",
+                answer: "Proudmoore ist ein neues Projekt aus erfahrenen Händen, eine Zusammenarbeit, die die Infrastruktur von Twinstar und ein neues Team nutzt, das aus privat Server Veteranen mit jahrelanger Erfahrung in der Projektleitung besteht. Mit starkem Fokus auf Gemeinschaft und Qualität wollen wir das bestmögliche Cataclysm-Projekt schaffen."
             },
             {
-                question: "Why did you choose Cataclysm as the expansion?",
-                answer: "Cataclysm is often misunderstood. Beneath its controversial changes lies the most refined class design in WoW’s classic era, along with world revamps, and PvP systems that deserve a second chance. We believe 4.3.4, when modernized and rebalanced, offers an incredibly rewarding gameplay loop, and we’re here to prove it."
+                question: "Warum habt Ihr Cataclysm als Erweiterung gewählt?",
+                answer: "Cataclysm wird oft missverstanden. Hinter den umstrittenen Änderungen verbirgt sich das raffinierteste Klassenkonzept der klassischen Ära von WoW, ergänzt durch Überarbeitungen der Welt und PvP-Systeme, die eine zweite Chance verdienen. Wir sind überzeugt: Wird 4.3.4 modernisiert und ausbalanciert, entsteht ein unglaublich gutes Spielgefühl, und genau das wollen wir beweisen."
             },
             {
-                question: "Will the server be Blizzlike or custom",
-                answer: "Consider Proudmoore as a hybrid. The content and progression will stay true to Blizzard’s Cataclysm, but the systems and mechanics behind it will have been modernized for 2025. We stay true to Blizzard’s design foundations, but we’re not afraid to fix what’s broken or expand where the original fell short."
+                question: "Wird der Server dem Blizzard-Original entsprechen oder verändert sein?",
+                answer: "Betrachte Proudmoore als Hybrid. Inhalte und Progression bleiben Blizzards Cataclysm treu, doch die dahinterliegenden Systeme und Mechaniken wurden für 2025 modernisiert. Wir halten uns an Blizzards Designgrundlagen, scheuen uns jedoch nicht, Fehler zu beheben oder Bereiche auszubauen, in denen das Original hinter den Erwartungen zurückblieb."
             },
             {
-                question: "How long has this server been in development?",
-                answer: "Proudmoore utilizes Twinstar’s Cataclysm core, which has been in development for nearly 17 years now. We’ve rebuilt and refined virtually every aspect of the game’s code from the ground up, ensuring every feature we launch with is production-ready and sustainable."
+                question: "Wie lange war der Server in der Entwicklung?",
+                answer: "Proudmoore nutzt Twinstars Cataclysm-Core, der nun seit fast 17 Jahren in Entwicklung ist. Wir haben nahezu jeden Aspekt des Spielcodes von Grund auf neu aufgebaut und verfeinert, um sicherzustellen, dass jede von uns veröffentlichte Funktion produktionbereit und robust ist."
             },
             {
-                question: "What is the server's long-term plan?",
-                answer: "Our goal is to provide a living, evolving Cataclysm experience. That means seasonal content rotations, fresh incentives for PvE and PvP, community events, and continuous balance updates. When the realm hits its natural end of progression, we will move away from blizzlike and begin experimental changes to keep things feeling fresh."
+                question: "Wie ist der langfristige Plan des Servers?",
+                answer: "Unser Ziel ist es, eine lebendige, sich entwickelnde Cataclysm-Erfahrung zu bieten. Das bedeutet saisonale Contentrotationen, neue Anreize für PvE und PvP, Community-Events und kontinuierliche Balance-Updates. Sobald der Server sein natürliches Ende der Progression erreicht, werden wir uns von der blizzlike-Form entfernen und experimentelle Änderungen einführen, um den Content frisch zu halten."
             },
             {
-                question: "Will Proudmoore reset or wipe in the future?",
-                answer: "No, Proudmoore is not a seasonal or time-limited project. Your progress is here to stay. While we may explore optional fresh starts in the distant future, the main realm will never be wiped or reset."
+                question: "Wird Proudmoore zurückgesetzt oder neu starten in der Zukunft?",
+                answer: "Nein, Proudmoore ist kein saisonales oder zeitlich begrenztes Projekt. Dein Fortschritt bleibt bestehen. Zwar könnten wir in ferner Zukunft optionale Neuanfänge erkunden, aber der Haupt-Realm wird niemals gelöscht oder zurückgesetzt."
             },
             {
-                question: "Is there a roadmap available post-launch?",
-                answer: "Yes. A full roadmap will be published shortly after launch, detailing our timeline for Mythic+ rotations, seasonal events, new systems, and quality-of-life updates. Proudmoore is a living project, and we’re committed to full transparency as we grow."
+                question: "Ist nach der Veröffentlichung eine Roadmap verfügbar?",
+                answer: "Ja. Eine vollständige Roadmap wird kurz nach dem Launch veröffentlicht und zeigt unseren Zeitplan für Mythische-Rotationen, saisonale Events, neue Systeme und Quality-of-Life-Updates. Proudmoore ist ein lebendiges Projekt, und wir verpflichten uns zu vollständiger Transparenz, während wir wachsen."
             }
         ]
     },
 
     faqGameplay: {
-        title: "Gameplay & Features",
+        title: "Spielmechaniken & Besonderheiten (Funktionen)",
         questions: [
             {
-                question: "What are the XP, gold, rep, and drop rates?",
-                answer: "We designed Proudmoore’s rates around <span class='font-bold'>balancing casual gameplay and long-term sustainability</span>. Here’s how each one fits into that vision:<br><ul><li><span class='font-bold'>XP (1x–3x, toggleable):</span><br>Leveling should feel rewarding, not tedious. With 3x default rates, players who can only play on weekends or casually here and there should make meaningful progression without feeling left behind. There will be additional bonuses to this as well, specifically on weekends and holidays. We have a toggle for xp rates, so you can choose the pace you want to take. Some want to get through leveling as fast as possible, others want to experience leveling to the fullest, we give you the freedom to choose.</li><li><span class='font-bold'>Reputation (1x with weekend bonuses):</span><br>Rep grinds define Cataclysm’s endgame. We keep the baseline Blizzlike to preserve progression value but offer weekend boosts to ease the burden for working players.</li><li><span class='font-bold'>Loot & Gold (1x):</span><br>Gold inflation kills economies. We keep loot and gold at 1x to maintain item value, prevent bot abuse, and ensure professions and player trading matter. It also ensures vendor and repair costs retain meaning over time.</li><li><span class='font-bold'>Rare Materials (~1.2x in Heroics/Raids):</span><br>Slightly increasing rare material drops in challenging content rewards group play and supports crafting progression without flooding the market. It also makes dungeons feel more rewarding over time.</li><li><span class='font-bold'>Professions (1x with weekend XP bonuses):</span><br>Gathering and crafting should be meaningful, not skippable. Keeping 1x ensures steady progression, while weekend boosts give a natural catch-up window for players with limited time.</li><li><span class='font-bold'>Honor (1.25x with weekend bonuses):</span><br>PvP gearing shouldn’t be a second job. Slightly higher Honor gain respects your time while keeping gear acquisition paced enough to support healthy seasons and ladder progression. Bonuses to Honor Rates will be substantially focused on prime-time to encourage large queues.</li><li><span class='font-bold'>Justice / Valor Points (1x with weekly activity bonuses):</span><br>PvE currency remains at 1x to preserve reward pacing, but active players are rewarded through weekly activity bonuses that speed things up without trivializing content.</li></ul>",
-                additionalInfoTitle: "In short:",
-                additionalInfoText: "We want progression to feel <span class='italic'>earned</span> but <span class='italic'>not exhausting</span>. These rates avoid the burnout of 1x-only grinds while steering clear of retail-level handouts. You’ll feel rewarded for your time and the economy will feel alive for months to come, unlike other projects."
+                question: "Wie hoch sind die Erfahrungs-, Gold-, Ruf- und Loot-Raten?",
+                answer: "Wir haben die Raten von Proudmoore so gestaltet, dass <span class='font-bold'>casual Gameplay und langfristiger Fortschritt</span> im Gleichgewicht bleiben. Jede Rate folgt dieser Vision:<br><ul><li><span class='font-bold'>EP (1x–3x, umschaltbar):</span><br>Leveln soll lohnend, nicht mühsam sein. Mit 3x Standardrate können Spieler, die nur am Wochenende oder gelegentlich spielen, bedeutenden Fortschritt erzielen, ohne sich zurückgelassen zu fühlen. Zusätzlich gibt es Boni an Wochenenden und Feiertagen. Die EP-Rate ist umschaltbar, sodass du das Tempo selbst bestimmen kannst. Manche wollen schnell leveln, andere das Leveling voll auskosten – wir geben dir die Freiheit, zu wählen.</li><li><span class='font-bold'>Ruf (1x mit Wochenend-Boni):</span><br>Rep-Grinds definieren das Endgame von Cataclysm. Wir halten die Basis Blizzlike, um den Progressionswert zu erhalten, bieten aber Wochenend-Boni, um berufstätigen Spielern die Last zu erleichtern.</li><li><span class='font-bold'>Loot & Gold (1x):</span><br>Goldinflation zerstört die Wirtschaft. Loot und Gold bleiben bei 1x, um den Gegenstandswert zu erhalten, Bot-Missbrauch zu verhindern und sicherzustellen, dass Berufe und Handel zwischen Spielern relevant bleiben. Auch Kosten für Händler und Reparaturen behalten so über die Zeit ihre Bedeutung.</li><li><span class='font-bold'>Seltene Materialien (~1.2x in Heroischen Instanzen/Schlachtzüge):</span><br>Leicht erhöhte Drops seltener Materialien in anspruchsvollem Content belohnen das Gruppenspiel und unterstützen den Handwerks-Fortschritt, ohne den Markt zu überschwemmen. So wirken Instanzen lohnender.</li><li><span class='font-bold'>Berufe (1x mit Wochenend-EP-Boni):</span><br>Sammeln und Herstellen soll bedeutsam sein, nicht überspringbar. 1x sorgt für stetigen Fortschritt, während Wochenend-Boni Spielern mit wenig Zeit ein natürliches Nachholfenster bieten.</li><li><span class='font-bold'>Ehre (1.25x mit Wochenend-Boni):</span><br>PvP-Ausrüstung sollte kein Zweitjob sein. Leicht höhere Ehre respektiert deine Zeit, während der Gear-Fortschritt so gesteuert bleibt, dass gesunde Seasons und Ranglisten-Fortschritt unterstützt werden. Boni auf die Ehrenrate fokussieren sich auf Prime-Time, um Warteschlangen zu fördern.</li><li><span class='font-bold'>Gerechtigkeits- / Tapferkeitspunkte (1x mit wöchentlichen Aktivitätsboni):</span><br>PvE-Währung bleibt bei 1x, um das Belohnungstempo zu erhalten. Aktive Spieler werden jedoch durch wöchentliche Aktivitätsboni belohnt, die den Fortschritt beschleunigen, ohne Content zu trivialisieren.</li></ul>",
+                additionalInfoTitle: "Kurzgefasst:",
+                additionalInfoText: "Wir möchten, dass sich Fortschritt <span class='italic'>verdient</span> anfühlt, aber <span class='italic'>nicht erschöpfend</span>. Diese Raten verhindern Burnout durch endlose 1x-Grinds und zugleich zu schnelles Leveln wie auf Retail-Niveau. So wirst du für deine Zeit belohnt, und die Wirtschaft wirkt über mehrere Monate lebendig – anders als bei vielen anderen Projekten."
             },
             {
-                question: "Is there RF (Raid Finder)?",
-                answer: "Nope, no Raid Finder. It was originally implemented on the Dragon Soul raid, and was extremely unpopular/controversial. We have no intentions of adding it here."
+                question: "Gibt es einen Raid-Finder?",
+                answer: "Nein, es gibt keinen Raid-Finder. Er wurde ursprünglich für den Drachenseelen-Raid eingeführt und war extrem unbeliebt. Wir haben keine Pläne, ihn hier hinzuzufügen."
             },
             {
-                question: "What's the status of Rated BGs, Arenas, and Solo Queue?",
-                answer: "All <span class='font-bold'>Rated PvP</span> modes will be released with season launch, at the same time as raid releases. <span class='font-bold'>Unrated</span> Solo Queue for Arenas is enabled from launch as an additional leveling path, as well as <span class='font-bold'>Unrated Battlegrounds</span>. Rated Battlegrounds are fully functional and will be tied into seasonal rewards."
+                question: "Wie ist der aktuelle Status von gewerteten BGs, Arenen und Solo-Warteschlangen?",
+                answer: "Alle <span class='font-bold'>gewerteten PvP</span>-Modi werden mit dem Start der Saison veröffentlicht, gleichzeitig mit den Raid-Veröffentlichungen. <span class='font-bold'>Ungewertete</span> Solo-Warteschlangen für Arenen sind ab Launch verfügbar, ebenso wie <span class='font-bold'>unbewertete Schlachtfelder</span>. Gewertete Schlachtfelder sind voll funktionsfähig und werden in saisonale Belohnungen eingebunden."
             },
             {
-                question: "Are there cross-faction BGs/dungeons?",
-                answer: "Yes. Proudmoore features full cross-faction queuing for battlegrounds, dungeons, and raids."
+                question: "Gibt es Fraktionsübergreifende BGs und Dungeons?",
+                answer: "Ja. Proudmoore bietet vollständig fraktionsübergreifende Warteschlangen für Bgs, Dungeons und Raids."
             },
             {
-                question: "Are any classes or specs disabled or rebalanced?",
-                answer: "No classes or specs are disabled or rebalanced. There are some slight rebalances towards end game content to adjust for the fact we are using the 4.3.4 client. When we hit end-of-progression, we will begin to experiment with class/spec rebalancing to keep content fresh."
+                question: "Sind irgendwelche Klassen oder Spezialisierungen deaktiviert oder neu balanciert?",
+                answer: "Keine Klassen oder Spezialisierungen wurden deaktiviert oder grundlegend neu ausbalanciert. Lediglich im Endgame-Content gab es kleine Anpassungen, um den 4.3.4-Client optimal zu berücksichtigen. Sobald die Progression abgeschlossen ist, werden wir gezielt mit Klassen- und Spezialisierungsanpassungen experimentieren, um den Content frisch zu halten."
             },
             {
-                question: "Are battlegroups active or merged in any way?",
-                answer: "This is a private server project, meaning we only have a single server. Battlegroups as they exist in Blizzard & Retail are redundant, all players are part of a single matchmaking pool for PVP & RDF/RF."
+                question: "Sind  Kampfgruppen aktiv oder in irgendeiner Form zusammengelegt?",
+                answer: "Dies ist ein Privatserver-Projekt, was bedeutet, dass wir nur einen einzigen Server haben. Kampfgruppen, wie sie bei Blizzard & im Retail existieren, sind daher überflüssig, alle Spieler sind Teil eines einzigen Matchmaking-Pools für PvP und Dungeons."
             },
             {
-                question: "Are dungeons/raids scripted? To what level of completion?",
-                answer: "Yes, all Cataclysm dungeons and raids are fully scripted. We are utilizing Twinstar’s Cataclysm core, which has over 17 years of development. From dungeon mechanics to boss events and AI behavior, you can expect the full experience."
+                question: "Sind Dungeons und Raids gescripted? Wenn ja, bis zu welchem Fertigstellungsgrad?",
+                answer: "Ja, alle Cataclysm-Dungeons und -Raids sind vollständig gescriptet. Wir nutzen Twinstars Cataclysm-Core, der über 17 Jahre Entwicklung umfasst. Von Dungeon-Mechaniken über Boss-Events bis hin zum KI-Verhalten kannst du eine vollständige Erfahrung erwarten."
             },
             {
-                question: "What tier does the server launch with?",
-                answer: "We launch pre-Tier 11: Bastion of Twilight, Blackwing Descent, and Throne of the Four Winds. Tier 11 raids will become available in a week or two after launch date (TBA). Future tiers will be staggered based on community progression, not static dates."
+                question: "Mit welchem Tier startet der Server?",
+                answer: "Wir starten vor Tier 11: Bastion des Zwielichts, Pechschwingenabstieg und Thron der Vier Winde. Tier-11-Schlachtzüge werden ein bis zwei Wochen nach dem Release-Termin (TBA) verfügbar. Zukünftige Tiers werden gestaffelt freigeschaltet, basierend auf dem Fortschritt der Community, nicht nach festen Terminen."
             },
             {
-                question: "How do gear progression and catch-up systems work?",
-                answer: "Gear progression will follow Blizzard’s progression, with the exception of our additions of Mythic+ dungeons, and Casual Mode Raids. Mythic+ will serve as a stepping stone between heroic dungeons and normal raids, and casual mode raids will serve as lowering the skill curve needed to go from dungeons to raiding. Our catch-up systems will be announced at a later date, but will essentially incentivize players joining in late to catch up to current content without getting punished for it."
+                question: "Wie laufen Ausrüstungsprogression und Aufholmechaniken ab?",
+                answer: "Die Ausrüstungsprogression folgt Blizzards Vorlage, ergänzt um unsere Mythischen Instanzen und Casual-Mode-Schlachtzüge. Mythische Dungeons dienen dabei als Zwischenschritt zwischen heroischen Dungeons und normalen Raids, während Casual-Mode-Raids die Einstiegshürde vom Dungeon- zum Raid-Content senken. Unsere Aufholsysteme werden zu einem späteren Zeitpunkt angekündigt. Sie sollen im Wesentlichen Spieler belohnen, die später dazustoßen, sodass sie zum aktuellen Content aufschließen können, ohne dafür bestraft zu werden."
             },
             {
-                question: "Is there PvE or PvP progression gating?",
-                answer: "Progression will be gated logically, and mostly following Blizzards original timeline. As mentioned before, we will not have static dates for future patch progression, instead we will have a blend of potential timelines, balanced with analytics on individual player progression and participation metrics. Essentially, we want to progress through patches without leaving players behind, while also keeping track of hardcore raider progression. It is not possible to time this perfect for all audiences, but we will do our best."
+                question: "Gibt es Fortschrittsbeschränkungen für PvE oder PvP?",
+                answer: "Die Progression wird logisch begrenzt und folgt größtenteils Blizzards ursprünglichem Zeitplan. Wie bereits erwähnt, wird es keine festen Termine für zukünftige Patch-Progressionen geben. Stattdessen setzen wir auf eine Kombination möglicher Zeitpläne, abgestimmt auf Analysen der individuellen Spielerprogression und Teilnahme. Im Wesentlichen möchten wir die Patches voranschreiten lassen, ohne Spieler zurückzulassen, während wir gleichzeitig den Fortschritt von Hardcore-Raidern im Auge behalten. Eine perfekte Abstimmung für alle Zielgruppen ist nicht möglich, aber wir werden unser Bestes geben."
             },
             {
-                question: "Is world PvP encouraged? How?",
-                answer: "We will be keeping a close eye on World PvP. If there is a sizeable amount of players participating in it and forming groups specifically for it, we will further incentivize it. We do not want Proudmoore to become a griefing fiesta, but we do want to encourage group World PvP if there is an interest in it."
+                question: "Wird Welt-PvP gefördert? Wenn ja, wie?",
+                answer: "Wir werden Welt-PvP genau beobachten. Wenn eine größere Anzahl von Spielern daran teilnimmt und gezielt Gruppen dafür bildet, werden wir zusätzliche Anreize schaffen. Wir wollen nicht, dass Proudmoore zu einem reinen Griefing-Fest wird, aber wir möchten gruppenbasiertes Welt-PvP fördern, wenn Interesse daran besteht."
             },
             {
-                question: "Do you have dual spec? Is it free or gold-based?",
-                answer: "Dual spec is automatically enabled from level 10 for free."
+                question: "Gibt es eine duale Talentspezialisierung? Is diese kostenlos oder gegen Gold verfügbar?",
+                answer: "Die duale Talentspezialisierung wird automatisch freigeschalten beim erreichen der Stufe 10 und ist kostenlos."
             },
             {
-                question: "Are there custom zones or events?",
-                answer: "No custom zones, but there will be plenty of events. We will explore the more “custom” parts of Cataclysm when we hit end of progression and players begin to get bored of 4.3.4 content."
+                question: "Gibt es neue Zonen oder Events?",
+                answer: "Es gibt keine neuen Zonen, aber es wird viele Events geben. Die „Custom“-Seite von Cataclysm werden wir erst erkunden, sobald die Progression abgeschlossen ist und die Spieler sich am 4.3.4-Content sattgesehen haben."
             },
             {
-                question: "Will we see Timewalking Mythic+ equivalents, or class tuning?",
-                answer: "Yes — Proudmoore features a homegrown <span class='font-bold'>Mythic+ system</span>, complete with scaling difficulty, affixes, and leaderboard tracking. Class tuning will be addressed at the end of content progression. We may possibly tune some end-game gear for Arenas and Rated Battlegrounds. Timewalking is under consideration as part of future seasonal content."
+                question: "Werden wir Zeitwanderungs-Äquivalente Dungeons oder Klassenanpassungen sehen?",
+                answer: "Ja, Proudmoore bietet ein selbst entwickeltes <span class='font-bold'>Mythisches-System</span> mit skalierbarem Schwierigkeitsgrad, Affixen und Ranglistenverfolgung. Klassenanpassungen werden am Ende der Content-progression erfolgen. Möglicherweise werden wir einige Endgame-Ausrüstungen für Arenen und gewertete Schlachtfelder anpassen. Zeitwanderung wird als Teil zukünftiger saisonalen Content in Betracht gezogen."
             }
         ],
     },
 
     faqTechnical: {
-        title: "Technical Questions",
+        title: "Technische Fragen",
         questions: [
             {
-                question: "What client do I need? Where do I download it?",
-                answer: "Any 4.3.4 client will work with Proudmoore. You can find this via Google. Additionally, we will be providing download links for our own 4.3.4 client, closer to launch date."
+                question: "Welchen Client benötige ich? Wo kann ich ihn herunterladen?",
+                answer: "Jeder 4.3.4-Client funktioniert mit Proudmoore. Du kannst diesen über Google finden. Außerdem werden wir kurz vor der Veröffentlichung Links zu unserem eigenen 4.3.4-Client bereitstellen."
             },
             {
-                question: "Is there a launcher? Patcher?",
-                answer: "No. Without getting too deep in the weeds, a launcher or patcher is an executable program, an .exe. Any custom .exe a private server produces will likely be unsigned, meaning it does not have a “digital certificate” ensuring it is safe. This is why most projects with a custom .exe tell you to “run the program as administrator”, because it bypasses any security protocols that will trigger when running an unsigned .exe. In layman’s terms, it is not safe and there is no guarantee on what you are installing and what access it has to your computer. Proudmoore will never encourage players to download an use an unsigned .exe."
+                question: "Gibt es einen Launcher oder Patcher?",
+                answer: "Nein. Ohne zu sehr ins Detail zu gehen: Ein Launcher oder Patcher ist ein ausführbares Programm, also eine .exe. Jede benutzerdefinierte .exe, die ein Privatserver erstellt, ist höchstwahrscheinlich nicht signiert, das heißt, sie besitzt kein „digitales Zertifikat“, das ihre Sicherheit garantiert. Aus diesem Grund weisen die meisten Projekte mit einer eigenen .exe darauf hin, das Programm „als Administrator auszuführen“, da so Sicherheitsprotokolle umgangen werden, die beim Starten einer unsignierten .exe ausgelöst würden. Einfach gesagt: Es ist nicht sicher, und es gibt keine Garantie dafür, was genau installiert wird und welche Zugriffsrechte das Programm auf deinem Computer hat. Proudmoore wird Spieler niemals dazu auffordern, eine unsignierte .exe herunterzuladen oder zu verwenden."
             },
             {
-                question: "Can I use my own Cataclysm client?",
-                answer: "Yes. Some clients may have modified MPQ patches, which can possibly disrupt your game. To assure you do not have any graphic issues or glitches, we recommend using a clean & fresh client."
+                question: "Kann ich meinen eigenen Cataclysm client benutzen?",
+                answer: "Ja. Einige Clients könnten modifizierte MPQ-Patches enthalten, die dein Spiel möglicherweise stören. Um Grafikprobleme oder Fehler zu vermeiden, empfehlen wir die Nutzung eines sauberen und frischen Clients."
             },
             {
-                question: "Is this server hosted on Each Coast, EU, or elsewhere?",
-                answer: "Our server is hosted in Europe."
+                question: "Wird dieser Server an der Ost- oder Westküste, in der EU oder anderswo gehostet?",
+                answer: "Unser Server wird in Euopa gehostet."
             },
             {
-                question: "What are the expected latency/ping times for NA/EU/SA players?",
-                answer: "EU: 20-60ms<br><br>NA: 70-130ms<br><br>SA: 90-160ms<br><br>We’ve done extensive routing tests and CDN optimization to keep things as smooth as possible for all regions."
+                question: "Welche Latenz- und Pingzeiten sind für Spieler aus NA, EU und SA zu erwarten?",
+                answer: "EU: 20–60 ms<br><br>NA: 70–130 ms<br><br>SA: 90–160 ms<br><br>Wir haben umfangreiche Routing-Tests und CDN-Optimierungen durchgeführt, um für alle Regionen ein möglichst flüssiges Spielerlebnis zu gewährleisten."
             },
             {
-                question: "What kind of anti-cheat is used?",
-                answer: "In most cases, no VPN is needed. If you’re in a region with restricted routing (e.g. Oceania or parts of Asia), a lightweight VPN may improve stability. Additionally, if you are in a region where internet is restricted, you may need a VPN in order to play."
+                question: "Welche Art von Anti-Cheat wird verwendet?",
+                answer: "In den meisten Fällen ist kein VPN erforderlich. Befindest du dich jedoch in einer Region mit eingeschränktem Routing (z. B. Ozeanien oder Teile Asiens), kann ein leichtes VPN die Stabilität verbessern. Außerdem kann in Regionen mit eingeschränktem Internet ein VPN notwendig sein, um spielen zu können."
             },
             {
-                question: "Can I play on Steam Deck or Linux?",
-                answer: "Yes! Proudmoore runs great through <span class='font-bold'>Proton (Steam Deck)</span> and <span class='font-bold'>Wine (Linux)</span>. Community guides will be available post-launch for setup walkthroughs."
+                question: "Kann ich auf Steam Deck oder unter Linux spielen?",
+                answer: "Ja! Proudmoore läuft einwandfrei über <span class='font-bold'>Proton (Steam Deck)</span> und <span class='font-bold'>Wine (Linux)</span>. Community-Guides zur Einrichtung werden nach dem Launch verfügbar sein."
             },
             {
-                question: "Will mobile clients like WoW Mini or Android work?",
-                answer: "We don’t officially support mobile clients due to performance and security concerns. However, advanced users may experiment at their own risk — just be aware that support and compatibility may vary."
+                question: "Werden mobile Clients wie WoW Mini oder Android funktionieren?",
+                answer: "Wir unterstützen mobile Clients offiziell nicht, aufgrund von Leistungs- und Sicherheitsbedenken. Fortgeschrittene Nutzer können jedoch auf eigene Verantwortung experimentieren, beachten Sie dabei, dass Support und Kompatibilität variieren können."
             }
         ]
     },
 
     faqAccountSecurity: {
-        title: "Account & Security",
+        title: "Account & Sicherheit",
         questions: [
             {
-                question: "How do I recover a lost password or locked account?",
-                answer: "Our account panel will have a button labeled “Forgot Password”. You can use this to recover your account. If your account is locked, please reach out to our support team via Discord, fast response guaranteed."
+                question: "Wie kann ich ein verlorenes Passwort oder einen gesperrten Account wiederherstellen?",
+                answer: "Unser Account-Panel verfügt über eine Schaltfläche mit der Aufschrift „Passwort vergessen“. Damit kannst du deinen Account wiederherstellen. Wenn dein Account gesperrt ist, wende dich bitte über Discord an unser Support-Team, schnelle Antworten sind garantiert."
             },
             {
-                question: "Is account sharing allowed?",
-                answer: "For the sake of security and fairness, we do not allow players to share accounts. We are players, we know how things work, especially with close friends and guilds. Account sharing will happen, we understand this, and will extend a degree of flexibility towards it. But, if we find an account is being shared for purposes of progressing competitively or staying logged in 24/7, be prepared for temporary or even permanent bans. Because of this policy, we do not have leniency for players who lose their accounts or gear from account sharing. Do it at your own risk."
+                question: "Ist die Weitergabe von Accounts erlaubt?",
+                answer: "Aus Sicherheits- und Fairnessgründen erlauben wir kein Teilen von Accounts. Wir sind selbst Spieler und wissen, wie das gerade bei engen Freunden oder Gilden ablaufen kann. Account-Sharing wird vorkommen, das verstehen wir, und wir zeigen hier ein gewisses Maß an Flexibilität. Wenn wir jedoch feststellen, dass ein Account geteilt wird, um wettbewerbsorientiert Fortschritt zu erzielen oder rund um die Uhr eingeloggt zu bleiben, sind temporäre oder sogar permanente Sperren möglich. Aufgrund dieser Regelung gibt es keine Nachsicht für Spieler, die durch Account-Sharing ihre Accounts oder Ausrüstung verlieren. Du handelst auf eigenes Risiko."
             },
             {
-                question: "Is multiboxing allowed?",
-                answer: "We allow common sense multiboxing. World of Warcraft has content that is intended for group play. If there is a boss that is too difficult to do on your own, does that mean you log into a second account to down it? No, it means you find a friend to help. Players are allowed to multibox when it comes to crafting, banking, and other things inside major cities. We do not allow multiboxing in leveling, battlegrounds, raids, dungeons, etc."
+                question: "Ist Multiboxing erlaubt?",
+                answer: "Wir erlauben Multiboxing mit gesundem Menschenverstand. World of Warcraft bietet Content, die für Gruppen gedacht sind. Wenn ein Boss zu schwer ist, um ihn alleine zu besiegen, heißt das nicht, dass man sich mit einem zweiten Account einloggt um den Boss zu besiegen, man sucht sich einen Freund zur Unterstützung. Multiboxing ist bei Handwerk, Bankgeschäften und ähnlichen Tätigkeiten in größeren Städten erlaubt. Beim Leveln, in Bgs, Schlachtzügen, Dungeons usw. ist Multiboxing hingegen nicht gestattet."
             },
             {
-                question: "Will 2FA (two-factor authentication) be supported?",
-                answer: "Yes. Two-Factor Authentication will be available via email or an authenticator app to help keep your account secure. We strongly encourage all players to enable it."
+                question: "Wird 2FA (Zwei-Faktor-Authentifizierung) unterstützt?",
+                answer: "Ja, die Zwei-Faktor-Authentifizierung wird über E-Mail oder der App verfügbar sein, um deinen Account zu sichern. Wir empfehlen allen Spielern dringend, 2FA zu verwenden."
             },
             {
-                question: "Can I change my username or email?",
-                answer: "For security purposes, we do not openly allow players to change their usernames or emails. If there is an extenuating circumstance, the administration team may manually make exceptions."
+                question: "Kann ich meinen Benutzernamen oder meine E-Mail ändern?",
+                answer: "Aus Sicherheitsgründen erlauben wir es Spielern nicht, ihre Benutzernamen oder E-Mail-Adressen eigenständig zu ändern. In Ausnahmefällen kann das Administrationsteam manuell Ausnahmen genehmigen."
             },
             {
                 question: "Will I be able to reserve names before launch?",
-                answer: "Yes, there will be a variety of ways to reserve names before launch, stay tuned."
+                answer: "Ja, es wird mehrere Möglichkeiten geben, Namen vor dem Launch zu reservieren. Bleib dran."
             },
             {
-                question: "Can I use my Twinstar account?",
-                answer: "Yes! If you have a Twinstar account, you will not need to create another account for Proudmoore. While we are our own project, TwinStar authentication database will be used for logins"
+                question: "Kann ich meinen Twinstar Account benutzen?",
+                answer: "Ja! Wenn du einen Twinstar-Account hast, musst du keinen weiteren Account für Proudmoore erstellen. Obwohl wir ein eigenes Projekt sind, wird die TwinStar-Authentifizierungsdatenbank für die Logins genutzt."
             }
         ]
     },
@@ -239,106 +239,106 @@ const deTranslation = {
         title: "Community & Discord",
         questions: [
             {
-                question: "Is Discord required to participate in events or support?",
-                answer: "No, but it’s <span class='font-bold'>highly recommended</span>. Most announcements and support updates will happen on Discord first. You don’t need to talk or join voice — just being in the server keeps you in the loop."
+                question: "Wird Discord für die Teilnahme an Events oder für Support benötigt?",
+                answer: "Nein, aber es ist <span class='font-bold'>sehr empfehlenswert</span>. Die meisten Ankündigungen und Support-Updates erfolgen zunächst nur über Discord. Du musst nicht schreiben oder dem Voice-Chat beitreten, allein die Mitgliedschaft im Server hält dich auf dem Laufenden."
             },
             {
-                question: "Can I link my Discord or email to recover accounts?",
-                answer: "No to Discord, yes to email. Players are not required to link their discord accounts to their in-game accounts."
+                question: "Kann ich meinen Discord-Account oder meine E-Mail Adresse verknüpfen, um meine Accounts wiederherzustellen?",
+                answer: "Nein zu Discord, ja zu E-Mail. Spieler müssen ihre Discord-Accounts nicht mit ihrem Ingame-Account verknüpfen."
             },
             {
-                question: "Will there be forums or just Discord?",
-                answer: "We’ll start with Discord for support, updates, and community discussion. Traditional forums may follow if there’s strong demand for organized discussion, but Discord allows faster, more direct communication."
+                question: "Wird es Foren geben oder nur Discord?",
+                answer: "Wir beginnen mit Discord für Support, Updates und Community-Diskussionen. Traditionelle Foren könnten folgen, wenn eine starke Nachfrage nach organisierten Diskussionen besteht, aber Discord ermöglicht schnellere und direktere Kommunikation."
             },
             {
-                question: "Can I appeal bans or punishments? Where?",
-                answer: "Yes, appeals will be handled through a form system and handled by our GM Team. Every case is reviewed by staff, and decisions are transparent and logged. Your appeal will never be handled by the same staff member that gave the punishment, to assure fairness."
+                question: "Kann ich gegen Sperren oder Strafen Einspruch einlegen? Wenn ja, wo?",
+                answer: "Ja, Einsprüche werden über ein Formularsystem vom GM- und/oder CM-Team bearbeitet. Jeder Fall wird vom Personal geprüft, und Entscheidungen sind transparent und protokolliert. Dein Einspruch wird niemals vom selben Mitarbeiter bearbeitet, der die Strafe verhängt hat, um Fairness zu gewährleisten."
             },
             {
-                question: "Do you support streamers or content creators?",
-                answer: "Absolutely. We offer perks for creators. Apply through the <span class='font-bold'>Creator Program (TBA)</span> channel on Discord."
+                question: "Unterstützt Ihr Streamer oder Content creator?",
+                answer: "Absolut. Wir bieten Vorteile für Creator an. <span class='font-bold'>Bewirb dich über Discord.</span>"
             },
             {
-                question: "Will there be a system to report players?",
-                answer: "Yes. Players can report players via /report in-game, via GM ticket, or through our Discord forms. We investigate all reports thoroughly and act quickly on confirmed abuse or cheating."
+                question: "Wird es ein System geben um Spieler zu melden?",
+                answer: "Ja. Spieler können andere Spieler über den Ingame-Befehl /report, ein GM-Ticket oder unsere Discord-Formulare melden. Wir untersuchen alle Meldungen gründlich und reagieren schnell auf bestätigten Missbrauch oder Betrug."
             }
         ]
     },
 
     faqEvents: {
-        title: "Events & Seasons",
+        title: "Events & Saisons",
         questions: [
             {
-                question: "Are there in-game events like seasonal holidays or PvP tournaments?",
-                answer: "Absolutely, yes! We host both <span class='font-bold'>Blizzard-style seasonal events</span> (like Hallow’s End, Winter Veil) and <span class='font-bold'>custom events</span>, including tournaments, scavenger hunts, world boss races, and more — all with cosmetic or vanity rewards. There will be additional small events for holidays around the world."
+                question: "Gibt es Ingame-Events wie saisonale Feiertage oder PvP-Turniere?",
+                answer: "Absolut, ja! Wir veranstalten sowohl <span class='font-bold'>Blizzard-typische saisonale Events</span> (wie Hallow’s End oder Winterhauch) als auch <span class='font-bold'>eigene Events</span>, darunter Turniere, Schatzsuchen, Weltboss-Rennen und mehr – alles mit kosmetischen oder Vanity-Belohnungen. Außerdem wird es zusätzliche kleinere Events zu weltweiten Feiertagen geben."
             },
             {
-                question: "Will there be weekly challenges or server-wide goals?",
-                answer: "All challenges and goals on a server-wide level will take place in our online leaderboards. We hope to continue expanding on these to create as much competition & boasting rights as possible."
+                question: "Wird es wöchentliche Herausforderungen oder serverweite Ziele geben?",
+                answer: "Alle Herausforderungen und serverweiten Ziele werden über unsere Online-Ranglisten abgebildet. Wir möchten diese weiter ausbauen, um möglichst viel Wettbewerb und Angeberrechte zu ermöglichen."
             },
             {
-                question: "Will gear/achievements be reset between seasons?",
-                answer: "We will be following Blizzard’s progression path, so there will be no gear or achievement resets while progressing through seasons or patches. When we hit the end of progression, we may begin to spice things up, but that will be up to the community."
+                question: "Werden Ausrüstung und Erfolge zwischen den Saisons zurückgesetzt?",
+                answer: "Wir folgen Blizzards Progressionspfad, daher wird es während der Saisons oder Patch-Fortschritte keine Rücksetzungen von Ausrüstung oder Erfolgen geben. Sobald wir das Ende der Progression erreichen, könnten wir Änderungen einführen, aber das hängt von der Community ab."
             }
         ]
     },
 
     faqMonetization: {
-        title: "Monetization & Store",
+        title: "Monetarisierung & Shop",
         questions: [
             {
-                question: "Is Proudmoore free to play?",
-                answer: "Yes. Proudmoore is <span class='font-bold'>100% free to play</span>, no P2W, no hidden fees, no purchase required to access any content."
+                question: "Ist Proudmoore kostenlos?",
+                answer: "Ja. Proudmoore ist <span class='font-bold'>zu 100 % kostenlos spielbar</span>, kein Pay-to-Win, keine versteckten Gebühren und kein Kauf nötig, um auf Inhalte zuzugreifen."
             },
             {
-                question: "Is there a vanity or service shop?",
-                answer: "Yes, we will have optional donations and shops. No P2W. Players will be able to earn anything in donation shops without ever donating."
+                question: "Gibt es einen Kosmetik- oder Service-Shop?",
+                answer: "Ja, wir werden optionale Spenden und Shops anbieten. Kein Pay-to-Win. Spieler können alles in den Spenden-Shops erspielen, ohne jemals gespendet zu haben."
             },
             {
-                question: "Are there cosmetic or QoL perks for donors?",
-                answer: "We will offer a number of cosmetic and QoL perks for donors. We want to emphasize here that donating on Proudmoore is not intended to create an “upper class” of players with unique advantages not available to players. Every single thing in our shop will be available to players by playing the game. Our shop is for players who want to support our project, and a majority of the funding gained from it goes directly back into the community."
+                question: "Gibt es kosmetische oder Quality-of-Life-Vorteile für Spender?",
+                answer: "Wir werden eine Reihe kosmetischer und Quality-of-Life-Vorteile für Spender anbieten. Wir möchten hier betonen, dass Spenden bei Proudmoore nicht dazu dienen, eine „obere Klasse“ von Spielern mit einzigartigen Vorteilen zu schaffen, die anderen Spielern nicht zur Verfügung stehen. Alles in unserem Shop kann auch durch das Spielen des Spiels freigeschaltet werden. Unser Shop richtet sich an Spieler, die unser Projekt unterstützen möchten, und der Großteil der Einnahmen fließt direkt zurück in die Community."
             },
             {
-                question: "Is the shop only cosmetic, or does it have boosts?",
-                answer: "The shop is <span class='font-bold'>strictly cosmetic and utility-based</span>. No gear, power, or progression can be purchased. We are committed to <span class='font-bold'>no pay-to-win</span>. Ever. We are the only Cataclysm private server that offers this, and we plan to keep it that way."
+                question: "Ist der Shop nur kosmetisch, oder gibt es auch Boosts?",
+                answer: "Der Shop ist <span class='font-bold'>ausschließlich kosmetisch und nutzungsbezogen</span>. Keine Ausrüstung, Macht oder Progression kann gekauft werden. Wir stehen voll hinter <span class='font-bold'>keinem Pay-to-Win</span>. Niemals. Wir sind der einzige Cataclysm-Privatserver, der dies bietet, und wir haben vor, es auch so zu belassen."
             },
             {
-                question: "Are transmogs available without donating?",
-                answer: "<span class='font-bold'>Yes</span>. We have made the decision to make unlimited & full transmog free to all players. Players can choose to donate for transmogs, but these are optional and not restricted to only paying players. We are the only Cataclysm private server that offers this for free."
+                question: "Sind Transmogs auch ohne Spenden verfügbar?",
+                answer: "<span class='font-bold'>Ja</span>. Wir haben entschieden, dass unbegrenzte und vollständige Transmogrifikation für alle Spieler kostenlos ist. Spieler können spenden, um Transmogs zu erhalten, dies ist jedoch optional und nicht nur zahlenden Spielern vorbehalten. Wir sind der einzige Cataclysm-Privatserver, der dies kostenlos anbietet."
             },
             {
-                question: "Are there lootboxes or gamble systems?",
-                answer: "NO. Never. Proudmoore will never use lootboxes or RNG-based purchased. We may add lootboxes in-game as an incentive for things such as RDF queues, but these will always be free features. All donation items are transparently priced with clear descriptions — no bait-and-switch mechanics."
+                question: "Gibt es Lootboxen oder Glücksspiel-Systeme?",
+                answer: "NEIN. Niemals. Proudmoore wird niemals Lootboxen oder käufliche, RNG-basierte Systeme verwenden. Lootboxen könnten eventuell im Spiel als Anreiz für Dinge wie Dungeon-Warteschlangen hinzugefügt werden, diese bleiben jedoch immer kostenlose Features. Alle Spendenartikel sind transparent bepreist und klar beschrieben – keine Bait- oder Täuschungsmechaniken."
             },
             {
-                question: "Is the server pay-to-win in any form?",
-                answer: "Absolutely not. Proudmoore is built on integrity and balance. Donors support the server, not their performance. That being said, some players may view things such as experience rate boosts as P2W. Proudmoore is built upon the idea that players do not have the time they used to in their busy lives, but still want to be able to enjoy playing the game. Any optional service we offer in the store will be with these players in mind. But we will never allow these services to interfere with actual competition, such as realm first races. No P2W. Ever."
+                question: "Ist der Server in irgendeiner Form Pay-to-Win?",
+                answer: "Auf keinen Fall. Proudmoore basiert auf Integrität und Balance. Spender unterstützen den Server, nicht ihre eigene Leistung. Manche Spieler könnten beispielsweise Erfahrungspunkte-Boni als Pay-to-Win ansehen. Proudmoore geht davon aus, dass Spieler heute weniger Zeit haben, aber trotzdem das Spiel genießen möchten. Alle optionalen Services im Shop richten sich an diese Spieler. Wir werden jedoch niemals zulassen, dass diese Services den Wettbewerb beeinflussen, z. B. Realm-First-Races. Kein Pay-to-Win. Niemals."
             }
         ]
     },
 
     faqRules: {
-        title: "Rules & Policies",
+        title: "Regeln & Richtlinien",
         questions: [
             {
-                question: "What's the policy on using bots or rotation helpers (PQRs)?",
-                answer: "You’re joking if you’re asking this seriously. Zero tolerance. Any form of botting, automation, or rotation scripts will result in immediate bans. We prioritize a fair and competitive environment for all players."
+                question: "Wie ist die Richtlinie zur Nutzung von Bots oder Rotationshilfen (PQRs)?",
+                answer: "Du musst schwerzen, wenn du das ernst meinst. Null Toleranz. Jegliche Form von Botting, Automatisierung oder Rotations-Skripten führt zu sofortigen Sperren. Wir legen großen Wert auf eine faire und wettbewerbsfähige Umgebung für alle Spieler."
             },
             {
-                question: "Are there any addons that aren't allowed?",
-                answer: "There are a number of addons that are automation-based and respond with inputs, these are not allowed. The line on this is not exactly black and white, so we will give discretion towards players. There are addons that will automate auction house sales, both buying and selling. These make you no different than a bot. If you are using addons that make you look like a bot, you may be handled by our GM team like you are a bot."
+                question: "Gibt es Addons, die nicht erlaubt sind?",
+                answer: "Es gibt eine Reihe von Addons, die auf Automatisierung basieren und Eingaben selbstständig ausführen, diese sind nicht erlaubt. Die Abgrenzung ist nicht immer eindeutig, daher wird im Einzelfall auf Spieler-Ermessensspielraum geachtet. Addons, die Auktionen automatisch kaufen oder verkaufen, gelten als Botting. Wenn du Addons nutzt, die dich wie einen Bot erscheinen lassen, kann unser GM-Team dich genauso behandeln, als wärst du ein Bot."
             },
             {
-                question: "Will GMs moderate world chat or stay hands-off?",
-                answer: "Moderation will be <span class='font-bold'>light, but active</span>. We aim for a free, fun environment. There will not be any “big brother” watching down on you here. Any conversation that goes too far will result in a warning from a GM privately. Racism, hate speech, spam, or harassment will be removed quickly. GMs are there to support the community, not police it unnecessarily."
+                question: "Werden GMs den Weltchat moderieren oder sich zurückhalten?",
+                answer: "Die Moderation wird <span class='font-bold'>behutsam, aber aktiv</span> sein. Wir streben eine freie und spaßige Umgebung an. Hier wird es keine „Big Brother“-Überwachung geben. Gespräche, die zu weit gehen, führen zu einer privaten Warnung durch einen GM. Rassismus, Hassrede, Spam oder Belästigung werden schnell entfernt. GMs sind da, um die Community zu unterstützen, nicht unnötig zu kontrollieren."
             },
             {
-                question: "What's your policy on toxicity and harassment?",
-                answer: "We take it seriously, and understand there is nuance to the words “toxicity” and “harassment”, especially in an MMORPG like WoW. Banter, goading, trolling, these are all things that are very common in the way that people act towards each other, even friends. We take this understanding very seriously when it comes to our GM team. Every GM with permissions to moderate chat will explicitly prove that they are able to see the nuance here, and understand when banter becomes hostile and aggressive. There are in-game systems to block people from your chat, we expect players to use them. But repeated instances of bullying or harassment will result in punishments."
+                question: "Wie sind eure Richtlinien zu Toxizität und Belästigung?",
+                answer: "Wir nehmen das sehr ernst und verstehen, dass die Begriffe „Toxizität“ und „Belästigung“ Nuancen haben, besonders in einem MMORPG wie WoW. Neckereien, Sticheleien oder Trolling sind übliche Verhaltensweisen zwischen Spielern, selbst unter Freunden. Unser GM-Team berücksichtigt diese Nuancen sehr genau. Jeder GM mit Chat-Moderationsrechten muss ausdrücklich nachweisen, dass er diese Unterschiede erkennt und versteht, wann Neckereien in feindseliges und aggressives Verhalten übergehen. Im Spiel gibt es Systeme, um Personen aus dem Chat zu blockieren, und wir erwarten, dass Spieler diese nutzen. Wiederholte Fälle von Mobbing oder Belästigung führen jedoch zu Strafen."
             },
             {
-                question: "Can I advertise my stream/guild in global chat?",
-                answer: "Yes, <span class='font-bold'>within reason</span>. Occasional guild recruitment or stream announcements are allowed in moderation. Repeating ads or spamming global chat will result in mutes or timeouts. Be respectful of the space, and of the players. If you post your ads and players begin getting vocally upset, and you continue anyways, we will see your ad as disruptive to the community, within reason."
+                question: "Darf ich meinen Stream oder meine Gilde im Globalen-Chat bewerben?",
+                answer: "Ja, <span class='font-bold'>in Maßen</span>. Gelegentliche Gildenrekrutierungen oder Stream-Ankündigungen sind erlaubt. Wiederholte Werbung oder Spam im Global-Chat führen zu Mutes oder Timeouts. Sei respektvoll gegenüber dem Chat und den Spielern. Wenn du deine Anzeigen postest, Spieler sich darüber lautstark beschweren und du trotzdem weitermachst, betrachten wir deine Werbung, im Rahmen des Zumutbaren, als störend für die Community."
             }
         ]
     },
@@ -347,7 +347,7 @@ const deTranslation = {
         title: "Progression & Transfers",
         questions: [
             {
-                question: "Can I transfer a character from another private server?",
+                question: "Kann ich einen Charakter von einem anderen Privatserver übertragen?",
                 answer: "No, we <span class='font-bold'>do not accept transfers from other private servers</span>. Proudmoore is a fresh, fair start for everyone. Allowing external transfers would compromise integrity and balance. Other Cataclysm projects have P2W stores, and accepting transfers would mean accepting P2W players."
             },
             {

@@ -15,8 +15,8 @@ const op = ref<any>();
 const selectedLanguage = ref<{ code: string; src: string; alt: string } | null>(null);
 
 const flags = ref([
-    { code: 'fr', src: '/icons/fr.svg', alt: 'French flag icon' },
     { code: 'en', src: '/icons/en.svg', alt: 'English flag icon' },
+    { code: 'fr', src: '/icons/fr.svg', alt: 'French flag icon' },
     { code: 'es', src: '/icons/es.svg', alt: 'Spanish flag icon' },
     { code: 'de', src: '/icons/de.svg', alt: 'German flag icon' },
     { code: 'cz', src: '/icons/cz.svg', alt: 'Czech flag icon' },
@@ -25,8 +25,8 @@ const flags = ref([
 
 const selectLanguageLabel = computed(() => {
     switch (i18n.locale.value) {
-        case 'fr': return 'Sélectionner la langue';
         case 'en': return 'Select Language';
+        case 'fr': return 'Sélectionner la langue';
         case 'es': return 'Seleccionar idioma';
         case 'de': return 'Sprache auswählen';
         case 'cz': return 'Vybrat jazyk';
@@ -40,7 +40,7 @@ const toggle = (event: Event) => {
 };
 
 const setLanguage = (lang: string) => {
-    const allowed = ['fr', 'en', 'es', 'de', 'cz', 'nl'];
+    const allowed = ['en', 'fr', 'es', 'de', 'cz', 'nl'];
     i18n.locale.value = allowed.includes(lang) ? lang : 'en';
 };
 

@@ -2,22 +2,22 @@ const esTranslation = {
     welcome: "Welcome to the Proudmoore WoW Website",
 
     nav: {
-        home: "Home",
-        about: "What is Proudmoore?",
-        features: "Features & Rates",
+        home: "Inicio",
+        about: "¿Qué es Proudmoore?",
+        features: "Características y Rates*",
         timeline: "Launch Timeline & Dates",
-        discord: "Join the Community",
-        faq: "Frequently Asked Questions",
-        legal: "Legality & Player Rights",
-        appeal: "Discord Ban Appeals"
+        discord: "Entra en la Comunidad",
+        faq: "Preguntas Frecuentes",
+        legal: "Legalidad y derechos del jugador",
+        appeal: "Apelaciones de baneos en Discord"
     },
 
-    copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in partnership with TwinStar-WoW</span>. Not affiliated with Blizzard Entertainment. All rights reserved.",
-    copyrightExtraWarning: "The copyright in this website is owned by proudmoore.gg and its respective authors except trademarks and other items which are the properties of their respective owners. All rights reserved. Copying, modifying, transferring or distribution of the website's content in any form is not allowed without the permission of proudmoore.gg.",
+    copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, en asociación con TwinStar-WoW</span>. No está afiliado con Blizzard Entertainment. Todos los derechos reservados.",
+    copyrightExtraWarning: "Los derechos de autor en este sitio web, es propiedad de proudmoore.gg y sus respectivos autores, excepto marcas comerciales y otros objetos que son propiedades de sus respectivos propietarios. Todos los derechos reservados. Copiar, modificar, transferir o distribuir contenido de este sitio web de cualquier forma o manera, no está permitido sin permiso de proudmoore.gg.",
 
-    videoDescription: "A new era of Cataclysm is coming…",
+    videoDescription: "Una nueva era de Cataclysm está llegando...",
 
-    descriptionTitle: "What is Proudmoore?",
+    descriptionTitle: "¿Qué es Proudmoore?",
     descriptionText: "Proudmoore is a <span class='italic'>handcrafted</span> Cataclysm server — built for players who want a modern experience that still feels like OG World of Warcraft.<br><br>No queues. No Pay-to-Win. No retail <span class='font-extrabold'>bloat</span>.<br>Just smooth PvP, fully scripted PVE content, and a fresh start that respects your time.<br><br>If you’ve played private servers before, you’ll feel the difference.<br>If you haven’t — <span class='font-extrabold'>this is where to start.</span>",
 
     features: {

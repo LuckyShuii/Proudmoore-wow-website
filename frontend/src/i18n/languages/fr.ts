@@ -213,94 +213,94 @@ const frTranslation = {
                 answer: "Pour des raisons de sécurité et d'équité, nous n'autorisons pas les joueurs à partager leurs comptes. Nous sommes nous-mêmes des joueurs, et nous savons comment les choses fonctionnent, surtout entre amis proches et au sein des guildes. Le partage de compte arrivera, nous le comprenons, et nous ferons preuve d'une certaine souplesse à ce sujet. Cependant, si nous découvrons qu'un compte est partagé dans le but de progresser de manière compétitive ou de rester connecté 24h/24 et 7j/7, attendez-vous à des bannissements temporaires, voire permanents. En raison de cette politique, nous ne ferons preuve d'aucune indulgence envers les joueurs qui perdent leurs comptes ou leur équipement à cause du partage de compte. Faites-le à vos propres risques."
             },
             {
-                question: "Is multiboxing allowed?",
-                answer: "We allow common sense multiboxing. World of Warcraft has content that is intended for group play. If there is a boss that is too difficult to do on your own, does that mean you log into a second account to down it? No, it means you find a friend to help. Players are allowed to multibox when it comes to crafting, banking, and other things inside major cities. We do not allow multiboxing in leveling, battlegrounds, raids, dungeons, etc."
+                question: "Le multiboxing est-il autorisé ?",
+                answer: "Nous autorisons le multiboxing de bon sens. World of Warcraft a du contenu qui est destiné au jeu en groupe. S'il y a un boss trop difficile à faire en solo, est-ce que cela signifie que vous vous connectez sur un deuxième compte pour le vaincre ? Non, cela signifie que vous trouvez un ami pour vous aider. Les joueurs sont autorisés à utiliser le multiboxing pour le craft, la banque, et d'autres choses à l'intérieur des grandes villes. Nous n'autorisons pas le multiboxing pour le leveling, les champs de bataille, les raids, les donjons, etc."
             },
             {
-                question: "Will 2FA (two-factor authentication) be supported?",
-                answer: "Yes. Two-Factor Authentication will be available via email or an authenticator app to help keep your account secure. We strongly encourage all players to enable it."
+                question: "La 2FA (authentification à deux facteurs) sera-t-elle prise en charge ?",
+                answer: "Oui. L'authentification à deux facteurs sera disponible par e-mail ou via une application d'authentification pour aider à sécuriser votre compte. Nous encourageons fortement tous les joueurs à l'activer."
             },
             {
-                question: "Can I change my username or email?",
-                answer: "For security purposes, we do not openly allow players to change their usernames or emails. If there is an extenuating circumstance, the administration team may manually make exceptions."
+                question: "Puis-je changer mon nom d'utilisateur ou mon adresse e-mail ?",
+                answer: "Pour des raisons de sécurité, nous n'autorisons pas ouvertement les joueurs à changer leur nom d'utilisateur ou leur adresse e-mail. S'il y a des circonstances atténuantes, l'équipe d'administration peut faire des exceptions manuellement."
             },
             {
-                question: "Will I be able to reserve names before launch?",
-                answer: "Yes, there will be a variety of ways to reserve names before launch, stay tuned."
+                question: "Serai-je capable de réserver des noms avant le lancement ?",
+                answer: "Oui, il y aura différentes manières de réserver des noms avant le lancement, restez à l'écoute."
             },
             {
-                question: "Can I use my Twinstar account?",
-                answer: "Yes! If you have a Twinstar account, you will not need to create another account for Proudmoore. While we are our own project, TwinStar authentication database will be used for logins"
+                question: "Puis-je utiliser mon compte Twinstar ?",
+                answer: "Oui ! Si vous avez un compte Twinstar, vous n'aurez pas besoin d'en créer un autre pour Proudmoore. Bien que nous soyons notre propre projet, la base de données d'authentification de TwinStar sera utilisée pour les connexions."
             }
         ]
     },
 
     faqCommunity: {
-        title: "Community & Discord",
+        title: "Communauté et Discord",
         questions: [
             {
-                question: "Is Discord required to participate in events or support?",
-                answer: "No, but it’s <span class='font-bold'>highly recommended</span>. Most announcements and support updates will happen on Discord first. You don’t need to talk or join voice — just being in the server keeps you in the loop."
+                question: "Discord est-il requis pour participer aux événements ou pour le support ?",
+                answer: "Non, mais c'est <span class='font-bold'>fortement recommandé</span>. La plupart des annonces et des mises à jour de support seront d'abord publiées sur Discord. Vous n'avez pas besoin de parler ou de rejoindre un salon vocal — le simple fait d'être sur le serveur vous tient informé."
             },
             {
-                question: "Can I link my Discord or email to recover accounts?",
-                answer: "No to Discord, yes to email. Players are not required to link their discord accounts to their in-game accounts."
+                question: "Puis-je lier mon Discord ou mon e-mail pour récupérer des comptes ?",
+                answer: "Non pour Discord, oui pour l'e-mail. Les joueurs ne sont pas tenus de lier leurs comptes Discord à leurs comptes en jeu."
             },
             {
-                question: "Will there be forums or just Discord?",
-                answer: "We’ll start with Discord for support, updates, and community discussion. Traditional forums may follow if there’s strong demand for organized discussion, but Discord allows faster, more direct communication."
+                question: "Y aura-t-il des forums ou seulement Discord ?",
+                answer: "Nous commencerons par Discord pour le support, les mises à jour et les discussions communautaires. Des forums traditionnels pourront suivre s'il y a une forte demande pour des discussions organisées, mais Discord permet une communication plus rapide et plus directe."
             },
             {
-                question: "Can I appeal bans or punishments? Where?",
-                answer: "Yes, appeals will be handled through a form system and handled by our GM Team. Every case is reviewed by staff, and decisions are transparent and logged. Your appeal will never be handled by the same staff member that gave the punishment, to assure fairness."
+                question: "Puis-je faire appel des bannissements ou des sanctions ? Où ?",
+                answer: "Oui, les appels seront traités via un système de formulaire et gérés par notre équipe de Maîtres de jeu. Chaque cas est examiné par le personnel, et les décisions sont transparentes et enregistrées. Votre appel ne sera jamais traité par le même membre du personnel qui a infligé la sanction, afin de garantir l'équité."
             },
             {
-                question: "Do you support streamers or content creators?",
-                answer: "Absolutely. We offer perks for creators. Apply through the <span class='font-bold'>Creator Program (TBA)</span> channel on Discord."
+                question: "Est-ce que vous soutenez les streamers ou les créateurs de contenu ?",
+                answer: "Absolument. Nous offrons des avantages aux créateurs. Postulez via le salon <span class='font-bold'>Programme des créateurs (À DÉTERMINER)</span> sur Discord."
             },
             {
-                question: "Will there be a system to report players?",
-                answer: "Yes. Players can report players via /report in-game, via GM ticket, or through our Discord forms. We investigate all reports thoroughly and act quickly on confirmed abuse or cheating."
+                question: "Y aura-t-il un système pour signaler les joueurs ?",
+                answer: "Oui. Les joueurs peuvent signaler d'autres joueurs via la commande /report en jeu, par le biais d'un ticket de MJ, ou via nos formulaires sur Discord. Nous enquêtons de manière approfondie sur tous les signalements et agissons rapidement en cas d'abus ou de tricherie confirmés."
             }
         ]
     },
 
     faqEvents: {
-        title: "Events & Seasons",
+        title: "Événements et saisons",
         questions: [
             {
-                question: "Are there in-game events like seasonal holidays or PvP tournaments?",
-                answer: "Absolutely, yes! We host both <span class='font-bold'>Blizzard-style seasonal events</span> (like Hallow’s End, Winter Veil) and <span class='font-bold'>custom events</span>, including tournaments, scavenger hunts, world boss races, and more — all with cosmetic or vanity rewards. There will be additional small events for holidays around the world."
+                question: "Y a-t-il des événements en jeu comme les fêtes saisonnières ou les tournois JcJ ?",
+                answer: "Absolument, oui ! Nous organisons à la fois des <span class='font-bold'>événements saisonniers de type Blizzard</span> (comme la Sanssaint, le Voile d'hiver) et des <span class='font-bold'>événements personnalisés</span>, incluant des tournois, des chasses au trésor, des courses de boss mondiaux, et plus encore — tous avec des récompenses cosmétiques ou d'apparat. Il y aura aussi d'autres petits événements pour les jours fériés dans le monde entier."
             },
             {
-                question: "Will there be weekly challenges or server-wide goals?",
-                answer: "All challenges and goals on a server-wide level will take place in our online leaderboards. We hope to continue expanding on these to create as much competition & boasting rights as possible."
+                question: "Y aura-t-il des défis hebdomadaires ou des objectifs à l'échelle du serveur ?",
+                answer: "Tous les défis et objectifs à l'échelle du serveur se dérouleront dans nos classements en ligne. Nous espérons continuer à les développer pour créer le plus de compétition et de gloire possible."
             },
             {
-                question: "Will gear/achievements be reset between seasons?",
-                answer: "We will be following Blizzard’s progression path, so there will be no gear or achievement resets while progressing through seasons or patches. When we hit the end of progression, we may begin to spice things up, but that will be up to the community."
+                question: "L'équipement et les hauts faits seront-ils réinitialisés entre les saisons ?",
+                answer: "Nous suivrons le chemin de progression de Blizzard, il n'y aura donc aucune réinitialisation de l'équipement ou des hauts faits pendant la progression à travers les saisons ou les patchs. Lorsque nous atteindrons la fin de la progression, nous pourrions commencer à pimenter les choses, mais cela dépendra de la communauté."
             }
         ]
     },
 
     faqMonetization: {
-        title: "Monetization & Store",
+        title: "Monétisation et boutique",
         questions: [
             {
-                question: "Is Proudmoore free to play?",
-                answer: "Yes. Proudmoore is <span class='font-bold'>100% free to play</span>, no P2W, no hidden fees, no purchase required to access any content."
+                question: "Proudmoore est-il gratuit ?",
+                answer: "Oui. Proudmoore est <span class='font-bold'>100 % gratuit</span>, sans P2W, sans frais cachés et sans achat requis pour accéder à n'importe quel contenu."
             },
             {
-                question: "Is there a vanity or service shop?",
-                answer: "Yes, we will have optional donations and shops. No P2W. Players will be able to earn anything in donation shops without ever donating."
+                question: "Y a-t-il une boutique de vanité ou de services ?",
+                answer: "Oui, nous aurons des dons optionnels et des boutiques. Pas de 'Payer pour gagner' (P2W). Les joueurs pourront gagner tout ce qui se trouve dans les boutiques de dons sans jamais avoir à faire de donation."
             },
             {
-                question: "Are there cosmetic or QoL perks for donors?",
-                answer: "We will offer a number of cosmetic and QoL perks for donors. We want to emphasize here that donating on Proudmoore is not intended to create an “upper class” of players with unique advantages not available to players. Every single thing in our shop will be available to players by playing the game. Our shop is for players who want to support our project, and a majority of the funding gained from it goes directly back into the community."
+                question: "Y a-t-il des avantages cosmétiques ou de qualité de vie pour les donateurs ?",
+                answer: "Nous offrirons un certain nombre d'avantages cosmétiques et de qualité de vie aux donateurs. Nous tenons à souligner que faire un don sur Proudmoore n'est pas destiné à créer une 'classe supérieure' de joueurs avec des avantages uniques non disponibles pour les autres joueurs. Absolument tout ce qui se trouve dans notre boutique sera accessible aux joueurs simplement en jouant au jeu. Notre boutique est destinée aux joueurs qui souhaitent soutenir notre projet, et la majorité des fonds collectés est directement réinvestie dans la communauté."
             },
             {
-                question: "Is the shop only cosmetic, or does it have boosts?",
-                answer: "The shop is <span class='font-bold'>strictly cosmetic and utility-based</span>. No gear, power, or progression can be purchased. We are committed to <span class='font-bold'>no pay-to-win</span>. Ever. We are the only Cataclysm private server that offers this, and we plan to keep it that way."
+                question: "La boutique est-elle uniquement cosmétique, ou propose-t-elle des boosts ?",
+                answer: "La boutique est <span class='font-bold'>strictement axée sur les cosmétiques et les utilitaires</span>. Aucun équipement, aucune puissance, ni aucune progression ne peuvent y être achetés. Nous nous engageons à <span class='font-bold'>ne jamais être pay-to-win</span>. Nous sommes le seul serveur privé Cataclysm à offrir cela, et nous prévoyons de le rester."
             },
             {
                 question: "Are transmogs available without donating?",
