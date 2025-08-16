@@ -3,6 +3,8 @@
 Refactor of the official [Proudmoore.gg](https://proudmoore.gg/) website, originally built with WordPress.  
 🎯 Goal: migrate to **Vue.js** for a fully functional **MVP** as quickly as possible, with all the current live content.
 
+Preview on the ongoing work : [Proudmoore.dev.gg](https://www.wildtransfer.fr/)
+
 Afterwards, progressively add new features with:
 
 - **Node.js/Express** backend
