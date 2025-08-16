@@ -11,7 +11,7 @@ const ratesComment = computed(() => t('ratesComment'))
 </script>
 
 <template>
-    <section class="flex flex-col items-center justify-center mb-10 mt-[-1rem]">
+    <section class="flex flex-col items-center justify-center mb-10 mt-[-1rem] mx-8">
         <div id="rate-animation" class="lg:text-[11.5rem]">3X</div>
         <div id="rates-frame">
             <ul class="text-center" v-html="rates"></ul>

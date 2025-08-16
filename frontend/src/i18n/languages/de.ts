@@ -5,7 +5,7 @@ const deTranslation = {
         home: "Startseite",
         about: "Was ist Proudmoore eigentlich?",
         features: "Besonderheiten & Raten",
-        timeline: "Launch Timeline & Dates",
+        timeline: "Startplan & Termine",
         discord: "Werde Teil der Community",
         faq: "Häufig gestellte Fragen",
         legal: "Rechtliche Hinweise & Spielerrechte",
