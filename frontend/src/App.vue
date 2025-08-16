@@ -25,7 +25,7 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
     <main class="flex-grow pl-[300px]">
       <Message severity="warn" class="fixed top-10 right-10 z-50 max-w-[600px] !bg-[#c49407]" v-if="isDev">
         <div class="text-white">
-          <p class="font-bold">Development Version</p>
+          <p class="font-bold">⚠️ Development Version - Work In Progress </p>
           <p>This is a development build of the website and not the production version.</p>
         </div>
       </Message>
