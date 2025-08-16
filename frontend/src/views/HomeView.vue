@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import FaqView from '@/components/Home/FaqView.vue';
 import FeaturesView from '@/components/Home/FeaturesView.vue';
 import HeroView from '@/components/Home/HeroView.vue';
 import JoinCommunityView from '@/components/Home/JoinCommunityView.vue';
@@ -18,5 +19,6 @@ const { t } = useI18n();
         <FeaturesView />
         <TimelineView />
         <JoinCommunityView />
+        <FaqView />
     </section>
 </template>

@@ -105,7 +105,7 @@ onMounted(() => {
                 <li><a class="font-lora" href="#about" v-html="t('nav.about')"></a></li>
                 <li><a class="font-lora" href="#features" v-html="t('nav.features')"></a></li>
                 <li><a class="font-lora" href="#timeline" v-html="t('nav.timeline')"></a></li>
-                <li><a class="font-lora" href="#discord" v-html="t('nav.discord')"></a></li>
+                <li><a class="font-lora" href="#community" v-html="t('nav.discord')"></a></li>
                 <li><a class="font-lora" href="#faq" v-html="t('nav.faq')"></a></li>
                 <li><a class="font-lora" href="#legal" v-html="t('nav.legal')"></a></li>
                 <li><a class="font-lora" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" v-html="t('nav.appeal')"></a></li>

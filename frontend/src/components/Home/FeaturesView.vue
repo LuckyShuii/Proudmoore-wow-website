@@ -12,7 +12,7 @@ const activeTab = ref('features');
 </script>
 
 <template>
-    <section class="flex flex-col w-full bg-[url('/webp/features-bg.webp')] bg-cover bg-center bg-no-repeat items-center py-20">
+    <section id="features" class="flex flex-col w-full bg-[url('/webp/features-bg.webp')] bg-cover bg-center bg-no-repeat items-center py-20">
         <div class="separator w-[77%] mt-[-1.8rem] mb-[2rem]"></div>
         <h3 class="font-marcellus text-[32px] mb-[1rem] font-[600]">{{ t('features.title') }}</h3>
         <p class="mb-[1.3rem] mt-0 text-center">{{ t('features.description') }}</p>
