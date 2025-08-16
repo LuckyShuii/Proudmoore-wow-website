@@ -1,4 +1,4 @@
-const enTranslation = {
+const esTranslation = {
     welcome: "Welcome to the Proudmoore WoW Website",
 
     nav: {
@@ -443,4 +443,4 @@ const enTranslation = {
     bugFixesComment: "Yeah. We know what we're doing."
 };
 
-export default enTranslation;
+export default esTranslation;

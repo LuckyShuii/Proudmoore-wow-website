@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import FlipCardsView from './FlipCardsView.vue';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 
 const { t, tm } = useI18n();
 
@@ -12,7 +12,7 @@ interface Feature {
     isFav: boolean;
 }
 
-const featuresList = ref<Feature[]>(tm('features.items'))
+const featuresList = computed<Feature[]>(() => tm('features.items'))
 
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import CountUpView from '@/components/CountUpView.vue';
 
@@ -8,7 +8,7 @@ interface BugFix { title: string; description: string; }
 const { tm, t } = useI18n();
 const i18n = useI18n({ useScope: 'global' });
 
-const bugFixesStats = ref<BugFix[]>(tm('bugFixes'));
+const bugFixesStats = computed<BugFix[]>(() => tm('bugFixes'));
 
 // [0] core revisions, [1] database, [2] years
 const stats = ref<number[]>([41655, 10228, 17]);

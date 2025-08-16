@@ -1,54 +1,54 @@
-const enTranslation = {
+const deTranslation = {
     welcome: "Welcome to the Proudmoore WoW Website",
 
     nav: {
-        home: "Home",
-        about: "What is Proudmoore?",
-        features: "Features & Rates",
+        home: "Startseite",
+        about: "Was ist Proudmoore eigentlich?",
+        features: "Besonderheiten & Raten",
         timeline: "Launch Timeline & Dates",
-        discord: "Join the Community",
-        faq: "Frequently Asked Questions",
-        legal: "Legality & Player Rights",
-        appeal: "Discord Ban Appeals"
+        discord: "Werde Teil der Community",
+        faq: "Häufig gestellte Fragen",
+        legal: "Rechtliche Hinweise & Spielerrechte",
+        appeal: "Discord-Entbannungsantrag"
     },
 
-    copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in partnership with TwinStar-WoW</span>. Not affiliated with Blizzard Entertainment. All rights reserved.",
-    copyrightExtraWarning: "The copyright in this website is owned by proudmoore.gg and its respective authors except trademarks and other items which are the properties of their respective owners. All rights reserved. Copying, modifying, transferring or distribution of the website's content in any form is not allowed without the permission of proudmoore.gg.",
+    copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in Partnerschaft mit TwinStar-WoW</span>. Steht in keinem Zusammenhang mit Blizzard Entertainment. Alle Rechte vorbehalten.",
+    copyrightExtraWarning: "Das Urheberrecht an dieser Website liegt bei proudmoore.gg und den jeweiligen Autoren, mit Ausnahme von Marken und anderen Elementen, die Eigentum ihrer jeweiligen Inhaber sind. Alle Rechte vorbehalten. Das Kopieren, Ändern, Weitergeben oder Verteilen von Inhalten dieser Website in jeglicher Form ist ohne die Zustimmung von proudmoore.gg nicht gestattet.",
 
-    videoDescription: "A new era of Cataclysm is coming…",
+    videoDescription: "Eine neue Ära des Cataclysm beginnt…",
 
-    descriptionTitle: "What is Proudmoore?",
-    descriptionText: "Proudmoore is a <span class='italic'>handcrafted</span> Cataclysm server — built for players who want a modern experience that still feels like OG World of Warcraft.<br><br>No queues. No Pay-to-Win. No retail <span class='font-extrabold'>bloat</span>.<br>Just smooth PvP, fully scripted PVE content, and a fresh start that respects your time.<br><br>If you’ve played private servers before, you’ll feel the difference.<br>If you haven’t — <span class='font-extrabold'>this is where to start.</span>",
+    descriptionTitle: "Was ist Proudmoore eigentlich?",
+    descriptionText: "Proudmoore ist ein <span class='italic'>handgefertigter</span> Cataclysm-Server — für Spieler, die ein modernes Erlebnis wollen, das sich trotzdem nach OG World of Warcraft anfühlt.<br><br>Keine Warteschlangen. Kein Pay-to-Win. Kein unnötiger <span class='font-extrabold'>Ballast</span> wie im offiziellen WoW.<br>Nur flüssiges PvP, vollständig geskriptete PvE-Inhalte und ein Neustart, der deine Zeit respektiert.<br><br>Wenn du schon private Server gespielt hast, wirst du den Unterschied spüren.<br>Wenn nicht — <span class='font-extrabold'>hier ist der perfekte Startpunkt.</span>",
 
     features: {
-        title: "Features & Rates",
-        description: "Discover all the core gameplay features, our server rates, and the many fixes that make Proudmoore unique.",
+        title: "Besonderheiten & Serverraten",
+        description: "Entdecke alle Kern-Spielmechaniken, unsere Serverraten und die vielen Anpassungen, die Proudmoore einzigartig machen.",
         nav: {
-            features: "Features",
-            rates: "Rates",
-            bugfixes: "Bug Fixes"
+            features: "Besonderheiten",
+            rates: "Raten",
+            bugfixes: "Fehlerbehebungen"
         },
         items: [
-            { "id": "mythicPlus", "title": "Mythic+ Dungeons", "description": "Experience Mythic+ dungeons with time-based challenges & increasing difficulty.", isFav: 1 },
-            { "id": "soloQueue", "title": "Solo Queue Arena", "description": "Queue on your own for arenas without needing a premade team.", isFav: 1 },
-            { "id": "crossFaction", "title": "Full Cross-Faction", "description": "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc).", isFav: 1 },
-            { "id": "transmogrification", "title": "Full Transmogrification", "description": "Customize your look completely with full transmogrification options. (No limits)", isFav: 1 },
-            { "id": "progressiveContent", "title": "Progressive Content", "description": "Content is released in phases, replicating the original Cataclysm progression.", isFav: 0 },
-            { "id": "casualRaid", "title": "Casual Raid Difficulty", "description": "More forgiving raid difficulties for casual and semi-hardcore players.", isFav: 1 },
-            { "id": "battlegroundLeveling", "title": "Battleground Leveling", "description": "Maximizing the ways you can level starting at level 10.", isFav: 1 },
-            { "id": "weekendEvents", "title": "Weekend Events", "description": "Enjoy weekend-only events that boost rewards and rates.", isFav: 0 },
-            { "id": "racialSwap", "title": "Racial Trait Swapping", "description": "Customize your racial traits to suit your build.", isFav: 0 },
-            { "id": "xpRate", "title": "Adjustable XP Rates", "description": "Choose how fast you want to level with adjustable experience gain, from 100% to 0%.", isFav: 0 },
-            { "id": "mopArena", "title": "MoP Arena Teams System", "description": "Use Mists of Pandaria-style arena teams, prioritizing personal rating over team rating.", isFav: 0 },
-            { "id": "accountWide", "title": "Account Wide Mounts & Companions", "description": "Earn and share vanity mounts & companions across all characters on your account.", isFav: 0 },
-            { "id": "antiBot", "title": "Modern Anti-Bot & Anti-Gold Seller Systems", "description": "Aggressive systems will prevent botting and gold selling like no other server.", isFav: 0 },
-            { "id": "dualSpec", "title": "Early & Free Dual Spec", "description": "Dual spec is unlocked from level 10 at no cost.", isFav: 0 },
-            { "id": "automaticSpell", "title": "Automatic Class Spell Learning", "description": "No need to visit trainers — learn abilities automatically on level-up.", isFav: 0 },
-            { "id": "catchupMecanics", "title": "Catch-Up Mechanics", "description": "Catch up quickly with systems designed to help new players jumping in after launch.", isFav: 0 },
-            { "id": "gatheringProfessions", "title": "Dynamic Gathering Professions", "description": "Gathering nodes will prioritize both economic stability and zone population density.", isFav: 0 },
-            { "id": "lootRules", "title": "Fair Loot Rules", "description": "Fair loot rules across all content to reduce ninja-looting.", isFav: 0 },
-            { "id": "altFriendly", "title": "Alt-Friendly Systems", "description": "Designed so your alts can benefit from account progress.", isFav: 0 },
-            { "id": "playerFirst", "title": "Player-First GameMaster Support", "description": "Player-First GameMaster Support. Our team prioritizes players & the community in every policy we implement.", isFav: 0 }
+            { "id": "mythicPlus", "title": "Mythische Dungeons", "description": "Erlebe Mythische Dungeons mit zeitbasierten Herausforderungen & steigendem Schwierigkeitsgrad", isFav: 1 },
+            { "id": "soloQueue", "title": "Arena Solo-Warteschlange", "description": "Melde dich Solo für die Arena an, ohne ein vorgefertigtes Team zu benötigen.", isFav: 1 },
+            { "id": "crossFaction", "title": "Komplett Fraktionsübergreifend", "description": "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc).", isFav: 1 },
+            { "id": "transmogrification", "title": "Full Transmogrification", "description": "Gestalte dein Aussehen frei mit allen Transmogrifikations-Optionen – ohne Einschränkungen!", isFav: 1 },
+            { "id": "progressiveContent", "title": "Fortschreitender Spielinhalt", "description": "Die Content wird phasenweise freigeschaltet und orientieren sich am ursprünglichen Cataclysm-Fortschritt.", isFav: 0 },
+            { "id": "casualRaid", "title": "Einfacher Raid-Schwierigkeitsgrad", "description": "Einfacher Raid-Schwierigkeitsgrad", isFav: 1 },
+            { "id": "battlegroundLeveling", "title": "Leveln durch Battlegrounds.", "description": "Ab Stufe 10 erwarten dich zusätzliche Level-Möglichkeiten.", isFav: 1 },
+            { "id": "weekendEvents", "title": "Wochenend-Events", "description": "Genieße exklusive Wochenend-Events mit erhöhten Belohnungen und Raten.", isFav: 0 },
+            { "id": "racialSwap", "title": "Wechsel der Volksfähigkeiten", "description": "Passe deine Volksfähigkeiten deinem Spielstil an.", isFav: 0 },
+            { "id": "xpRate", "title": "Anpassbare Erfahrungsraten", "description": "Wähle, wie schnell du leveln willst, mit einstellbarem Erfahrungsgewinn von 0 % bis 100 %.", isFav: 0 },
+            { "id": "mopArena", "title": "Arena-Gruppen-System aus Mists of Pandaria", "description": "Verwende Arena-Gruppen im Stil von Mists of Pandaria, bei denen die persönliche Wertung Vorrang vor der Teamwertung hat.", isFav: 0 },
+            { "id": "accountWide", "title": "Accountweite Reittiere & Haustiere", "description": "Reittiere und Haustiere sind auf allen Charakteren deines Accounts verfügbar.", isFav: 0 },
+            { "id": "antiBot", "title": "Moderne Systeme gegen Bots & Gold Verkäufer", "description": "Aggressive Systeme verhindern Botting und Goldverkauf wie auf keinem anderer Server.", isFav: 0 },
+            { "id": "dualSpec", "title": "Frühe & kostenlose duale Talentspezialisierung", "description": "Die duale Talentspezialisierung wird ab Stufe 10 ohne Kosten freigeschaltet.", isFav: 0 },
+            { "id": "automaticSpell", "title": "Automatisches erlernen der Klassenfähigkeiten", "description": "Kein Besuch bei Trainern nötig – Fähigkeiten werden beim Aufleveln automatisch erlernt", isFav: 0 },
+            { "id": "catchupMecanics", "title": "Aufholmechaniken", "description": "Schnelles Aufholen dank Systemen, die neuen Spielern nach dem Start den Einstieg erleichtern.", isFav: 0 },
+            { "id": "gatheringProfessions", "title": "Dynamische Sammelberufe", "description": "Materialvorkommen werden sowohl die wirtschaftliche Stabilität als auch die Bevölkerungsdichte der Zone berücksichtigen.", isFav: 0 },
+            { "id": "lootRules", "title": "Faire Beute-Regeln", "description": "Faire Beute-Regeln für den gesamten Content, um Ninja-Looting zu reduzieren.", isFav: 0 },
+            { "id": "altFriendly", "title": "Twink freundliche Systeme", "description": "So gestaltet, dass deine Twinks vom Fortschritt deines Accounts profitieren.", isFav: 0 },
+            { "id": "playerFirst", "title": "Spielerorientierter GameMaster-Service", "description": "Spielerorientierter GameMaster-Support. Unser Team stellt Spieler & die Gemeinschaft bei jeder von uns umgesetzten Richtlinie an erste Stelle.", isFav: 0 }
         ]
     },
 
@@ -443,4 +443,4 @@ const enTranslation = {
     bugFixesComment: "Yeah. We know what we're doing."
 };
 
-export default enTranslation;
+export default deTranslation;
