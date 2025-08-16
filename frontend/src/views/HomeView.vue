@@ -12,7 +12,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <section class="bg-[#0E0E0E]">
+    <section class="bg-[#0E0E0E] mb-[-1.5rem]">
         <HeroView />
         <div class="separator"></div>
         <ServerDescriptionView />
@@ -20,5 +20,9 @@ const { t } = useI18n();
         <TimelineView />
         <JoinCommunityView />
         <FaqView />
+        <img class="bg-[#070A15] mt-[-2rem] w-full" src="/webp/footer-corner.png" alt="Dark shadow devider imager" />
+        <div class="pt-[3rem] pb-[5rem] w-full flex justify-center items-center bg-black">
+            <p class="w-full max-w-[1140px] italic px-[20px]" v-html="t('copyrightExtraWarning')"></p>
+        </div>
     </section>
 </template>

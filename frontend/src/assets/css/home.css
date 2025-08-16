@@ -503,3 +503,76 @@ body, html {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/**
+  * FAQ Section
+  */
+
+.p-accordionheader,
+.p-accordioncontent-content  {
+    background: none !important;
+    color: white !important;
+    font-weight: 300 !important;
+}
+
+.p-accordionheader {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 0.8rem 1rem !important;
+}
+
+.p-accordioncontent-content {
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.p-accordionheader:hover {
+    background: rgba(0, 140, 255, 0.1) !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+.faq-title-section {
+    font-size: 1.56rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.faq-title {
+    padding: 0 .8em 0 0;
+    margin: 1.2rem 0;
+}
+
+.faq-separator {
+    flex: 1 1 auto;
+    background-color: #fff;
+    height: 1px;
+    min-width: 10%;
+    position: relative;
+}
+
+.content-p-accordion ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+}
+
+.content-p-accordion li {
+    margin-bottom: 1.5rem;
+}
+
+.content-p-accordion li::marker {
+    color: #ffffff;
+    font-weight: bold;
+    content: "•   ";
+}
+
+.additional-info-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}

@@ -104,7 +104,7 @@ const enTranslation = {
         questions: [
             {
                 question: "What are the XP, gold, rep, and drop rates?",
-                answer: "We designed Proudmoore’s rates around <strong>balancing casual gameplay and long-term sustainability</strong>. Here’s how each one fits into that vision:<br><ul><li><strong>XP (1x–3x, toggleable):</strong><br>Leveling should feel rewarding, not tedious. With 3x default rates, players who can only play on weekends or casually here and there should make meaningful progression without feeling left behind. There will be additional bonuses to this as well, specifically on weekends and holidays. We have a toggle for xp rates, so you can choose the pace you want to take. Some want to get through leveling as fast as possible, others want to experience leveling to the fullest, we give you the freedom to choose.</li><li><strong>Reputation (1x with weekend bonuses):</strong><br>Rep grinds define Cataclysm’s endgame. We keep the baseline Blizzlike to preserve progression value but offer weekend boosts to ease the burden for working players.</li><li><strong>Loot & Gold (1x):</strong><br>Gold inflation kills economies. We keep loot and gold at 1x to maintain item value, prevent bot abuse, and ensure professions and player trading matter. It also ensures vendor and repair costs retain meaning over time.</li><li><strong>Rare Materials (~1.2x in Heroics/Raids):</strong><br>Slightly increasing rare material drops in challenging content rewards group play and supports crafting progression without flooding the market. It also makes dungeons feel more rewarding over time.</li><li><strong>Professions (1x with weekend XP bonuses):</strong><br>Gathering and crafting should be meaningful, not skippable. Keeping 1x ensures steady progression, while weekend boosts give a natural catch-up window for players with limited time.</li><li><strong>Honor (1.25x with weekend bonuses):</strong><br>PvP gearing shouldn’t be a second job. Slightly higher Honor gain respects your time while keeping gear acquisition paced enough to support healthy seasons and ladder progression. Bonuses to Honor Rates will be substantially focused on prime-time to encourage large queues.</li><li><strong>Justice / Valor Points (1x with weekly activity bonuses):</strong><br>PvE currency remains at 1x to preserve reward pacing, but active players are rewarded through weekly activity bonuses that speed things up without trivializing content.</li></ul>",
+                answer: "We designed Proudmoore’s rates around <span class='font-bold'>balancing casual gameplay and long-term sustainability</span>. Here’s how each one fits into that vision:<br><ul><li><span class='font-bold'>XP (1x–3x, toggleable):</span><br>Leveling should feel rewarding, not tedious. With 3x default rates, players who can only play on weekends or casually here and there should make meaningful progression without feeling left behind. There will be additional bonuses to this as well, specifically on weekends and holidays. We have a toggle for xp rates, so you can choose the pace you want to take. Some want to get through leveling as fast as possible, others want to experience leveling to the fullest, we give you the freedom to choose.</li><li><span class='font-bold'>Reputation (1x with weekend bonuses):</span><br>Rep grinds define Cataclysm’s endgame. We keep the baseline Blizzlike to preserve progression value but offer weekend boosts to ease the burden for working players.</li><li><span class='font-bold'>Loot & Gold (1x):</span><br>Gold inflation kills economies. We keep loot and gold at 1x to maintain item value, prevent bot abuse, and ensure professions and player trading matter. It also ensures vendor and repair costs retain meaning over time.</li><li><span class='font-bold'>Rare Materials (~1.2x in Heroics/Raids):</span><br>Slightly increasing rare material drops in challenging content rewards group play and supports crafting progression without flooding the market. It also makes dungeons feel more rewarding over time.</li><li><span class='font-bold'>Professions (1x with weekend XP bonuses):</span><br>Gathering and crafting should be meaningful, not skippable. Keeping 1x ensures steady progression, while weekend boosts give a natural catch-up window for players with limited time.</li><li><span class='font-bold'>Honor (1.25x with weekend bonuses):</span><br>PvP gearing shouldn’t be a second job. Slightly higher Honor gain respects your time while keeping gear acquisition paced enough to support healthy seasons and ladder progression. Bonuses to Honor Rates will be substantially focused on prime-time to encourage large queues.</li><li><span class='font-bold'>Justice / Valor Points (1x with weekly activity bonuses):</span><br>PvE currency remains at 1x to preserve reward pacing, but active players are rewarded through weekly activity bonuses that speed things up without trivializing content.</li></ul>",
                 additionalInfoTitle: "In short:",
                 additionalInfoText: "We want progression to feel <span class='italic'>earned</span> but <span class='italic'>not exhausting</span>. These rates avoid the burnout of 1x-only grinds while steering clear of retail-level handouts. You’ll feel rewarded for your time and the economy will feel alive for months to come, unlike other projects."
             },
@@ -114,7 +114,7 @@ const enTranslation = {
             },
             {
                 question: "What's the status of Rated BGs, Arenas, and Solo Queue?",
-                answer: "All <strong>Rated PvP</strong> modes will be released with season launch, at the same time as raid releases. <strong>Unrated</strong> Solo Queue for Arenas is enabled from launch as an additional leveling path, as well as <strong>Unrated Battlegrounds</strong>. Rated Battlegrounds are fully functional and will be tied into seasonal rewards."
+                answer: "All <span class='font-bold'>Rated PvP</span> modes will be released with season launch, at the same time as raid releases. <span class='font-bold'>Unrated</span> Solo Queue for Arenas is enabled from launch as an additional leveling path, as well as <span class='font-bold'>Unrated Battlegrounds</span>. Rated Battlegrounds are fully functional and will be tied into seasonal rewards."
             },
             {
                 question: "Are there cross-faction BGs/dungeons?",
@@ -158,7 +158,7 @@ const enTranslation = {
             },
             {
                 question: "Will we see Timewalking Mythic+ equivalents, or class tuning?",
-                answer: "Yes — Proudmoore features a homegrown <strong>Mythic+ system</strong>, complete with scaling difficulty, affixes, and leaderboard tracking. Class tuning will be addressed at the end of content progression. We may possibly tune some end-game gear for Arenas and Rated Battlegrounds. Timewalking is under consideration as part of future seasonal content."
+                answer: "Yes — Proudmoore features a homegrown <span class='font-bold'>Mythic+ system</span>, complete with scaling difficulty, affixes, and leaderboard tracking. Class tuning will be addressed at the end of content progression. We may possibly tune some end-game gear for Arenas and Rated Battlegrounds. Timewalking is under consideration as part of future seasonal content."
             }
         ],
     },
@@ -192,7 +192,7 @@ const enTranslation = {
             },
             {
                 question: "Can I play on Steam Deck or Linux?",
-                answer: "Yes! Proudmoore runs great through <strong>Proton (Steam Deck)</strong> and <strong>Wine (Linux)</strong>. Community guides will be available post-launch for setup walkthroughs."
+                answer: "Yes! Proudmoore runs great through <span class='font-bold'>Proton (Steam Deck)</span> and <span class='font-bold'>Wine (Linux)</span>. Community guides will be available post-launch for setup walkthroughs."
             },
             {
                 question: "Will mobile clients like WoW Mini or Android work?",
@@ -240,7 +240,7 @@ const enTranslation = {
         questions: [
             {
                 question: "Is Discord required to participate in events or support?",
-                answer: "No, but it’s <strong>highly recommended</strong>. Most announcements and support updates will happen on Discord first. You don’t need to talk or join voice — just being in the server keeps you in the loop."
+                answer: "No, but it’s <span class='font-bold'>highly recommended</span>. Most announcements and support updates will happen on Discord first. You don’t need to talk or join voice — just being in the server keeps you in the loop."
             },
             {
                 question: "Can I link my Discord or email to recover accounts?",
@@ -256,7 +256,7 @@ const enTranslation = {
             },
             {
                 question: "Do you support streamers or content creators?",
-                answer: "Absolutely. We offer perks for creators. Apply through the <strong>Creator Program (TBA)</strong> channel on Discord."
+                answer: "Absolutely. We offer perks for creators. Apply through the <span class='font-bold'>Creator Program (TBA)</span> channel on Discord."
             },
             {
                 question: "Will there be a system to report players?",
@@ -270,7 +270,7 @@ const enTranslation = {
         questions: [
             {
                 question: "Are there in-game events like seasonal holidays or PvP tournaments?",
-                answer: "Absolutely, yes! We host both <strong>Blizzard-style seasonal events</strong> (like Hallow’s End, Winter Veil) and <strong>custom events</strong>, including tournaments, scavenger hunts, world boss races, and more — all with cosmetic or vanity rewards. There will be additional small events for holidays around the world."
+                answer: "Absolutely, yes! We host both <span class='font-bold'>Blizzard-style seasonal events</span> (like Hallow’s End, Winter Veil) and <span class='font-bold'>custom events</span>, including tournaments, scavenger hunts, world boss races, and more — all with cosmetic or vanity rewards. There will be additional small events for holidays around the world."
             },
             {
                 question: "Will there be weekly challenges or server-wide goals?",
@@ -288,7 +288,7 @@ const enTranslation = {
         questions: [
             {
                 question: "Is Proudmoore free to play?",
-                answer: "Yes. Proudmoore is <strong>100% free to play</strong>, no P2W, no hidden fees, no purchase required to access any content."
+                answer: "Yes. Proudmoore is <span class='font-bold'>100% free to play</span>, no P2W, no hidden fees, no purchase required to access any content."
             },
             {
                 question: "Is there a vanity or service shop?",
@@ -300,11 +300,11 @@ const enTranslation = {
             },
             {
                 question: "Is the shop only cosmetic, or does it have boosts?",
-                answer: "The shop is <strong>strictly cosmetic and utility-based</strong>. No gear, power, or progression can be purchased. We are committed to <strong>no pay-to-win</strong>. Ever. We are the only Cataclysm private server that offers this, and we plan to keep it that way."
+                answer: "The shop is <span class='font-bold'>strictly cosmetic and utility-based</span>. No gear, power, or progression can be purchased. We are committed to <span class='font-bold'>no pay-to-win</span>. Ever. We are the only Cataclysm private server that offers this, and we plan to keep it that way."
             },
             {
                 question: "Are transmogs available without donating?",
-                answer: "<strong>Yes</strong>. We have made the decision to make unlimited & full transmog free to all players. Players can choose to donate for transmogs, but these are optional and not restricted to only paying players. We are the only Cataclysm private server that offers this for free."
+                answer: "<span class='font-bold'>Yes</span>. We have made the decision to make unlimited & full transmog free to all players. Players can choose to donate for transmogs, but these are optional and not restricted to only paying players. We are the only Cataclysm private server that offers this for free."
             },
             {
                 question: "Are there lootboxes or gamble systems?",
@@ -330,7 +330,7 @@ const enTranslation = {
             },
             {
                 question: "Will GMs moderate world chat or stay hands-off?",
-                answer: "Moderation will be <strong>light, but active</strong>. We aim for a free, fun environment. There will not be any “big brother” watching down on you here. Any conversation that goes too far will result in a warning from a GM privately. Racism, hate speech, spam, or harassment will be removed quickly. GMs are there to support the community, not police it unnecessarily."
+                answer: "Moderation will be <span class='font-bold'>light, but active</span>. We aim for a free, fun environment. There will not be any “big brother” watching down on you here. Any conversation that goes too far will result in a warning from a GM privately. Racism, hate speech, spam, or harassment will be removed quickly. GMs are there to support the community, not police it unnecessarily."
             },
             {
                 question: "What's your policy on toxicity and harassment?",
@@ -338,7 +338,7 @@ const enTranslation = {
             },
             {
                 question: "Can I advertise my stream/guild in global chat?",
-                answer: "Yes, <strong>within reason</strong>. Occasional guild recruitment or stream announcements are allowed in moderation. Repeating ads or spamming global chat will result in mutes or timeouts. Be respectful of the space, and of the players. If you post your ads and players begin getting vocally upset, and you continue anyways, we will see your ad as disruptive to the community, within reason."
+                answer: "Yes, <span class='font-bold'>within reason</span>. Occasional guild recruitment or stream announcements are allowed in moderation. Repeating ads or spamming global chat will result in mutes or timeouts. Be respectful of the space, and of the players. If you post your ads and players begin getting vocally upset, and you continue anyways, we will see your ad as disruptive to the community, within reason."
             }
         ]
     },
@@ -348,7 +348,7 @@ const enTranslation = {
         questions: [
             {
                 question: "Can I transfer a character from another private server?",
-                answer: "No, we <strong>do not accept transfers from other private servers</strong>. Proudmoore is a fresh, fair start for everyone. Allowing external transfers would compromise integrity and balance. Other Cataclysm projects have P2W stores, and accepting transfers would mean accepting P2W players."
+                answer: "No, we <span class='font-bold'>do not accept transfers from other private servers</span>. Proudmoore is a fresh, fair start for everyone. Allowing external transfers would compromise integrity and balance. Other Cataclysm projects have P2W stores, and accepting transfers would mean accepting P2W players."
             },
             {
                 question: "Will characters ever carry over to future realms?",
@@ -364,7 +364,7 @@ const enTranslation = {
             },
             {
                 question: "Will you offer paid services like server transfer, appearance change, etc.?",
-                answer: "We will offer <strong>optional character services</strong> like name change, appearance change, and faction swap. All services are cosmetic or identity-based — no gameplay boosts or P2W."
+                answer: "We will offer <span class='font-bold'>optional character services</span> like name change, appearance change, and faction swap. All services are cosmetic or identity-based — no gameplay boosts or P2W."
             }
         ]
     },
