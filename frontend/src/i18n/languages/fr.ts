@@ -5,10 +5,10 @@ const enTranslation = {
         home: "Accueil",
         about: "Qu'est-ce que Proudmoore ?",
         features: "Fonctionnalités & Taux",
-        timeline: "Launch Timeline & Dates",
+        timeline: "Délais et dates de lancements",
         discord: "Rejoindre la Communauté",
-        faq: "Légalité & Droits des joueurs",
-        legal: "égalité & Droits des joueurs",
+        faq: "Foire Aux Questions",
+        legal: "Légalité & Droits des joueurs",
         appeal: "Appels de bannissement Discord"
     },
 
@@ -153,64 +153,64 @@ const enTranslation = {
                 answer: "La double spécialisation est automatiquement activée gratuitement à partir du niveau 10."
             },
             {
-                question: "Are there custom zones or events?",
-                answer: "No custom zones, but there will be plenty of events. We will explore the more “custom” parts of Cataclysm when we hit end of progression and players begin to get bored of 4.3.4 content."
+                question: "Existe-t-il des zones ou des événements personnalisés ?",
+                answer: "Pas de zones personnalisées, mais il y aura de nombreux événements. Nous explorerons les parties les plus 'personnalisées' de Cataclysm lorsque nous atteindrons la fin de la progression et que les joueurs commenceront à s'ennuyer du contenu 4.3.4."
             },
             {
-                question: "Will we see Timewalking Mythic+ equivalents, or class tuning?",
-                answer: "Yes — Proudmoore features a homegrown <span class='font-bold'>Mythic+ system</span>, complete with scaling difficulty, affixes, and leaderboard tracking. Class tuning will be addressed at the end of content progression. We may possibly tune some end-game gear for Arenas and Rated Battlegrounds. Timewalking is under consideration as part of future seasonal content."
+                question: "Verra-t-on des équivalents de Timewalking Mythic+ ou un ajustement des classes ?",
+                answer: "Oui - Proudmoore propose un <span class='font-bold'>système Mythique+</span> fait maison, avec une difficulté évolutive, des affixes et un suivi du classement. L'équilibrage des classes sera abordé à la fin de la progression du contenu. Nous pourrions éventuellement ajuster certains équipements de fin de jeu pour les arènes et les champs de bataille cotés. Le raid de Marcheurs du temps est à l'étude dans le cadre du futur contenu saisonnier."
             }
         ],
     },
 
     faqTechnical: {
-        title: "Technical Questions",
+        title: "Questions techniques",
         questions: [
             {
-                question: "What client do I need? Where do I download it?",
-                answer: "Any 4.3.4 client will work with Proudmoore. You can find this via Google. Additionally, we will be providing download links for our own 4.3.4 client, closer to launch date."
+                question: "Quel client ai-je besoin ? Où puis-je le télécharger ?",
+                answer: "N'importe quel client 4.3.4 fonctionnera avec Proudmoore. Vous pouvez en trouver un via Google. De plus, nous fournirons nos propres liens de téléchargement pour notre client 4.3.4, à l'approche de la date de lancement."
             },
             {
-                question: "Is there a launcher? Patcher?",
-                answer: "No. Without getting too deep in the weeds, a launcher or patcher is an executable program, an .exe. Any custom .exe a private server produces will likely be unsigned, meaning it does not have a “digital certificate” ensuring it is safe. This is why most projects with a custom .exe tell you to “run the program as administrator”, because it bypasses any security protocols that will trigger when running an unsigned .exe. In layman’s terms, it is not safe and there is no guarantee on what you are installing and what access it has to your computer. Proudmoore will never encourage players to download an use an unsigned .exe."
+                question: "Y a-t-il un lanceur ? Un patcher ?",
+                answer: "Non. Pour ne pas entrer dans les détails techniques, un lanceur ou un patcher est un programme exécutable, un fichier .exe. Tout fichier .exe personnalisé qu'un serveur privé produit ne sera probablement pas signé, ce qui signifie qu'il ne possède pas de 'certificat numérique' garantissant qu'il est sûr. C'est pourquoi la plupart des projets avec un fichier .exe personnalisé vous demandent de 'lancer le programme en tant qu'administrateur', car cela contourne les protocoles de sécurité qui se déclenchent lors de l'exécution d'un fichier .exe non signé. En termes simples, ce n'est pas sûr et il n'y a aucune garantie sur ce que vous installez et sur l'accès que cela a à votre ordinateur. Proudmoore n'encouragera jamais les joueurs à télécharger et à utiliser un fichier .exe non signé."
             },
             {
-                question: "Can I use my own Cataclysm client?",
-                answer: "Yes. Some clients may have modified MPQ patches, which can possibly disrupt your game. To assure you do not have any graphic issues or glitches, we recommend using a clean & fresh client."
+                question: "Puis-je utiliser mon propre client Cataclysm ?",
+                answer: "Oui. Certains clients peuvent avoir des patchs MPQ modifiés, ce qui peut potentiellement perturber votre jeu. Pour vous assurer de ne pas avoir de problèmes graphiques ou de bugs, nous vous recommandons d'utiliser un client propre et vierge."
             },
             {
-                question: "Is this server hosted on Each Coast, EU, or elsewhere?",
-                answer: "Our server is hosted in Europe."
+                question: "Ce serveur est-il hébergé sur la côte Est, en Europe, ou ailleurs ?",
+                answer: "Notre serveur est hébergé en Europe."
             },
             {
-                question: "What are the expected latency/ping times for NA/EU/SA players?",
-                answer: "EU: 20-60ms<br><br>NA: 70-130ms<br><br>SA: 90-160ms<br><br>We’ve done extensive routing tests and CDN optimization to keep things as smooth as possible for all regions."
+                question: "Quelle est la latence/le temps de ping attendu pour les joueurs d'Amérique du Nord, d'Europe et d'Amérique du Sud ?",
+                answer: "EU : 20-60 ms<br><br>NA : 70-130 ms<br><br>SA : 90-160 ms<br><br>Nous avons effectué des tests de routage approfondis et optimisé notre CDN pour que tout soit aussi fluide que possible dans toutes les régions."
             },
             {
-                question: "What kind of anti-cheat is used?",
-                answer: "In most cases, no VPN is needed. If you’re in a region with restricted routing (e.g. Oceania or parts of Asia), a lightweight VPN may improve stability. Additionally, if you are in a region where internet is restricted, you may need a VPN in order to play."
+                question: "Quel genre de système anti-triche est utilisé ?",
+                answer: "Dans la plupart des cas, aucun VPN n'est nécessaire. Si vous êtes dans une région où le routage est restreint (par exemple, en Océanie ou dans certaines parties de l'Asie), un VPN léger peut améliorer la stabilité. De plus, si vous êtes dans une région où l'accès à Internet est restreint, vous pourriez avoir besoin d'un VPN pour jouer."
             },
             {
-                question: "Can I play on Steam Deck or Linux?",
-                answer: "Yes! Proudmoore runs great through <span class='font-bold'>Proton (Steam Deck)</span> and <span class='font-bold'>Wine (Linux)</span>. Community guides will be available post-launch for setup walkthroughs."
+                question: "Puis-je jouer sur Steam Deck ou Linux ?",
+                answer: "Oui\! Proudmoore fonctionne très bien avec \<span class='font-bold'\>Proton (Steam Deck)\</span\> et \<span class='font-bold'\>Wine (Linux)\</span\>. Des guides communautaires seront disponibles après le lancement pour vous aider à l'installation."
             },
             {
-                question: "Will mobile clients like WoW Mini or Android work?",
-                answer: "We don’t officially support mobile clients due to performance and security concerns. However, advanced users may experiment at their own risk — just be aware that support and compatibility may vary."
+                question: "Les clients mobiles tels que WoW Mini ou Android fonctionneront-ils ?",
+                answer: "Nous ne prenons pas officiellement en charge les clients mobiles en raison de préoccupations liées à la performance et à la sécurité. Cependant, les utilisateurs avancés peuvent expérimenter à leurs risques et périls — sachez simplement que le support et la compatibilité peuvent varier."
             }
         ]
     },
 
     faqAccountSecurity: {
-        title: "Account & Security",
+        title: "Compte et sécurité",
         questions: [
             {
-                question: "How do I recover a lost password or locked account?",
-                answer: "Our account panel will have a button labeled “Forgot Password”. You can use this to recover your account. If your account is locked, please reach out to our support team via Discord, fast response guaranteed."
+                question: "Comment puis-je récupérer un mot de passe perdu ou un compte verrouillé ?",
+                answer: "Notre panneau de compte aura un bouton intitulé « Mot de passe oublié ». Vous pouvez l'utiliser pour récupérer votre compte. Si votre compte est verrouillé, veuillez contacter notre équipe d'assistance via Discord, une réponse rapide est garantie."
             },
             {
-                question: "Is account sharing allowed?",
-                answer: "For the sake of security and fairness, we do not allow players to share accounts. We are players, we know how things work, especially with close friends and guilds. Account sharing will happen, we understand this, and will extend a degree of flexibility towards it. But, if we find an account is being shared for purposes of progressing competitively or staying logged in 24/7, be prepared for temporary or even permanent bans. Because of this policy, we do not have leniency for players who lose their accounts or gear from account sharing. Do it at your own risk."
+                question: "Le partage de compte est-il autorisé ?",
+                answer: "Pour des raisons de sécurité et d'équité, nous n'autorisons pas les joueurs à partager leurs comptes. Nous sommes nous-mêmes des joueurs, et nous savons comment les choses fonctionnent, surtout entre amis proches et au sein des guildes. Le partage de compte arrivera, nous le comprenons, et nous ferons preuve d'une certaine souplesse à ce sujet. Cependant, si nous découvrons qu'un compte est partagé dans le but de progresser de manière compétitive ou de rester connecté 24h/24 et 7j/7, attendez-vous à des bannissements temporaires, voire permanents. En raison de cette politique, nous ne ferons preuve d'aucune indulgence envers les joueurs qui perdent leurs comptes ou leur équipement à cause du partage de compte. Faites-le à vos propres risques."
             },
             {
                 question: "Is multiboxing allowed?",

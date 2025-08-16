@@ -1,21 +1,21 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import FaqSectionView from './Faq/FaqSectionView.vue';
 
 const { tm, t } = useI18n();
 
-const generalFaq = ref(tm('faqGeneral'));
-const faqGameplay = ref(tm('faqGameplay'));
-const faqTechnical = ref(tm('faqTechnical'));
-const faqAccountSecurity = ref(tm('faqAccountSecurity'));
-const faqCommunity = ref(tm('faqCommunity'));
-const faqEvents = ref(tm('faqEvents'));
-const faqMonetization = ref(tm('faqMonetization'));
-const faqRules = ref(tm('faqRules'));
-const faqProgression = ref(tm('faqProgression'));
-const faqDevelopment = ref(tm('faqDevelopment'));
-const faqMiscellaneous = ref(tm('faqMiscellaneous'));
+const generalFaq = computed(() => tm('faqGeneral'));
+const faqGameplay = computed(() => tm('faqGameplay'));
+const faqTechnical = computed(() => tm('faqTechnical'));
+const faqAccountSecurity = computed(() => tm('faqAccountSecurity'));
+const faqCommunity = computed(() => tm('faqCommunity'));
+const faqEvents = computed(() => tm('faqEvents'));
+const faqMonetization = computed(() => tm('faqMonetization'));
+const faqRules = computed(() => tm('faqRules'));
+const faqProgression = computed(() => tm('faqProgression'));
+const faqDevelopment = computed(() => tm('faqDevelopment'));
+const faqMiscellaneous = computed(() => tm('faqMiscellaneous'));
 </script>
 
 <template>
