@@ -1,11 +1,13 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, onBeforeUnmount, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 const i18n = useI18n({ useScope: 'global' });
 
-const op = ref();
+const STORAGE_KEY = 'pm_lang'; // localStorage key
+
+const op = ref<any>();
 const selectedLanguage = ref<{ code: string; src: string; alt: string } | null>(null);
 
 const flags = ref([
@@ -14,59 +16,68 @@ const flags = ref([
     { code: 'es', src: '/icons/es.svg', alt: 'Spanish flag icon' },
     { code: 'de', src: '/icons/de.svg', alt: 'German flag icon' },
     { code: 'cz', src: '/icons/cz.svg', alt: 'Czech flag icon' },
+    { code: 'nl', src: '/icons/nl.svg', alt: 'Dutch flag icon' },
 ]);
 
 const selectLanguageLabel = computed(() => {
     switch (i18n.locale.value) {
-        case 'fr':
-            return "Sélectionner la langue";
-        case 'en':
-            return "Select Language";
-        case 'es':
-            return "Seleccionar idioma";
-        case 'de':
-            return "Sprache auswählen";
-        case 'cz':
-            return "Vybrat jazyk";
-        default:
-            return null;
+        case 'fr': return 'Sélectionner la langue';
+        case 'en': return 'Select Language';
+        case 'es': return 'Seleccionar idioma';
+        case 'de': return 'Sprache auswählen';
+        case 'cz': return 'Vybrat jazyk';
+        case 'nl': return 'Selecteer taal';
+        default: return null;
     }
-})
+});
 
 const toggle = (event: Event) => {
-    op.value.toggle(event);
+    op.value?.toggle(event);
 };
 
 const setLanguage = (lang: string) => {
-    if (!lang || !['fr', 'en', 'es', 'de', 'cz'].includes(lang)) {
-        i18n.locale.value = 'en';
-    } else {
-        i18n.locale.value = lang;
-    }
+    const allowed = ['fr', 'en', 'es', 'de', 'cz', 'nl'];
+    i18n.locale.value = allowed.includes(lang) ? lang : 'en';
 };
 
 const selectLanguage = (lang: { code: string; src: string; alt: string }) => {
     selectedLanguage.value = lang;
     setLanguage(lang.code);
-    op.value.hide();
+
+    // persist choice
+    try {
+        localStorage.setItem(STORAGE_KEY, lang.code);
+    } catch (_) { /* ignore storage errors (e.g., private mode) */ }
+
+    op.value?.hide();
 };
 
 const handleScroll = () => {
-    if (window.scrollY > 0) {
-        op.value.hide();
-    }
+    op.value?.hide();
 };
 
-window.addEventListener('scroll', handleScroll);
-
 onMounted(() => {
-    const currentLang = i18n.locale.value;
-    const flag = flags.value.find(flag => flag.code === currentLang);
+    // restore from storage if available
+    let initial = i18n.locale.value;
+    try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) initial = saved;
+    } catch (_) { /* ignore */ }
+
+    setLanguage(initial);
+
+    const flag = flags.value.find(f => f.code === i18n.locale.value);
     selectedLanguage.value = flag || flags.value[0];
 
-    op.value.hide();
+    window.addEventListener('scroll', handleScroll);
+    op.value?.hide();
+});
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', handleScroll);
 });
 </script>
+
 
 <template>
     <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-50 flex flex-col w-[300px] py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
