@@ -98,7 +98,7 @@ onBeforeUnmount(() => {
             </Button>
 
             <!-- Popover PrimeVue -->
-            <Popover ref="op" class="w-[8rem]" dismissable closeOnEscape>
+            <Popover ref="op" class="w-[8rem] z-50" dismissable closeOnEscape>
                 <div class="flex flex-col gap-4 items-center">
                     <ul class="list-none p-0 m-0 flex flex-col">
                         <li

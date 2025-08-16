@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import Footer from '@/components/Footer.vue'
-import DesktopNavView from './components/DesktopNavView.vue';
+import NavView from './components/NavView.vue';
 import { computed, ref } from 'vue';
 
 const visible = ref(false);
@@ -23,11 +23,12 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
     <!-- Right -->
     <div class="pointer-events-none fixed top-0 right-0 w-[100px] h-full bg-[url('/webp/border-right.png')] bg-no-repeat bg-[length:100%_100%] z-50"></div>
 
-    <Drawer v-model:visible="visible" header="Drawer" class="!w-full lg:!w-[30rem] lg:!hidden" dismissable>
-      <DesktopNavView @update-visible="visible = false" />
-    </Drawer>
-
-    <DesktopNavView class="hidden lg:flex" />
+    <div class="w-full lg:w-[30rem] lg:hidden">
+      <Drawer v-model:visible="visible"showCloseIcon dismissable>
+        <NavView @update-visible="visible = false" />
+      </Drawer>
+    </div>
+    <NavView class="hidden lg:flex" />
 
     <main class="flex-grow lg:pl-[300px]">
       <Message severity="warn" class="fixed top-10 right-10 lg:right-10 z-50 lg:max-w-[600px] !bg-[#c49407]" v-if="isDev">
