@@ -192,7 +192,7 @@ const frTranslation = {
             },
             {
                 question: "Puis-je jouer sur Steam Deck ou Linux ?",
-                answer: "Oui\! Proudmoore fonctionne très bien avec \<span class='font-bold'\>Proton (Steam Deck)\</span\> et \<span class='font-bold'\>Wine (Linux)\</span\>. Des guides communautaires seront disponibles après le lancement pour vous aider à l'installation."
+                answer: "Oui! Proudmoore fonctionne très bien avec <span class='font-bold'>Proton (Steam Deck)</span> et <span class='font-bold'>Wine (Linux)</span>. Des guides communautaires seront disponibles après le lancement pour vous aider à l'installation."
             },
             {
                 question: "Les clients mobiles tels que WoW Mini ou Android fonctionneront-ils ?",

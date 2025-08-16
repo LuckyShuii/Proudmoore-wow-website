@@ -348,99 +348,99 @@ const deTranslation = {
         questions: [
             {
                 question: "Kann ich einen Charakter von einem anderen Privatserver übertragen?",
-                answer: "No, we <span class='font-bold'>do not accept transfers from other private servers</span>. Proudmoore is a fresh, fair start for everyone. Allowing external transfers would compromise integrity and balance. Other Cataclysm projects have P2W stores, and accepting transfers would mean accepting P2W players."
+                answer: "Nein, wir <span class='font-bold'>akzeptieren keine Transfers von anderen Privatservern</span>. Proudmoore startet für alle Spieler frisch und fair, externe Transfers würden die Balance und Integrität des Servers gefährden. Andere Cataclysm-Projekte haben Pay-to-Win-Shops, und Transfers von solchen Servern wären nicht vereinbar. Charaktertransfers von Athena sind jedoch erlaubt, <span class='font-bold'>aber erst nach Abschluss der Proudmoore-Progression</span>."
             },
             {
-                question: "Will characters ever carry over to future realms?",
-                answer: "Proudmoore is intended to be a permanent realm. If we do decide to launch a new realm in the future, yes, we will have a system for legacy transfers. If this is something we decide to do, please keep in mind that the stability of the fresh realms competition and fairness will be prioritized over your legacy character."
+                question: "Werden Charaktere jemals auf zukünftige Realms übertragen?",
+                answer: "Aktuell ist der einzige geplante Transfer von Athena zu Proudmoore, sobald die Progression auf Proudmoore abgeschlossen ist. Sollte die Community irgendwann einen frischen Realm wünschen, werden wir das besprechen und dann passende Transfermöglichkeiten prüfen."
             },
             {
-                question: "Is there a fresh realm planned?",
-                answer: "Directly from the administration team – we have not discussed any future realms, whatsoever. Proudmoore is our primary and only focus. We will hold space to say that there could be future realms based on our community, but that is a discussion for years down the road. If we do ever have any future realms besides Proudmoore, fresh starts will never force wipes on the main realm."
+                question: "Ist ein frischer Realm geplant?",
+                answer: "Direkt vom Administrationsteam: Wir haben bislang über keine zukünftigen Realms gesprochen. Proudmoore ist unser primärer und einziger Fokus. Wir möchten offenlassen, dass zukünftige Realms je nach Community möglich sind, aber das ist ein Thema für die nächsten Jahre."
             },
             {
-                question: "Are character renames or race/faction changes available?",
-                answer: "Yes, these services will all be available to players. Internally, we have not discussed how these services will be available, by default we assume they will be optional paid services. This is something we will bring up with the community and see what they want this to look like."
+                question: "Sind Charakter-Umbenennungen oder Änderungen an der Rasse oder Fraktion möglich?",
+                answer: "Ja, diese Services werden allen Spielern zur Verfügung stehen. Intern haben wir noch nicht besprochen, wie genau sie angeboten werden; standardmäßig gehen wir davon aus, dass es optionale kostenpflichtige Dienste sein werden. Dies werden wir mit der Community besprechen, um herauszufinden, wie sie sich das vorstellen."
             },
             {
-                question: "Will you offer paid services like server transfer, appearance change, etc.?",
-                answer: "We will offer <span class='font-bold'>optional character services</span> like name change, appearance change, and faction swap. All services are cosmetic or identity-based — no gameplay boosts or P2W."
+                question: "Werden kostenpflichtige Services wie Servertransfers, Änderungen am Aussehen usw. angeboten?",
+                answer: "Wir werden <span class='font-bold'>optionale Charakter-Services</span> wie Namensänderungen, Änderungen am Aussehen und Fraktionswechsel anbieten. Alle Services sind rein kosmetisch oder identitätsbasiert, es gibt keine Gameplay-Boni und kein Pay-to-Win."
             }
         ]
     },
 
     faqDevelopment: {
-        title: "Development & Feedback",
+        title: "Entwicklung & Feedback",
         questions: [
             {
-                question: "How can I report bugs?",
-                answer: "TBD. Twinstar’s infrastructure has a built-in bug reporting system, we may end up using a version of this. Or we may use github. This will be updated and we will have a Discord announcement when this information is clear. To be clear, developers do not monitor Discord. Complaining about bugs or demanding fixes there will not result in what you want. As an administration team, we do believe that sometimes bugs are critical enough that they warrant public discussion, and we do encourage players to speak up if they see something critical. But we will have standard processes for handling bugs that all players must go through. As a courtesy, our GM Team extends a strong helping hand when players experience bugs. If you experience a bug that is blocking your progression or creating another issue that needs quick resolution, please make a GM Ticket in-game."
+                question: "Wie kann ich Bugs melden?",
+                answer: "Noch festzulegen. Twinstars Infrastruktur verfügt über ein integriertes Bug-Reporting-System, das wir möglicherweise in einer Version verwenden werden. Alternativ könnten wir GitHub nutzen. Diese Informationen werden aktualisiert, und wir werden eine Ankündigung auf Discord machen, sobald alles klar ist. Zur Klarstellung: Die Entwickler überwachen Discord nicht. Beschwerden über Bugs oder Forderungen nach Fixes dort werden nicht zum gewünschten Ergebnis führen. Als Verwaltungsteam glauben wir jedoch, dass manche Bugs kritisch genug sein können, um öffentlich diskutiert zu werden, und wir ermutigen Spieler, sich zu äußern, wenn sie etwas Kritisches bemerken. Es wird jedoch standardisierte Prozesse für die Bearbeitung von Bugs geben, die alle Spieler einhalten müssen. Unser GM-Team bietet aus Kulanz stets Unterstützung, wenn Spieler auf Bugs stoßen. Wenn du einen Bug erlebst, der deinen Fortschritt blockiert oder ein anderes dringendes Problem verursacht, erstelle bitte ein GM-Ticket im Spiel."
             },
             {
-                question: "Will bug fixes be posted publicly?",
-                answer: "Yes. It is important for players to know what is fixed, and when. You’ll always know what’s going on behind the scenes."
+                question: "Werden Fehlerbehebungen öffentlich bekanntgegeben?",
+                answer: "Ja. Es ist wichtig für die Spieler zu wissen, was behoben wurde und wann. Ihr werdet immer informiert sein, was hinter den Kulissen passiert."
             },
             {
-                question: "How often are updates rolled out?",
-                answer: "TBA. On Proudmoore, we approach everything with facts and data. How aggressively we roll out updates will depend on the amount of bugs we encounter and the severity. Proudmoore is running a core that has been in active development for 17 years, so we are not too concerned about this."
+                question: "Wie oft werden Updates veröffentlicht?",
+                answer: "Auf Proudmoore gehen wir alles mit Fakten und Daten an. Wie aggressiv wir Updates veröffentlichen, hängt von der Anzahl der aufgetretenen Bugs und deren Schwere ab. Proudmoore läuft auf einem Core, der seit 17 Jahren aktiv entwickelt wird, daher sind wir diesbezüglich nicht allzu besorgt."
             },
             {
-                question: "Is the dev team active in Discord?",
-                answer: "No. We strongly believe in allowing our staff team to work in the environment that is best for them. Time spent chatting or getting derailed in Discord is time that could be spent fixing priority issues. We will hold this boundary for our Developers, and for our Game Masters as well, if they do not want to be present on the public Discord. That being said, our administration team and community management team will be informed and knowledgeable about any subject relevant to development. We will always prioritize listening to players and understanding the community."
+                question: "Ist das Entwickler-Team im Discord aktiv?",
+                answer: "Nein. Wir sind fest davon überzeugt, unserem Team zu ermöglichen, in der Umgebung zu arbeiten, die für sie am besten geeignet ist. Zeit, die mit Chatten oder Ablenkungen auf Discord verbracht wird, ist Zeit, die stattdessen für die Behebung von vorrangigen Problemen genutzt werden könnte. Diese Grenze gilt für unsere Entwickler ebenso wie für unsere GMs, wenn sie nicht auf dem öffentlichen Discord präsent sein möchten. Dennoch wird unser Verwaltungsteam sowie das Community-Management-Team über alle für die Entwicklung relevanten Themen informiert und auf dem Laufenden sein. Wir werden stets Priorität darauf legen, den Spielern zuzuhören und die Community zu verstehen."
             },
             {
-                question: "Do players get to vote on changes or features?",
-                answer: "Yes. If there are any significant changes or features that we believe may impact players, we will involve the community on the decisions. We will regularly listen to players, gather feedback, and encourage open discussion."
+                question: "Bekommen Spieler ein Mitbestimmungsrecht für Änderungen oder Features?",
+                answer: "Ja. Wenn es bedeutende Änderungen oder Features gibt, von denen wir glauben, dass sie die Spieler betreffen könnten, werden wir die Community in die Entscheidungen einbeziehen. Wir werden regelmäßig auf die Spieler hören, Feedback einholen und offene Diskussionen fördern."
             },
             {
-                question: "Is this based on TrinityCore or another core?",
-                answer: "Twinstar’s Cataclysm core was originally based on TrinityCore back in 2011. Since then, we have had over 50,000 updates to the core. Our core and TrinityCore are now so different that we are not able to utilize TrinityCore’s open source updates. We view this as a strength, not a weakness."
+                question: "Basiert der Server auf dem Trinity-Core oder einen anderen Core?",
+                answer: "Twinstars Cataclysm-Core basierte ursprünglich im Jahr 2011 auf dem TrinityCore. Seitdem haben wir über 50.000 Updates am Core vorgenommen. Unser Core und TrinityCore unterscheiden sich inzwischen so stark, dass wir TrinityCores Open-Source-Updates nicht mehr nutzen können. Wir sehen das als Stärke, nicht als Schwäche."
             }
         ]
     },
 
     faqMiscellaneous: {
-        title: "Miscellaneous",
+        title: "Sonstiges",
         questions: [
             {
-                question: "Are achievements and mounts account-wide?",
-                answer: "Yes! This is a simple QOL improvement that is widely popular amongst players. You earned it, you deserve to show it off, regardless of what character you’re playing on."
+                question: "Sind Erfolge und Reittiere Accountweit?",
+                answer: "Ja! Dies ist eine einfache Quality-of-Life Verbesserung, die bei den Spielern sehr beliebt ist. Du hast sie dir verdient und solltest sie zeigen können, egal auf welchem Charakter du spielst."
             },
             {
-                question: "Will there be a ladder or ranking system for PvP?",
-                answer: "Ohhh yes. We will have a full leaderboard and ranking system available online. This is one area that Proudmoore will walk in Twinstar’s footsteps, and push to be bigger and better than ever. We want to expand on leaderboards and player progression extensively, and we already have the best leaderboards of all Cataclysm servers."
+                question: "Wird es eine Rangliste oder ein Bewertungssystem für PvP geben?",
+                answer: "Oh ja. Wir werden ein vollständiges Online-Ranking- und Bestenlisten-System haben. In diesem Bereich wird Proudmoore in die Fußstapfen von Twinstar treten und noch größer und besser werden als je zuvor. Wir wollen die Bestenlisten und die Spielerprogression umfassend ausbauen und haben bereits die besten Bestenlisten aller Cataclysm-Server."
             },
             {
-                question: "Is there a spectator mode for arena?",
-                answer: "Currently, no. This is something we may look into if there is a large demand, but from experience, spectator features often seem to be niche and rarely used."
+                question: "Gibt es einen Zuschauermodus für die Arena?",
+                answer: "Derzeit nicht. Das ist etwas, das wir in Betracht ziehen könnten, wenn eine große Nachfrage besteht, aber unserer Erfahrung nach sind Zuschauerfunktionen oft nur eine Nische und werden selten genutzt."
             },
             {
-                question: "Will there be RP support or RP realms?",
-                answer: "Proudmoore is not an RP realm, but we would consider ourselves RP-friendly. If any RP group or guild wishes to join, feel free to reach out to our administration team and we’ll see what we can do for you."
+                question: "Wird es RP Support oder Realms geben?",
+                answer: "Proudmoore ist kein RP-Server, aber wir betrachten uns als RP-freundlich. Wenn eine RP-Gruppe oder Gilde beitreten möchte, könnt ihr euch gerne an unser Verwaltungsteam wenden, und wir werden sehen, was wir für euch tun können."
             }
         ]
     },
 
-    rates: "<li><span class='font-bold'>XP Rates:</span> 1x–3x (player-controlled toggle)</li><li><span class='font-bold'>Reputation:</span> 1x (& weekend bonuses)</li><li><span class='font-bold'>Loot & Gold:</span> 1x (balanced economy)</li><li><span class='font-bold'>Rare Materials:</span> ~1.2x in Heroics/Raids</li><li><span class='font-bold'>Professions:</span> 1x (& weekend bonuses)</li><li><span class='font-bold'>Honor:</span> 1.25x (& weekend bonuses)</li><li><span class='font-bold'>Justice / Valor Points:</span> 1x (& weekly activity bonus)</li>",
+    rates: "<li><span class='font-bold'>EP-Raten:</span> 1x–3x (vom Spieler steuerbar)</li> <li><span class='font-bold'>Ruf:</span> 1x (& Wochenendboni)</li> <li><span class='font-bold'>Beute & Gold:</span> 1x (ausgeglichene Wirtschaft)</li> <li><span class='font-bold'>Seltene Materialien:</span> ~1,2x in Heroics/Raids</li> <li><span class='font-bold'>Berufe:</span> 1x (& Wochenendboni)</li> <li><span class='font-bold'>Ehre:</span> 1,25x (& Wochenendboni)</li> <li><span class='font-bold'>Gerechtigkeits- / Tapferkeitspunkte:</span> 1x (& wöchentlicher Aktivitätsbonus)</li>",
 
-    ratesComment: "Patience for escort quests: 0x",
+    ratesComment: "Geduld für Begleitquests: 0x",
 
     bugFixes: [
         {
-            title: "Core Revisions",
-            description: "Tailored server-side improvements to stability, accuracy, and core logic."
+            title: "Core-Überarbeitungen",
+            description: "Maßgeschneiderte serverseitige Optimierungen für Stabilität, Genauigkeit und Core-Logik."
         },
         {
-            title: "Database Revisions",
-            description: "10,000+ DB enhancements to quests, NPCs, items, and mechanics."
+            title: "Datenbank Überarbeitungen",
+            description: "Über 10.000 Datenbank-Verbesserungen für Quests, NPCs, Gegenstände und Mechaniken."
         },
         {
-            title: "Years of Active Development",
-            description: "Consistent development — we build, polish, and iterate nonstop."
+            title: "Jahre aktiver Entwicklung",
+            description: "Ständige Weiterentwicklung, wir entwickeln, verfeinern und optimieren laufend."
         },
     ],
 
-    bugFixesComment: "Yeah. We know what we're doing."
+    bugFixesComment: "Aufgrund unseres erfahrenen Teams wissen wir was wir tun.."
 };
 
 export default deTranslation;
