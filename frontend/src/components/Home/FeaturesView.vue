@@ -15,7 +15,7 @@ const activeTab = ref('features');
     <section id="features" class="flex flex-col w-full bg-[url('/webp/features-bg.webp')] bg-cover bg-center bg-no-repeat items-center py-20">
         <div class="separator w-[77%] mt-[-1.8rem] mb-[2rem]"></div>
         <h3 class="font-marcellus text-[32px] mb-[1rem] font-[600]">{{ t('features.title') }}</h3>
-        <p class="mb-[1.3rem] mt-0 text-center">{{ t('features.description') }}</p>
+        <p class="mb-[1.3rem] mt-0 text-center px-10">{{ t('features.description') }}</p>
         <ul class="flex gap-14 mb-6 mt-10">
             <li class="hover:cursor-pointer" @click="activeTab = 'features'" :class="activeTab === 'features' ? 'border-b-2 font-bold' : 'opacity-[0.7]'">{{ t('features.nav.features') }}</li>
             <li class="hover:cursor-pointer" @click="activeTab = 'rates'" :class="activeTab === 'rates' ? 'border-b-2 font-bold' : 'opacity-[0.7]'">{{ t('features.nav.rates') }}</li>

@@ -9,14 +9,50 @@
 
 @font-face {
   font-family: "Marcellus";
-  src: url("/src/assets/font/Marcellus/Marcellus-Regular.ttf")
-    format("truetype");
+  src: url("/src/assets/font/Marcellus/Marcellus-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("/src/assets/font/Roboto_Condensed/static/RobotoCondensed-Regular.ttf")
-    format("truetype");
+  src: url("/src/assets/font/Roboto_Condensed/static/RobotoCondensed-Regular.ttf") format("truetype");
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style-type: none;
+}
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+html {
+  min-height: 100vh;
+  font-size: 16px;
+  overflow-x: hidden;
+  color: #ddecef;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* for screen of 640px and less the 1rem becomes 14px instead of 16px */
+
+@media (max-width: 640px) {
+  html {
+    font-size: 87.5%;
+    /* 14px */
+  }
 }
 
 .p-drawer {

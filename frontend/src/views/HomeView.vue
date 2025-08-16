@@ -12,7 +12,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <section class="bg-[#0E0E0E] mb-[-1.5rem]">
+    <section class="bg-[#0E0E0E]">
         <HeroView />
         <div class="separator"></div>
         <ServerDescriptionView />

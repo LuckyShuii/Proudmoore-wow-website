@@ -23,23 +23,22 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
     <!-- Right -->
     <div class="pointer-events-none fixed top-0 right-0 w-[100px] h-full bg-[url('/webp/border-right.png')] bg-no-repeat bg-[length:100%_100%] z-50"></div>
 
-    <Drawer v-model:visible="visible" header="Drawer" class="!w-full md:!w-80 lg:!w-[30rem] sm:!hidden" dismissable>
+    <Drawer v-model:visible="visible" header="Drawer" class="!w-full lg:!w-[30rem] lg:!hidden" dismissable>
       <DesktopNavView @update-visible="visible = false" />
     </Drawer>
 
-    <DesktopNavView class="hidden sm:block" />
+    <DesktopNavView class="hidden lg:flex" />
 
-    <main class="flex-grow sm:pl-[300px]">
-      <Message severity="warn" class="fixed top-10 right-10 sm:right-10 z-50 sm:max-w-[600px] !bg-[#c49407]" v-if="isDev">
+    <main class="flex-grow lg:pl-[300px]">
+      <Message severity="warn" class="fixed top-10 right-10 lg:right-10 z-50 lg:max-w-[600px] !bg-[#c49407]" v-if="isDev">
         <div class="text-white">
           <p class="font-bold">⚠️ Development Version (W.I.P)</p>
-          <p class="hidden sm:block">This is a development build of the website and not the production version.</p>
+          <p class="hidden lg:block">This is a development build of the website and not the production version. Currently working on home page responsiveness.</p>
         </div>
       </Message>
-      <Button icon="pi pi-bars" class="!scale-[3] !fixed !top-10 !left-10 !z-[60] pointer-events-auto block sm:!hidden" @click="visible = true" />
+      <Button icon="pi pi-bars" class="!scale-[3] !fixed !top-10 !left-10 !z-[60] pointer-events-auto block lg:!hidden" @click="visible = true" />
       <RouterView />
     </main>
-    <Footer class="flex-shrink-0" />
   </div>
 </template>
 

@@ -84,7 +84,7 @@ onBeforeUnmount(() => {
 
 
 <template>
-    <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-50 flex flex-col w-[300px] py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
+    <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-50 flex flex-col w-[300px] py-[35px] lg:py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
         <div class="card flex justify-center">
             <!-- Button with selected flag or text -->
             <Button type="button" @click="toggle" @mouseover="toggle" class="min-w-32 flex items-center gap-2 justify-center">

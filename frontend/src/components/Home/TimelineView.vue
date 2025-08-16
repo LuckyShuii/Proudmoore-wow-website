@@ -8,7 +8,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <section id="timeline" class="pt-[160px] flex flex-col items-center justify-center">
+    <section id="timeline" class="pt-[160px] flex flex-col items-center justify-center px-8">
         <h3 class="mb-[1.7rem] font-marcellus timeline-title">{{ t('timeline.title') }}</h3>
         <p class="font-marcellus timeline-title mb-4">{{ t('timeline.description') }}</p>
     </section>

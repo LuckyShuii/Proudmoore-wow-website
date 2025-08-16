@@ -19,10 +19,10 @@ const faqMiscellaneous = ref(tm('faqMiscellaneous'));
 </script>
 
 <template>
-    <section class="flex flex-col items-center justify-center bg-[#070A15] pl-[15px] pr-[20px] w-full">
+    <section class="flex flex-col items-center justify-center bg-[#070A15] pl-[15px] pr-[20px] w-full pb-[5rem]">
         <div class="separator w-full max-w-[1110px] mt-[4rem]"></div>
         <h3 class="mt-[2rem] text-white font-marcellus text-[32px] text-center font-bold">{{ t('faqTitle') }}</h3>
-        <div class="flex flex-col items-center justify-center w-full max-w-[1110px]">
+        <div class="px-4 flex flex-col items-center justify-center w-full max-w-[1110px]">
             <FaqSectionView :faq="(generalFaq as any)" />
             <FaqSectionView :faq="(faqGameplay as any)" />
             <FaqSectionView :faq="(faqTechnical as any)" />

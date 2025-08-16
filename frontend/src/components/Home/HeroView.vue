@@ -25,8 +25,8 @@ onUnmounted(() => {
 
 <template>
     <!-- Hero section -->
-    <section class="relative h-screen w-full flex justify-start items-center px-4 bg-[url('/webp/background-1.webp')] bg-cover bg-center bg-no-repeat">
-        <div class="flex flex-col items-center ml-4 w-full max-w-[700px] mr-[20rem] mt-[-5rem]">
+    <section class="relative h-screen w-full flex lg:justify-start items-center px-4 bg-[url('/webp/background-1.webp')] bg-cover bg-center bg-no-repeat">
+        <div class="flex flex-col items-center mx-4 lg:ml-4 w-full lg:max-w-[700px] lg:mr-[20rem] mt-[-5rem]">
             
             <!-- Proudmoore LOGO -->
             <div class="w-full max-w-[700px] drop-shadow-xl transition-filter duration-700 hover:scale-110" :style="{ filter: shadow }">
