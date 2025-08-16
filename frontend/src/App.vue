@@ -28,6 +28,7 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
     </Drawer>
 
     <DesktopNavView class="hidden sm:block" />
+    
     <main class="flex-grow sm:pl-[300px]">
       <Message severity="warn" class="fixed top-10 right-10 z-50 max-w-[600px] !bg-[#c49407] hidden" v-if="isDev">
         <div class="text-white">
