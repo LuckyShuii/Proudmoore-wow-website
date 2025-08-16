@@ -18,3 +18,14 @@
   src: url("/src/assets/font/Roboto_Condensed/static/RobotoCondensed-Regular.ttf")
     format("truetype");
 }
+
+.p-drawer {
+  background: none !important;
+  border: none !important;
+}
+
+.p-button {
+  background: none !important;
+  border: none !important;
+  color: white !important;
+}

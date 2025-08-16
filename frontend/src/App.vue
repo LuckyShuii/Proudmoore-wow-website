@@ -2,7 +2,9 @@
 import { RouterView } from 'vue-router'
 import Footer from '@/components/Footer.vue'
 import DesktopNavView from './components/DesktopNavView.vue';
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
+
+const visible = ref(false);
 
 const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
 </script>
@@ -21,14 +23,19 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
     <!-- Right -->
     <div class="pointer-events-none fixed top-0 right-0 w-[100px] h-full bg-[url('/webp/border-right.png')] bg-no-repeat bg-[length:100%_100%] z-50"></div>
 
-    <DesktopNavView />
-    <main class="flex-grow pl-[300px]">
-      <Message severity="warn" class="fixed top-10 right-10 z-50 max-w-[600px] !bg-[#c49407]" v-if="isDev">
+    <Drawer v-model:visible="visible" header="Drawer" class="!w-full md:!w-80 lg:!w-[30rem] sm:!hidden" dismissable>
+      <DesktopNavView @update-visible="visible = false" />
+    </Drawer>
+
+    <DesktopNavView class="hidden sm:block" />
+    <main class="flex-grow sm:pl-[300px]">
+      <Message severity="warn" class="fixed top-10 right-10 z-50 max-w-[600px] !bg-[#c49407] hidden" v-if="isDev">
         <div class="text-white">
           <p class="font-bold">⚠️ Development Version - Work In Progress </p>
           <p>This is a development build of the website and not the production version.</p>
         </div>
       </Message>
+      <Button icon="pi pi-bars" class="!scale-[3] !fixed !top-10 !left-10 !z-[60] pointer-events-auto block sm:!hidden" @click="visible = true" />
       <RouterView />
     </main>
     <Footer class="flex-shrink-0" />
