@@ -5,7 +5,7 @@ import CountUpView from '@/components/CountUpView.vue';
 
 interface BugFix { title: string; description: string; }
 
-const { tm } = useI18n();
+const { tm, t } = useI18n();
 const i18n = useI18n({ useScope: 'global' });
 
 const bugFixesStats = ref<BugFix[]>(tm('bugFixes'));
@@ -21,15 +21,16 @@ const stats = ref<number[]>([41655, 10228, 17]);
         v-for="(value, index) in bugFixesStats"
         :key="value.title"
         >
-        <h3 class="text-[4rem] mb-[0.8rem] font-[600]">
-            <CountUpView :end="stats[Number(index)]" :duration="2600" :locale="i18n.locale.value" />
-        </h3>
-        <h3 class="font-marcellus uppercase text-[1.25rem] mb-[0.5rem] font-[600]">
-            {{ value.title }}
-        </h3>
-        <p class="mb-[1.3rem] mt-0 text-center opacity-[0.85]">
-            {{ value.description }}
-        </p>
+            <h3 class="text-[4rem] mb-[0.8rem] font-[600]">
+                <CountUpView :end="stats[Number(index)]" :duration="2600" :locale="i18n.locale.value" />
+            </h3>
+            <h3 class="font-marcellus uppercase text-[1.25rem] mb-[0.5rem] font-[600]">
+                {{ value.title }}
+            </h3>
+            <p class="mb-[1.3rem] mt-0 text-center opacity-[0.85]">
+                {{ value.description }}
+            </p>
         </div>
     </section>
+    <div class="under-comment !max-w-[300px]" v-html="t('bugFixesComment')"></div>
 </template>

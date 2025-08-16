@@ -11,6 +11,6 @@ const { t } = useI18n();
         <div id="rates-frame">
             <ul class="text-center" v-html="t('rates')"></ul>
         </div>
-        <div id="rates-comment" v-html="t('ratesComment')"></div>
+        <div class="under-comment" v-html="t('ratesComment')"></div>
     </section>
 </template>

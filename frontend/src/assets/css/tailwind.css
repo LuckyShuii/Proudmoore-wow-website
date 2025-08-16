@@ -404,7 +404,7 @@ body, html {
   padding: 0.1rem 0;
 }
 
-#rates-comment {
+.under-comment {
   font-size: 0.9rem;
   color: #64bfff;
   font-style: italic;
