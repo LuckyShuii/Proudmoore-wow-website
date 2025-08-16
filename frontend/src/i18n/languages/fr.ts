@@ -2,155 +2,155 @@ const enTranslation = {
     welcome: "Welcome to the Proudmoore WoW Website",
 
     nav: {
-        home: "Home",
-        about: "What is Proudmoore?",
-        features: "Features & Rates",
+        home: "Accueil",
+        about: "Qu'est-ce que Proudmoore ?",
+        features: "Fonctionnalités & Taux",
         timeline: "Launch Timeline & Dates",
-        discord: "Join the Community",
-        faq: "Frequently Asked Questions",
-        legal: "Legality & Player Rights",
-        appeal: "Discord Ban Appeals"
+        discord: "Rejoindre la Communauté",
+        faq: "Légalité & Droits des joueurs",
+        legal: "égalité & Droits des joueurs",
+        appeal: "Appels de bannissement Discord"
     },
 
-    copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in partnership with TwinStar-WoW</span>. Not affiliated with Blizzard Entertainment. All rights reserved.",
-    copyrightExtraWarning: "The copyright in this website is owned by proudmoore.gg and its respective authors except trademarks and other items which are the properties of their respective owners. All rights reserved. Copying, modifying, transferring or distribution of the website's content in any form is not allowed without the permission of proudmoore.gg.",
+    copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, en partenariat avec TwinStar-WoW</span>. Non affilié à Blizzard Entertainment. Tous droits réservés.",
+    copyrightExtraWarning: "Le droit d'auteur de ce site web est la propriété de proudmoore.gg et de leurs auteurs respectifs, à l'exception des marques de commerce et autres éléments qui sont la propriété de leurs propriétaires respectifs. Tous droits réservés. La copie, la modification, le transfert ou la distribution du contenu du site web sous quelque forme que ce soit n'est pas autorisée sans la permission de proudmoore.gg.",
 
-    videoDescription: "A new era of Cataclysm is coming…",
+    videoDescription: "Une nouvelle ère de Cataclysm est en marche…",
 
-    descriptionTitle: "What is Proudmoore?",
-    descriptionText: "Proudmoore is a <span class='italic'>handcrafted</span> Cataclysm server — built for players who want a modern experience that still feels like OG World of Warcraft.<br><br>No queues. No Pay-to-Win. No retail <span class='font-extrabold'>bloat</span>.<br>Just smooth PvP, fully scripted PVE content, and a fresh start that respects your time.<br><br>If you’ve played private servers before, you’ll feel the difference.<br>If you haven’t — <span class='font-extrabold'>this is where to start.</span>",
+    descriptionTitle: "Qu'est-ce que Proudmoore ?",
+    descriptionText: "Proudmoore est un serveur Cataclysm créé <span class='italic'>sur mesure</span> — conçu pour les joueurs qui veulent une expérience moderne tout en conservant l'esprit d'origine de World of Warcraft.<br><br>Pas de files d'attente. Pas de 'Pay-to-Win'. Pas de <span class='font-extrabold'>surcharge</span> du client officiel.<br>Juste un JcJ fluide, un contenu JcE entièrement scripté, et un nouveau départ qui respecte votre temps.<br><br>Si vous avez déjà joué sur des serveurs privés, vous sentirez la différence.<br>Si ce n'est pas le cas — <span class='font-extrabold'>c'est ici que vous devez commencer.</span>",
 
     features: {
-        title: "Features & Rates",
-        description: "Discover all the core gameplay features, our server rates, and the many fixes that make Proudmoore unique.",
+        title: "Fonctionnalités & Taux",
+        description: "Découvrez toutes les fonctionnalités de jeu principales, nos taux et les nombreuses corrections qui rendent Proudmoore unique.",
         nav: {
-            features: "Features",
-            rates: "Rates",
-            bugfixes: "Bug Fixes"
+            features: "Fonctionnalités",
+            rates: "Taux",
+            bugfixes: "Corrections de bugs"
         },
         items: [
-            { "id": "mythicPlus", "title": "Mythic+ Dungeons", "description": "Experience Mythic+ dungeons with time-based challenges & increasing difficulty.", isFav: 1 },
-            { "id": "soloQueue", "title": "Solo Queue Arena", "description": "Queue on your own for arenas without needing a premade team.", isFav: 1 },
-            { "id": "crossFaction", "title": "Full Cross-Faction", "description": "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc).", isFav: 1 },
-            { "id": "transmogrification", "title": "Full Transmogrification", "description": "Customize your look completely with full transmogrification options. (No limits)", isFav: 1 },
-            { "id": "progressiveContent", "title": "Progressive Content", "description": "Content is released in phases, replicating the original Cataclysm progression.", isFav: 0 },
-            { "id": "casualRaid", "title": "Casual Raid Difficulty", "description": "More forgiving raid difficulties for casual and semi-hardcore players.", isFav: 1 },
-            { "id": "battlegroundLeveling", "title": "Battleground Leveling", "description": "Maximizing the ways you can level starting at level 10.", isFav: 1 },
-            { "id": "weekendEvents", "title": "Weekend Events", "description": "Enjoy weekend-only events that boost rewards and rates.", isFav: 0 },
-            { "id": "racialSwap", "title": "Racial Trait Swapping", "description": "Customize your racial traits to suit your build.", isFav: 0 },
-            { "id": "xpRate", "title": "Adjustable XP Rates", "description": "Choose how fast you want to level with adjustable experience gain, from 100% to 0%.", isFav: 0 },
-            { "id": "mopArena", "title": "MoP Arena Teams System", "description": "Use Mists of Pandaria-style arena teams, prioritizing personal rating over team rating.", isFav: 0 },
-            { "id": "accountWide", "title": "Account Wide Mounts & Companions", "description": "Earn and share vanity mounts & companions across all characters on your account.", isFav: 0 },
-            { "id": "antiBot", "title": "Modern Anti-Bot & Anti-Gold Seller Systems", "description": "Aggressive systems will prevent botting and gold selling like no other server.", isFav: 0 },
-            { "id": "dualSpec", "title": "Early & Free Dual Spec", "description": "Dual spec is unlocked from level 10 at no cost.", isFav: 0 },
-            { "id": "automaticSpell", "title": "Automatic Class Spell Learning", "description": "No need to visit trainers — learn abilities automatically on level-up.", isFav: 0 },
-            { "id": "catchupMecanics", "title": "Catch-Up Mechanics", "description": "Catch up quickly with systems designed to help new players jumping in after launch.", isFav: 0 },
-            { "id": "gatheringProfessions", "title": "Dynamic Gathering Professions", "description": "Gathering nodes will prioritize both economic stability and zone population density.", isFav: 0 },
-            { "id": "lootRules", "title": "Fair Loot Rules", "description": "Fair loot rules across all content to reduce ninja-looting.", isFav: 0 },
-            { "id": "altFriendly", "title": "Alt-Friendly Systems", "description": "Designed so your alts can benefit from account progress.", isFav: 0 },
-            { "id": "playerFirst", "title": "Player-First GameMaster Support", "description": "Player-First GameMaster Support. Our team prioritizes players & the community in every policy we implement.", isFav: 0 }
+            { "id": "mythicPlus", "title": "Donjons Mythique +", "description": "Découvrez les donjons Mythique+ avec des défis chronométrés et une difficulté croissante.", isFav: 1 },
+            { "id": "soloQueue", "title": "Arène en file d'attente solo", "description": "Faites la queue en solo pour les arènes sans avoir besoin d'une équipe préfabriquée.", isFav: 1 },
+            { "id": "crossFaction", "title": "Complètement inter-factions", "description": "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc).", isFav: 1 },
+            { "id": "transmogrification", "title": "Full Transmogrification", "description": "Personnalisez entièrement votre apparence avec des options de transmogrification complètes. (Sans limites)", isFav: 1 },
+            { "id": "progressiveContent", "title": "Contenu progressif", "description": "Le contenu est publié en phases, reproduisant la progression originale de Cataclysm.", isFav: 0 },
+            { "id": "casualRaid", "title": "Difficulté de raid décontractée", "description": "Des difficultés de raid plus indulgentes pour les joueurs occasionnels et semi-hardcore.", isFav: 1 },
+            { "id": "battlegroundLeveling", "title": "Montée en niveau via les champs de bataille", "description": "Maximisation les façons de monter en niveau à partir du niveau 10.", isFav: 1 },
+            { "id": "weekendEvents", "title": "Événements du week-end", "description": "Profitez d'événements exclusifs durant le week-end qui augmentent les récompenses et les taux.", isFav: 0 },
+            { "id": "racialSwap", "title": "Échange de traits raciaux", "description": "Personnalisez vos traits raciaux pour qu'ils correspondent à votre build.", isFav: 0 },
+            { "id": "xpRate", "title": "Taux d'XP ajustables", "description": "Choisissez la vitesse à laquelle vous voulez monter de niveau grâce à un gain d'expérience ajustable, de 100 % à 0 %.", isFav: 0 },
+            { "id": "mopArena", "title": "Système d'équipes d'arène MoP", "description": "Utilisez les équipes d'arène de style Mists of Pandaria, en donnant la priorité à la cote personnelle plutôt qu'à la cote d'équipe.", isFav: 0 },
+            { "id": "accountWide", "title": "Montures et compagnons liés au compte", "description": "Gagnez et partagez des montures et des compagnons de prestige sur tous les personnages de votre compte.", isFav: 0 },
+            { "id": "antiBot", "title": "Systèmes modernes anti-bots & anti-vendeurs d'or", "description": "Des systèmes agressifs empêcheront le botting et la vente d'or comme sur aucun autre serveur.", isFav: 0 },
+            { "id": "dualSpec", "title": "Double spécialisation à bas niveau et gratuite", "description": "La double spécialisation est débloquée à partir du niveau 10 sans frais.", isFav: 0 },
+            { "id": "automaticSpell", "title": "Apprentissage automatique des sorts de classe", "description": "Pas besoin de visiter les maîtres de classe — apprenez les capacités automatiquement en montant de niveau.", isFav: 0 },
+            { "id": "catchupMecanics", "title": "Mécaniques de rattrapage", "description": "Rattrapage rapide avec des systèmes conçus pour aider les nouveaux joueurs qui se lancent après le lancement du serveur.", isFav: 0 },
+            { "id": "gatheringProfessions", "title": "Professions de récolte dynamiques", "description": "Les lieux de récolte donneront la priorité à la fois à la stabilité économique et à la densité de population des zones.", isFav: 0 },
+            { "id": "lootRules", "title": "Règles de butin équitables", "description": "Règles de butin équitables sur tout le contenu pour réduire le 'ninja-looting'.", isFav: 0 },
+            { "id": "altFriendly", "title": "Systèmes favorables aux alts", "description": "Conçu pour que vos personnages secondaires puissent bénéficier de la progression de votre compte.", isFav: 0 },
+            { "id": "playerFirst", "title": "Assistance MJ axée sur le joueur (Player-First)", "description": "Assistance MJ axée sur le joueur. Notre équipe priorise les joueurs et la communauté dans chaque politique que nous mettons en œuvre.", isFav: 0 }
         ]
     },
 
     timeline: {
-        title: "Proudmoore begins",
-        description: "September 13th, 2025."
+        title: "Proudmoore débute le",
+        description: "13 septembre 2025"
     },
 
-    discord: "Join our Discord",
+    discord: "Rejoignez notre Discord",
 
-    faqTitle: "Frequently Asked Questions",
+    faqTitle: "Foire aux questions",
 
     faqGeneral: {
-        title: "General Questions",
+        title: "Informations générales",
         questions: [
             {
-                question: "What makes Proudmoore different from other Cataclysm servers?",
-                answer: "Proudmoore isn’t just another Cataclysm realm, it is expanding on well-tested concepts to make the expansion well rounded for hardcore and casual players alike.. We’re introducing Mythic+ dungeons, solo-rated PvP queues, a variety of new leveling paths, and cross-faction systems, all while preserving the core Cataclysm experience."
+                question: "Qu'est-ce qui différencie Proudmoore des autres serveurs Cataclysm ?",
+                answer: "Proudmoore n'est pas juste un autre royaume Cataclysm, il s'appuie sur des concepts bien testés pour rendre l'extension bien équilibrée pour les joueurs hardcore et occasionnels. Nous introduisons les donjons Mythique+, les files d'attente JcJ cotées en solo, une variété de nouvelles voies de progression de niveau, et des systèmes inter-factions, tout en préservant l'expérience Cataclysm de base."
             },
             {
-                question: "Who is running Proudmoore? Is it a new team or a revival?",
-                answer: "Proudmoore is a fresh project from experienced hands, a collaboration utilizing Twinstar’s infrastructure and a new team composed of private server veterans with years of experience managing projects. With heavy focus on community and quality, we aim to create the best Cataclysm project possible."
+                question: "Qui dirige Proudmoore ? Est-ce une nouvelle équipe ou une renaissance ?",
+                answer: "Proudmoore est un nouveau projet dirigé par une équipe expérimentée, une collaboration utilisant l'infrastructure de TwinStar et une nouvelle équipe composée de vétérans des serveurs privés avec des années d'expérience dans la gestion de projets. En mettant l'accent sur la communauté et la qualité, nous visons à créer le meilleur projet Cataclysm possible."
             },
             {
-                question: "Why did you choose Cataclysm as the expansion?",
-                answer: "Cataclysm is often misunderstood. Beneath its controversial changes lies the most refined class design in WoW’s classic era, along with world revamps, and PvP systems that deserve a second chance. We believe 4.3.4, when modernized and rebalanced, offers an incredibly rewarding gameplay loop, and we’re here to prove it."
+                question: "Pourquoi avoir choisi l'expansion Cataclysm?",
+                answer: "Cataclysm est souvent mal compris. Sous ses changements controversés se cache la conception de classe la plus raffinée de l'ère classique de WoW, ainsi que des refontes du monde et des systèmes JcJ qui méritent une seconde chance. Nous pensons que la version 4.3.4, une fois modernisée et rééquilibrée, offre une boucle de jeu incroyablement gratifiante, et nous sommes là pour le prouver."
             },
             {
-                question: "Will the server be Blizzlike or custom",
-                answer: "Consider Proudmoore as a hybrid. The content and progression will stay true to Blizzard’s Cataclysm, but the systems and mechanics behind it will have been modernized for 2025. We stay true to Blizzard’s design foundations, but we’re not afraid to fix what’s broken or expand where the original fell short."
+                question: "Le serveur sera-t-il Blizzlike ou personnalisé ?",
+                answer: "Considérez Proudmoore comme un hybride. Le contenu et la progression resteront fidèles à Cataclysm de Blizzard, mais les systèmes et les mécanismes seront modernisés pour 2025. Nous restons fidèles aux fondations de Blizzard, mais nous n'avons pas peur de corriger ce qui doit être corriger ou d'améliorer ce que l'original n'a pas réussi à faire."
             },
             {
-                question: "How long has this server been in development?",
-                answer: "Proudmoore utilizes Twinstar’s Cataclysm core, which has been in development for nearly 17 years now. We’ve rebuilt and refined virtually every aspect of the game’s code from the ground up, ensuring every feature we launch with is production-ready and sustainable."
+                question: "Combien de temps ce serveur a-t-il été en développement ?",
+                answer: "Proudmoore utilise le core Cataclysm de TwinStar, qui est en développement depuis près de 17 ans maintenant. Nous avons reconstruit et affiné pratiquement tous les aspects du code du jeu de A à Z, en nous assurant que chaque fonctionnalité que nous lançons est prête pour la production et durable."
             },
             {
-                question: "What is the server's long-term plan?",
-                answer: "Our goal is to provide a living, evolving Cataclysm experience. That means seasonal content rotations, fresh incentives for PvE and PvP, community events, and continuous balance updates. When the realm hits its natural end of progression, we will move away from blizzlike and begin experimental changes to keep things feeling fresh."
+                question: "Quel est le plan à long terme du serveur ?",
+                answer: "Notre objectif est d'offrir une expérience Cataclysm vivante et évolutive. Cela implique des rotations de contenu saisonnières, de nouvelles incitations pour le JcE et le JcJ, des événements communautaires, et des mises à jour d'équilibrage continues. Lorsque le royaume atteindra la fin naturelle de sa progression, nous nous éloignerons du format « blizzlike » et commencerons à apporter des changements expérimentaux pour que le jeu reste dynamique."
             },
             {
-                question: "Will Proudmoore reset or wipe in the future?",
-                answer: "No, Proudmoore is not a seasonal or time-limited project. Your progress is here to stay. While we may explore optional fresh starts in the distant future, the main realm will never be wiped or reset."
+                question: "Est-ce que Proudmoore va se réinitialiser ou faire un « wipe » à l'avenir ?",
+                answer: "Non, Proudmoore n'est pas un projet saisonnier ou à durée limitée. Votre progression est là pour rester. Bien que nous puissions envisager de nouveaux serveurs frais facultatifs dans un avenir lointain, le royaume principal ne sera jamais effacé ou réinitialisé."
             },
             {
-                question: "Is there a roadmap available post-launch?",
-                answer: "Yes. A full roadmap will be published shortly after launch, detailing our timeline for Mythic+ rotations, seasonal events, new systems, and quality-of-life updates. Proudmoore is a living project, and we’re committed to full transparency as we grow."
+                question: "Y a-t-il une feuille de route disponible après le lancement ?",
+                answer: "Oui. Une feuille de route complète sera publiée peu après le lancement, détaillant notre calendrier pour les rotations de Mythic+, les événements saisonniers, les nouveaux systèmes et les mises à jour de qualité de vie. Proudmoore est un projet vivant, et nous nous engageons à faire preuve d'une totale transparence au fur et à mesure que nous grandissons."
             }
         ]
     },
 
     faqGameplay: {
-        title: "Gameplay & Features",
+        title: "Expériences de jeu et Fonctionnalités",
         questions: [
             {
-                question: "What are the XP, gold, rep, and drop rates?",
-                answer: "We designed Proudmoore’s rates around <span class='font-bold'>balancing casual gameplay and long-term sustainability</span>. Here’s how each one fits into that vision:<br><ul><li><span class='font-bold'>XP (1x–3x, toggleable):</span><br>Leveling should feel rewarding, not tedious. With 3x default rates, players who can only play on weekends or casually here and there should make meaningful progression without feeling left behind. There will be additional bonuses to this as well, specifically on weekends and holidays. We have a toggle for xp rates, so you can choose the pace you want to take. Some want to get through leveling as fast as possible, others want to experience leveling to the fullest, we give you the freedom to choose.</li><li><span class='font-bold'>Reputation (1x with weekend bonuses):</span><br>Rep grinds define Cataclysm’s endgame. We keep the baseline Blizzlike to preserve progression value but offer weekend boosts to ease the burden for working players.</li><li><span class='font-bold'>Loot & Gold (1x):</span><br>Gold inflation kills economies. We keep loot and gold at 1x to maintain item value, prevent bot abuse, and ensure professions and player trading matter. It also ensures vendor and repair costs retain meaning over time.</li><li><span class='font-bold'>Rare Materials (~1.2x in Heroics/Raids):</span><br>Slightly increasing rare material drops in challenging content rewards group play and supports crafting progression without flooding the market. It also makes dungeons feel more rewarding over time.</li><li><span class='font-bold'>Professions (1x with weekend XP bonuses):</span><br>Gathering and crafting should be meaningful, not skippable. Keeping 1x ensures steady progression, while weekend boosts give a natural catch-up window for players with limited time.</li><li><span class='font-bold'>Honor (1.25x with weekend bonuses):</span><br>PvP gearing shouldn’t be a second job. Slightly higher Honor gain respects your time while keeping gear acquisition paced enough to support healthy seasons and ladder progression. Bonuses to Honor Rates will be substantially focused on prime-time to encourage large queues.</li><li><span class='font-bold'>Justice / Valor Points (1x with weekly activity bonuses):</span><br>PvE currency remains at 1x to preserve reward pacing, but active players are rewarded through weekly activity bonuses that speed things up without trivializing content.</li></ul>",
-                additionalInfoTitle: "In short:",
-                additionalInfoText: "We want progression to feel <span class='italic'>earned</span> but <span class='italic'>not exhausting</span>. These rates avoid the burnout of 1x-only grinds while steering clear of retail-level handouts. You’ll feel rewarded for your time and the economy will feel alive for months to come, unlike other projects."
+                question: "Quels sont les taux d'XP, d'or, de réputation et de butin ?",
+                answer: "Nous avons conçu les taux de Proudmoore en cherchant à <span class='font-bold'>équilibrer le jeu décontracté et la durabilité à long terme</span>. Voici comment chacun d'eux s'inscrit dans cette vision :<br><ul><li><span class='font-bold'>XP (1x–3x, commutable) :</span><br>Monter de niveau doit être gratifiant, pas fastidieux. Avec un taux par défaut de 3x, les joueurs qui ne peuvent jouer que le week-end ou de manière occasionnelle devraient pouvoir progresser de manière significative sans se sentir à la traîne. Il y aura également des bonus supplémentaires, en particulier le week-end et les jours fériés. Nous avons une option pour commuter les taux d'XP, afin que vous puissiez choisir le rythme que vous souhaitez. Certains veulent monter de niveau le plus vite possible, d'autres veulent en faire l'expérience pleinement, nous vous donnons la liberté de choisir.</li><li><span class='font-bold'>Réputation (1x avec des bonus le week-end) :</span><br>Le « farming » de réputation définit le contenu de fin de jeu de Cataclysm. Nous maintenons le taux de base 'blizzlike' pour préserver la valeur de la progression, mais nous offrons des bonus le week-end pour alléger la charge des joueurs qui travaillent.</li><li><span class='font-bold'>Butin et or (1x) :</span><br>L'inflation de l'or tue les économies. Nous maintenons le butin et l'or à 1x pour préserver la valeur des objets, empêcher l'abus des 'bots' et garantir que les métiers et le commerce entre joueurs restent importants. Cela garantit également que les coûts des vendeurs et des réparations conservent leur sens au fil du temps.</li><li><span class='font-bold'>Matériaux rares (~1,2x en donjons héroïques/raids) :</span><br>Une légère augmentation des butins de matériaux rares dans le contenu de défi récompense le jeu en groupe et soutient la progression des métiers sans inonder le marché. Cela rend également les donjons plus gratifiants au fil du temps.</li><li><span class='font-bold'>Métiers (1x avec des bonus d'XP le week-end) :</span><br>La collecte et l'artisanat doivent être significatifs, et non pas une étape à sauter. Le maintien du taux à 1x assure une progression constante, tandis que les bonus de week-end offrent une fenêtre de rattrapage naturelle pour les joueurs ayant un temps limité.</li><li><span class='font-bold'>Honneur (1,25x avec des bonus le week-end) :</span><br>S'équiper en JcJ ne devrait pas être un second emploi. Un gain d'Honneur légèrement plus élevé respecte votre temps tout en maintenant l'acquisition d'équipement à un rythme suffisant pour soutenir des saisons saines et la progression dans le classement. Les bonus sur les taux d'Honneur seront principalement axés sur les heures de pointe pour encourager de larges files d'attente.</li><li><span class='font-bold'>Points de Justice / Vaillance (1x avec des bonus d'activité hebdomadaire) :</span><br>La monnaie du JcE reste à 1x pour préserver le rythme des récompenses, mais les joueurs actifs sont récompensés par des bonus d'activité hebdomadaire qui accélèrent les choses sans trivialiser le contenu.</li></ul>",
+                additionalInfoTitle: "En résumé:",
+                additionalInfoText: "Nous voulons que la progression soit <span class='italic'>méritée</span> mais <span class='italic'>pas épuisante</span>. Ces taux évitent l'épuisement des sessions de « farming » uniquement en 1x tout en restant loin des « cadeaux » offerts dans la version officielle du jeu. Vous vous sentirez récompensé pour le temps que vous y avez consacré et l'économie restera active pendant des mois, contrairement à d'autres projets."
             },
             {
-                question: "Is there RF (Raid Finder)?",
-                answer: "Nope, no Raid Finder. It was originally implemented on the Dragon Soul raid, and was extremely unpopular/controversial. We have no intentions of adding it here."
+                question: "Y a-t-il le RF (Recherche de raid) ?",
+                answer: "Non, il n'y a pas de Recherche de raid. Elle a été ajoutée à l'origine avec le raid de l'Âme des dragons, et elle était extrêmement impopulaire/controversée. Nous n'avons aucune intention de l'ajouter ici."
             },
             {
-                question: "What's the status of Rated BGs, Arenas, and Solo Queue?",
-                answer: "All <span class='font-bold'>Rated PvP</span> modes will be released with season launch, at the same time as raid releases. <span class='font-bold'>Unrated</span> Solo Queue for Arenas is enabled from launch as an additional leveling path, as well as <span class='font-bold'>Unrated Battlegrounds</span>. Rated Battlegrounds are fully functional and will be tied into seasonal rewards."
+                question: "Quel est le statut des champs de bataille classés, des arènes et de la file d'attente solo ?",
+                answer: "Tous les modes de <span class='font-bold'>JcJ classé</span> seront disponibles au lancement de la saison, en même temps que la sortie des raids. La file d'attente solo <span class='font-bold'>non classée</span> pour les arènes est activée dès le lancement comme voie de montée en niveau supplémentaire, tout comme les <span class='font-bold'>champs de bataille non classés</span>. Les champs de bataille classés sont entièrement fonctionnels et seront liés aux récompenses saisonnières."
             },
             {
-                question: "Are there cross-faction BGs/dungeons?",
-                answer: "Yes. Proudmoore features full cross-faction queuing for battlegrounds, dungeons, and raids."
+                question: "Y a-t-il des champs de bataille/donjons inter-factions ?",
+                answer: "Oui. Proudmoore propose une mise en file d'attente inter-factions complète pour les champs de bataille, les donjons et les raids."
             },
             {
-                question: "Are any classes or specs disabled or rebalanced?",
-                answer: "No classes or specs are disabled or rebalanced. There are some slight rebalances towards end game content to adjust for the fact we are using the 4.3.4 client. When we hit end-of-progression, we will begin to experiment with class/spec rebalancing to keep content fresh."
+                question: "Est-ce qu'il y a des classes ou des spécialisations désactivées ou rééquilibrées ?",
+                answer: "Aucune classe ou spécialisation n'est désactivée ou rééquilibrée. Il y a quelques légers rééquilibrages vers le contenu de fin de jeu pour s'adapter au fait que nous utilisons le client 4.3.4. Lorsque nous atteindrons la fin de la progression, nous commencerons à expérimenter le rééquilibrage des classes et des spécialisations pour que le contenu reste dynamique."
             },
             {
-                question: "Are battlegroups active or merged in any way?",
-                answer: "This is a private server project, meaning we only have a single server. Battlegroups as they exist in Blizzard & Retail are redundant, all players are part of a single matchmaking pool for PVP & RDF/RF."
+                question: "Les champs de bataille sont-ils actifs ou fusionnés de quelque manière que ce soit ?",
+                answer: "Il s'agit d'un projet de serveur privé, ce qui signifie que nous n'avons qu'un seul serveur. Les groupes de bataille tels qu'ils existent chez Blizzard & dans la version officielle du jeu sont superflus, tous les joueurs font partie d'un seul pool de 'matchmaking' pour le JcJ, la recherche de donjon (RDF)"
             },
             {
-                question: "Are dungeons/raids scripted? To what level of completion?",
-                answer: "Yes, all Cataclysm dungeons and raids are fully scripted. We are utilizing Twinstar’s Cataclysm core, which has over 17 years of development. From dungeon mechanics to boss events and AI behavior, you can expect the full experience."
+                question: "Les donjons et les raids sont-ils scriptés ? À quel niveau d'achèvement ?",
+                answer: "Oui, tous les donjons et raids de Cataclysm sont entièrement scriptés. Nous utilisons le core de Cataclysm de Twinstar, qui a plus de 17 ans de développement. Des mécaniques de donjon à l'IA et aux événements des boss, vous pouvez vous attendre à vivre une expérience complète."
             },
             {
-                question: "What tier does the server launch with?",
-                answer: "We launch pre-Tier 11: Bastion of Twilight, Blackwing Descent, and Throne of the Four Winds. Tier 11 raids will become available in a week or two after launch date (TBA). Future tiers will be staggered based on community progression, not static dates."
+                question: "Avec quel palier le serveur est-il lancé ?",
+                answer: "Nous lançons le serveur avec le contenu d'avant le palier 11 : le Bastion du Crépuscule, Descente de l'Aile noire et le Trône des quatre vents. Les raids du palier 11 seront disponibles une ou deux semaines après la date de lancement (à déterminer). Les paliers futurs seront échelonnés en fonction de la progression de la communauté, et non de dates fixes."
             },
             {
-                question: "How do gear progression and catch-up systems work?",
-                answer: "Gear progression will follow Blizzard’s progression, with the exception of our additions of Mythic+ dungeons, and Casual Mode Raids. Mythic+ will serve as a stepping stone between heroic dungeons and normal raids, and casual mode raids will serve as lowering the skill curve needed to go from dungeons to raiding. Our catch-up systems will be announced at a later date, but will essentially incentivize players joining in late to catch up to current content without getting punished for it."
+                question: "Comment fonctionnent la progression de l'équipement et les systèmes de rattrapage ?",
+                answer: "La progression de l'équipement suivra celle de Blizzard, à l'exception de nos ajouts de donjons Mythique+ et de raids en mode décontracté. Le Mythique+ servira de passerelle entre les donjons héroïques et les raids normaux, et les raids en mode décontracté serviront à réduire la courbe de compétence nécessaire pour passer des donjons aux raids. Nos systèmes de rattrapage seront annoncés à une date ultérieure, mais ils inciteront essentiellement les joueurs qui rejoignent tardivement à rattraper le contenu actuel sans en être pénalisés."
             },
             {
-                question: "Is there PvE or PvP progression gating?",
-                answer: "Progression will be gated logically, and mostly following Blizzards original timeline. As mentioned before, we will not have static dates for future patch progression, instead we will have a blend of potential timelines, balanced with analytics on individual player progression and participation metrics. Essentially, we want to progress through patches without leaving players behind, while also keeping track of hardcore raider progression. It is not possible to time this perfect for all audiences, but we will do our best."
+                question: "Y a-t-il une restriction de progression JcE ou JcJ ?",
+                answer: "La progression sera restreinte de manière logique et suivra principalement la chronologie originale de Blizzard. Comme mentionné précédemment, nous n'aurons pas de dates fixes pour la progression des futurs patchs ; à la place, nous aurons un mélange de calendriers potentiels, équilibrés par des analyses sur la progression individuelle des joueurs et des mesures de participation. En substance, nous voulons progresser à travers les patchs sans laisser les joueurs à la traîne, tout en gardant un œil sur la progression des joueurs les plus assidus. Il n'est pas possible de planifier cela parfaitement pour tous les publics, mais nous ferons de notre mieux."
             },
             {
-                question: "Is world PvP encouraged? How?",
-                answer: "We will be keeping a close eye on World PvP. If there is a sizeable amount of players participating in it and forming groups specifically for it, we will further incentivize it. We do not want Proudmoore to become a griefing fiesta, but we do want to encourage group World PvP if there is an interest in it."
+                question: "Le JcJ sauvage est-il encouragé ? Comment ?",
+                answer: "Nous garderons un œil attentif sur le JcJ sauvage. S'il y a un nombre important de joueurs qui y participent et forment des groupes spécifiquement pour cela, nous l'encouragerons davantage. Nous ne voulons pas que Proudmoore devienne un terrain de jeu pour le harcèlement gratuit, mais nous voulons encourager le JcJ sauvage en groupe s'il y a un intérêt pour cela."
             },
             {
-                question: "Do you have dual spec? Is it free or gold-based?",
-                answer: "Dual spec is automatically enabled from level 10 for free."
+                question: "Avez-vous la double spécialisation ? Est-elle gratuite ou basée sur l'or ?",
+                answer: "La double spécialisation est automatiquement activée gratuitement à partir du niveau 10."
             },
             {
                 question: "Are there custom zones or events?",

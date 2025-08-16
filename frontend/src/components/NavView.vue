@@ -122,7 +122,7 @@ onBeforeUnmount(() => {
                 <li><a class="font-lora hover:font-thin" href="#timeline" v-html="t('nav.timeline')" @click="emit('update-visible', false)"></a></li>
                 <li><a class="font-lora hover:font-thin" href="#community" v-html="t('nav.discord')" @click="emit('update-visible', false)"></a></li>
                 <li><a class="font-lora hover:font-thin" href="#faq" v-html="t('nav.faq')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora hover:font-thin" href="#legal" v-html="t('nav.legal')" @click="emit('update-visible', false)"></a></li>
+                <li><a class="font-lora hover:font-thin" href="" v-html="t('nav.legal')" @click="emit('update-visible', false)"></a></li>
                 <li><a class="font-lora hover:font-thin" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" v-html="t('nav.appeal')" @click="emit('update-visible', false)"></a></li>
             </ul>
         </div>
