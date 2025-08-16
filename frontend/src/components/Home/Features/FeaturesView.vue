@@ -17,7 +17,7 @@ const featuresList = ref<Feature[]>(tm('features.items'))
 </script>
 
 <template>
-    <section id="#features" class=" max-h-[1100px] py-8 overflow-y-auto flex flex-wrap gap-4 w-[90%] max-w-[85rem] justify-center mt-4">
+    <section id="#features" class="max-h-[1100px] py-8 overflow-y-auto flex flex-wrap gap-4 w-[90%] max-w-[85rem] justify-center mt-4">
         <FlipCardsView v-for="feature in featuresList"
             :key="feature.id"
             :front="feature.title"

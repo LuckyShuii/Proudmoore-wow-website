@@ -6,7 +6,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <section class="flex flex-col items-center justify-center mb-10">
+    <section class="flex flex-col items-center justify-center mb-10 mt-[-1rem]">
         <div id="rate-animation">3X</div>
         <div id="rates-frame">
             <ul class="text-center" v-html="t('rates')"></ul>
