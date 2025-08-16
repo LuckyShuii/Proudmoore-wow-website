@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import '@/assets/css/tailwind.css';
+import '@/assets/css/home.css'; 
 
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura'; // ✅ new v4 theming
