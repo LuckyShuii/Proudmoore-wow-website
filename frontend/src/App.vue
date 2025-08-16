@@ -23,9 +23,17 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
     <!-- Right -->
     <div class="pointer-events-none fixed top-0 right-0 w-[100px] h-full bg-[url('/webp/border-right.png')] bg-no-repeat bg-[length:100%_100%] z-50"></div>
 
-    <div class="w-full lg:w-[30rem] lg:hidden">
-      <Drawer v-model:visible="visible"showCloseIcon dismissable>
-        <NavView @update-visible="visible = false" />
+    <div class="w-full lg:w-[30rem] lg:hidden z-60">
+      <Drawer v-model:visible="visible" :showCloseIcon="false" header="">
+        <NavView @update-visible="visible = false">
+          <template #header>
+            <div class="absolute right-4">
+              <button class="p-2" @click="visible=false" aria-label="Close">
+                <i class="pi pi-times text-2xl text-white"></i>
+              </button>
+            </div>
+          </template>
+        </NavView>
       </Drawer>
     </div>
     <NavView class="hidden lg:flex" />

@@ -56,7 +56,7 @@ html {
 }
 
 .p-drawer {
-  background: none !important;
+  width: 300px !important;
   border: none !important;
 }
 
@@ -64,4 +64,8 @@ html {
   background: none !important;
   border: none !important;
   color: white !important;
+}
+
+.p-drawer .p-drawer-header {
+  z-index: 60;
 }

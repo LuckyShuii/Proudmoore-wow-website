@@ -96,7 +96,7 @@ onBeforeUnmount(() => {
                     🌐 {{ selectLanguageLabel }}
                 </template>
             </Button>
-
+            <slot name='header'></slot>
             <!-- Popover PrimeVue -->
             <Popover ref="op" class="w-[8rem] z-50" dismissable closeOnEscape>
                 <div class="flex flex-col gap-4 items-center">
@@ -117,13 +117,13 @@ onBeforeUnmount(() => {
         <div class="h-full flex flex-col justify-center text-sm font-semibold">
             <ul class="flex flex-col items-center space-y-8 font-semibold">
                 <li><a class="font-lora hover:font-thin" href="#home" v-html="t('nav.home')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora" href="#about" v-html="t('nav.about')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora" href="#features" v-html="t('nav.features')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora" href="#timeline" v-html="t('nav.timeline')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora" href="#community" v-html="t('nav.discord')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora" href="#faq" v-html="t('nav.faq')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora" href="#legal" v-html="t('nav.legal')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" v-html="t('nav.appeal')" @click="emit('update-visible', false)"></a></li>
+                <li><a class="font-lora hover:font-thin" href="#about" v-html="t('nav.about')" @click="emit('update-visible', false)"></a></li>
+                <li><a class="font-lora hover:font-thin" href="#features" v-html="t('nav.features')" @click="emit('update-visible', false)"></a></li>
+                <li><a class="font-lora hover:font-thin" href="#timeline" v-html="t('nav.timeline')" @click="emit('update-visible', false)"></a></li>
+                <li><a class="font-lora hover:font-thin" href="#community" v-html="t('nav.discord')" @click="emit('update-visible', false)"></a></li>
+                <li><a class="font-lora hover:font-thin" href="#faq" v-html="t('nav.faq')" @click="emit('update-visible', false)"></a></li>
+                <li><a class="font-lora hover:font-thin" href="#legal" v-html="t('nav.legal')" @click="emit('update-visible', false)"></a></li>
+                <li><a class="font-lora hover:font-thin" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" v-html="t('nav.appeal')" @click="emit('update-visible', false)"></a></li>
             </ul>
         </div>
         <div class="px-[40px] pt-[40px]">

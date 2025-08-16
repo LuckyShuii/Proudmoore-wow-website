@@ -2,10 +2,10 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import '@/assets/css/tailwind.css';
-import '@/assets/css/home.css'; 
+import '@/assets/css/home.css';
 
 import PrimeVue from 'primevue/config';
-import Aura from '@primeuix/themes/aura'; // ✅ new v4 theming
+import Aura from '@primeuix/themes/aura';
 
 import Popover from 'primevue/popover';
 import Accordion from 'primevue/accordion';
@@ -36,7 +36,7 @@ app.component('Button', Button);
 app.use(pinia);
 app.use(PrimeVue, {
   theme: {
-    preset: Aura   
+    preset: Aura
   }
 });
 app.use(router);
