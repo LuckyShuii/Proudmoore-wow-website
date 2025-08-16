@@ -28,9 +28,9 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
     </Drawer>
 
     <DesktopNavView class="hidden sm:block" />
-    
+
     <main class="flex-grow sm:pl-[300px]">
-      <Message severity="warn" class="fixed top-10 right-10 z-50 max-w-[600px] !bg-[#c49407] hidden" v-if="isDev">
+      <Message severity="warn" class="fixed bottom-5 left-5 right-5 sm:top-10 sm:right-10 z-50 max-w-[600px] !bg-[#c49407]" v-if="isDev">
         <div class="text-white">
           <p class="font-bold">⚠️ Development Version - Work In Progress </p>
           <p>This is a development build of the website and not the production version.</p>
