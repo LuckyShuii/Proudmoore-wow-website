@@ -2,6 +2,9 @@
 import { RouterView } from 'vue-router'
 import Footer from '@/components/Footer.vue'
 import DesktopNavView from './components/DesktopNavView.vue';
+import { computed } from 'vue';
+
+const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
 </script>
 
 <template>
@@ -20,6 +23,12 @@ import DesktopNavView from './components/DesktopNavView.vue';
 
     <DesktopNavView />
     <main class="flex-grow pl-[300px]">
+      <Message severity="warn" class="fixed top-10 right-10 z-50 max-w-[600px] !bg-[#c49407]" v-if="isDev">
+        <div class="text-white">
+          <p class="font-bold">Development Version</p>
+          <p>This is a development build of the website and not the production version.</p>
+        </div>
+      </Message>
       <RouterView />
     </main>
     <Footer class="flex-shrink-0" />

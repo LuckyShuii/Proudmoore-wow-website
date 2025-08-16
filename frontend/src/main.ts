@@ -12,6 +12,7 @@ import Accordion from 'primevue/accordion';
 import AccordionPanel from 'primevue/accordionpanel';
 import AccordionHeader from 'primevue/accordionheader';
 import AccordionContent from 'primevue/accordioncontent';
+import Message from 'primevue/message';
 
 import i18n from './i18n';
 import { createPinia } from 'pinia';
@@ -26,6 +27,7 @@ app.component('Accordion', Accordion);
 app.component('AccordionPanel', AccordionPanel);
 app.component('AccordionHeader', AccordionHeader);
 app.component('AccordionContent', AccordionContent);
+app.component('Message', Message);
 
 app.use(pinia);
 app.use(PrimeVue, {
