@@ -439,7 +439,122 @@ const frTranslation = {
     ],
 
     bugFixesComment: "Oui. Nous savons ce que nous faisons.",
-    ratesComment: "Patience pour les quêtes d'escorte : 0x"
+    ratesComment: "Patience pour les quêtes d'escorte : 0x",
+
+    legalityPage: {
+        title: "Is It Safe to Play on Private Servers?",
+        titleDescription: "Everything you need to know about your rights and the legality of playing on a private server.",
+
+        mainWarning: "✅ No player has ever been fined, sued, or banned by Blizzard for playing on a private server. You’re safe. ✅",
+
+        firstBottomWarning: "Proudmoore exists to give players a fair, nostalgic, and balanced World of Warcraft experience.",
+        secondBottomWarning: "Millions of players have enjoyed private servers without fear.",
+        thirdBottomWarning: "You’re not doing anything wrong by playing here, and we’re glad to have you.",
+
+        faqAmISafe: {
+            title: "Am I safe doing this?",
+            questions: [
+                {
+                    question: "What's the worst that could happen to me as a player?",
+                    answer: "Realistically, the only “risk” is that a server might shut down unexpectedly. In that case, you would lose access to your characters and progress. There are no financial or legal consequences. However, this is not a concern for us whatsoever."
+                },
+                {
+                    question: "Has Blizzard ever gone after players?",
+                    answer: "No. All legal action by Blizzard has been against server operators. There is zero precedent for Blizzard taking action against a player simply for playing on a private server."
+                },
+                {
+                    question: "Can I get in legal trouble for playing on Proudmoore?",
+                    answer: "No. Players have never been targeted by Blizzard or any legal entity for using a private World of Warcraft server. Legal enforcement, when it happens, is directed at those who host the server, not those who play on it."
+                },
+                {
+                    question: "Will Blizzard ban my official (retail) WoW account if I play here?",
+                    answer: "There is no history of Blizzard banning anyone for simply playing on a private server. They don’t track players on private servers, and they would need direct access to your computer or account to even know you were playing."
+                },
+                {
+                    question: "Is using a private server considered piracy?",
+                    answer: "No. Simply playing on a private server is not considered piracy. You’re not redistributing or profiting from copyrighted material. The legal concern lies with the server hosts who distribute Blizzard’s game files, not players who connect to those servers."
+                },
+                {
+                    question: "What happens if the server is shut down by Blizzard?",
+                    answer: "If a private server is taken down, your only risk is losing access to the game. Your personal data and accounts are not at risk, and Blizzard has never targeted players following server shutdowns. We are personally not concerned about Proudmoore being taken down."
+                }
+            ]
+        },
+
+        faqTracking: {
+            title: "Can they track or see me?",
+            questions: [
+                {
+                    question: "Can Blizzard detect if I'm playing on a private server?",
+                    answer: "Only if you were to tell them or try to log in to your Battle.net account from within a private client (which you shouldn’t do). Private servers like Proudmoore are completely separate from Blizzard’s infrastructure."
+                },
+                {
+                    question: "Will my ISP or government block or flag me for playing?",
+                    answer: "No. Playing on private game servers is not monitored or blocked by ISPs or governments in most countries. There’s no known case of anyone being penalized by their provider for playing WoW on a private server. However, there are some countries such as Iran that monitor web traffic. In this case, it would be advised to use a VPN."
+                },
+                {
+                    question: "Do I need to use a VPN to stay safe?",
+                    answer: "No. Most players do not use a VPN, and there’s no need to unless you want added privacy. VPNs are optional, but not required to protect yourself while playing. Depending on your location, a VPN may improve your latency."
+                },
+                {
+                    question: "If Proudmoore shuts down, could Blizzard get my email or IP address?",
+                    answer: "No. Proudmoore does not share player data, and there’s no precedent for any server handing over player information to Blizzard. Furthermore, we are not concerned about being shut down."
+                }
+            ]
+        },
+
+        faqPersonalData: {
+            title: "Am I giving up personal data?",
+            questions: [
+                {
+                    question: "Can private servers access my real identity or payment information?",
+                    answer: "Only if you provide it voluntarily. Proudmoore does not ask for personal ID or payment info in order to play. Donations, if accepted, go through secure third-party processors like PayPal."
+                },
+                {
+                    question: "Can Proudmoore see my retail account or Blizzard activity?",
+                    answer: "No. Private servers do not connect to Blizzard’s systems and cannot view or access any of your Blizzard or Battle.net account activity."
+                },
+                {
+                    question: "Could playing here infect my computer or steal my data?",
+                    answer: "No. To stay safe, always download the client directly from the official Proudmoore website and never share your password across multiple services."
+                }
+            ]
+        },
+
+        faqDonation: {
+            title: "What if I donate?",
+            questions: [
+                {
+                    question: "If I donate to a private server, am I more at risk legally?",
+                    answer: "A: No. Even players who have donated to private servers have never been pursued legally. The legal line is drawn at commercial hosting and distribution, not players supporting a project."
+                }
+            ]
+        },
+
+        faqEdgeCases: {
+            title: "How about legal edge cases?",
+            questions: [
+                {
+                    question: "Is it legal to download a modified WoW client to play on a private server?",
+                    answer: "It’s legally gray. While distributing modified clients can violate Blizzard’s terms, players downloading and using them have never faced legal consequences. Think of it like emulators: the software may violate terms, but users are not prosecuted."
+                },
+                {
+                    question: "What about EU or US copyright law? Could that ever come back to bite me?",
+                    answer: "In the entire history of private servers, no player has ever been targeted under EU or US copyright law. Courts have only pursued server operators or distributors—never players."
+                }
+            ]
+        },
+
+        faqNewOkay: {
+            title: "I'm new, is this okay?",
+            questions: [
+                {
+                    question: "I’ve never played WoW. Is joining a private server like Proudmoore risky as a newcomer?",
+                    answer: "Not at all. Private servers are often more welcoming and community-driven than retail. You’ll find that many players on private servers are helpful and passionate about the game, and many of the features on Proudmoore are intended specifically for newcomers."
+                }
+            ]
+        },
+    }
 };
 
 export default frTranslation;
