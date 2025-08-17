@@ -26,7 +26,7 @@ Afterwards, progressively add new features with:
 
 ## 📌 Roadmap
 
-- [ ] Migrate current content to Vue.js (WIP)
+- [x] Migrate current content to Vue.js (WIP)
 - [ ] Add a Node.js/Express backend
 - [ ] Implement a database
 - [ ] Containerize with Docker & Nginx reverse proxy
