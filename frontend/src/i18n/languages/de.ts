@@ -33,9 +33,9 @@ const deTranslation = {
             { "id": "soloQueue", "title": "Arena Solo-Warteschlange", "description": "Melde dich Solo für die Arena an, ohne ein vorgefertigtes Team zu benötigen.", isFav: 1 },
             { "id": "crossFaction", "title": "Komplett Fraktionsübergreifend", "description": "Spiele unabhängig deiner Fraktion mit deinen Freunden, Gruppen, Raid, BGs, usw. sind vollkommen Fraktionsübergreifend", isFav: 1 },
             { "id": "transmogrification", "title": "Komplette Transmogrifikation", "description": "Gestalte dein Aussehen frei mit allen Transmogrifikations-Optionen – ohne Einschränkungen!", isFav: 1 },
-            { "id": "progressiveContent", "title": "Fortschreitender Spielinhalt", "description": "Die Content wird phasenweise freigeschaltet und orientieren sich am ursprünglichen Cataclysm-Fortschritt.", isFav: 0 },
-            { "id": "casualRaid", "title": "Einfacher Raid-Schwierigkeitsgrad", "description": "Einfacher Raid-Schwierigkeitsgrad", isFav: 1 },
-            { "id": "battlegroundLeveling", "title": "Leveln durch Battlegrounds.", "description": "Ab Stufe 10 erwarten dich zusätzliche Level-Möglichkeiten.", isFav: 1 },
+            { "id": "progressiveContent", "title": "Fortschreitender Spielinhalt", "description": "Der Content wird phasenweise freigeschaltet und orientiert sich am ursprünglichen Cataclysm-Fortschritt.", isFav: 0 },
+            { "id": "casualRaid", "title": "Einfacher Raid-Schwierigkeitsgrad", "description": "Einfacherer Raid-Schwierigkeitsgrad für Casual- und Semi-Hardcore-Spieler.", isFav: 1 },
+            { "id": "battlegroundLeveling", "title": "Leveln durch Battlegrounds.", "description": "Ab Stufe 10 kannst du ganz einfach durch Battlegrounds leveln.", isFav: 1 },
             { "id": "weekendEvents", "title": "Wochenend-Events", "description": "Genieße exklusive Wochenend-Events mit erhöhten Belohnungen und Raten.", isFav: 0 },
             { "id": "racialSwap", "title": "Wechsel der Volksfähigkeiten", "description": "Passe deine Volksfähigkeiten deinem Spielstil an.", isFav: 0 },
             { "id": "xpRate", "title": "Anpassbare Erfahrungsraten", "description": "Wähle, wie schnell du leveln willst, mit einstellbarem Erfahrungsgewinn von 0 % bis 100 %.", isFav: 0 },
@@ -48,7 +48,7 @@ const deTranslation = {
             { "id": "gatheringProfessions", "title": "Dynamische Sammelberufe", "description": "Materialvorkommen werden sowohl die wirtschaftliche Stabilität als auch die Bevölkerungsdichte der Zone berücksichtigen.", isFav: 0 },
             { "id": "lootRules", "title": "Faire Beute-Regeln", "description": "Faire Beute-Regeln für den gesamten Content, um Ninja-Looting zu reduzieren.", isFav: 0 },
             { "id": "altFriendly", "title": "Twink freundliche Systeme", "description": "So gestaltet, dass deine Twinks vom Fortschritt deines Accounts profitieren.", isFav: 0 },
-            { "id": "playerFirst", "title": "Spielerorientierter GameMaster-Service", "description": "Spielerorientierter GameMaster-Support. Unser Team stellt Spieler & die Gemeinschaft bei jeder von uns umgesetzten Richtlinie an erste Stelle.", isFav: 0 }
+            { "id": "playerFirst", "title": "Spielerorientierter GameMaster-Service", "description": "Spielerorientierter GameMaster-Support. Unser Team stellt Spieler & die Community bei jeder von uns umgesetzten Richtlinie an erste Stelle.", isFav: 0 }
         ]
     },
 
@@ -66,11 +66,11 @@ const deTranslation = {
         questions: [
             {
                 question: "Was unterscheidet Proudmoore von anderen Cataclysm Servern?",
-                answer: "Proudmoore ist nicht einfach nur ein weiterer Cataclysm Server, sondern baut auf bewährten Konzepten auf, um die Erweiterung für Hardcore- und Gelegenheitsspieler gleichermaßen abzurunden. Wir bieten mythische Dungeons, Solo-Wertung PvP Warteschlangen, eine Vielzahl neuer Levelpfade und fraktionsübergreifende Systeme an, während wir gleichzeitig das Kernerlebnis von Cataclysm bewahren."
+                answer: "Proudmoore ist nicht einfach nur ein weiterer Cataclysm-Server, sondern baut auf bewährten Konzepten auf, um die Erweiterung sowohl für Hardcore- als auch für Gelegenheitsspieler abzurunden. Wir bieten mythische Dungeons, Solo-Wertung PvP Warteschlangen, Leveln über BGs und fraktionsübergreifende Systeme, während wir gleichzeitig das klassische Cataclysm-Erlebnis bewahren."
             },
             {
                 question: "Wer betreibt Proudmoore? Ist es ein neues Team oder eine Neuauflage?",
-                answer: "Proudmoore ist ein neues Projekt aus erfahrenen Händen, eine Zusammenarbeit, die die Infrastruktur von Twinstar und ein neues Team nutzt, das aus privat Server Veteranen mit jahrelanger Erfahrung in der Projektleitung besteht. Mit starkem Fokus auf Gemeinschaft und Qualität wollen wir das bestmögliche Cataclysm-Projekt schaffen."
+                answer: "Proudmoore ist ein neues Projekt aus erfahrenen Händen, eine Zusammenarbeit, die die Infrastruktur von Twinstar und ein neues Team nutzt, das aus privat Server Veteranen mit jahrelanger Erfahrung in der Projektleitung besteht. Mit starkem Fokus auf Community und Qualität wollen wir das bestmögliche Cataclysm-Projekt schaffen."
             },
             {
                 question: "Warum habt Ihr Cataclysm als Erweiterung gewählt?",
@@ -114,7 +114,7 @@ const deTranslation = {
             },
             {
                 question: "Wie ist der aktuelle Status von gewerteten BGs, Arenen und Solo-Warteschlangen?",
-                answer: "Alle <span class='font-bold'>gewerteten PvP</span>-Modi werden mit dem Start der Saison veröffentlicht, gleichzeitig mit den Raid-Veröffentlichungen. <span class='font-bold'>Ungewertete</span> Solo-Warteschlangen für Arenen sind ab Launch verfügbar, ebenso wie <span class='font-bold'>unbewertete Schlachtfelder</span>. Gewertete Schlachtfelder sind voll funktionsfähig und werden in saisonale Belohnungen eingebunden."
+                answer: "Alle <span class='font-bold'>gewerteten PvP</span>-Modi werden mit dem Start der Saison veröffentlicht, gleichzeitig mit den Raid-Veröffentlichungen. <span class='font-bold'>Ungewertete</span> Solo-Warteschlangen für Arenen sind ab Launch verfügbar, ebenso wie <span class='font-bold'>ungewertete Battlegrounds</span>. Gewertete Battlegrounds sind voll funktionsfähig und werden in saisonale Belohnungen eingebunden."
             },
             {
                 question: "Gibt es Fraktionsübergreifende BGs und Dungeons?",
@@ -138,7 +138,7 @@ const deTranslation = {
             },
             {
                 question: "Wie laufen Ausrüstungsprogression und Aufholmechaniken ab?",
-                answer: "Die Ausrüstungsprogression folgt Blizzards Vorlage, ergänzt um unsere Mythischen Instanzen und Casual-Mode-Schlachtzüge. Mythische Dungeons dienen dabei als Zwischenschritt zwischen heroischen Dungeons und normalen Raids, während Casual-Mode-Raids die Einstiegshürde vom Dungeon- zum Raid-Content senken. Unsere Aufholsysteme werden zu einem späteren Zeitpunkt angekündigt. Sie sollen im Wesentlichen Spieler belohnen, die später dazustoßen, sodass sie zum aktuellen Content aufschließen können, ohne dafür bestraft zu werden."
+                answer: "Die Ausrüstungsprogression folgt Blizzards Vorlage, ergänzt um unsere Mythischen Dungeons und Casual-Mode-Raids. Mythische Dungeons dienen dabei als Zwischenschritt zwischen heroischen Dungeons und normalen Raids, während Casual-Mode-Raids die Einstiegshürde vom Dungeon- zum Raid-Content senken. Unsere Aufholsysteme werden zu einem späteren Zeitpunkt angekündigt. Sie sollen im Wesentlichen Spieler belohnen, die später dazustoßen, sodass sie zum aktuellen Content aufschließen können, ohne dafür bestraft zu werden."
             },
             {
                 question: "Gibt es Fortschrittsbeschränkungen für PvE oder PvP?",
@@ -158,7 +158,7 @@ const deTranslation = {
             },
             {
                 question: "Werden wir Zeitwanderungs-Äquivalente Dungeons oder Klassenanpassungen sehen?",
-                answer: "Ja, Proudmoore bietet ein selbst entwickeltes <span class='font-bold'>Mythisches-System</span> mit skalierbarem Schwierigkeitsgrad, Affixen und Ranglistenverfolgung. Klassenanpassungen werden am Ende der Content-progression erfolgen. Möglicherweise werden wir einige Endgame-Ausrüstungen für Arenen und gewertete Schlachtfelder anpassen. Zeitwanderung wird als Teil zukünftiger saisonalen Content in Betracht gezogen."
+                answer: "Ja, Proudmoore bietet ein selbst entwickeltes <span class='font-bold'>Mythisches-System</span> mit skalierbarem Schwierigkeitsgrad, Affixen und Ranglistenverfolgung. Klassenanpassungen werden am Ende der Content-progression erfolgen. Möglicherweise werden wir einige Endgame-Ausrüstungen für Arenen und gewertete Battlegrounds anpassen. Zeitwanderung wird als Teil zukünftiger saisonalen Content in Betracht gezogen."
             }
         ],
     },
@@ -443,115 +443,115 @@ const deTranslation = {
     bugFixesComment: "Aufgrund unseres erfahrenen Teams wissen wir was wir tun..",
 
     legalityPage: {
-        title: "Is It Safe to Play on Private Servers?",
-        titleDescription: "Everything you need to know about your rights and the legality of playing on a private server.",
+        title: "Ist es sicher, auf Privatservern zu spielen?",
+        titleDescription: "Alles, was du über deine Rechte und die rechtliche Lage beim Spielen auf einem Privatserver wissen solltest.",
 
-        mainWarning: "✅ No player has ever been fined, sued, or banned by Blizzard for playing on a private server. You’re safe. ✅",
+        mainWarning: "✅ Kein Spieler wurde jemals von Blizzard verklagt, bestraft oder gebannt, nur weil er auf einem Privatserver gespielt hat. Du bist also auf der sicheren Seite. ✅",
 
-        firstBottomWarning: "Proudmoore exists to give players a fair, nostalgic, and balanced World of Warcraft experience.",
-        secondBottomWarning: "Millions of players have enjoyed private servers without fear.",
-        thirdBottomWarning: "You’re not doing anything wrong by playing here, and we’re glad to have you.",
+        firstBottomWarning: "Proudmoore existiert, um den Spielern ein faires, nostalgisches und ausgewogenes World of Warcraft-Erlebnis zu bieten.",
+        secondBottomWarning: "Bereits millionen von Spielern haben private Server angstfrei genossen.",
+        thirdBottomWarning: "Du machst nichts falsch, indem du hier spielst, und wir freuen uns, dich dabei zu haben.",
 
         faqAmISafe: {
-            title: "Am I safe doing this?",
+            title: "Ja, als Spieler bist du sicher.",
             questions: [
                 {
-                    question: "What's the worst that could happen to me as a player?",
-                    answer: "Realistically, the only “risk” is that a server might shut down unexpectedly. In that case, you would lose access to your characters and progress. There are no financial or legal consequences. However, this is not a concern for us whatsoever."
+                    question: "Was ist das Schlimmste, das mir als Spieler passieren könnte?",
+                    answer: "Realistisch betrachtet besteht das einzige „Risiko“ darin, dass ein Server unerwartet abgeschaltet werden könnte. In diesem Fall würdest du den Zugriff auf deine Charaktere und deinen Fortschritt verlieren. Finanzielle oder rechtliche Konsequenzen gibt es keine. Für uns stellt das jedoch keinerlei Sorge dar."
                 },
                 {
-                    question: "Has Blizzard ever gone after players?",
-                    answer: "No. All legal action by Blizzard has been against server operators. There is zero precedent for Blizzard taking action against a player simply for playing on a private server."
+                    question: "Hat Blizzard jemals Spieler rechtlich verfolgt?",
+                    answer: "Nein. Alle rechtlichen Schritte von Blizzard richteten sich ausschließlich gegen Serverbetreiber. Es gibt keinerlei Präzedenzfälle dafür, dass Blizzard Spieler bestraft hat, nur weil sie auf einem privaten Server spielen."
                 },
                 {
-                    question: "Can I get in legal trouble for playing on Proudmoore?",
-                    answer: "No. Players have never been targeted by Blizzard or any legal entity for using a private World of Warcraft server. Legal enforcement, when it happens, is directed at those who host the server, not those who play on it."
+                    question: "Kann ich rechtliche Probleme bekommen, weil ich auf Proudmoore spiele?",
+                    answer: "Nein. Spieler wurden von Blizzard oder einer anderen rechtlichen Instanz noch nie für die Nutzung eines privaten World of Warcraft-Servers verfolgt. Rechtliche Schritte richten sich, falls überhaupt, ausschließlich gegen die Betreiber des Servers, nicht gegen die Spieler."
                 },
                 {
-                    question: "Will Blizzard ban my official (retail) WoW account if I play here?",
-                    answer: "There is no history of Blizzard banning anyone for simply playing on a private server. They don’t track players on private servers, and they would need direct access to your computer or account to even know you were playing."
+                    question: "Wird Blizzard meinen offiziellen WoW-Account sperren, wenn ich hier spiele?",
+                    answer: "Es gibt keine Fälle, in denen Blizzard jemanden allein dafür gesperrt hätte, dass er auf einem privaten Server spielt. Sie verfolgen Spieler auf privaten Servern nicht und bräuchten direkten Zugriff auf deinen Computer oder Account, um überhaupt zu wissen, dass du spielst."
                 },
                 {
-                    question: "Is using a private server considered piracy?",
-                    answer: "No. Simply playing on a private server is not considered piracy. You’re not redistributing or profiting from copyrighted material. The legal concern lies with the server hosts who distribute Blizzard’s game files, not players who connect to those servers."
+                    question: "Gilt das Spielen auf einem privaten Server als illegale Nutzung?",
+                    answer: "Nein. Das Spielen auf einem privaten Server gilt nicht als illegale Nutzung. Du verteilst keine urheberrechtlich geschützten Inhalte und erzielst keinen Profit daraus. Rechtliche Probleme betreffen die Betreiber der Server, die Blizzards Spieldateien verbreiten, nicht die Spieler, die sich auf diesen Servern einloggen."
                 },
                 {
-                    question: "What happens if the server is shut down by Blizzard?",
-                    answer: "If a private server is taken down, your only risk is losing access to the game. Your personal data and accounts are not at risk, and Blizzard has never targeted players following server shutdowns. We are personally not concerned about Proudmoore being taken down."
+                    question: "Was passiert, wenn der Server von Blizzard geschlossen wird?",
+                    answer: "Wenn ein privater Server abgeschaltet wird, besteht das einzige Risiko darin, den Zugriff auf das Spiel zu verlieren. Deine persönlichen Daten und Accounts sind nicht gefährdet, und Blizzard hat Spieler nach der Schließung eines Servers niemals ins Visier genommen. Wir selbst machen uns keine Sorgen, dass Proudmoore abgeschaltet wird."
                 }
             ]
         },
 
         faqTracking: {
-            title: "Can they track or see me?",
+            title: "Können sie mich nachverfolgen?",
             questions: [
                 {
-                    question: "Can Blizzard detect if I'm playing on a private server?",
-                    answer: "Only if you were to tell them or try to log in to your Battle.net account from within a private client (which you shouldn’t do). Private servers like Proudmoore are completely separate from Blizzard’s infrastructure."
+                    question: "Kann Blizzard erkennen, ob ich auf einem privaten Server spiele?",
+                    answer: "Nur, wenn du es ihnen selbst sagst oder versuchst, dich über einen privaten Client in dein Battle.net-Konto einzuloggen (was du nicht tun solltest). Privat Server wie Proudmoore sind komplett von Blizzards Infrastruktur getrennt."
                 },
                 {
-                    question: "Will my ISP or government block or flag me for playing?",
-                    answer: "No. Playing on private game servers is not monitored or blocked by ISPs or governments in most countries. There’s no known case of anyone being penalized by their provider for playing WoW on a private server. However, there are some countries such as Iran that monitor web traffic. In this case, it would be advised to use a VPN."
+                    question: "Wird mein Internetanbieter oder die Regierung mein Spielen überwachen oder sperren?",
+                    answer: "Nein. Das Spielen auf privaten Spieleservern wird in den meisten Ländern weder von Internetanbietern noch von Regierungen überwacht oder gesperrt. Es ist kein Fall bekannt, in dem jemand von seinem Anbieter für das Spielen von WoW auf einem privaten Server bestraft wurde. In einigen Ländern, wie zum Beispiel Iran, wird der Internetverkehr jedoch überwacht. In solchen Fällen wird die Nutzung eines VPNs empfohlen."
                 },
                 {
-                    question: "Do I need to use a VPN to stay safe?",
-                    answer: "No. Most players do not use a VPN, and there’s no need to unless you want added privacy. VPNs are optional, but not required to protect yourself while playing. Depending on your location, a VPN may improve your latency."
+                    question: "Muss ich ein VPN benutzen, um sicher zu sein?",
+                    answer: "Nein. Die meisten Spieler verwenden kein VPN, und es ist auch nicht nötig, außer du möchtest zusätzliche Privatsphäre. VPNs sind optional und nicht erforderlich, um beim Spielen geschützt zu sein. Je nach Standort kann ein VPN außerdem deine Latenz verbessern."
                 },
                 {
-                    question: "If Proudmoore shuts down, could Blizzard get my email or IP address?",
-                    answer: "No. Proudmoore does not share player data, and there’s no precedent for any server handing over player information to Blizzard. Furthermore, we are not concerned about being shut down."
+                    question: "Könnte Blizzard meine E-Mail-Adresse oder IP herausfinden, falls Proudmoore abgeschaltet wird?",
+                    answer: "Nein. Proudmoore gibt keine Spieldaten weiter, und es gibt keinen Fall, in dem ein Server Spielerninformationen an Blizzard übermittelt hätte. Außerdem machen wir uns persönlich keine Sorgen über eine Abschaltung."
                 }
             ]
         },
 
         faqPersonalData: {
-            title: "Am I giving up personal data?",
+            title: "Gebe ich persönliche Daten preis?",
             questions: [
                 {
-                    question: "Can private servers access my real identity or payment information?",
-                    answer: "Only if you provide it voluntarily. Proudmoore does not ask for personal ID or payment info in order to play. Donations, if accepted, go through secure third-party processors like PayPal."
+                    question: "Können private Server auf meine echte Identität oder Zahlungsinformationen zugreifen?",
+                    answer: "Nur, wenn du sie freiwillig angibst. Proudmoore verlangt keine persönlichen Daten oder Zahlungsinformationen, um spielen zu können. Spenden, falls akzeptiert, werden über sichere Drittanbieter wie PayPal abgewickelt."
                 },
                 {
-                    question: "Can Proudmoore see my retail account or Blizzard activity?",
-                    answer: "No. Private servers do not connect to Blizzard’s systems and cannot view or access any of your Blizzard or Battle.net account activity."
+                    question: "Kann Proudmoore auf meinen Retail-Account oder meine Blizzard-Aktivitäten zugreifen?",
+                    answer: "Nein. Private Server sind nicht mit den Systemen von Blizzard verbunden und können weder auf deinen Blizzard- noch auf deinen Battle.net-Account zugreifen oder Aktivitäten einsehen."
                 },
                 {
-                    question: "Could playing here infect my computer or steal my data?",
-                    answer: "No. To stay safe, always download the client directly from the official Proudmoore website and never share your password across multiple services."
+                    question: "Kann das Spielen hier meinen Computer infizieren oder meine Daten stehlen?",
+                    answer: "Nein. Um sicher zu bleiben, lade den Client immer direkt von der offiziellen Proudmoore-Website herunter und nutze dein Passwort niemals auf mehreren Plattformen."
                 }
             ]
         },
 
         faqDonation: {
-            title: "What if I donate?",
+            title: "Was geschieht, wenn ich eine Spende tätige?",
             questions: [
                 {
-                    question: "If I donate to a private server, am I more at risk legally?",
-                    answer: "A: No. Even players who have donated to private servers have never been pursued legally. The legal line is drawn at commercial hosting and distribution, not players supporting a project."
+                    question: "Bin ich rechtlich gefährdet, wenn ich an einen privaten Server spende?",
+                    answer: "Nein. Selbst Spieler, die an private Server gespendet haben, wurden rechtlich nie belangt. Die rechtliche Grenze liegt beim kommerziellen Hosting und der Verbreitung, nicht bei Spielern, die ein Projekt unterstützen."
                 }
             ]
         },
 
         faqEdgeCases: {
-            title: "How about legal edge cases?",
+            title: "Wie sieht es mit rechtlichen Sonderfällen aus?",
             questions: [
                 {
-                    question: "Is it legal to download a modified WoW client to play on a private server?",
-                    answer: "It’s legally gray. While distributing modified clients can violate Blizzard’s terms, players downloading and using them have never faced legal consequences. Think of it like emulators: the software may violate terms, but users are not prosecuted."
+                    question: "Ist es legal, einen modifizierten WoW-Client herunterzuladen, um auf einem privaten Server zu spielen?",
+                    answer: "Rechtlich gesehen ist es ein Graubereich. Das Verteilen modifizierter Clients kann gegen Blizzards Nutzungsbedingungen verstoßen, doch Spieler, die diese Clients nur herunterladen und nutzen, wurden dafür bisher nie rechtlich belangt. Man kann es mit Emulatoren vergleichen: Die Software selbst könnte Regeln verletzen, die Nutzer hingegen nicht."
                 },
                 {
-                    question: "What about EU or US copyright law? Could that ever come back to bite me?",
-                    answer: "In the entire history of private servers, no player has ever been targeted under EU or US copyright law. Courts have only pursued server operators or distributors—never players."
+                    question: "Wie sieht es mit dem Urheberrecht in der EU oder den USA aus? Könnte das jemals rechtliche Probleme für mich verursachen?",
+                    answer: "In der gesamten Geschichte privater Server wurde noch nie ein Spieler aufgrund von EU- oder US-Urheberrechtsgesetzen belangt. Rechtliche Schritte richteten sich stets nur gegen Serverbetreiber oder Daten-Verteiler, niemals gegen die Spieler selbst."
                 }
             ]
         },
 
         faqNewOkay: {
-            title: "I'm new, is this okay?",
+            title: "Ich bin neu bei WoW und privaten Servern, ist das in Ordnung?",
             questions: [
                 {
-                    question: "I’ve never played WoW. Is joining a private server like Proudmoore risky as a newcomer?",
-                    answer: "Not at all. Private servers are often more welcoming and community-driven than retail. You’ll find that many players on private servers are helpful and passionate about the game, and many of the features on Proudmoore are intended specifically for newcomers."
+                    question: "Ich habe noch nie WoW gespielt. Ist es für einen Neuling riskant, einem privaten Server wie Proudmoore beizutreten?",
+                    answer: "Überhaupt nicht. Private Server sind oft einladender und gemeinschaftsorientierter als die offiziellen Server. Du wirst feststellen, dass viele Spieler auf privaten Servern hilfsbereit und leidenschaftlich für das Spiel sind, und viele Funktionen auf Proudmoore sind speziell auf Neulinge zugeschnitten."
                 }
             ]
         },

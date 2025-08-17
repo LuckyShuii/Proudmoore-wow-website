@@ -45,7 +45,7 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
           <p class="hidden lg:block">This is a development build of the website and not the production version.</p>
         </div>
       </Message>
-      <Button icon="pi pi-bars" class="!scale-[3] !fixed !top-10 !left-10 !z-[60] pointer-events-auto block lg:!hidden" @click="visible = true" />
+      <Button id="burger-button" icon="pi pi-bars" class="!scale-[3] !fixed !top-10 !left-10 !z-[60] pointer-events-auto block lg:!hidden" @click="visible = true" />
       <RouterView />
     </main>
   </div>

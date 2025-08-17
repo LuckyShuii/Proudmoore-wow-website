@@ -88,7 +88,7 @@ onBeforeUnmount(() => {
     <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-50 flex flex-col w-[300px] py-[35px] lg:py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
         <div class="card flex justify-center">
             <!-- Button with selected flag or text -->
-            <Button type="button" @click="toggle" class="min-w-32 flex items-center gap-2 justify-center z-60">
+            <Button id="select-language-button" type="button" @click="toggle" class="min-w-32 flex items-center gap-2 justify-center z-60">
                 <template v-if="selectedLanguage">
                     <img :src="selectedLanguage.src" :alt="selectedLanguage.alt" class="w-6 h-6" />
                     {{ selectedLanguage.code.toUpperCase() }}
