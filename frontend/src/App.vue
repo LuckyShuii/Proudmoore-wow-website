@@ -27,7 +27,7 @@ const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
       <Drawer v-model:visible="visible" :showCloseIcon="false" header="">
         <NavView @update-visible="visible = false">
           <template #header>
-            <div class="absolute right-4">
+            <div class="absolute right-4 mt-20 lg:mt-8">
               <button class="p-2" @click="visible=false" aria-label="Close">
                 <i class="pi pi-times text-2xl text-white"></i>
               </button>

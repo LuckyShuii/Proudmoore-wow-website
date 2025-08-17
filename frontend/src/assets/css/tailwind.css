@@ -69,3 +69,7 @@ html {
 .p-drawer .p-drawer-header {
   z-index: 60;
 }
+
+#nav-banner {
+  animation: glowing-divider-line 1.5s infinite alternate;
+}

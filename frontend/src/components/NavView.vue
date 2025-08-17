@@ -86,9 +86,10 @@ onBeforeUnmount(() => {
 
 <template>
     <nav class="bg-[#0E0E0E] fixed top-0 bottom-0 left-0 z-50 flex flex-col w-[300px] py-[35px] lg:py-[70px] pl-1 shadow-[5px_0_5px_-1px_black]">
+        <div class="bg-[url('/webp/coming-soon.png')] h-[90px] bg-cover bg-center absolute top-0 right-0 left-0" id="nav-banner"></div>
         <div class="card flex justify-center">
             <!-- Button with selected flag or text -->
-            <Button id="select-language-button" type="button" @click="toggle" class="min-w-32 flex items-center gap-2 justify-center z-60">
+            <Button id="select-language-button" type="button" @click="toggle" class="min-w-32 flex items-center gap-2 justify-center z-60 mt-20 lg:mt-8">
                 <template v-if="selectedLanguage">
                     <img :src="selectedLanguage.src" :alt="selectedLanguage.alt" class="w-6 h-6" />
                     {{ selectedLanguage.code.toUpperCase() }}
