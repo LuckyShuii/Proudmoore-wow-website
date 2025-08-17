@@ -117,14 +117,14 @@ onBeforeUnmount(() => {
         </div>
         <div class="h-full flex flex-col justify-center text-sm font-semibold">
             <ul class="flex flex-col items-center space-y-8 font-semibold">
-                <li><RouterLink class="font-lora hover:font-thin" to="/#home" @click="emit('update-visible', false)">{{ t('nav.home') }}</RouterLink></li>
-                <li><RouterLink class="font-lora hover:font-thin" to="/#about" @click="emit('update-visible', false)">{{ t('nav.about') }}</RouterLink></li>
-                <li><RouterLink class="font-lora hover:font-thin" to="/#features" @click="emit('update-visible', false)">{{ t('nav.features') }}</RouterLink></li>
-                <li><RouterLink class="font-lora hover:font-thin" to="/#timeline" @click="emit('update-visible', false)">{{ t('nav.timeline') }}</RouterLink></li>
-                <li><RouterLink class="font-lora hover:font-thin" to="/#community" @click="emit('update-visible', false)">{{ t('nav.discord') }}</RouterLink></li>
-                <li><RouterLink class="font-lora hover:font-thin" to="/#faq" @click="emit('update-visible', false)">{{ t('nav.faq') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#home' }" @click="emit('update-visible', false)">{{ t('nav.home') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#about' }" @click="emit('update-visible', false)">{{ t('nav.about') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#features' }" @click="emit('update-visible', false)">{{ t('nav.features') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#timeline' }" @click="emit('update-visible', false)">{{ t('nav.timeline') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#community' }" @click="emit('update-visible', false)">{{ t('nav.discord') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#faq' }" @click="emit('update-visible', false)">{{ t('nav.faq') }}</RouterLink></li>
                 <li><RouterLink class="font-lora hover:font-thin" to="/legality-player-rights" @click="emit('update-visible', false)">{{ t('nav.legal') }}</RouterLink></li>
-                <li><RouterLink class="font-lora hover:font-thin" to="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" @click="emit('update-visible', false)">{{ t('nav.appeal') }}</RouterLink></li>
+                <li><a class="font-lora hover:font-thin" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" @click="emit('update-visible', false)">{{ t('nav.appeal') }}</a></li>
             </ul>
         </div>
         <div class="px-[40px] pt-[40px]">
