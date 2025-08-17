@@ -12,7 +12,7 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <section class="bg-[#0E0E0E]">
+    <section class="bg-[#0E0E0E]" id="home">
         <HeroView />
         <div class="separator"></div>
         <ServerDescriptionView />

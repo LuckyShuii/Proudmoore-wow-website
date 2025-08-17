@@ -1,21 +1,12 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { ref } from 'vue';
+import type { Faq } from '@/types/faqType';
 
 const { tm } = useI18n();
 
-interface FaqQuestion {
-    question: string;
-    answer: string;
-    additionalInfoTitle: string | undefined;
-    additionalInfoText: string | undefined;
-}
-
 const props = defineProps<{
-    faq: {
-        title: string;
-        questions: FaqQuestion[];
-    };
+    faq: Faq;
 }>();
 
 </script>
