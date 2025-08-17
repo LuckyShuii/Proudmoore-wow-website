@@ -31,8 +31,8 @@ const deTranslation = {
         items: [
             { "id": "mythicPlus", "title": "Mythische Dungeons", "description": "Erlebe Mythische Dungeons mit zeitbasierten Herausforderungen & steigendem Schwierigkeitsgrad", isFav: 1 },
             { "id": "soloQueue", "title": "Arena Solo-Warteschlange", "description": "Melde dich Solo für die Arena an, ohne ein vorgefertigtes Team zu benötigen.", isFav: 1 },
-            { "id": "crossFaction", "title": "Komplett Fraktionsübergreifend", "description": "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc).", isFav: 1 },
-            { "id": "transmogrification", "title": "Full Transmogrification", "description": "Gestalte dein Aussehen frei mit allen Transmogrifikations-Optionen – ohne Einschränkungen!", isFav: 1 },
+            { "id": "crossFaction", "title": "Komplett Fraktionsübergreifend", "description": "Spiele unabhängig deiner Fraktion mit deinen Freunden, Gruppen, Raid, BGs, usw. sind vollkommen Fraktionsübergreifend", isFav: 1 },
+            { "id": "transmogrification", "title": "Komplette Transmogrifikation", "description": "Gestalte dein Aussehen frei mit allen Transmogrifikations-Optionen – ohne Einschränkungen!", isFav: 1 },
             { "id": "progressiveContent", "title": "Fortschreitender Spielinhalt", "description": "Die Content wird phasenweise freigeschaltet und orientieren sich am ursprünglichen Cataclysm-Fortschritt.", isFav: 0 },
             { "id": "casualRaid", "title": "Einfacher Raid-Schwierigkeitsgrad", "description": "Einfacher Raid-Schwierigkeitsgrad", isFav: 1 },
             { "id": "battlegroundLeveling", "title": "Leveln durch Battlegrounds.", "description": "Ab Stufe 10 erwarten dich zusätzliche Level-Möglichkeiten.", isFav: 1 },

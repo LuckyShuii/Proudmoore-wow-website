@@ -16,11 +16,14 @@ export default defineConfig({
     }
   },
   server: {
-    host: '0.0.0.0', 
-    watch: {
-      usePolling: true, 
+    host: true,
+    port: 7002,
+    strictPort: true,
+    hmr: {
+      protocol: 'wss',
+      host: 'wildtransfer.fr',
+      clientPort: 443,
     },
-    hmr: isProd ? false : { path: '/hmr', port: 7002 }, 
-    allowedHosts: ['wildtransfer.fr']
+    origin: 'https://wildtransfer.fr'
   }
 })

@@ -31,8 +31,8 @@ const frTranslation = {
         items: [
             { "id": "mythicPlus", "title": "Donjons Mythique +", "description": "Découvrez les donjons Mythique+ avec des défis chronométrés et une difficulté croissante.", isFav: 1 },
             { "id": "soloQueue", "title": "Arène en file d'attente solo", "description": "Faites la queue en solo pour les arènes sans avoir besoin d'une équipe préfabriquée.", isFav: 1 },
-            { "id": "crossFaction", "title": "Complètement inter-factions", "description": "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc).", isFav: 1 },
-            { "id": "transmogrification", "title": "Full Transmogrification", "description": "Personnalisez entièrement votre apparence avec des options de transmogrification complètes. (Sans limites)", isFav: 1 },
+            { "id": "crossFaction", "title": "Complètement inter-factions", "description": "Jouez avec vos amis quelle que soit votre faction — le crossfaction est entièrement activé (Groupe/Raid/HV/Champ de bataille/etc).", isFav: 1 },
+            { "id": "transmogrification", "title": "Transmogrification complète", "description": "Personnalisez entièrement votre apparence avec des options de transmogrification complètes. (Sans limites)", isFav: 1 },
             { "id": "progressiveContent", "title": "Contenu progressif", "description": "Le contenu est publié en phases, reproduisant la progression originale de Cataclysm.", isFav: 0 },
             { "id": "casualRaid", "title": "Difficulté de raid décontractée", "description": "Des difficultés de raid plus indulgentes pour les joueurs occasionnels et semi-hardcore.", isFav: 1 },
             { "id": "battlegroundLeveling", "title": "Montée en niveau via les champs de bataille", "description": "Maximisation les façons de monter en niveau à partir du niveau 10.", isFav: 1 },
@@ -303,144 +303,143 @@ const frTranslation = {
                 answer: "La boutique est <span class='font-bold'>strictement axée sur les cosmétiques et les utilitaires</span>. Aucun équipement, aucune puissance, ni aucune progression ne peuvent y être achetés. Nous nous engageons à <span class='font-bold'>ne jamais être pay-to-win</span>. Nous sommes le seul serveur privé Cataclysm à offrir cela, et nous prévoyons de le rester."
             },
             {
-                question: "Are transmogs available without donating?",
-                answer: "<span class='font-bold'>Yes</span>. We have made the decision to make unlimited & full transmog free to all players. Players can choose to donate for transmogs, but these are optional and not restricted to only paying players. We are the only Cataclysm private server that offers this for free."
+                question: "Les transmogrifications sont-elles disponibles sans faire de don ?",
+                answer: "<span class='font-bold'>Oui</span>. Nous avons pris la décision de rendre la transmogrification complète et illimitée gratuite pour tous les joueurs. Les joueurs peuvent choisir de faire un don pour des transmogs, mais elles sont facultatives et ne sont pas réservées uniquement aux joueurs payants. Nous sommes le seul serveur privé Cataclysm à offrir cela gratuitement."
             },
             {
-                question: "Are there lootboxes or gamble systems?",
-                answer: "NO. Never. Proudmoore will never use lootboxes or RNG-based purchased. We may add lootboxes in-game as an incentive for things such as RDF queues, but these will always be free features. All donation items are transparently priced with clear descriptions — no bait-and-switch mechanics."
+                question: "Y a-t-il des boîtes à butin ou des systèmes de jeu de hasard ?",
+                answer: "Non. Jamais. Proudmoore n'utilisera jamais de boîtes à butin ou d'achats basés sur le hasard. Nous pourrions ajouter des boîtes à butin en jeu en tant qu'incitation pour des choses comme les files d'attente pour le donjon aléatoire, mais celles-ci seront toujours des fonctionnalités gratuites. Tous les articles de la boutique de dons ont des prix transparents et des descriptions claires — pas de mécanismes de confusion."
             },
             {
-                question: "Is the server pay-to-win in any form?",
-                answer: "Absolutely not. Proudmoore is built on integrity and balance. Donors support the server, not their performance. That being said, some players may view things such as experience rate boosts as P2W. Proudmoore is built upon the idea that players do not have the time they used to in their busy lives, but still want to be able to enjoy playing the game. Any optional service we offer in the store will be with these players in mind. But we will never allow these services to interfere with actual competition, such as realm first races. No P2W. Ever."
+                question: "Le serveur est-il « pay-to-win » sous quelque forme que ce soit ?",
+                answer: "Absolument pas. Proudmoore est bâti sur l'intégrité et l'équilibre. Les donateurs soutiennent le serveur, pas leurs performances. Cela dit, certains joueurs peuvent considérer des choses comme les bonus de taux d'expérience comme du 'pay- to - win'. Proudmoore est construit sur l'idée que les joueurs n'ont plus le temps qu'ils avaient autrefois dans leur vie bien remplie, mais qu'ils veulent quand même pouvoir profiter du jeu. Tout service optionnel que nous proposons dans la boutique sera conçu en pensant à ces joueurs. Mais nous ne permettrons jamais que ces services interfèrent avec la compétition réelle, comme les courses au 'first du royaume'. Pas de 'pay - to - win'. Jamais."
             }
         ]
     },
 
     faqRules: {
-        title: "Rules & Policies",
+        title: "Règles et politiques",
         questions: [
             {
-                question: "What's the policy on using bots or rotation helpers (PQRs)?",
-                answer: "You’re joking if you’re asking this seriously. Zero tolerance. Any form of botting, automation, or rotation scripts will result in immediate bans. We prioritize a fair and competitive environment for all players."
+                question: "Quelle est la politique concernant l'utilisation de bots ou d'aides à la rotation (PQR) ?",
+                answer: "Vous plaisantez si vous posez la question sérieusement. Tolérance zéro. Toute forme de botting, d'automatisation ou de scripts de rotation entraînera un bannissement immédiat. Nous privilégions un environnement juste et compétitif pour tous les joueurs."
             },
             {
-                question: "Are there any addons that aren't allowed?",
-                answer: "There are a number of addons that are automation-based and respond with inputs, these are not allowed. The line on this is not exactly black and white, so we will give discretion towards players. There are addons that will automate auction house sales, both buying and selling. These make you no different than a bot. If you are using addons that make you look like a bot, you may be handled by our GM team like you are a bot."
+                question: "Y a-t-il des addons qui ne sont pas autorisés ?",
+                answer: "Il y a un certain nombre d'addons qui sont basés sur l'automatisation et qui répondent avec des entrées ; ceux-ci ne sont pas autorisés. La frontière n'est pas exactement claire, nous ferons donc preuve de discernement envers les joueurs. Il y a des addons qui automatisent les ventes à l'hôtel des ventes, que ce soit pour acheter ou vendre. Ils ne vous rendent pas différent d'un bot. Si vous utilisez des addons qui vous font ressembler à un bot, vous pourriez être traité par notre équipe de MJs comme si vous en étiez un."
             },
             {
-                question: "Will GMs moderate world chat or stay hands-off?",
-                answer: "Moderation will be <span class='font-bold'>light, but active</span>. We aim for a free, fun environment. There will not be any “big brother” watching down on you here. Any conversation that goes too far will result in a warning from a GM privately. Racism, hate speech, spam, or harassment will be removed quickly. GMs are there to support the community, not police it unnecessarily."
+                question: "Les MJ modéreront-ils le canal 'World Chat' ou resteront-ils en retrait ?",
+                answer: "La modération sera <span class='font-bold'>légère, mais active</span>. Nous visons un environnement libre et amusant. Il n'y aura pas de « grand frère » qui vous surveille ici. Toute conversation qui va trop loin entraînera un avertissement privé de la part d'un MJ. Le racisme, les discours de haine, le spam ou le harcèlement seront rapidement supprimés. Les MJ sont là pour soutenir la communauté, pas pour la surveiller inutilement."
             },
             {
-                question: "What's your policy on toxicity and harassment?",
-                answer: "We take it seriously, and understand there is nuance to the words “toxicity” and “harassment”, especially in an MMORPG like WoW. Banter, goading, trolling, these are all things that are very common in the way that people act towards each other, even friends. We take this understanding very seriously when it comes to our GM team. Every GM with permissions to moderate chat will explicitly prove that they are able to see the nuance here, and understand when banter becomes hostile and aggressive. There are in-game systems to block people from your chat, we expect players to use them. But repeated instances of bullying or harassment will result in punishments."
+                question: "Quelle est votre politique en matière de toxicité et de harcèlement ?",
+                answer: "Nous prenons ce sujet très au sérieux et comprenons la nuance des mots 'toxicité' et 'harcèlement', surtout dans un MMORPG comme WoW. Les plaisanteries, les taquineries, le 'trolling', sont des comportements très courants entre les gens, même entre amis. Nous tenons compte de cela avec beaucoup de sérieux au sein de notre équipe de Maîtres de jeu. Chaque MJ autorisé à modérer le chat devra explicitement prouver qu'il est capable de voir cette nuance et de comprendre quand la plaisanterie devient hostile et agressive. Il existe des systèmes en jeu pour bloquer des personnes de votre chat, et nous nous attendons à ce que les joueurs les utilisent. Mais les cas répétés d'intimidation ou de harcèlement entraîneront des sanctions."
             },
             {
-                question: "Can I advertise my stream/guild in global chat?",
-                answer: "Yes, <span class='font-bold'>within reason</span>. Occasional guild recruitment or stream announcements are allowed in moderation. Repeating ads or spamming global chat will result in mutes or timeouts. Be respectful of the space, and of the players. If you post your ads and players begin getting vocally upset, and you continue anyways, we will see your ad as disruptive to the community, within reason."
+                question: "Puis-je faire de la publicité pour mon stream/ma guilde dans le chat global ?",
+                answer: "Oui, <span class='font-bold'>dans la mesure du raisonnable</span>. Les annonces de recrutement de guilde occasionnelles ou de stream sont autorisées avec modération. Répéter les publicités ou spammer le chat global entraînera des mises en sourdine ou des temps d'arrêt. Soyez respectueux de l'espace et des joueurs. Si vous publiez vos annonces et que les joueurs commencent à faire entendre leur mécontentement, et que vous continuez quand même, nous considérerons votre annonce comme perturbatrice pour la communauté, dans la mesure du raisonnable."
             }
         ]
     },
 
     faqProgression: {
-        title: "Progression & Transfers",
+        title: "Progression et transferts",
         questions: [
             {
-                question: "Can I transfer a character from another private server?",
-                answer: "No, we <span class='font-bold'>do not accept transfers from other private servers</span>. Proudmoore is a fresh, fair start for everyone. Allowing external transfers would compromise integrity and balance. Other Cataclysm projects have P2W stores, and accepting transfers would mean accepting P2W players."
+                question: "Puis-je transférer un personnage d'un autre serveur privé ?",
+                answer: "Non, nous n'acceptons <span class='font-bold'>pas les transferts depuis d'autres serveurs privés</span>. Proudmoore est un départ frais et équitable pour tout le monde. Autoriser des transferts externes compromettrait l'intégrité et l'équilibre. D'autres projets Cataclysm ont des boutiques P2W, et accepter des transferts reviendrait à accepter des joueurs P2W."
             },
             {
-                question: "Will characters ever carry over to future realms?",
-                answer: "Proudmoore is intended to be a permanent realm. If we do decide to launch a new realm in the future, yes, we will have a system for legacy transfers. If this is something we decide to do, please keep in mind that the stability of the fresh realms competition and fairness will be prioritized over your legacy character."
+                question: "Les personnages seront-ils un jour transférés vers de futurs royaumes ?",
+                answer: "Proudmoore est conçu pour être un royaume permanent. Si nous décidons de lancer un nouveau royaume à l'avenir, oui, nous aurons un système de transferts de personnages hérités. Si nous décidons de le faire, veuillez garder à l'esprit que la stabilité, la compétition et l'équité des nouveaux royaumes seront prioritaires par rapport à votre personnage existant."
             },
             {
-                question: "Is there a fresh realm planned?",
-                answer: "Directly from the administration team – we have not discussed any future realms, whatsoever. Proudmoore is our primary and only focus. We will hold space to say that there could be future realms based on our community, but that is a discussion for years down the road. If we do ever have any future realms besides Proudmoore, fresh starts will never force wipes on the main realm."
+                question: "Il y-a-t'il un royaume fresh de prévu?",
+                answer: "Proudmoore n'a actuellement pas de projet pour un nouveau royaume 'fresh'. Proudmoore est conçu pour être un serveur permanent et à long terme. Cependant, si la communauté exprime un fort intérêt à l'avenir, nous pourrions envisager un royaume 'legacy' avec des transferts de personnages."
             },
             {
-                question: "Are character renames or race/faction changes available?",
-                answer: "Yes, these services will all be available to players. Internally, we have not discussed how these services will be available, by default we assume they will be optional paid services. This is something we will bring up with the community and see what they want this to look like."
+                question: "Les changements de nom, de race ou de faction de personnage sont-ils disponibles ?",
+                answer: "Oui, tous ces services seront disponibles pour les joueurs. En interne, nous n'avons pas encore discuté de la manière dont ils seront proposés, mais par défaut, nous supposons qu'il s'agira de services payants optionnels. C'est une question que nous allons soumettre à la communauté pour voir comment elle souhaite que cela soit mis en place."
             },
             {
-                question: "Will you offer paid services like server transfer, appearance change, etc.?",
-                answer: "We will offer <span class='font-bold'>optional character services</span> like name change, appearance change, and faction swap. All services are cosmetic or identity-based — no gameplay boosts or P2W."
+                question: "Proposerez-vous des services payants tels que le transfert de serveur, le changement d'apparence, etc. ?",
+                answer: "Nous offrirons des <span class='font-bold'>services de personnage facultatifs</span> comme le changement de nom, le changement d'apparence et le changement de faction. Tous les services sont basés sur l'apparence ou l'identité — pas de boosts de gameplay ou de P2W."
             }
         ]
     },
 
     faqDevelopment: {
-        title: "Development & Feedback",
+        title: "Développement et commentaires",
         questions: [
             {
-                question: "How can I report bugs?",
-                answer: "TBD. Twinstar’s infrastructure has a built-in bug reporting system, we may end up using a version of this. Or we may use github. This will be updated and we will have a Discord announcement when this information is clear. To be clear, developers do not monitor Discord. Complaining about bugs or demanding fixes there will not result in what you want. As an administration team, we do believe that sometimes bugs are critical enough that they warrant public discussion, and we do encourage players to speak up if they see something critical. But we will have standard processes for handling bugs that all players must go through. As a courtesy, our GM Team extends a strong helping hand when players experience bugs. If you experience a bug that is blocking your progression or creating another issue that needs quick resolution, please make a GM Ticket in-game."
+                question: "Comment puis-je signaler des bugs ?",
+                answer: "Pour l'instant, c'est à déterminer. L'infrastructure de Twinstar possède un système de signalement de bugs intégré, et nous pourrions finir par utiliser une version de celui-ci. Ou nous pourrions utiliser GitHub. Cette information sera mise à jour et nous ferons une annonce sur Discord quand la décision sera prise.Pour être clair, les développeurs ne surveillent pas Discord. Se plaindre des bugs ou exiger des corrections à cet endroit ne donnera pas le résultat que vous souhaitez. En tant qu'équipe d'administration, nous pensons que certains bugs sont parfois suffisamment critiques pour justifier une discussion publique, et nous encourageons les joueurs à s'exprimer s'ils voient quelque chose d'important. Mais nous aurons des processus standards pour la gestion des bugs que tous les joueurs devront suivre.Par courtoisie, notre équipe de MJs offre une aide précieuse aux joueurs qui rencontrent des bugs. Si vous rencontrez un bug qui bloque votre progression ou crée un autre problème nécessitant une résolution rapide, veuillez faire un ticket de MJ en jeu."
             },
             {
-                question: "Will bug fixes be posted publicly?",
-                answer: "Yes. It is important for players to know what is fixed, and when. You’ll always know what’s going on behind the scenes."
+                question: "Les correctifs de bugs seront-ils publiés publiquement ?",
+                answer: "Oui. Il est important que les joueurs sachent ce qui est corrigé et quand. Vous saurez toujours ce qui se passe en coulisses."
             },
             {
-                question: "How often are updates rolled out?",
-                answer: "TBA. On Proudmoore, we approach everything with facts and data. How aggressively we roll out updates will depend on the amount of bugs we encounter and the severity. Proudmoore is running a core that has been in active development for 17 years, so we are not too concerned about this."
+                question: "À quelle fréquence les mises à jour sont-elles déployées ?",
+                answer: "TBA. Sur Proudmoore, nous abordons tout avec des faits et des données. L'agressivité avec laquelle nous déploierons les mises à jour dépendra du nombre de bugs que nous rencontrerons et de leur gravité. Proudmoore utilise un noyau qui est en développement actif depuis 17 ans, nous ne sommes donc pas trop préoccupés par cela."
             },
             {
-                question: "Is the dev team active in Discord?",
-                answer: "No. We strongly believe in allowing our staff team to work in the environment that is best for them. Time spent chatting or getting derailed in Discord is time that could be spent fixing priority issues. We will hold this boundary for our Developers, and for our Game Masters as well, if they do not want to be present on the public Discord. That being said, our administration team and community management team will be informed and knowledgeable about any subject relevant to development. We will always prioritize listening to players and understanding the community."
+                question: "L'équipe de développement est-elle active sur Discord ?",
+                answer: "Non. Nous sommes fermement convaincus qu'il faut permettre à notre équipe de travailler dans l'environnement qui lui convient le mieux. Le temps passé à discuter ou à se laisser distraire sur Discord est du temps qui pourrait être consacré à la résolution de problèmes prioritaires. Nous maintiendrons cette limite pour nos développeurs, ainsi que pour nos maîtres de jeu, s'ils ne veulent pas être présents sur le Discord public. Cela dit, notre équipe d'administration et de gestion de la communauté sera informée et connaîtra tout sujet pertinent au développement. Nous donnerons toujours la priorité à l'écoute des joueurs et à la compréhension de la communauté."
             },
             {
-                question: "Do players get to vote on changes or features?",
-                answer: "Yes. If there are any significant changes or features that we believe may impact players, we will involve the community on the decisions. We will regularly listen to players, gather feedback, and encourage open discussion."
+                question: "Les joueurs peuvent-ils voter sur les changements ou les fonctionnalités ?",
+                answer: "Oui. S'il y a des changements ou des fonctionnalités significatifs qui, selon nous, pourraient avoir un impact sur les joueurs, nous impliquerons la communauté dans les décisions. Nous écouterons régulièrement les joueurs, recueillerons leurs commentaires et encouragerons les discussions ouvertes."
             },
             {
-                question: "Is this based on TrinityCore or another core?",
-                answer: "Twinstar’s Cataclysm core was originally based on TrinityCore back in 2011. Since then, we have had over 50,000 updates to the core. Our core and TrinityCore are now so different that we are not able to utilize TrinityCore’s open source updates. We view this as a strength, not a weakness."
+                question: "Est-ce basé sur TrinityCore ou un autre noyau ?",
+                answer: "Le noyau de Cataclysm de Twinstar était à l'origine basé sur TrinityCore en 2011. Depuis, nous avons eu plus de 50 000 mises à jour du noyau. Notre noyau et TrinityCore sont maintenant si différents que nous ne sommes plus en mesure d'utiliser les mises à jour open source de TrinityCore. Nous considérons cela comme une force, pas une faiblesse."
             }
         ]
     },
 
     faqMiscellaneous: {
-        title: "Miscellaneous",
+        title: "Divers",
         questions: [
             {
-                question: "Are achievements and mounts account-wide?",
-                answer: "Yes! This is a simple QOL improvement that is widely popular amongst players. You earned it, you deserve to show it off, regardless of what character you’re playing on."
+                question: "Est-ce que les hauts faits et les montures sont liés au compte ?",
+                answer: "Oui ! Il s'agit d'une simple amélioration de la qualité de vie qui est très populaire auprès des joueurs. Vous l'avez mérité, vous méritez de le montrer, quel que soit le personnage avec lequel vous jouez."
             },
             {
-                question: "Will there be a ladder or ranking system for PvP?",
-                answer: "Ohhh yes. We will have a full leaderboard and ranking system available online. This is one area that Proudmoore will walk in Twinstar’s footsteps, and push to be bigger and better than ever. We want to expand on leaderboards and player progression extensively, and we already have the best leaderboards of all Cataclysm servers."
+                question: "Y aura-t-il un classement ou un système de rang pour le PvP ?",
+                answer: "Ohh oui. Nous aurons un classement complet et un système de rang disponibles en ligne. C'est un domaine dans lequel Proudmoore marchera sur les traces de Twinstar, et s'efforcera d'être plus grand et meilleur que jamais. Nous voulons étendre les classements et la progression des joueurs de manière significative, et nous avons déjà les meilleurs classements de tous les serveurs Cataclysm."
             },
             {
-                question: "Is there a spectator mode for arena?",
-                answer: "Currently, no. This is something we may look into if there is a large demand, but from experience, spectator features often seem to be niche and rarely used."
+                question: "Y aura-t-il un mode spectateur pour les arènes ?",
+                answer: "Actuellement, non. C'est quelque chose que nous pourrions envisager s'il y a une forte demande, mais d'après l'expérience, les fonctionnalités de spectateur semblent souvent être de niche et sont rarement utilisées."
             },
             {
-                question: "Will there be RP support or RP realms?",
-                answer: "Proudmoore is not an RP realm, but we would consider ourselves RP-friendly. If any RP group or guild wishes to join, feel free to reach out to our administration team and we’ll see what we can do for you."
+                question: "Y aura-t-il un support pour le jeu de rôle ou des royaumes de jeu de rôle ?",
+                answer: "Proudmoore n'est pas un royaume de jeu de rôle, mais nous nous considérons comme amicaux envers le jeu de rôle. Si un groupe ou une guilde de jeu de rôle souhaite nous rejoindre, n'hésitez pas à contacter notre équipe d'administration et nous verrons ce que nous pouvons faire pour vous."
             }
         ]
     },
 
-    rates: "<li><span class='font-bold'>XP Rates:</span> 1x–3x (player-controlled toggle)</li><li><span class='font-bold'>Reputation:</span> 1x (& weekend bonuses)</li><li><span class='font-bold'>Loot & Gold:</span> 1x (balanced economy)</li><li><span class='font-bold'>Rare Materials:</span> ~1.2x in Heroics/Raids</li><li><span class='font-bold'>Professions:</span> 1x (& weekend bonuses)</li><li><span class='font-bold'>Honor:</span> 1.25x (& weekend bonuses)</li><li><span class='font-bold'>Justice / Valor Points:</span> 1x (& weekly activity bonus)</li>",
-
-    ratesComment: "Patience for escort quests: 0x",
+    rates: "<li><span class='font-bold'>Taux d'XP :</span> 1x–3x (activé par le joueur)</li><li><span class='font-bold'>Réputation :</span> 1x (et bonus de week-end)</li><li><span class='font-bold'>Butin et pièces d'or :</span> 1x (économie équilibrée)</li><li><span class='font-bold'>Matériaux rares :</span> ~1,2x en Héroïques/Raids</li><li><span class='font-bold'>Métiers :</span> 1x (et bonus de week-end)</li><li><span class='font-bold'>Honneur :</span> 1,25x (et bonus de week-end)</li><li><span class='font-bold'>Points de justice/vaillance :</span> 1x (et bonus d'activité hebdomadaire)</li>",
 
     bugFixes: [
         {
-            title: "Core Revisions",
-            description: "Tailored server-side improvements to stability, accuracy, and core logic."
+            title: "Révisions du noyau",
+            description: "Améliorations côté serveur, sur mesure, pour la stabilité, la précision et la logique du noyau."
         },
         {
-            title: "Database Revisions",
-            description: "10,000+ DB enhancements to quests, NPCs, items, and mechanics."
+            title: "Révisions de la base de données",
+            description: "Plus de 10 000 améliorations de la base de données pour les quêtes, les PNJ, les objets et les mécaniques."
         },
         {
-            title: "Years of Active Development",
-            description: "Consistent development — we build, polish, and iterate nonstop."
+            title: "Années de développement actif",
+            description: "Développement constant : nous construisons, améliorons et itérons sans cesse."
         },
     ],
 
-    bugFixesComment: "Yeah. We know what we're doing."
+    bugFixesComment: "Oui. Nous savons ce que nous faisons.",
+    ratesComment: "Patience pour les quêtes d'escorte : 0x"
 };
 
 export default frTranslation;

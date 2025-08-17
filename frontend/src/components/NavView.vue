@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, onBeforeUnmount, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { RouterLink } from 'vue-router';
 
 const { t } = useI18n();
 const i18n = useI18n({ useScope: 'global' });
@@ -116,14 +117,14 @@ onBeforeUnmount(() => {
         </div>
         <div class="h-full flex flex-col justify-center text-sm font-semibold">
             <ul class="flex flex-col items-center space-y-8 font-semibold">
-                <li><a class="font-lora hover:font-thin" href="#home" v-html="t('nav.home')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora hover:font-thin" href="#about" v-html="t('nav.about')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora hover:font-thin" href="#features" v-html="t('nav.features')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora hover:font-thin" href="#timeline" v-html="t('nav.timeline')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora hover:font-thin" href="#community" v-html="t('nav.discord')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora hover:font-thin" href="#faq" v-html="t('nav.faq')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora hover:font-thin" href="" v-html="t('nav.legal')" @click="emit('update-visible', false)"></a></li>
-                <li><a class="font-lora hover:font-thin" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" v-html="t('nav.appeal')" @click="emit('update-visible', false)"></a></li>
+                <li><RouterLink class="font-lora hover:font-thin" to="/#home" @click="emit('update-visible', false)">{{ t('nav.home') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" to="/#about" @click="emit('update-visible', false)">{{ t('nav.about') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" to="/#features" @click="emit('update-visible', false)">{{ t('nav.features') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" to="/#timeline" @click="emit('update-visible', false)">{{ t('nav.timeline') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" to="/#community" @click="emit('update-visible', false)">{{ t('nav.discord') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" to="/#faq" @click="emit('update-visible', false)">{{ t('nav.faq') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" to="/legality-player-rights" @click="emit('update-visible', false)">{{ t('nav.legal') }}</RouterLink></li>
+                <li><RouterLink class="font-lora hover:font-thin" to="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" @click="emit('update-visible', false)">{{ t('nav.appeal') }}</RouterLink></li>
             </ul>
         </div>
         <div class="px-[40px] pt-[40px]">
