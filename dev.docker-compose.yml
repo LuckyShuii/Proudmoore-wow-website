@@ -8,24 +8,30 @@ services:
   #     - ./backend/src:/app/src
       
   frontend:
-    build: ./frontend/Dockerfile.dev
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
     container_name: proudmoore-website-frontend
     environment:
       # VITE_BACKEND_URL: ${BACKEND_URL}
       VITE_PROJECT_STATUS: ${PROJECT_STATUS}
       VITE_FRONTEND_URL: ${FRONTEND_URL}
+      VITE_FALLBACK_LOCALE: ${FALLBACK_LOCALE}
+      VITE_DEFAULT_LOCALE: ${DEFAULT_LOCALE}
     volumes:
       - ./frontend/src/i18n:/app/src/i18n
-    ports:
-      - "7002:7002"
+    expose:
+      - "5173"
+      - "7002"
+    command: ["npm", "run", "dev"]
 
   db:
     image: postgres
     container_name: proudmoore-website-db
     environment:
       POSTGRES_DB: ${DB_DATABASE}
-      POSTGRES_PASSWORD: ${DB_PASSWORD_READONLY}
-      POSTGRES_USER: ${DB_USER_READONLY}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
     volumes:
       # - ./backend/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
       - ./pgdata:/var/lib/postgresql/data
@@ -36,10 +42,16 @@ services:
     image: redis
     container_name: proudmoore-website-redis
 
+  adminer:
+    image: adminer
+    container_name: proudmoore-website-adminer
+    expose:
+      - 8080
+
   apigateway:
     image: nginx
     container_name: proudmoore-website-apigateway
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
-      - "8080:80"
+      - "8081:80"
