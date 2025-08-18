@@ -117,7 +117,7 @@ onBeforeUnmount(() => {
             </Popover>
         </div>
         <div class="h-full flex flex-col justify-center text-sm font-semibold">
-            <ul class="flex flex-col items-center space-y-8 font-semibold">
+            <ul class="flex flex-col items-center space-y-6 font-semibold">
                 <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#home' }" @click="emit('update-visible', false)">{{ t('nav.home') }}</RouterLink></li>
                 <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#about' }" @click="emit('update-visible', false)">{{ t('nav.about') }}</RouterLink></li>
                 <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#features' }" @click="emit('update-visible', false)">{{ t('nav.features') }}</RouterLink></li>
@@ -126,6 +126,13 @@ onBeforeUnmount(() => {
                 <li><RouterLink class="font-lora hover:font-thin" :to="{ path: '/', hash: '#faq' }" @click="emit('update-visible', false)">{{ t('nav.faq') }}</RouterLink></li>
                 <li><RouterLink class="font-lora hover:font-thin" to="/legality-player-rights" @click="emit('update-visible', false)">{{ t('nav.legal') }}</RouterLink></li>
                 <li><a class="font-lora hover:font-thin" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" @click="emit('update-visible', false)">{{ t('nav.appeal') }}</a></li>
+                <li class="flex gap-2">
+                    <img src="/favicon-2.webp" class="w-[20px] transform [transform:rotateY(180deg)]"/>
+                    <a class="font-lora hover:font-thin" href="https://manager.twinstar-wow.com/" target="_blank" @click="emit('update-visible', false)">
+                        {{ t('nav.accountManager') }}
+                    </a>
+                    <img src="/favicon-2.webp" class="w-[20px]"/>
+                </li>
             </ul>
         </div>
         <div class="px-[40px] pt-[40px]">

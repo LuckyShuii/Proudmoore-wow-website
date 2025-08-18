@@ -9,7 +9,8 @@ const esTranslation = {
         discord: "Entra en la Comunidad",
         faq: "Preguntas Frecuentes",
         legal: "Legalidad y derechos del jugador",
-        appeal: "Apelaciones de baneos en Discord"
+        appeal: "Apelaciones de baneos en Discord",
+        accountManager: "Account Manager"
     },
 
     copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, en asociación con TwinStar-WoW</span>. No está afiliado con Blizzard Entertainment. Todos los derechos reservados.",

@@ -9,7 +9,8 @@ const deTranslation = {
         discord: "Werde Teil der Community",
         faq: "Häufig gestellte Fragen",
         legal: "Rechtliche Hinweise & Spielerrechte",
-        appeal: "Discord-Entbannungsantrag"
+        appeal: "Discord-Entbannungsantrag",
+        accountManager: "Account Manager"
     },
 
     copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in Partnerschaft mit TwinStar-WoW</span>. Steht in keinem Zusammenhang mit Blizzard Entertainment. Alle Rechte vorbehalten.",

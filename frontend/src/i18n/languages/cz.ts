@@ -9,7 +9,8 @@ const czTranslation = {
         discord: "Join the Community",
         faq: "Frequently Asked Questions",
         legal: "Legality & Player Rights",
-        appeal: "Discord Ban Appeals"
+        appeal: "Discord Ban Appeals",
+        accountManager: "Account Manager"
     },
 
     copyright: "<span class='text-sm text-gray-400 font-extrabold'>© 2025 Proudmoore, in partnership with TwinStar-WoW</span>. Not affiliated with Blizzard Entertainment. All rights reserved.",
