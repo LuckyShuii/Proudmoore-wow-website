@@ -555,7 +555,11 @@ const frTranslation = {
                 }
             ]
         },
-    }
+    },
+
+    notFoundTitle: "Not Found",
+    notFoundDescription: "The page you are looking for does not exist",
+    notFoundHome: "Return to Home"
 };
 
 export default frTranslation;

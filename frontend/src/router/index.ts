@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue';
+import NotFoundView from '@/views/NotFoundView.vue';
 import { nextTick } from 'vue';
 import LegalityPlayerView from '@/views/LegalityPlayerView.vue';
 
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/legality-player-rights',
       name: 'legality-player-rights',
       component: LegalityPlayerView
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'not-found',
+      component: NotFoundView
     }
   ]
 })
