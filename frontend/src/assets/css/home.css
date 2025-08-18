@@ -332,6 +332,7 @@
 .flipCard {
   animation: card-glow 5s infinite alternate;
   padding: 2px;
+  border: 2px solid #1c2e50;
 }
 
 .flipCard:hover {
