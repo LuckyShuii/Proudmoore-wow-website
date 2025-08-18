@@ -1,0 +1,45 @@
+services:
+  # backend:
+  #   build: ./backend/Dockerfile.prod
+  #   container_name: proudmoore-website-backend
+  #   environment:
+  #     FRONTEND_URL: ${FRONTEND_URL}
+  #   volumes:
+  #     - ./backend/src:/app/src
+      
+  frontend:
+    build: ./frontend/Dockerfile.dev
+    container_name: proudmoore-website-frontend
+    environment:
+      # VITE_BACKEND_URL: ${BACKEND_URL}
+      VITE_PROJECT_STATUS: ${PROJECT_STATUS}
+      VITE_FRONTEND_URL: ${FRONTEND_URL}
+    volumes:
+      - ./frontend/src/i18n:/app/src/i18n
+    ports:
+      - "7002:7002"
+
+  db:
+    image: postgres
+    container_name: proudmoore-website-db
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_PASSWORD: ${DB_PASSWORD_READONLY}
+      POSTGRES_USER: ${DB_USER_READONLY}
+    volumes:
+      # - ./backend/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+      - ./pgdata:/var/lib/postgresql/data
+    expose:
+      - 5432
+
+  redis:
+    image: redis
+    container_name: proudmoore-website-redis
+
+  apigateway:
+    image: nginx
+    container_name: proudmoore-website-apigateway
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "8080:80"
