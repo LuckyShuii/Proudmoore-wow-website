@@ -17,18 +17,24 @@ const router = createRouter({
 
     // 3) Anchor present (#faq, etc.)
     if (to.hash) {
-      // If the element is not yet in the DOM (async content), wait for the next tick
-      return new Promise((resolve) => {
-        const tryScroll = () => {
-          const el = document.querySelector(to.hash)
-          if (el) {
-            resolve({ el: to.hash, behavior: 'smooth' }) // smooth scroll to anchor
-          } else {
-            // retry on next tick (useful if section arrives after render)
-            nextTick().then(tryScroll)
-          }
-        }
-        tryScroll()
+      // Safe selector even if hash contains special characters
+      const selector =
+        typeof window.CSS?.escape === 'function' && to.hash.length > 1
+          ? `#${window.CSS.escape(to.hash.slice(1))}`
+          : to.hash
+
+      const findEl = () => document.querySelector(selector)
+
+      return new Promise(async (resolve) => {
+        // 1) Immediate attempt
+        if (findEl()) return resolve({ el: selector, behavior: 'smooth' })
+
+        // 2) Wait for next tick (async content)
+        await nextTick()
+        if (findEl()) return resolve({ el: selector, behavior: 'smooth' })
+
+        // 3) Failure → fallback without crashing
+        resolve({ top: 0 })
       })
     }
 
@@ -52,6 +58,17 @@ const router = createRouter({
       component: NotFoundView
     }
   ]
+})
+
+router.afterEach((to) => {
+  if (!to.hash) return
+  // Let scrollBehavior start the scroll, then remove the hash
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      const clean = to.fullPath.split('#')[0] // remove everything after #
+      window.history.replaceState({}, '', clean)
+    }, 300) // small delay to not break the smooth scroll
+  })
 })
 
 export default router
