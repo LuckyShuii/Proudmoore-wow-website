@@ -127,7 +127,7 @@ onBeforeUnmount(() => {
                 <li><RouterLink class="font-lora hover:font-thin" to="/legality-player-rights" @click="emit('update-visible', false)">{{ t('nav.legal') }}</RouterLink></li>
                 <li><a class="font-lora hover:font-thin" href="https://forms.gle/p81uHVpJ9pUQ1GCt7" target="_blank" @click="emit('update-visible', false)">{{ t('nav.appeal') }}</a></li>
                 <li class="flex gap-2">
-                    <img src="/favicon-2.webp" class="w-[20px] transform [transform:rotateY(180deg)]"/>
+                    <img src="/favicon-2.webp" class="w-[20px] [transform:rotateY(180deg)]"/>
                     <a class="font-lora hover:font-thin" href="https://manager.twinstar-wow.com/" target="_blank" @click="emit('update-visible', false)">
                         {{ t('nav.accountManager') }}
                     </a>
