@@ -453,7 +453,7 @@ const deTranslation = {
         thirdBottomWarning: "Du machst nichts falsch, indem du hier spielst, und wir freuen uns, dich dabei zu haben.",
 
         faqAmISafe: {
-            title: "Ja, als Spieler bist du sicher.",
+            title: "Ist es sicher für mich, das zu tun?",
             questions: [
                 {
                     question: "Was ist das Schlimmste, das mir als Spieler passieren könnte?",

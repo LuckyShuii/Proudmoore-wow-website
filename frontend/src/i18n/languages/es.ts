@@ -4,8 +4,8 @@ const esTranslation = {
     nav: {
         home: "Inicio",
         about: "¿Qué es Proudmoore?",
-        features: "Características y Rates*",
-        timeline: "Launch Timeline & Dates",
+        features: "Características y Rates",
+        timeline: "Cronograma de Lanzamiento y Fechas",
         discord: "Entra en la Comunidad",
         faq: "Preguntas Frecuentes",
         legal: "Legalidad y derechos del jugador",
@@ -18,54 +18,54 @@ const esTranslation = {
     videoDescription: "Una nueva era de Cataclysm está llegando...",
 
     descriptionTitle: "¿Qué es Proudmoore?",
-    descriptionText: "Proudmoore is a <span class='italic'>handcrafted</span> Cataclysm server — built for players who want a modern experience that still feels like OG World of Warcraft.<br><br>No queues. No Pay-to-Win. No retail <span class='font-extrabold'>bloat</span>.<br>Just smooth PvP, fully scripted PVE content, and a fresh start that respects your time.<br><br>If you’ve played private servers before, you’ll feel the difference.<br>If you haven’t — <span class='font-extrabold'>this is where to start.</span>",
+    descriptionText: "Proudmoore es un servidor de Cataclysm <span class='italic'>hecho a mano</span> — hecho por jugadores que desean una experiencia moderna, pero que se siga sintiendo como el original World of Warcraft.<br><br>Sin colas. Sin Pay-to-Win. Sin retail <span class='font-extrabold'>bloat</span>.<br>PvP agradable, contenido PVE full script, y un nuevo comienzo que respete tu tiempo.<br><br>Si has jugado servidores privados de antemano, sentirás la diferencia.<br>Y si no lo has hecho— <span class='font-extrabold'>aquí es donde comenzarás.</span>",
 
     features: {
-        title: "Features & Rates",
-        description: "Discover all the core gameplay features, our server rates, and the many fixes that make Proudmoore unique.",
+        title: "Características y Rates",
+        description: "Descubre todas las características principales del juego, nuestros rates del servidor y el montón de arreglos que hacen único a Proudmoore.",
         nav: {
-            features: "Features",
+            features: "Características",
             rates: "Rates",
-            bugfixes: "Bug Fixes"
+            bugfixes: "Arreglos de bugs"
         },
         items: [
-            { "id": "mythicPlus", "title": "Mythic+ Dungeons", "description": "Experience Mythic+ dungeons with time-based challenges & increasing difficulty.", isFav: 1 },
-            { "id": "soloQueue", "title": "Solo Queue Arena", "description": "Queue on your own for arenas without needing a premade team.", isFav: 1 },
+            { "id": "mythicPlus", "title": "Mazmorras Míticas+", "description": "Experimenta las mazmorras Míticas+ con desafíos basados en tiempo y dificultad incrementada.", isFav: 1 },
+            { "id": "soloQueue", "title": "Solo Queue Arena", "description": "Haz cola por ti solo para Arenas sin necesidad de tener un equipo preestablecido.", isFav: 1 },
             { "id": "crossFaction", "title": "Full Cross-Faction", "description": "Play with friends regardless of faction — crossfaction is fully enabled (Party/Raid/AH/BG/etc).", isFav: 1 },
-            { "id": "transmogrification", "title": "Full Transmogrification", "description": "Customize your look completely with full transmogrification options. (No limits)", isFav: 1 },
-            { "id": "progressiveContent", "title": "Progressive Content", "description": "Content is released in phases, replicating the original Cataclysm progression.", isFav: 0 },
-            { "id": "casualRaid", "title": "Casual Raid Difficulty", "description": "More forgiving raid difficulties for casual and semi-hardcore players.", isFav: 1 },
-            { "id": "battlegroundLeveling", "title": "Battleground Leveling", "description": "Maximizing the ways you can level starting at level 10.", isFav: 1 },
-            { "id": "weekendEvents", "title": "Weekend Events", "description": "Enjoy weekend-only events that boost rewards and rates.", isFav: 0 },
-            { "id": "racialSwap", "title": "Racial Trait Swapping", "description": "Customize your racial traits to suit your build.", isFav: 0 },
-            { "id": "xpRate", "title": "Adjustable XP Rates", "description": "Choose how fast you want to level with adjustable experience gain, from 100% to 0%.", isFav: 0 },
-            { "id": "mopArena", "title": "MoP Arena Teams System", "description": "Use Mists of Pandaria-style arena teams, prioritizing personal rating over team rating.", isFav: 0 },
-            { "id": "accountWide", "title": "Account Wide Mounts & Companions", "description": "Earn and share vanity mounts & companions across all characters on your account.", isFav: 0 },
-            { "id": "antiBot", "title": "Modern Anti-Bot & Anti-Gold Seller Systems", "description": "Aggressive systems will prevent botting and gold selling like no other server.", isFav: 0 },
-            { "id": "dualSpec", "title": "Early & Free Dual Spec", "description": "Dual spec is unlocked from level 10 at no cost.", isFav: 0 },
-            { "id": "automaticSpell", "title": "Automatic Class Spell Learning", "description": "No need to visit trainers — learn abilities automatically on level-up.", isFav: 0 },
-            { "id": "catchupMecanics", "title": "Catch-Up Mechanics", "description": "Catch up quickly with systems designed to help new players jumping in after launch.", isFav: 0 },
-            { "id": "gatheringProfessions", "title": "Dynamic Gathering Professions", "description": "Gathering nodes will prioritize both economic stability and zone population density.", isFav: 0 },
-            { "id": "lootRules", "title": "Fair Loot Rules", "description": "Fair loot rules across all content to reduce ninja-looting.", isFav: 0 },
-            { "id": "altFriendly", "title": "Alt-Friendly Systems", "description": "Designed so your alts can benefit from account progress.", isFav: 0 },
-            { "id": "playerFirst", "title": "Player-First GameMaster Support", "description": "Player-First GameMaster Support. Our team prioritizes players & the community in every policy we implement.", isFav: 0 }
+            { "id": "transmogrification", "title": "Full Transmogrification", "description": "Personaliza tu apariencia por completo con opciones de transfiguración completas. (Sin límites)", isFav: 1 },
+            { "id": "progressiveContent", "title": "Contenido Progresivo", "description": "El contenido es lanzado por fases, replicando la progresión original en Cataclysm.", isFav: 0 },
+            { "id": "casualRaid", "title": "Dificultad de Banda Casual", "description": "Dificultades de raids más indulgentes para jugadores ocasionales y semi-hardcore.", isFav: 1 },
+            { "id": "battlegroundLeveling", "title": "Subir de nivel en Campos de Batalla", "description": "Maximiza las formas en las que puedes subir de nivel a partir del nivel 10.", isFav: 1 },
+            { "id": "weekendEvents", "title": "Eventos en fines de semana", "description": "Disfrute de eventos exclusivos de fin de semana que aumentan las recompensas y las rates.", isFav: 0 },
+            { "id": "racialSwap", "title": "Intercambio de rasgos de Raciales", "description": "Personaliza tus rasgos raciales para adaptarlos a tu personaje.", isFav: 0 },
+            { "id": "xpRate", "title": "Rates de EXP ajustables", "description": "Elige qué tan rápido quieres levear con ajustes en la experiencia obtenida, desde 100% al 0%.", isFav: 0 },
+            { "id": "mopArena", "title": "Sistema de Equipos de Arena de MoP", "description": "Usa equipos de arena al estilo de Mists of Pandaria, priorizando el ranking personal ante el ranking del equipo.", isFav: 0 },
+            { "id": "accountWide", "title": "Monturas y compañeros ligados a la cuenta", "description": "Consigue y comparte tus monturas y compañeros hacia todos tus personajes en tu cuenta.", isFav: 0 },
+            { "id": "antiBot", "title": "Sistema Anti-Bots y Anti-Vendedores de Oro modernos.", "description": "Sistemas agresivos que previenen bots y vendedores de oro como ningún otro servidor.", isFav: 0 },
+            { "id": "dualSpec", "title": "Doble Especialización temprana y gratuita", "description": "Doble Especialización será desbloqueada al nivel 10, sin costo alguno.", isFav: 0 },
+            { "id": "automaticSpell", "title": "Aprendizaje automático de hechizos de clase", "description": "No necesitas visitar a los maestros de clase, aprenderas tus habilidades automáticamente al levear.", isFav: 0 },
+            { "id": "catchupMecanics", "title": "Mecánicas para ponerse al día", "description": "Ponte al día rápidamente con sistemas diseñados para ayudar a los nuevos jugadores que se suman después del lanzamiento.", isFav: 0 },
+            { "id": "gatheringProfessions", "title": "Profesiones de recolección dinámicas.", "description": "Los nodos de recolección priorizaran tanto la estabilidad económica, como la densidad popular de la zonas.", isFav: 0 },
+            { "id": "lootRules", "title": "Reglas de Botín Justo", "description": "Reglas sobre botín justo durante todo el contenido, para reducir el ninja loot.", isFav: 0 },
+            { "id": "altFriendly", "title": "Sistema amigable para alternativos", "description": "Diseñado para que tus personajes alternativos se beneficien del progreso de la cuenta.", isFav: 0 },
+            { "id": "playerFirst", "title": "Soporte de Maestros de Juego priorizando jugadores", "description": "Nuestro equipo prioriza jugadores y la comunidad en cada en cada política que implementamos.", isFav: 0 }
         ]
     },
 
     timeline: {
-        title: "Proudmoore begins",
-        description: "September 13th, 2025."
+        title: "Proudmoore comienza",
+        description: "13 de Septiembre de 2025"
     },
 
-    discord: "Join our Discord",
+    discord: "Entra en nuestro Discord",
 
-    faqTitle: "Frequently Asked Questions",
+    faqTitle: "Preguntas Frecuentes",
 
     faqGeneral: {
-        title: "General Questions",
+        title: "Información general",
         questions: [
             {
-                question: "What makes Proudmoore different from other Cataclysm servers?",
+                question: "¿Qué hace a Proudmoore diferente de otros servidores de Cataclysm?",
                 answer: "Proudmoore isn’t just another Cataclysm realm, it is expanding on well-tested concepts to make the expansion well rounded for hardcore and casual players alike.. We’re introducing Mythic+ dungeons, solo-rated PvP queues, a variety of new leveling paths, and cross-faction systems, all while preserving the core Cataclysm experience."
             },
             {
