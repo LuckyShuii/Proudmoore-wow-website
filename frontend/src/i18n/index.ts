@@ -1,30 +1,32 @@
 import { createI18n } from "vue-i18n";
-import pluralization from "./rules/pluralization";
-import frTranslation from "./languages/fr";
-import enTranslation from "./languages/en";
-import czTranslation from "./languages/cz";
-import deTranslation from "./languages/de";
-import nlTranslation from "./languages/nl";
-import esTranslation from "./languages/es";
 
-const translations = {
-    fr: frTranslation,
-    en: enTranslation,
-    cz: czTranslation,
-    de: deTranslation,
-    nl: nlTranslation,
-    es: esTranslation
-};
+const DEFAULT_LOCALE  = import.meta.env.VITE_DEFAULT_LOCALE  || "cz";
+const FALLBACK_LOCALE = import.meta.env.VITE_FALLBACK_LOCALE || "cz";
 
-export default createI18n({
-    // @local: default language for the app
-    locale: import.meta.env.VITE_DEFAULT_LOCALE,
-    // @fallbackLocale: fallback language for the app if a translation is not found
-    fallbackLocale: import.meta.env.VITE_FALLBACK_LOCALE,
-    // @legacy: false: use the new composition API from Vue3 for i18n
-    legacy: false,
-    // @globalInjection: true: use the global injection for i18n, allows to use $t() in the template instead of importing the i18n instance everytime
-    globalInjection: true,
-    pluralization,
-    messages: translations,
-})
+export const i18n = createI18n({
+  legacy: false,
+  globalInjection: true,
+  locale: DEFAULT_LOCALE,
+  fallbackLocale: FALLBACK_LOCALE,
+  messages: {},
+});
+
+export async function loadLocaleMessages(locale: string) {
+  const res = await fetch(`/locales/${locale}.json?ts=${Date.now()}`, {
+    cache: "no-store"
+  });
+  if (!res.ok) throw new Error(`Failed to load /locales/${locale}.json`);
+  const msgs = await res.json();
+  i18n.global.setLocaleMessage(locale, msgs);
+}
+
+export async function setupI18n() {
+  if (!i18n.global.availableLocales.includes(DEFAULT_LOCALE)) {
+    await loadLocaleMessages(DEFAULT_LOCALE);
+  }
+}
+
+export async function setLocale(locale: string) {
+  await loadLocaleMessages(locale);
+  i18n.global.locale.value = locale;
+}
