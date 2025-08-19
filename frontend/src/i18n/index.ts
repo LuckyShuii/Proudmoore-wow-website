@@ -1,7 +1,12 @@
 import { createI18n } from "vue-i18n";
 
-const DEFAULT_LOCALE  = import.meta.env.VITE_DEFAULT_LOCALE  || "cz";
-const FALLBACK_LOCALE = import.meta.env.VITE_FALLBACK_LOCALE || "cz";
+const getDefaultLocale = () => {
+  const saved = localStorage.getItem('pm_lang');
+  return saved ? saved : 'en';
+}
+const DEFAULT_LOCALE  = getDefaultLocale();
+
+const FALLBACK_LOCALE = import.meta.env.VITE_FALLBACK_LOCALE || "en";
 
 export const i18n = createI18n({
   legacy: false,
