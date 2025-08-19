@@ -29,7 +29,6 @@ services:
       dockerfile: Dockerfile
     container_name: dev-proudmoore-website-frontend
     environment:
-      # VITE_BACKEND_URL: ${BACKEND_URL}
       VITE_PROJECT_STATUS: ${PROJECT_STATUS}
       VITE_FRONTEND_URL: ${FRONTEND_URL}
       VITE_FALLBACK_LOCALE: ${FALLBACK_LOCALE}

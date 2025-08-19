@@ -1,15 +1,24 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import Footer from '@/components/Footer.vue'
 import NavView from './components/NavView.vue';
 import { computed, ref } from 'vue';
+import projectData from './utils/projectData';
+
+// import API from '@/services/API'
+
+// const rolesApiTest = ref(null);
 
 const visible = ref(false);
 
-const isDev = computed(() => import.meta.env.VITE_PROJECT_STATUS === 'DEV');
+const isDev = computed(() => projectData.PROJECT_STATUS === 'DEV');
+
+// onMounted(async () => {
+//   rolesApiTest.value = (await API.roles.getRoles()).data;
+// })
 </script>
 
 <template>
+  <!-- {{ rolesApiTest }} -->
   <div class="flex flex-col min-h-screen">
     <!-- Top -->
     <div class="pointer-events-none fixed top-0 left-0 w-full h-[100px] bg-[url('/webp/border-top.png')] bg-no-repeat bg-[length:100%_100%] z-50"></div>

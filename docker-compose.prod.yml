@@ -48,8 +48,6 @@ services:
     image: node:20-alpine
     container_name: prod-proudmoore-website-frontend-build
     working_dir: /app
-    environment:
-      VITE_PROJECT_STATUS: PROD
     volumes:
       - ./frontend:/app
     command: sh -lc "npm ci && npm run build"

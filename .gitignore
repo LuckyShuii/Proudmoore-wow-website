@@ -4,3 +4,4 @@ backend/node_modules/
 backend/.DS_Store
 .DS_Store
 database/
+frontend/src/utils/projectData.ts
