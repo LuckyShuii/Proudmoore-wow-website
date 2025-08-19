@@ -3,7 +3,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: proudmoore-website-backend
+    container_name: dev-proudmoore-website-backend
     environment:
       FRONTEND_URL: ${FRONTEND_URL}
       DB_DATABASE: ${DB_DATABASE}
@@ -27,7 +27,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: proudmoore-website-frontend
+    container_name: dev-proudmoore-website-frontend
     environment:
       # VITE_BACKEND_URL: ${BACKEND_URL}
       VITE_PROJECT_STATUS: ${PROJECT_STATUS}
@@ -43,7 +43,7 @@ services:
 
   db:
     image: postgres
-    container_name: proudmoore-website-db
+    container_name: dev-proudmoore-website-db
     environment:
       POSTGRES_DB: ${DB_DATABASE}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
@@ -61,17 +61,17 @@ services:
 
   redis:
     image: redis
-    container_name: proudmoore-website-redis
+    container_name: dev-proudmoore-website-redis
 
   adminer:
     image: adminer
-    container_name: proudmoore-website-adminer
+    container_name: dev-proudmoore-website-adminer
     expose:
       - 8080
 
   apigateway:
     image: nginx
-    container_name: proudmoore-website-apigateway
+    container_name: dev-proudmoore-website-apigateway
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
