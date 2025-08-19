@@ -2,7 +2,7 @@ services:
   backend:
     build:
       context: ./backend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     container_name: dev-proudmoore-website-backend
     environment:
       FRONTEND_URL: ${FRONTEND_URL}
@@ -26,7 +26,7 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     container_name: dev-proudmoore-website-frontend
     environment:
       VITE_PROJECT_STATUS: ${PROJECT_STATUS}
@@ -35,9 +35,11 @@ services:
       VITE_DEFAULT_LOCALE: ${DEFAULT_LOCALE}
     volumes:
       - ./frontend/src/i18n:/app/src/i18n
-    expose:
-      - "5173"
-      - "7002"
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    ports:
+      - "5173:5173"
+      - "7002:7002"
     command: ["npm", "run", "dev"]
 
   db:

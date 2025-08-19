@@ -35,3 +35,5 @@ export async function setLocale(locale: string) {
   await loadLocaleMessages(locale);
   i18n.global.locale.value = locale;
 }
+
+export default i18n;
