@@ -2,7 +2,7 @@ const enTranslation = {
     welcome: "Welcome to the Proudmoore WoW Website",
 
     nav: {
-        home: "Home",
+        home: "Home EDIT TEST",
         about: "What is Proudmoore?",
         features: "Features & Rates",
         timeline: "Launch Timeline & Dates",
