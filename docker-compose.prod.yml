@@ -21,7 +21,7 @@ services:
     restart: unless-stopped
 
   db:
-    image: postgres:17
+    image: postgres:latest
     container_name: prod-proudmoore-website-db
     environment:
       POSTGRES_DB: ${DB_DATABASE}

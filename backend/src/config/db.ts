@@ -1,4 +1,5 @@
 import { DataSource } from "typeorm";
+import path from "path";
 
 export const dataSource = new DataSource({
 	type: "postgres",
@@ -10,10 +11,10 @@ export const dataSource = new DataSource({
 
     // Enable or disable synchronization based on the project status
 	synchronize: process.env.PROJECT_STATUS === 'DEV' ? true : false,
-	migrations: ["migrations/*.ts"],
+	migrations: [process.env.PROJECT_STATUS === 'DEV' ? "src/migrations/*.ts" : path.join(__dirname, "..", "migrations", "*.js")],
 	migrationsTableName: "migrations",
 	logging: ["error", "query", "schema"],
 
     // Specify the entities to be used based on the project status, no need to import them
-	entities: [process.env.PROJECT_STATUS === 'DEV' ? "src/entities/*.ts" : "dist/entities/*.js"],
+	entities: [process.env.PROJECT_STATUS === 'DEV' ? "src/entities/*.ts" : path.join(__dirname, "..", "entities", "*.js")],
 });
