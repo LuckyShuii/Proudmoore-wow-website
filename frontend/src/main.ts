@@ -16,7 +16,7 @@ import Message from 'primevue/message';
 import Drawer from 'primevue/drawer';
 import Button from 'primevue/button';
 
-import i18n from './i18n';
+import { i18n, setupI18n } from "./i18n";
 import { createPinia } from 'pinia';
 
 import 'primeicons/primeicons.css';
@@ -24,22 +24,24 @@ import 'primeicons/primeicons.css';
 const pinia = createPinia();
 const app = createApp(App);
 
-app.component('Popover', Popover);
-app.component('Accordion', Accordion);
-app.component('AccordionPanel', AccordionPanel);
-app.component('AccordionHeader', AccordionHeader);
-app.component('AccordionContent', AccordionContent);
-app.component('Message', Message);
-app.component('Drawer', Drawer);
-app.component('Button', Button);
+setupI18n().then(() => {
+  app.use(i18n);
+  app.component('Popover', Popover);
+  app.component('Accordion', Accordion);
+  app.component('AccordionPanel', AccordionPanel);
+  app.component('AccordionHeader', AccordionHeader);
+  app.component('AccordionContent', AccordionContent);
+  app.component('Message', Message);
+  app.component('Drawer', Drawer);
+  app.component('Button', Button);
 
-app.use(pinia);
-app.use(PrimeVue, {
-  theme: {
-    preset: Aura
-  }
+  app.use(pinia);
+  app.use(PrimeVue, {
+    theme: { preset: Aura }
+  });
+  app.use(router);
+
+  app.mount('#app');
+}).catch(err => {
+  console.error("❌ Failed to setup i18n:", err);
 });
-app.use(router);
-app.use(i18n);
-
-app.mount('#app');

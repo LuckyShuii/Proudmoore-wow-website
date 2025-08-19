@@ -63,6 +63,7 @@ services:
     volumes:
       - ./nginx.prod.conf:/etc/nginx/nginx.conf:ro
       - ./frontend/dist:/usr/share/nginx/html:ro
+      - ./frontend/public/locales:/app/frontend/public/locales:ro
     depends_on:
       backend:
         condition: service_started

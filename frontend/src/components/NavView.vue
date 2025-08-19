@@ -2,6 +2,7 @@
 import { computed, onMounted, onBeforeUnmount, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { RouterLink } from 'vue-router';
+import { setLocale } from '@/i18n';
 
 const { t } = useI18n();
 const i18n = useI18n({ useScope: 'global' });
@@ -40,9 +41,9 @@ const toggle = (event: Event) => {
     op.value?.toggle(event);
 };
 
-const setLanguage = (lang: string) => {
+const setLanguage = async (lang: string) => {
     const allowed = ['en', 'fr', 'es', 'de', 'cz', 'nl'];
-    i18n.locale.value = allowed.includes(lang) ? lang : 'en';
+    await setLocale(allowed.includes(lang) ? lang : 'en');
 };
 
 const selectLanguage = (lang: { code: string; src: string; alt: string }) => {
