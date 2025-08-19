@@ -1,11 +1,17 @@
 services:
-  # backend:
-  #   build: ./backend/Dockerfile.prod
-  #   container_name: proudmoore-website-backend
-  #   environment:
-  #     FRONTEND_URL: ${FRONTEND_URL}
-  #   volumes:
-  #     - ./backend/src:/app/src
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: proudmoore-website-backend
+    environment:
+      FRONTEND_URL: ${FRONTEND_URL}
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      PROJECT_STATUS: ${PROJECT_STATUS}
+    volumes:
+      - ./backend/src:/app/src
       
   frontend:
     build:
@@ -33,7 +39,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_USER: ${DB_USER}
     volumes:
-      # - ./backend/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
+      - ./backend/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
       - ./pgdata:/var/lib/postgresql/data
     expose:
       - 5432

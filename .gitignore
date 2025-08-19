@@ -1,2 +1,6 @@
 .env
 pgdata/
+backend/node_modules/
+backend/.DS_Store
+backend/package-lock.json
+.DS_Store
