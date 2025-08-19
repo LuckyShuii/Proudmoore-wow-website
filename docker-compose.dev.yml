@@ -73,7 +73,7 @@ services:
     image: nginx
     container_name: dev-proudmoore-website-apigateway
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf
     ports:
       - "8081:80"
     depends_on:

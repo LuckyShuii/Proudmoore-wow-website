@@ -1,0 +1,71 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.prod
+    container_name: prod-proudmoore-website-backend
+    environment:
+      NODE_ENV: production
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      FRONTEND_URL: ${FRONTEND_URL}
+      PROJECT_STATUS: PROD
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "8002"
+    restart: unless-stopped
+
+  db:
+    image: postgres:17
+    container_name: prod-proudmoore-website-db
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    expose:
+      - "5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_DATABASE}"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+      start_period: 5s
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+    container_name: prod-proudmoore-website-redis
+    restart: unless-stopped
+
+  frontend-build:
+    image: node:20-alpine
+    container_name: prod-proudmoore-website-frontend-build
+    working_dir: /app
+    environment:
+      VITE_PROJECT_STATUS: PROD
+    volumes:
+      - ./frontend:/app
+    command: sh -lc "npm ci && npm run build"
+    profiles: ["tools"]
+
+  apigateway:
+    image: nginx:alpine
+    container_name: prod-proudmoore-website-apigateway
+    ports:
+      - "8081:80"
+    volumes:
+      - ./nginx.prod.conf:/etc/nginx/nginx.conf:ro
+      - ./frontend/dist:/usr/share/nginx/html:ro
+    depends_on:
+      backend:
+        condition: service_started
+      db:
+        condition: service_healthy
+    restart: unless-stopped
