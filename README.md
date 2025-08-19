@@ -53,12 +53,9 @@ Proudmoore-wow-website/
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/your-username/Proudmoore-wow-website.git
+git clone git@github.com:LuckyShuii/Proudmoore-wow-website.git
 
-# 2️⃣ Install frontend dependencies
-cd frontend
-npm install
-
-# 3️⃣ Start the Vue.js development server
-npm run dev
+# 2️⃣ Start the executable file
+(may vary depending your OS)
+./sh_reload
 ```
