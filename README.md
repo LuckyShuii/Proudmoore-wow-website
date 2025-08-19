@@ -27,9 +27,13 @@ Afterwards, progressively add new features with:
 ## 📌 Roadmap
 
 - [x] Migrate current content to Vue.js (WIP)
-- [ ] Add a Node.js/Express backend
-- [ ] Implement a database
-- [ ] Containerize with Docker & Nginx reverse proxy
+- [x] Add a Node.js/Express backend
+- [ ] Protected API with JWT Auth and Roles
+- [x] Very detailed logs system
+- [x] Redis for caching
+- [x] Implement a database
+- [x] Containerize with Docker & Nginx reverse proxy
+- [ ] Protected back-office pages
 - [ ] Develop new features
 
 ---

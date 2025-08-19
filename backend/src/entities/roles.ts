@@ -13,11 +13,17 @@ export class Roles extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ length: 255 })
+    @Column({ length: 255, unique: true })
     @Length(1, 255, {
         message: 'The name cannot be empty and must not exceed 255 characters.'
     })
     name: string;
+
+    @Column({ length: 255 })
+    @Length(1, 255, {
+        message: 'The description cannot be empty and must not exceed 255 characters.'
+    })
+    description: string;
 
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     created_at: Date;

@@ -12,7 +12,17 @@ services:
       PROJECT_STATUS: ${PROJECT_STATUS}
     volumes:
       - ./backend/src:/app/src
-      
+      - ./backend/migrations:/app/migrations
+    healthcheck:
+      test: 'curl --fail --request POST --header ''content-type: application/json'' --url ''http://localhost:8002/graphql'' --data ''{"query":"query { __typename }"}'' || exit 1'
+      interval: 1s
+      timeout: 2s
+      retries: 5
+      start_period: 2s
+    depends_on:
+      db:
+        condition: service_healthy
+
   frontend:
     build:
       context: ./frontend
@@ -39,10 +49,15 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_USER: ${DB_USER}
     volumes:
-      - ./backend/init_db.sql:/docker-entrypoint-initdb.d/init_db.sql
-      - ./pgdata:/var/lib/postgresql/data
+    - ./database:/var/lib/postgresql/data
     expose:
       - 5432
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_DATABASE}"]
+      interval: 1s
+      timeout: 2s
+      retries: 5
+      start_period: 2s
 
   redis:
     image: redis
@@ -61,3 +76,6 @@ services:
       - ./nginx.conf:/etc/nginx/nginx.conf
     ports:
       - "8081:80"
+    depends_on:
+      - backend
+      - db

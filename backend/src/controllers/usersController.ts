@@ -8,8 +8,6 @@ import { appendUserLog } from "../utils/logger";
 const UsersController = {
     getAllUsers: async (_req: Request, res: Response) => {
         try {
-            appendUserLog(`Querying all users`);
-
             const cacheResult = await redisClient.get("allUsers");
 
             if (cacheResult) {

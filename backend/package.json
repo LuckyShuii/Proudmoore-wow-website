@@ -7,7 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev ./src/index.ts",
     "stop": "ts-node-dev stop ./src/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "migration:create": "typeorm-ts-node-commonjs migration:create",
+    "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/config/db.ts",
+    "migration:up": "typeorm-ts-node-commonjs migration:run -d src/config/db.ts",
+    "migration:down": "typeorm-ts-node-commonjs migration:revert -d src/config/db.ts"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +23,7 @@
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "express-rate-limit": "^7.5.0",
+    "pg": "^8.16.3",
     "redis": "^4.7.0",
     "reflect-metadata": "^0.2.1",
     "typeorm": "^0.3.20"

@@ -9,6 +9,7 @@ import { dataSource } from "./config/db";
 
 import UsersController from "./controllers/usersController";
 import RolesController from "./controllers/rolesController";
+import { seedRoles } from "./startup/seed";
 
 dotenv.config();
 
@@ -47,7 +48,8 @@ const port = 8002;
 
 app.listen(port, async () => {
     await dataSource.initialize();
-
+    await seedRoles();
+    
     try {
         await redisClient.connect();
         console.log("Redis connected");
