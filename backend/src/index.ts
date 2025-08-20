@@ -9,6 +9,7 @@ import { dataSource } from "./config/db";
 
 import UsersController from "./controllers/usersController";
 import RolesController from "./controllers/rolesController";
+import ContentCreatorsController from "./controllers/contentCreatorsController";
 
 dotenv.config();
 
@@ -63,5 +64,29 @@ app.get("/api", (_req, res) => {
     res.status(200).send("The server is ON");
 });
 
+/**
+ * Content Creators API
+ */
+
+// GET
+app.get("/api/content-creators", ContentCreatorsController.getAllContentCreators);
+
+// POST
+
+/**
+ * Users API
+ */
+
+// GET
 app.get("/api/users", UsersController.getAllUsers);
+
+// POST
+
+/**
+ * Roles API
+ */
+
+// GET
 app.get("/api/roles", RolesController.getAllRoles);
+
+// POST

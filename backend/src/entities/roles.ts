@@ -32,5 +32,5 @@ export class Roles extends BaseEntity {
     updated_at: Date;
 
     @OneToMany(() => UserRole, (ur) => ur.role, { cascade: false })
-    userRoles!: UserRole[];
+    user_roles!: UserRole[];
 }
