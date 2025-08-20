@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import router from '@/router';
 import { useAuthStore } from '@/store/authStore';
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import { storeToRefs } from 'pinia';
 import { getRoleClass } from '@/utils/getRoleClass';
 
@@ -11,7 +11,7 @@ const { isAuthenticated, isAdmin, isCm, isDev, isHgm, isSmm, isTranslator, user 
 
 const showProfileMenu = ref(false);
 
-const items = ref([
+const items = computed(() => [
     {
         label: 'Dashboard',
         icon: 'pi pi-home',
@@ -21,13 +21,13 @@ const items = ref([
         label: 'Content Creators',
         icon: 'pi pi-pencil',
         command: () => router.push({ name: 'content-creators' }),
-        disabled: !isAdmin || !isDev || !isCm || !isSmm
+        disabled: !(isAdmin.value || isDev.value || isCm.value || isSmm.value)
     },
     {
         label: 'Articles',
         icon: 'pi pi-file',
         command: () => router.push({ name: 'articles' }),
-        disabled: !isAdmin || !isDev || !isCm || !isSmm
+        disabled: !(isAdmin.value || isDev.value || isCm.value || isSmm.value)
     },
     {
         label: 'Manager Users',
@@ -44,7 +44,7 @@ const items = ref([
                 command: () => router.push({ name: 'create-user' })
             }
         ],
-        disabled: !isAdmin
+        disabled: !isAdmin.value
     }
 ]);
 
