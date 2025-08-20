@@ -4,45 +4,65 @@ import { useAuthStore } from '@/store/authStore';
 import { ref } from 'vue';
 import { storeToRefs } from 'pinia';
 
-const { isAuthenticated } = storeToRefs(useAuthStore());
+// Store
+const authStore = useAuthStore();
+const { isAuthenticated } = storeToRefs(authStore);
 
 const items = ref([
     {
         label: 'Dashboard',
         icon: 'pi pi-home',
-        command: () => router.push({ name: 'admin-dashboard' }),
-        items: [
-            {
-                label: 'Example 1',
-                icon: 'pi pi-chart-line',
-            },
-            {
-                label: 'Example 2',
-                icon: 'pi pi-cog',
-            }
-        ]
+        command: () => router.push({ name: 'admin-dashboard' })
     },
     {
         label: 'Content Creators',
-        icon: 'pi pi-users',
+        icon: 'pi pi-pencil',
         command: () => router.push({ name: 'content-creators' })
     },
     {
-        label: 'Log out',
-        icon: 'pi pi-sign-out',
-        command: () => {
-            const authStore = useAuthStore();
-            authStore.logout();
-            router.push({ name: 'admin-login' });
-        },
-        class: 'bg-red-500 rounded ml-4'
+        label: 'Manager Users',
+        icon: 'pi pi-users',
+        items: [
+            {
+                label: 'All Users',
+                icon: 'pi pi-users',
+                command: () => router.push({ name: 'all-users' })
+            },
+            {
+                label: 'Create User',
+                icon: 'pi pi-user-plus',
+                command: () => router.push({ name: 'create-user' })
+            }
+        ]
     }
 ]);
 
+const logout = () => {
+    authStore.logout();
+    router.push({ name: 'admin-login' });
+};
 </script>
 
 <template>
-    <nav class="absolute top-5 left-0 right-0 w-full p-4 text-white flex justify-center items-center" :class="!isAuthenticated ? 'hidden' : ''">
-        <Menubar :model="items" />
+    <nav
+      v-if="isAuthenticated"
+      class="absolute top-5 left-1/2 -translate-x-1/2 max-w-[70rem] w-full "
+    >
+        <Menubar :model="items" class="w-full">
+            <template #start>
+                <div class="flex items-center gap-4 mr-6 p-2">
+                    <img src="/favicon-2.webp" class="w-10 [transform:rotateY(180deg)]" />
+                </div>
+            </template>
+
+            <template #end>
+                <Button 
+                  icon="pi pi-sign-out"
+                  label="Logout"
+                  id="logout-button"
+                  @click="logout"
+                />
+            </template>
+        </Menubar>
     </nav>
 </template>

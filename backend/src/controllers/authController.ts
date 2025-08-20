@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import { Users } from "../entities/users";
 import { AuthService } from "../services/authService";
 import { appendUserLog } from "../utils/logger";
+import UsersService from "../services/usersService";
 
 export default class AuthController {
     static async register(req: Request, res: Response) {
@@ -49,6 +50,8 @@ export default class AuthController {
             }
 
             const token = AuthService.generateToken(user);
+
+            await UsersService.updateLastLogin(user.id);
 
             return res.json({ token });
         } catch (err) {

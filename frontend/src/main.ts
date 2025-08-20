@@ -20,6 +20,9 @@ import InputText from 'primevue/inputtext'
 import InputGroup from 'primevue/inputgroup';
 import InputGroupAddon from 'primevue/inputgroupaddon';
 import Menubar from 'primevue/menubar';
+import DataTable from 'primevue/datatable';
+import Column from "primevue/column";
+import Chip from 'primevue/chip';
 
 import { i18n, setupI18n } from "./i18n";
 import { createPinia } from 'pinia';
@@ -44,6 +47,9 @@ setupI18n().then(() => {
   app.component('InputGroup', InputGroup);
   app.component('InputGroupAddon', InputGroupAddon);
   app.component('Menubar', Menubar);
+  app.component('DataTable', DataTable);
+  app.component('Column', Column);
+  app.component('Chip', Chip);
 
   app.use(pinia);
   app.use(PrimeVue, {

@@ -2,7 +2,7 @@ import { Users } from "../entities/users";
 
 const UsersService = {
     getAllUsers: async (): Promise<Users[]> => {
-        const result = await Users.find();
+        const result = await Users.find({relations: ["user_roles", "user_roles.role", "created_by"]});
         return result;
     },
 
@@ -15,6 +15,10 @@ const UsersService = {
         const user = Users.create(userData);
         await user.save();
         return user;
+    },
+
+    updateLastLogin: async (userId: number): Promise<void> => {
+        await Users.update(userId, { last_login: new Date() });
     }
 }
 

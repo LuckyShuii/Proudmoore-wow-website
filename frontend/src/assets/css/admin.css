@@ -15,3 +15,12 @@
 .p-inputgroup > .p-inputtext:focus {
     border-color: #3b82f6 !important;
 }
+
+.p-menubar-item-icon {
+    color: white !important;
+}
+
+#logout-button {
+    background-color: #ef4444 !important;
+    border-radius: 5px;
+}

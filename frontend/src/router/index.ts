@@ -76,6 +76,18 @@ const router = createRouter({
       component: () => import('@/views/Admin/ContentCreators/ContentCreatorsView.vue'),
       meta: { requiresAuth: true, roles: ["ADMIN", "DEV", "CM", "SMM"] }
     },
+    {
+      path: '/admin/manager-users/all-users',
+      name: 'all-users',
+      component: () => import('@/views/Admin/ManageUsers/AllUsersView.vue'),
+      meta: { requiresAuth: true, roles: ["ADMIN", "DEV"] }
+    },
+    {
+      path: '/admin/manager-users/create-users',
+      name: 'create-users',
+      component: () => import('@/views/Admin/ManageUsers/CreateUserView.vue'),
+      meta: { requiresAuth: true, roles: ["ADMIN", "DEV"] }
+    },
   ]
 })
 

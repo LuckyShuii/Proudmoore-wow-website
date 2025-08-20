@@ -17,7 +17,6 @@ export async function createDefaultUser() {
             username: "proudmoore_admin",
             email: "proudmoore_admin@example.com",
             password: hashedPassword,
-            created_by_system: 'System',
         });
         await user.save();
 
