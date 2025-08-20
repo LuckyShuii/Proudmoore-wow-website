@@ -10,6 +10,8 @@ import { dataSource } from "./config/db";
 import UsersController from "./controllers/usersController";
 import RolesController from "./controllers/rolesController";
 import ContentCreatorsController from "./controllers/contentCreatorsController";
+import AuthController from "./controllers/authController";
+import { authenticateJWT, authorizeRoles } from "./middlewares/authMiddleware";
 
 dotenv.config();
 
@@ -65,28 +67,33 @@ app.get("/api", (_req, res) => {
 });
 
 /**
- * Content Creators API
+ * POST ROUTES
  */
+app.post("/api/auth/login", AuthController.login);
 
-// GET
-app.get("/api/content-creators", ContentCreatorsController.getAllContentCreators);
-
-// POST
+app.post("/api/auth/register", 
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    AuthController.register,
+);
 
 /**
- * Users API
+ * GET ROUTES
  */
+app.get("/api/users",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    UsersController.getAllUsers
+);
 
-// GET
-app.get("/api/users", UsersController.getAllUsers);
+app.get("/api/roles",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    RolesController.getAllRoles
+);
 
-// POST
-
-/**
- * Roles API
- */
-
-// GET
-app.get("/api/roles", RolesController.getAllRoles);
-
-// POST
+app.get("/api/content-creators",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    ContentCreatorsController.getAllContentCreators
+);

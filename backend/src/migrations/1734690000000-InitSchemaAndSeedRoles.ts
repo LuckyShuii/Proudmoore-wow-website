@@ -41,13 +41,13 @@ public async up(queryRunner: QueryRunner): Promise<void> {
 
     // Seed roles (idempotent)
     await queryRunner.query(`
-    INSERT INTO roles (name, description) VALUES
-        ('Administrator','Full Access'),
-        ('Website Developer','Full Access'),
-        ('Social Media Manager','Elevated Privileges'),
-        ('Community Manager','Elevated Privileges'),
-        ('Translator','Access to Translation Tools'),
-        ('Head Game Master','Elevated Privileges')
+    INSERT INTO roles (code, name, description) VALUES
+        ('ADMIN', 'Administrator','Full Access'),
+        ('DEV', 'Website Developer','Full Access'),
+        ('SMM', 'Social Media Manager','Elevated Privileges'),
+        ('CM', 'Community Manager','Elevated Privileges'),
+        ('TRANSLATOR', 'Translator','Access to Translation Tools'),
+        ('HGM', 'Head Game Master','Elevated Privileges')
     ON CONFLICT (name) DO NOTHING;
     `);
 }
