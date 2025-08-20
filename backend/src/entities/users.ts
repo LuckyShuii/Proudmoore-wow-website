@@ -11,9 +11,15 @@ import { Length } from "class-validator";
 import { UserRole } from "./userRole";
 
 @Entity()
-export class Users extends BaseEntity {
+export class Users extends BaseEntity {    
     @PrimaryGeneratedColumn()
     id: number;
+
+    @Column({ length: 255, unique: true })
+    @Length(1, 255, {
+        message: 'The UUID cannot be empty and must not exceed 255 characters.'
+    })
+    uuid: string;
 
     @Column({ length: 255 })
     @Length(1, 255, {

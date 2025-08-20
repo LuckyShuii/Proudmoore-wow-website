@@ -6,6 +6,7 @@ import { AuthService } from "../services/authService";
 import { appendUserLog } from "..//utils/logger";
 import RolesService from "../services/rolesService";
 import { UserRole } from "../entities/userRole";
+import { v4 as uuidv4 } from "uuid";
 
 const UsersController = {
     getAllUsers: async (_req: Request, res: Response) => {
@@ -51,6 +52,7 @@ const UsersController = {
                 username: user.username,
                 email: user.email,
                 roles: user.roles.map(r => { return { code: r.code, name: r.name } }),
+                uuid: user.uuid
             });
         } catch (err) {
             console.error("Error in getMe:", err);
@@ -84,6 +86,7 @@ const UsersController = {
                 password: await AuthService.hashPassword(password),
                 created_by: createdBy,
                 last_updated_by: createdBy,
+                uuid: uuidv4()
             });
 
             if (roles && roles.length > 0) {
@@ -96,6 +99,8 @@ const UsersController = {
                         granted_by: createdBy ?? undefined, 
                     })
                 );
+
+                console.log("CREATING : ", userRoles);
 
                 await UserRole.save(userRoles);
 

@@ -3,6 +3,7 @@ import { Users } from "../entities/users";
 import { AuthService } from "../services/authService";
 import { appendUserLog } from "../utils/logger";
 import UsersService from "../services/usersService";
+import { v4 as uuidv4 } from "uuid";
 
 export default class AuthController {
     static async register(req: Request, res: Response) {
@@ -19,7 +20,8 @@ export default class AuthController {
             const user = Users.create({
                 username,
                 email,
-                password: hashedPassword
+                password: hashedPassword,
+                uuid: uuidv4()
             });
 
             await user.save();

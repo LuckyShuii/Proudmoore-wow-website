@@ -2,6 +2,7 @@ import { Users } from "../entities/users";
 import { Roles } from "../entities/roles";
 import { UserRole } from "../entities/userRole";
 import { AuthService } from "../services/authService";
+import { v4 as uuidv4 } from "uuid";
 
 export async function createDefaultUser() {
     try {
@@ -17,6 +18,7 @@ export async function createDefaultUser() {
             username: "proudmoore_admin",
             email: "proudmoore_admin@example.com",
             password: hashedPassword,
+            uuid: uuidv4()
         });
         await user.save();
 

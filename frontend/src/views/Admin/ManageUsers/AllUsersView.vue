@@ -5,9 +5,19 @@ import API from '@/services/API'
 import { storeToRefs } from 'pinia';
 import { convertDate } from '@/utils/convertDate';
 import { getRoleClass } from '@/utils/getRoleClass';
+import UserDetailsDialog from '@/components/Dialog/UserDetailsDialog.vue';
+import type { User } from '@/types/userType';
 
 const users = ref([]);
 const { isAdmin, user } = storeToRefs(useAuthStore());
+
+const infoVisible = ref<boolean>(false);
+const selectedUser = ref<User | null>(null);
+
+const showUserInfo = (user: User) => {
+    selectedUser.value = user;
+    infoVisible.value = true;
+}
 
 onMounted(async () => {
     users.value = (await API.users.getUsers()).data;
@@ -28,11 +38,18 @@ onMounted(async () => {
             <Column field="userRoles" header="Roles">
                 <template #body="{ data }">
                     <div class="flex flex-wrap gap-2">
-                        <Chip v-for="(role, index) in data.userRoles" :key="index" :label="role.role.name" :class="getRoleClass(role.role.code, 'chip')" class="text-sm" />
+                        <Chip v-for="(role, index) in data.userRoles" :key="index" :label="role.role.name" :class="getRoleClass(role.role.code, 'chip')" class="text-[14px]" />
                     </div>
                 </template>
             </Column>
+            <Column header="Actions">
+                <template #body="{ data }">
+                    <Button icon="pi pi-pencil" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="" />
+                    <Button icon="pi pi-trash" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="" />
+                    <Button icon="pi pi-eye" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showUserInfo(data)" />
+                </template>
+            </Column>
         </DataTable>
-
+        <UserDetailsDialog :visible="infoVisible" :user="selectedUser as User" @close="infoVisible = false" />
     </section>
 </template>

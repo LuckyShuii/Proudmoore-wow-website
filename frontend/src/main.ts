@@ -26,6 +26,7 @@ import Chip from 'primevue/chip';
 import Password from 'primevue/password';
 import MultiSelect from 'primevue/multiselect';
 import Avatar from 'primevue/avatar';
+import Dialog from 'primevue/dialog';
 
 import { i18n, setupI18n } from "./i18n";
 import { createPinia } from 'pinia';
@@ -56,6 +57,7 @@ setupI18n().then(() => {
   app.component('Password', Password);
   app.component('MultiSelect', MultiSelect);
   app.component('Avatar', Avatar);
+  app.component('Dialog', Dialog);
 
   app.use(pinia);
   app.use(PrimeVue, {
