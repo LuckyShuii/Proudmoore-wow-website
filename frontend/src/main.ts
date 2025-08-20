@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 import '@/assets/css/tailwind.css';
 import '@/assets/css/home.css';
+import '@/assets/css/admin.css';
 
 import PrimeVue from 'primevue/config';
 import Aura from '@primeuix/themes/aura';
@@ -15,6 +16,9 @@ import AccordionContent from 'primevue/accordioncontent';
 import Message from 'primevue/message';
 import Drawer from 'primevue/drawer';
 import Button from 'primevue/button';
+import InputText from 'primevue/inputtext'
+import InputGroup from 'primevue/inputgroup';
+import InputGroupAddon from 'primevue/inputgroupaddon';
 
 import { i18n, setupI18n } from "./i18n";
 import { createPinia } from 'pinia';
@@ -34,6 +38,9 @@ setupI18n().then(() => {
   app.component('Message', Message);
   app.component('Drawer', Drawer);
   app.component('Button', Button);
+  app.component('InputText', InputText);
+  app.component('InputGroup', InputGroup);
+  app.component('InputGroupAddon', InputGroupAddon);
 
   app.use(pinia);
   app.use(PrimeVue, {

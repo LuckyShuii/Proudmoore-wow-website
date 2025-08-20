@@ -33,11 +33,26 @@ const login = async () => {
 
 <template>
     <section class="w-full h-screen flex flex-col items-center justify-center">
-        <form @submit.prevent="login" class="flex flex-col items-center justify-center gap-4">
-            <input type="text" v-model="username" placeholder="Username" class="p-2 border border-gray-300 rounded" />
-            <input type="password" v-model="password" placeholder="Password" class="p-2 border border-gray-300 rounded" />
-            <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Login</button>
+        <form @submit.prevent="login" class="flex flex-col items-center justify-center gap-4 min-w-[15rem] mx-10">
+            <img src="/webp/logo_t.webp" alt="Logo" class="max-w-[25rem] w-full" />
+            <InputGroup>
+                <InputGroupAddon>
+                    <i class="pi pi-user"></i>
+                </InputGroupAddon>
+                <InputText v-model="username" placeholder="Username" />
+            </InputGroup>
+
+            <InputGroup>
+                <InputGroupAddon>
+                    <i class="pi pi-lock"></i>
+                </InputGroupAddon>
+                <InputText v-model="password" placeholder="Password" type="password" />
+            </InputGroup>
+
+            <Button type="submit" id="admin-login-button">
+                Login
+            </Button>
         </form>
-        <p v-if="errorMessage">{{ errorMessage }}</p>
+        <p class="h-[2rem] mt-4 flex justify-center items-center"><span class="text-red-500" v-if="errorMessage">{{ errorMessage }}</span></p>
     </section>
 </template>
