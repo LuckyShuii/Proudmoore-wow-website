@@ -81,8 +81,8 @@ const UsersController = {
                 : undefined;
 
             const newUser = await UsersService.createUser({
-                username,
-                email,
+                username: username.toLowerCase(),
+                email: email.toLowerCase(),
                 password: await AuthService.hashPassword(password),
                 created_by: createdBy,
                 last_updated_by: createdBy,
@@ -100,14 +100,12 @@ const UsersController = {
                     })
                 );
 
-                console.log("CREATING : ", userRoles);
-
                 await UserRole.save(userRoles);
 
                 newUser.user_roles = userRoles;
             }
 
-            appendUserLog(`${createdBy?.username ?? "system"} created user: ${username}`);
+            appendUserLog(`${createdBy?.username.toUpperCase() ?? "SYSTEM"} created user: ${username.toUpperCase()}`);
             return res.status(201).json(newUser);
 
         } catch (err) {

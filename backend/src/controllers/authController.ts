@@ -10,7 +10,7 @@ export default class AuthController {
         const { username, email, password } = req.body;
 
         try {
-            const existing = await Users.findOne({ where: { username } });
+            const existing = await Users.findOne({ where: { username: username.toLowerCase() } });
             if (existing) {
                 return res.status(400).json({ message: "Username already in use" });
             }
@@ -18,8 +18,8 @@ export default class AuthController {
             const hashedPassword = await AuthService.hashPassword(password);
 
             const user = Users.create({
-                username,
-                email,
+                username: username.toLowerCase(),
+                email: email.toLowerCase(),
                 password: hashedPassword,
                 uuid: uuidv4()
             });
@@ -38,7 +38,7 @@ export default class AuthController {
 
         try {
             const user = await Users.findOne({
-                where: { username },
+                where: { username: username.toLowerCase() },
                 relations: ["user_roles", "user_roles.role"]
             });
 
@@ -55,10 +55,10 @@ export default class AuthController {
 
             await UsersService.updateLastLogin(user.id);
 
-            appendUserLog(`${username} logged in successfully`);
+            appendUserLog(`${username.toUpperCase()} logged in successfully`);
             return res.json({ token });
         } catch (err) {
-            appendUserLog(`${username} failed to log in: ${err.message}`);
+            appendUserLog(`${username.toUpperCase()} failed to log in: ${err.message}`);
             return res.status(500).json({ message: "Error logging in", error: err });
         }
     }
