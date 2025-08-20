@@ -1,7 +1,7 @@
 import { Users } from "../entities/users";
 import { Roles } from "../entities/roles";
 import { UserRole } from "../entities/userRole";
-import { AuthService } from "../services/authService"; // pour hasher le mdp
+import { AuthService } from "../services/authService";
 
 export async function createDefaultUser() {
     try {
@@ -32,16 +32,9 @@ export async function createDefaultUser() {
         const ur1 = UserRole.create({
             user_id: user.id,
             role_id: adminRole.id,
-            granted_by: 'System'
         });
 
-        const ur2 = UserRole.create({
-            user_id: user.id,
-            role_id: devRole.id,
-            granted_by: 'System'
-        });
-
-        await UserRole.save([ur1, ur2]);
+        await UserRole.save([ur1]);
 
         console.log("✅ Roles ADMIN & DEV assigned to user:", user.username);
     } catch (err) {

@@ -1,6 +1,6 @@
 // src/entities/userRole.ts
 import {
-  Entity, Column, ManyToOne, JoinColumn,
+  Entity, ManyToOne, JoinColumn,
   PrimaryColumn, CreateDateColumn, UpdateDateColumn,
   BaseEntity
 } from "typeorm";
@@ -29,6 +29,7 @@ export class UserRole extends BaseEntity {
   @UpdateDateColumn({ name: "updated_at", type: "timestamptz", default: () => "CURRENT_TIMESTAMP" })
   updated_at!: Date;
 
-  @Column({ name: "granted_by", type: "varchar", length: 255, nullable: true })
-  granted_by?: Users | string;
+  @ManyToOne(() => Users, { nullable: true, onDelete: "SET NULL" })
+  @JoinColumn({ name: "granted_by" })
+  granted_by?: Users;
 }

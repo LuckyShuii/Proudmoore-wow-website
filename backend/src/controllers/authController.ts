@@ -53,8 +53,10 @@ export default class AuthController {
 
             await UsersService.updateLastLogin(user.id);
 
+            appendUserLog(`${username} logged in successfully`);
             return res.json({ token });
         } catch (err) {
+            appendUserLog(`${username} failed to log in: ${err.message}`);
             return res.status(500).json({ message: "Error logging in", error: err });
         }
     }

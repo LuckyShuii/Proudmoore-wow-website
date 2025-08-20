@@ -14,7 +14,13 @@ export const useAuthStore = defineStore("auth", () => {
     // ROLE STRUCTURE : { code: code, name: name }
     const isAuthenticated = computed(() => !!accessToken.value);
     const hasRole = (code: string) => user.value?.roles.some(r => r.code === code) ?? false;
+    const hasRoles = (codes: string[]) => codes.some(code => hasRole(code));
 
+    const isCm = computed(() => hasRole("CM"));
+    const isSmm = computed(() => hasRole("SMM"));
+    const isDev = computed(() => hasRole("DEV"));
+    const isHgm = computed(() => hasRole("HGM"));
+    const isTranslator = computed(() => hasRole("TRANSLATOR"));
     const isAdmin = computed(() => { return hasRole("ADMIN") || hasRole("DEV") });
 
     const login = async (username: string, password: string) => {
@@ -65,7 +71,13 @@ export const useAuthStore = defineStore("auth", () => {
         accessToken,
         user,
         isAuthenticated,
+        isCm,
+        isSmm,
+        isDev,
+        isHgm,
+        isTranslator,
         hasRole,
+        hasRoles,
         isAdmin,
         login,
         fetchUserProfile,

@@ -7,6 +7,6 @@ const { isAdmin } = storeToRefs(useAuthStore());
 
 <template>
     <section class="w-full flex flex-col items-center justify-center">
-        DASHBOARD {{ isAdmin }}
+        DASHBOARD
     </section>
 </template>

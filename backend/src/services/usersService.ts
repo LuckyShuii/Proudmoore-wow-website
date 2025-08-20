@@ -1,3 +1,4 @@
+import { DeepPartial } from "typeorm";
 import { Users } from "../entities/users";
 
 const UsersService = {
@@ -11,10 +12,15 @@ const UsersService = {
         return user;
     },
 
-    createUser: async (userData: Users): Promise<Users> => {
-        const user = Users.create(userData);
-        await user.save();
+    getUserBy: async (searchType: string, searchValue: string): Promise<Users | null> => {
+        const user = await Users.findOne({ where: { [searchType]: searchValue }, relations: ["user_roles", "user_roles.role", "created_by"] });
         return user;
+    },
+
+    async createUser(user: DeepPartial<Users>): Promise<Users> {
+        const newUser = Users.create(user);
+        await newUser.save();
+        return newUser;
     },
 
     updateLastLogin: async (userId: number): Promise<void> => {

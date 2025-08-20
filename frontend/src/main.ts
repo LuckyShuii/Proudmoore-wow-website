@@ -23,6 +23,8 @@ import Menubar from 'primevue/menubar';
 import DataTable from 'primevue/datatable';
 import Column from "primevue/column";
 import Chip from 'primevue/chip';
+import Password from 'primevue/password';
+import MultiSelect from 'primevue/multiselect';
 
 import { i18n, setupI18n } from "./i18n";
 import { createPinia } from 'pinia';
@@ -50,6 +52,8 @@ setupI18n().then(() => {
   app.component('DataTable', DataTable);
   app.component('Column', Column);
   app.component('Chip', Chip);
+  app.component('Password', Password);
+  app.component('MultiSelect', MultiSelect);
 
   app.use(pinia);
   app.use(PrimeVue, {

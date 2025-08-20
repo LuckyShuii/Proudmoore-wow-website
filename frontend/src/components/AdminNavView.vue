@@ -6,7 +6,7 @@ import { storeToRefs } from 'pinia';
 
 // Store
 const authStore = useAuthStore();
-const { isAuthenticated } = storeToRefs(authStore);
+const { isAuthenticated, isAdmin, isCm, isDev, isHgm, isSmm, isTranslator } = storeToRefs(authStore);
 
 const items = ref([
     {
@@ -17,7 +17,14 @@ const items = ref([
     {
         label: 'Content Creators',
         icon: 'pi pi-pencil',
-        command: () => router.push({ name: 'content-creators' })
+        command: () => router.push({ name: 'content-creators' }),
+        disabled: !isAdmin || !isDev || !isCm || !isSmm
+    },
+    {
+        label: 'Articles',
+        icon: 'pi pi-file',
+        command: () => router.push({ name: 'articles' }),
+        disabled: !isAdmin || !isDev || !isCm || !isSmm
     },
     {
         label: 'Manager Users',
@@ -33,7 +40,8 @@ const items = ref([
                 icon: 'pi pi-user-plus',
                 command: () => router.push({ name: 'create-user' })
             }
-        ]
+        ],
+        disabled: !isAdmin
     }
 ]);
 
@@ -46,7 +54,7 @@ const logout = () => {
 <template>
     <nav
       v-if="isAuthenticated"
-      class="absolute top-5 left-1/2 -translate-x-1/2 max-w-[70rem] w-full "
+      class="absolute top-5 left-1/2 -translate-x-1/2 max-w-[70rem] w-full z-50"
     >
         <Menubar :model="items" class="w-full">
             <template #start>

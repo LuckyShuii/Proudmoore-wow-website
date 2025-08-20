@@ -80,6 +80,12 @@ app.post("/api/auth/register",
     AuthController.register,
 );
 
+app.post("/api/users",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    UsersController.createUser
+)
+
 /**
  * GET ROUTES
  */

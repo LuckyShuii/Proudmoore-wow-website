@@ -84,7 +84,7 @@ const router = createRouter({
     },
     {
       path: '/admin/manager-users/create-users',
-      name: 'create-users',
+      name: 'create-user',
       component: () => import('@/views/Admin/ManageUsers/CreateUserView.vue'),
       meta: { requiresAuth: true, roles: ["ADMIN", "DEV"] }
     },

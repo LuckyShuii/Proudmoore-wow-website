@@ -44,11 +44,11 @@ export class Users extends BaseEntity {
 
     @ManyToOne(() => Users, (u) => u.created_users, { nullable: true, onDelete: 'SET NULL' })
     @JoinColumn({ name: 'created_by' })
-    created_by?: Users;
+    created_by?: Users | null;
 
     @ManyToOne(() => Users, (u) => u.created_users, { nullable: true, onDelete: 'SET NULL' })
     @JoinColumn({ name: 'last_updated_by' })
-    last_updated_by?: Users;
+    last_updated_by?: Users | null;
 
     @OneToMany(() => Users, (u) => u.created_by)
     created_users?: Users[];

@@ -24,3 +24,17 @@
     background-color: #ef4444 !important;
     border-radius: 5px;
 }
+
+#create-user-button {
+    outline: none !important;
+    width: 100% !important;
+    background-color: #08a710 !important;
+}
+
+#create-user-button:hover {
+    background-color: #06b700 !important;
+}
+
+#create-user-button:active {
+    background-color: #07cf00 !important;
+}
