@@ -4,11 +4,15 @@ import NavView from './components/NavView.vue';
 import { computed, ref } from 'vue';
 import projectData from './utils/projectData';
 import router from './router';
+import AdminNavView from './components/AdminNavView.vue';
+import { useAuthStore } from './store/authStore';
+import { storeToRefs } from 'pinia';
 
 const isAdminPage = computed(() => {
   return router.currentRoute.value.path.startsWith('/admin');
 });
 
+const { isAuthenticated } = storeToRefs(useAuthStore())
 const visible = ref(false);
 
 const isDev = computed(() => projectData.PROJECT_STATUS === 'DEV');
@@ -44,8 +48,10 @@ const isDev = computed(() => projectData.PROJECT_STATUS === 'DEV');
     </div>
     <NavView class="hidden lg:flex" v-if="!isAdminPage" />
 
-    <main class="flex-grow" :class="!isAdminPage ? 'lg:pl-[300px]' : ''">
-      <Message severity="warn" class="fixed top-10 right-10 lg:right-10 z-50 lg:max-w-[600px] !bg-[#c49407]" v-if="isDev">
+    <AdminNavView v-if="isAdminPage" />
+
+    <main class="flex-grow" :class="!isAdminPage ? 'lg:pl-[300px]' : 'mt-[8rem] flex flex-col items-center'">
+      <Message severity="warn" class="fixed top-10 right-10 lg:right-10 z-50 lg:max-w-[600px] !bg-[#c49407]" v-if="isDev && !isAdminPage">
         <div class="text-white">
           <p class="font-bold">⚠️ Development Version (W.I.P)</p>
           <p class="hidden lg:block">This is a development build of the website and not the production version.</p>

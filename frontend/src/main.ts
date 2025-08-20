@@ -19,11 +19,13 @@ import Button from 'primevue/button';
 import InputText from 'primevue/inputtext'
 import InputGroup from 'primevue/inputgroup';
 import InputGroupAddon from 'primevue/inputgroupaddon';
+import Menubar from 'primevue/menubar';
 
 import { i18n, setupI18n } from "./i18n";
 import { createPinia } from 'pinia';
 
 import 'primeicons/primeicons.css';
+import { useAuthStore } from './store/authStore';
 
 const pinia = createPinia();
 const app = createApp(App);
@@ -41,12 +43,18 @@ setupI18n().then(() => {
   app.component('InputText', InputText);
   app.component('InputGroup', InputGroup);
   app.component('InputGroupAddon', InputGroupAddon);
+  app.component('Menubar', Menubar);
 
   app.use(pinia);
   app.use(PrimeVue, {
     theme: { preset: Aura }
   });
   app.use(router);
+
+  const authStore = useAuthStore();
+  if (authStore.accessToken) {
+    authStore.fetchUserProfile();
+  }
 
   app.mount('#app');
 }).catch(err => {

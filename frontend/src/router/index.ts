@@ -61,14 +61,20 @@ const router = createRouter({
     {
       path: '/admin/login',
       name: 'admin-login',
-      component: () => import('@/views/Admin/AdminLoginView.vue')
+      component: () => import('@/views/Admin/AdminLoginView.vue'),
+      meta: { requiresAuth: false }
     },
     {
       path: '/admin/dashboard',
       name: 'admin-dashboard',
       component: () => import('@/views/Admin/AdminDashboardView.vue'),
       meta: { requiresAuth: true }
-      // meta: { requiresAuth: true, roles: ["ADMIN", "DEV"] }
+    },
+    {
+      path: '/admin/content-creators',
+      name: 'content-creators',
+      component: () => import('@/views/Admin/ContentCreators/ContentCreatorsView.vue'),
+      meta: { requiresAuth: true, roles: ["ADMIN", "DEV", "CM", "SMM"] }
     },
   ]
 })
@@ -76,6 +82,8 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
+
+  authStore.refreshFromStorage();
 
   // Check if authentication is required
   if (to.meta.requiresAuth) {
@@ -88,12 +96,16 @@ router.beforeEach((to, from, next) => {
     if (to.meta.roles) {
       const allowedRoles = to.meta.roles as string[];
       const hasAccess = allowedRoles.some((role) =>
-        authStore.user?.roles.includes(role as any)
+        authStore.user?.roles.some(r => r.code === role)
       );
       if (!hasAccess) {
-        return next({ name: "not-found" }); 
+        return next({ name: "admin-dashboard" }); 
       }
     }
+  }
+
+  if (to.name === "admin-login" && authStore.isAuthenticated) {
+    return next({ name: "admin-dashboard" });
   }
 
   next();

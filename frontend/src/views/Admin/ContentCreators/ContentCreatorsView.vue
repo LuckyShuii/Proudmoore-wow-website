@@ -2,18 +2,13 @@
 import { useAuthStore } from '@/store/authStore';
 import { onMounted, ref } from 'vue';
 import API from '@/services/API'
-import { storeToRefs } from 'pinia';
 
 const rolesApiTest = ref(null);
-const { isAdmin, user } = storeToRefs(useAuthStore());
-onMounted(async () => {
-    rolesApiTest.value = (await API.roles.getRoles()).data;
-})
+
 </script>
 
 <template>
     <section class="w-full flex flex-col items-center justify-center">
-        DASHBOARD {{ isAdmin }}
-        <pre>{{ user }}</pre>
+        CONTENT CREATORS VIEW
     </section>
 </template>

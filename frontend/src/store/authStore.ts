@@ -41,7 +41,7 @@ export const useAuthStore = defineStore("auth", () => {
         try {
             const { data } = await APIHandler.get("/users/me");
             user.value = data;
-            localStorage.setItem("user", JSON.stringify(user.value));
+            localStorage.setItem("_proudmoore_website_user_", JSON.stringify(user.value));
         } catch (error) {
             logout();
         }
@@ -54,6 +54,13 @@ export const useAuthStore = defineStore("auth", () => {
         localStorage.removeItem("_proudmoore_website_user_");
     };
 
+    const refreshFromStorage = () => {
+        accessToken.value = localStorage.getItem("_proudmoore_website_access_token_");
+        const storedUser = localStorage.getItem("_proudmoore_website_user_");
+        user.value = storedUser ? JSON.parse(storedUser) : null;
+    };
+
+
     return {
         accessToken,
         user,
@@ -63,5 +70,6 @@ export const useAuthStore = defineStore("auth", () => {
         login,
         fetchUserProfile,
         logout,
+        refreshFromStorage
     };
 });
