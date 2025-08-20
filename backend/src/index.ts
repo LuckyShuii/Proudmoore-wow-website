@@ -6,6 +6,7 @@ import rateLimit from "express-rate-limit";
 import { createClient } from "redis";
 
 import { dataSource } from "./config/db";
+import { createDefaultUser } from "./seeds/createUser";
 
 import UsersController from "./controllers/usersController";
 import RolesController from "./controllers/rolesController";
@@ -59,6 +60,8 @@ app.listen(port, async () => {
         console.error("Impossible to connect to Redis", err);
     }
     
+    await createDefaultUser();
+
     console.log(`Server is listening on port ${port}`);
 });
 
@@ -84,6 +87,11 @@ app.get("/api/users",
     authenticateJWT,
     authorizeRoles("ADMIN", "DEV"),
     UsersController.getAllUsers
+);
+
+app.get("/api/users/me",
+    authenticateJWT,
+    UsersController.getMe
 );
 
 app.get("/api/roles",

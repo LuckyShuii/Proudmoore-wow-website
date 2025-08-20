@@ -19,7 +19,7 @@ export class AuthService {
         const payload = {
             id: user.id,
             email: user.email,
-            roles: user.roles.map(r => r.name)
+            roles: user.roles.map(r => { return { code: r.code, name: r.name } })
         };
         return jwt.sign(payload, this.jwtSecret, { expiresIn: this.jwtExpiresIn });
     }

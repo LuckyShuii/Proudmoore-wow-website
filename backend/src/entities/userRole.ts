@@ -1,13 +1,14 @@
 // src/entities/userRole.ts
 import {
   Entity, Column, ManyToOne, JoinColumn,
-  PrimaryColumn, CreateDateColumn, UpdateDateColumn
+  PrimaryColumn, CreateDateColumn, UpdateDateColumn,
+  BaseEntity
 } from "typeorm";
 import { Users } from "./users";
 import { Roles } from "./roles";
 
 @Entity({ name: "user_roles" })
-export class UserRole {
+export class UserRole extends BaseEntity {
   @PrimaryColumn({ name: "user_id", type: "int" })
   user_id!: number;
 
@@ -29,5 +30,5 @@ export class UserRole {
   updated_at!: Date;
 
   @Column({ name: "granted_by", type: "varchar", length: 255, nullable: true })
-  granted_by?: Users
+  granted_by?: Users | string;
 }

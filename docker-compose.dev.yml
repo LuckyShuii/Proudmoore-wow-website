@@ -11,6 +11,7 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       PROJECT_STATUS: ${PROJECT_STATUS}
       JWT_SECRET: ${JWT_SECRET}
+      PROUDMOORE_ADMIN_PASSWORD: ${PROUDMOORE_ADMIN_PASSWORD}
     volumes:
       - ./backend/src:/app/src
       - ./backend/migrations:/app/migrations

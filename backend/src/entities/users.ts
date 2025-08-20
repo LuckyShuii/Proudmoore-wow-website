@@ -33,6 +33,9 @@ export class Users extends BaseEntity {
     })
     password: string;
 
+    @Column({ length: 255, nullable: true })
+    created_by_system: string;
+
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     created_at: Date;
 

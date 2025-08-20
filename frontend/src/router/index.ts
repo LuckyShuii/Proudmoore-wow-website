@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 import { nextTick } from 'vue';
 import LegalityPlayerView from '@/views/LegalityPlayerView.vue';
+import { useAuthStore } from '@/store/authStore';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,9 +57,47 @@ const router = createRouter({
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: NotFoundView
-    }
+    },
+    {
+      path: '/admin/login',
+      name: 'admin-login',
+      component: () => import('@/views/Admin/AdminLoginView.vue')
+    },
+    {
+      path: '/admin/dashboard',
+      name: 'admin-dashboard',
+      component: () => import('@/views/Admin/AdminDashboardView.vue'),
+      meta: { requiresAuth: true }
+      // meta: { requiresAuth: true, roles: ["ADMIN", "DEV"] }
+    },
   ]
 })
+
+
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore();
+
+  // Check if authentication is required
+  if (to.meta.requiresAuth) {
+    if (!authStore.isAuthenticated) {
+      // Not authenticated → redirect to login
+      return next({ name: "admin-login" });
+    }
+
+    // Check roles if specified
+    if (to.meta.roles) {
+      const allowedRoles = to.meta.roles as string[];
+      const hasAccess = allowedRoles.some((role) =>
+        authStore.user?.roles.includes(role as any)
+      );
+      if (!hasAccess) {
+        return next({ name: "not-found" }); 
+      }
+    }
+  }
+
+  next();
+});
 
 router.afterEach((to) => {
   if (!to.hash) return

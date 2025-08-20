@@ -49,8 +49,8 @@ export const authorizeRoles = (...roles: string[]) => {
             return res.status(401).json({ message: "Not authenticated" });
         }
 
-        const userRoles: string[] = req.user.roles;
-        const hasRole = roles.some(r => userRoles.includes(r));
+        const userRoles: { code: string, name: string }[] = req.user.roles;
+        const hasRole = roles.some(code => userRoles.some(r => r.code === code));
 
         if (!hasRole) {
             return res.status(403).json({ message: "Forbidden: insufficient role" });

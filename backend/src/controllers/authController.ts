@@ -8,9 +8,9 @@ export default class AuthController {
         const { username, email, password } = req.body;
 
         try {
-            const existing = await Users.findOne({ where: { email } });
+            const existing = await Users.findOne({ where: { username } });
             if (existing) {
-                return res.status(400).json({ message: "Email already in use" });
+                return res.status(400).json({ message: "Username already in use" });
             }
 
             const hashedPassword = await AuthService.hashPassword(password);
