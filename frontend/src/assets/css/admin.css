@@ -21,9 +21,17 @@
 }
 
 #logout-button {
-    background-color: #ef4444 !important;
+    background-color: #d00f12 !important;
     border-radius: 5px;
 }
+
+#logout-button:hover {
+    background-color: #b00d10 !important;
+}
+
+#logout-button:active {
+    background-color: #c00e11 !important;
+}   
 
 #create-user-button {
     outline: none !important;

@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import router from '@/router';
 import { useAuthStore } from '@/store/authStore';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { storeToRefs } from 'pinia';
+import { getRoleClass } from '@/utils/getRoleClass';
 
 // Store
 const authStore = useAuthStore();
-const { isAuthenticated, isAdmin, isCm, isDev, isHgm, isSmm, isTranslator } = storeToRefs(authStore);
+const { isAuthenticated, isAdmin, isCm, isDev, isHgm, isSmm, isTranslator, user } = storeToRefs(authStore);
+
+const showProfileMenu = ref(false);
 
 const items = ref([
     {
@@ -49,6 +52,19 @@ const logout = () => {
     authStore.logout();
     router.push({ name: 'admin-login' });
 };
+
+const toggleProfileMenu = () => {
+  showProfileMenu.value = !showProfileMenu.value;
+};
+
+onMounted(() => {
+    showProfileMenu.value = false;
+
+    // Close profile menu on route change
+    router.afterEach(() => {
+        showProfileMenu.value = false;
+    });
+});
 </script>
 
 <template>
@@ -64,12 +80,40 @@ const logout = () => {
             </template>
 
             <template #end>
-                <Button 
-                  icon="pi pi-sign-out"
-                  label="Logout"
-                  id="logout-button"
-                  @click="logout"
+                <Avatar 
+                    class="cursor-pointer !w-[3rem] !h-[3rem] !border-2 hover:border-blue-500 transition-all duration-200"
+                    shape="circle"
+                    icon="pi pi-user"
+                    @click="toggleProfileMenu"
                 />
+
+                <!-- Menu Profil -->
+                <div
+                    v-if="showProfileMenu"
+                    class="absolute right-0 top-20 w-56 bg-white shadow-lg rounded-xl p-4 z-50"
+                >
+                    <div class="flex flex-col items-center text-center">
+                        <h3 class="font-bold text-black">Welcome</h3>
+                        <p class="uppercase text-blue-500">{{ user?.username }}</p>
+                        <div class="flex flex-wrap gap-2 justify-center mt-4 w-full border border-red-100 rounded-xl p-4">
+                            <h4 class="text-gray-600 text-sm">Your Roles:</h4>
+                            <Chip
+                                v-for="role in (user?.roles as any)"
+                                :key="role.code"
+                                :label="role.name"
+                                class="px-2 py-1 text-xs w-full flex justify-center"
+                                :class="getRoleClass(role.code, 'chip')"
+                            />
+                        </div>
+                    </div>
+                    <Button 
+                        icon="pi pi-sign-out"
+                        label="Logout"
+                        id="logout-button"
+                        class="w-full h-[2rem] mt-6"
+                        @click="logout"
+                    />
+                </div>
             </template>
         </Menubar>
     </nav>
