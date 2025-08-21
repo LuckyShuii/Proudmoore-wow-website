@@ -33,7 +33,7 @@ export class Users extends BaseEntity {
     })
     email: string;
 
-    @Column({ length: 255 })
+    @Column({ length: 255, select: false })
     @Length(8, 255, {
         message: 'The password must be between 8 and 255 characters long.'
     })
