@@ -113,9 +113,12 @@ router.beforeEach((to, from, next) => {
     // Check roles if specified
     if (to.meta.roles) {
       const allowedRoles = to.meta.roles as string[];
-      const hasAccess = allowedRoles.some((role) =>
-        authStore.user?.roles.some(r => r.code === role)
-      );
+      const hasAccess = allowedRoles.some((role) => {
+          if (authStore.user && authStore.user.roles) {
+              return authStore.user.roles.some(r => r.code === role);
+          }
+          return false;
+      });
       if (!hasAccess) {
         return next({ name: "admin-dashboard" }); 
       }

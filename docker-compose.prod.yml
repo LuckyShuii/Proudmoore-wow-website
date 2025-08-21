@@ -13,6 +13,10 @@ services:
       DB_PASSWORD: ${DB_PASSWORD}
       FRONTEND_URL: ${FRONTEND_URL}
       PROJECT_STATUS: PROD
+      JWT_SECRET: ${JWT_SECRET}
+      PROUDMOORE_ADMIN_PASSWORD: ${PROUDMOORE_ADMIN_PASSWORD}
+    volumes:
+      - ./backend/src/logs:/app/logs
     depends_on:
       db:
         condition: service_healthy

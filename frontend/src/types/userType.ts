@@ -11,6 +11,7 @@ export interface User {
     createdBy?: User;
     lastUpdatedBy?: User;
     userRoles?: UserRole[];
+    roles?: Role[];
 }
 
 export interface UserRole {

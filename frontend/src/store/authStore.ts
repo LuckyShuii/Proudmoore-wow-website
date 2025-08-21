@@ -13,7 +13,12 @@ export const useAuthStore = defineStore("auth", () => {
 
     // ROLE STRUCTURE : { code: code, name: name }
     const isAuthenticated = computed(() => !!accessToken.value);
-    const hasRole = (code: string) => user.value?.roles.some(r => r.code === code) ?? false;
+    const hasRole = (code: string) => {
+        if (user.value && user.value.roles) {
+            return user.value.roles.some(r => r.code === code) ?? false;
+        }
+        return false;
+    };
     const hasRoles = (codes: string[]) => codes.some(code => hasRole(code));
 
     const isCm = computed(() => hasRole("CM"));
