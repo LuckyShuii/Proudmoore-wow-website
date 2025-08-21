@@ -86,6 +86,15 @@ export class InitSchemaAndSeedRoles1755765204475 implements MigrationInterface {
             ('HGM', 'Head Game Master', 'Elevated Privileges')
         ON CONFLICT (name) DO NOTHING;
         `);
+
+        await queryRunner.query(`
+        INSERT INTO user_roles (user_id, role_id, granted_by, created_at, updated_at)
+        SELECT u.id, r.id, u.id, NOW(), NOW()
+        FROM users u
+        JOIN roles r ON r.code = 'ADMIN'
+        WHERE u.username = 'root'
+        ON CONFLICT DO NOTHING;
+        `);
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
