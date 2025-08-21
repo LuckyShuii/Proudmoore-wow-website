@@ -40,7 +40,8 @@ export default class AuthController {
         try {
             const user = await Users.findOne({
                 where: { username: username.toLowerCase() },
-                relations: ["user_roles", "user_roles.role"]
+                relations: ["user_roles", "user_roles.role"],
+                select: ["id", "uuid", "username", "email", "password"]
             });
 
             if (!user) {
@@ -62,7 +63,7 @@ export default class AuthController {
             return res.json({ token });
         } catch (err) {
             appendUserLog(`${username.toUpperCase()} failed to log in: ${err.message}`);
-            return res.status(500).json({ message: "Error logging in", error: err });
+            return res.status(500).json({ message: "Error logging in", error: err.message });
         }
     }
 }
