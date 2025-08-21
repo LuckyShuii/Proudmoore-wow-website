@@ -13,6 +13,9 @@ export class Roles extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
+    @Column({ length: 10, unique: true, nullable: true })
+    code: string;
+
     @Column({ length: 255, unique: true })
     @Length(1, 255, {
         message: 'The name cannot be empty and must not exceed 255 characters.'
@@ -32,5 +35,5 @@ export class Roles extends BaseEntity {
     updated_at: Date;
 
     @OneToMany(() => UserRole, (ur) => ur.role, { cascade: false })
-    userRoles!: UserRole[];
+    user_roles!: UserRole[];
 }

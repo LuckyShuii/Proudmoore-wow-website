@@ -10,7 +10,8 @@ export const dataSource = new DataSource({
 	database: process.env.DB_DATABASE,
 
     // Enable or disable synchronization based on the project status
-	synchronize: process.env.PROJECT_STATUS === 'DEV' ? true : false,
+	// synchronize: process.env.PROJECT_STATUS === 'DEV' ? true : false,
+	synchronize: false,
 	migrations: [process.env.PROJECT_STATUS === 'DEV' ? "src/migrations/*.ts" : path.join(__dirname, "..", "migrations", "*.js")],
 	migrationsTableName: "migrations",
 	logging: ["error", "query", "schema"],

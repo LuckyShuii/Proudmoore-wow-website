@@ -5,3 +5,4 @@ backend/.DS_Store
 .DS_Store
 database/
 frontend/src/utils/projectData.ts
+backend/src/logs/

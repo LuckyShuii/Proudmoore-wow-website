@@ -6,9 +6,13 @@ import rateLimit from "express-rate-limit";
 import { createClient } from "redis";
 
 import { dataSource } from "./config/db";
+import { createDefaultUser } from "./seeds/createUser";
 
 import UsersController from "./controllers/usersController";
 import RolesController from "./controllers/rolesController";
+import ContentCreatorsController from "./controllers/contentCreatorsController";
+import AuthController from "./controllers/authController";
+import { authenticateJWT, authorizeRoles } from "./middlewares/authMiddleware";
 
 dotenv.config();
 
@@ -56,6 +60,8 @@ app.listen(port, async () => {
         console.error("Impossible to connect to Redis", err);
     }
     
+    await createDefaultUser();
+
     console.log(`Server is listening on port ${port}`);
 });
 
@@ -63,5 +69,65 @@ app.get("/api", (_req, res) => {
     res.status(200).send("The server is ON");
 });
 
-app.get("/api/users", UsersController.getAllUsers);
-app.get("/api/roles", RolesController.getAllRoles);
+/**
+ * POST ROUTES
+ */
+app.post("/api/auth/login", AuthController.login);
+
+app.post("/api/auth/register", 
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    AuthController.register,
+);
+
+app.post("/api/users",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    UsersController.createUser
+)
+
+/**
+ * GET ROUTES
+ */
+app.get("/api/users",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    UsersController.getAllUsers
+);
+
+app.get("/api/users/me",
+    authenticateJWT,
+    UsersController.getMe
+);
+
+app.get("/api/roles",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    RolesController.getAllRoles
+);
+
+app.get("/api/content-creators",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    ContentCreatorsController.getAllContentCreators
+);
+
+/**
+ * DELETE ROUTES
+ */
+
+app.delete("/api/users/:uuid",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    UsersController.deleteUser
+);
+
+/**
+ * PUT ROUTES
+ */
+
+app.put("/api/users/:uuid",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    UsersController.updateUser
+);

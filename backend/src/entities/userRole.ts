@@ -1,33 +1,35 @@
 // src/entities/userRole.ts
 import {
-  Entity, Column, ManyToOne, JoinColumn,
-  PrimaryColumn, CreateDateColumn, UpdateDateColumn
+  Entity, ManyToOne, JoinColumn,
+  PrimaryColumn, CreateDateColumn, UpdateDateColumn,
+  BaseEntity
 } from "typeorm";
 import { Users } from "./users";
 import { Roles } from "./roles";
 
 @Entity({ name: "user_roles" })
-export class UserRole {
+export class UserRole extends BaseEntity {
   @PrimaryColumn({ name: "user_id", type: "int" })
-  userId!: number;
+  user_id!: number;
 
   @PrimaryColumn({ name: "role_id", type: "int" })
-  roleId!: number;
+  role_id!: number;
 
-  @ManyToOne(() => Users, (u) => u.userRoles, { onDelete: "CASCADE" })
+  @ManyToOne(() => Users, (u) => u.user_roles, { onDelete: "CASCADE" })
   @JoinColumn({ name: "user_id" })
   user!: Users;
 
-  @ManyToOne(() => Roles, (r) => r.userRoles, { onDelete: "CASCADE" })
+  @ManyToOne(() => Roles, (r) => r.user_roles, { onDelete: "CASCADE" })
   @JoinColumn({ name: "role_id" })
   role!: Roles;
 
   @CreateDateColumn({ name: "created_at", type: "timestamptz", default: () => "CURRENT_TIMESTAMP" })
-  createdAt!: Date;
+  created_at!: Date;
 
   @UpdateDateColumn({ name: "updated_at", type: "timestamptz", default: () => "CURRENT_TIMESTAMP" })
-  updatedAt!: Date;
+  updated_at!: Date;
 
-  @Column({ name: "granted_by", type: "varchar", length: 255, nullable: true })
-  grantedBy?: Users
+  @ManyToOne(() => Users, { nullable: true, onDelete: "SET NULL" })
+  @JoinColumn({ name: "granted_by" })
+  granted_by?: Users;
 }

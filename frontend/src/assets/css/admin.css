@@ -1,0 +1,90 @@
+#admin-login-button {
+    outline: none !important;
+    width: 100% !important;
+    background-color: #3b82f6 !important;
+}
+
+#admin-login-button:hover {
+    background-color: #2563eb !important;
+}
+
+#admin-login-button:active {
+    background-color: #3a6ad3 !important;
+}
+
+.p-inputgroup > .p-inputtext:focus {
+    border-color: #3b82f6 !important;
+}
+
+.p-menubar-item-icon {
+    color: white !important;
+}
+
+#logout-button {
+    background-color: #d00f12 !important;
+    border-radius: 5px;
+}
+
+#logout-button:hover {
+    background-color: #b00d10 !important;
+}
+
+#logout-button:active {
+    background-color: #c00e11 !important;
+}   
+
+#create-user-button {
+    outline: none !important;
+    width: 100% !important;
+    background-color: #08a710 !important;
+}
+
+#create-user-button:hover {
+    background-color: #06b700 !important;
+}
+
+#create-user-button:active {
+    background-color: #07cf00 !important;
+}
+
+.confirm-button {
+    outline: none !important;
+    width: 10rem !important;
+    background-color: #08a710 !important;
+}
+
+.confirm-button:hover {
+    background-color: #06b700 !important;
+}
+
+.confirm-button:active {
+    background-color: #07cf00 !important;
+}
+
+.delete-button {
+    outline: none !important;
+    width: 6rem !important;
+    background-color: #d00f12 !important;
+}
+
+.delete-button:hover {
+    background-color: #b00d10 !important;
+}
+
+.delete-button:active {
+    background-color: #c00e11 !important;
+}
+
+.cancel-button {
+    outline: none !important;
+    width: 6rem !important;
+    background-color: #0f1cd0a5 !important;
+}
+
+.cancel-button:hover {
+    background-color: #0d1cd0 !important;
+}
+
+.cancel-button:active {
+    background-color: #0b1cd0 !important;
+}
