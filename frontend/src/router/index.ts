@@ -59,6 +59,12 @@ const router = createRouter({
       component: NotFoundView
     },
     {
+      path: '/admin',
+      name: 'admin',
+      component: () => import('@/views/Admin/AdminLoginView.vue'),
+      meta: { requiresAuth: false }
+    },
+    {
       path: '/admin/login',
       name: 'admin-login',
       component: () => import('@/views/Admin/AdminLoginView.vue'),
@@ -114,6 +120,10 @@ router.beforeEach((to, from, next) => {
         return next({ name: "admin-dashboard" }); 
       }
     }
+  }
+
+  if (to.name === "admin") {
+    return next({ name: "admin-login" });
   }
 
   if (to.name === "admin-login" && authStore.isAuthenticated) {
