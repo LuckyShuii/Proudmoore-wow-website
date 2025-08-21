@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { Users } from "../entities/users";
+import { appendUserLog } from "src/utils/logger";
 
 export class AuthService {
     private static readonly jwtSecret = process.env.JWT_SECRET as string;
@@ -22,6 +23,7 @@ export class AuthService {
             roles: user.roles.map(r => { return { code: r.code, name: r.name } }),
             uuid: user.uuid
         };
+        appendUserLog(`SYSTEM: Generated JWT Token for user ${user.username.toUpperCase()}`);
         return jwt.sign(payload, this.jwtSecret, { expiresIn: this.jwtExpiresIn });
     }
 

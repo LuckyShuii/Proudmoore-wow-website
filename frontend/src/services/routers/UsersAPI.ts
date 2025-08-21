@@ -14,7 +14,7 @@ export default {
         return APIHandler.delete(`${resource}/${userUuid}`, { data: { who: whoUsername } });
     },
 
-    editUser(userUuid: string, data: any, who: number) {
-        return APIHandler.put(`${resource}/${userUuid}`, { ...data, who });
+    editUser(userUuid: string, data: any, whoId: number, whoUsername: string) {
+        return APIHandler.put(`${resource}/${userUuid}`, { ...data, whoId, whoUsername });
     }
 }

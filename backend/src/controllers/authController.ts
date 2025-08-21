@@ -29,6 +29,7 @@ export default class AuthController {
             appendUserLog(`New user created: ${JSON.stringify(user)}`);
             return res.status(201).json({ message: "User registered successfully" });
         } catch (err) {
+            appendUserLog(`Error registering user: ${err instanceof Error ? err.message : JSON.stringify(err)}`);
             return res.status(500).json({ message: "Error registering user", error: err });
         }
     }
@@ -43,11 +44,13 @@ export default class AuthController {
             });
 
             if (!user) {
+                appendUserLog(`${username.toUpperCase()} failed to log in: Wrong Username`);
                 return res.status(401).json({ message: "Invalid credentials" });
             }
 
             const validPassword = await AuthService.comparePassword(password, user.password);
             if (!validPassword) {
+                appendUserLog(`${username.toUpperCase()} failed to log in: Wrong Password`);
                 return res.status(401).json({ message: "Invalid credentials" });
             }
 

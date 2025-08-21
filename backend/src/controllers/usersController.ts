@@ -57,7 +57,7 @@ const UsersController = {
                 uuid: user.uuid
             });
         } catch (err) {
-            console.error("Error in getMe:", err);
+            appendUserLog(`Error fetching profile: ${err instanceof Error ? err.message : JSON.stringify(err)}`);
             return res.status(500).json({ message: "Error fetching profile" });
         }
     },
@@ -143,7 +143,7 @@ const UsersController = {
             );
             return res.status(204).send();
         } catch (err) {
-            console.error("Error in deleteUser:", err);
+            appendUserLog(`Error deleting user: ${err instanceof Error ? err.message : JSON.stringify(err)}`);
             return res.status(500).json({ message: "Error deleting user" });
         }
     },
@@ -151,8 +151,8 @@ const UsersController = {
     async updateUser(req: AuthRequest, res: Response) {
         try {
             const userUuid = req.params.uuid;
-            const { username, email, password, roles, who } = req.body as {
-                username?: string; email?: string; password?: string; roles?: number[]; who?: number | null;
+            const { username, email, password, roles, whoId, whoUsername } = req.body as {
+                username?: string; email?: string; password?: string; roles?: number[]; whoId: number; whoUsername: string;
             };
 
             const user = await UsersService.getUserByUuid(userUuid);
@@ -172,16 +172,20 @@ const UsersController = {
 
             if (!Array.isArray(roles)) return res.status(400).json({ message: 'Invalid roles' });
 
-            await UserRolesService.setUserRoles(user.id, roles, who ?? null);
+            await UserRolesService.setUserRoles(user.id, roles, whoUsername, whoId);
 
             const updated = await Users.findOne({
                 where: { uuid: userUuid },
                 relations: ['user_roles', 'user_roles.role'],
             });
 
+            appendUserLog(`${whoUsername.toUpperCase()} updated user ${user.username.toUpperCase()}`);
+
             return res.status(200).json(updated);
         } catch (err) {
-            console.error('Error in updateUser:', err);
+            appendUserLog(
+                `Error updating user: ${err instanceof Error ? err.message : JSON.stringify(err)}`
+            );
             return res.status(500).json({ message: 'Error updating user' });
         }
     }

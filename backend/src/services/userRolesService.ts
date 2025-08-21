@@ -1,17 +1,18 @@
+import { appendUserLog } from "src/utils/logger";
 import { dataSource } from "../config/db";
 
 const UserRolesService = {
-  async setUserRoles(userId: number, roleIds: number[], grantedById?: number | null) {
+  async setUserRoles(userId: number, roleIds: number[], grantedByUsername: string, grantedById?: number | null) {
     const existingRoles = await this.getUserRoles(userId);
     const rolesToRemove = existingRoles.filter((role: any) => !roleIds.includes(role.id));
     const rolesToAdd = roleIds.filter(roleId => !existingRoles.some((role: any) => role.id === roleId));
 
     for (const role of rolesToRemove) {
-      await UserRolesService.deleteUserRoles(role.id, userId);
+      await UserRolesService.deleteUserRoles(role.id, userId, grantedByUsername);
     }
 
     for (const roleId of rolesToAdd) {
-      await UserRolesService.addRoleToUser(roleId, userId, grantedById);
+      await UserRolesService.addRoleToUser(roleId, userId, grantedByUsername, grantedById);
     }
   },
 
@@ -27,18 +28,22 @@ const UserRolesService = {
     return rows;
   },
 
-  async deleteUserRoles(userRoleId: number, user_id: number) {
+  async deleteUserRoles(userRoleId: number, userId: number, grantedByUsername: string) {
     await dataSource.query(
       `DELETE FROM user_roles WHERE role_id = $1 AND user_id = $2`,
-      [userRoleId, user_id]
+      [userRoleId, userId]
     );
+
+    appendUserLog(`${grantedByUsername} removed role ${userRoleId} from user ${userId}`);
   },
 
-  async addRoleToUser(userRoleId: number, userId: number, grantedById?: number | null) {
+  async addRoleToUser(userRoleId: number, userId: number, grantedByUsername: string, grantedById?: number | null) {
     await dataSource.query(
       `INSERT INTO user_roles (role_id, user_id, granted_by) VALUES ($1, $2, $3)`,
       [userRoleId, userId, grantedById]
     );
+
+    appendUserLog(`${grantedByUsername} added role ${userRoleId} to user ${userId}`);
   },
 
   async editGrantedBy(userRoleId: number, grantedById: number | null) {

@@ -109,7 +109,7 @@ const handleEditConfirm = async () => {
             payload.password = form.password;
         }
 
-        const editedUser = (await API.users.editUser(props.user?.uuid as string, payload, Number(authStore.user?.id) as number)).data;
+        const editedUser = (await API.users.editUser(props.user?.uuid as string, payload, Number(authStore.user?.id) as number, authStore.user?.username as string)).data;
         emit('edit', editedUser);
     } catch (error: any) {
         console.error('Error editing user:', error);
