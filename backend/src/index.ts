@@ -32,7 +32,7 @@ app.use(cors({
     origin: [
         process.env.FRONTEND_URL || "http://localhost:5173", "http://localhost:8081",
     ].filter(Boolean) as string[],
-    methods: ["GET", "POST"]
+    methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 
 app.use(express.json());
