@@ -3,10 +3,12 @@ import { Request, Response } from "express";
 import { redisClient } from "../index";
 import { AuthRequest } from "src/middlewares/authMiddleware";
 import { AuthService } from "../services/authService";
-import { appendUserLog } from "..//utils/logger";
+import { appendUserLog } from "../utils/logger";
 import RolesService from "../services/rolesService";
 import { UserRole } from "../entities/userRole";
 import { v4 as uuidv4 } from "uuid";
+import { Users } from "../entities/users";
+import UserRolesService from "../services/userRolesService";
 
 const UsersController = {
     getAllUsers: async (_req: Request, res: Response) => {
@@ -144,8 +146,45 @@ const UsersController = {
             console.error("Error in deleteUser:", err);
             return res.status(500).json({ message: "Error deleting user" });
         }
-    }
+    },
 
+    async updateUser(req: AuthRequest, res: Response) {
+        try {
+            const userUuid = req.params.uuid;
+            const { username, email, password, roles, who } = req.body as {
+                username?: string; email?: string; password?: string; roles?: number[]; who?: number | null;
+            };
+
+            const user = await UsersService.getUserByUuid(userUuid);
+            if (!user) return res.status(404).json({ message: 'User not found' });
+
+            const partial: Partial<Users> = {};
+
+            if (username) partial.username = username.toLowerCase();
+            if (email) partial.email = email.toLowerCase();
+            if (password && password.length > 0) {
+                partial.password = await AuthService.hashPassword(password);
+            }
+
+            if (Object.keys(partial).length > 0) {
+                await Users.update({ uuid: user.uuid }, partial);
+            }
+
+            if (!Array.isArray(roles)) return res.status(400).json({ message: 'Invalid roles' });
+
+            await UserRolesService.setUserRoles(user.id, roles, who ?? null);
+
+            const updated = await Users.findOne({
+                where: { uuid: userUuid },
+                relations: ['user_roles', 'user_roles.role'],
+            });
+
+            return res.status(200).json(updated);
+        } catch (err) {
+            console.error('Error in updateUser:', err);
+            return res.status(500).json({ message: 'Error updating user' });
+        }
+    }
 }
 
 export default UsersController;

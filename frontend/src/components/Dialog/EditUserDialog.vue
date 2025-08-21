@@ -6,9 +6,12 @@ import API from '@/services/API';
 
 import { useRolesStore } from '@/store/rolesStore';
 import { storeToRefs } from 'pinia';
+import { useAuthStore } from '@/store/authStore';
 
 const { roles } = storeToRefs(useRolesStore());
 const rolesStore = useRolesStore();
+
+const authStore = useAuthStore();
 
 const props = defineProps<{
     user?: User | null
@@ -105,7 +108,7 @@ const handleEditConfirm = async () => {
             payload.password = form.password;
         }
 
-        const editedUser = (await API.users.editUser(props.user?.uuid as string, payload)).data;
+        const editedUser = (await API.users.editUser(props.user?.uuid as string, payload, Number(authStore.user?.id))).data;
         emit('edit', editedUser);
     } catch (error: any) {
         console.error('Error editing user:', error);

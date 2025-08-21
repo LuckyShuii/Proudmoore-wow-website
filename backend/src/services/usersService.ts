@@ -34,6 +34,15 @@ const UsersService = {
 
     deleteUser: async (userUuid: string): Promise<void> => {
         await Users.delete({ uuid: userUuid });
+    },
+
+    updateUser: async (userUuid: string, userData: DeepPartial<Users>): Promise<Users> => {
+        await Users.update({ uuid: userUuid }, userData);
+        const updatedUser = await UsersService.getUserByUuid(userUuid);
+        if (!updatedUser) {
+            throw new Error(`User with UUID ${userUuid} not found after update.`);
+        }
+        return updatedUser;
     }
 }
 

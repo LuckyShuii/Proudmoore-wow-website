@@ -121,3 +121,13 @@ app.delete("/api/users/:uuid",
     authorizeRoles("ADMIN", "DEV"),
     UsersController.deleteUser
 );
+
+/**
+ * PUT ROUTES
+ */
+
+app.put("/api/users/:uuid",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    UsersController.updateUser
+);
