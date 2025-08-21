@@ -17,7 +17,7 @@ services:
       PROUDMOORE_ADMIN_PASSWORD: ${PROUDMOORE_ADMIN_PASSWORD}
       LOG_DIR: /var/log/wildtransfer
     volumes:
-      - ./logs:/var/log/wildtransfer
+      - ./app/logs:/var/log/wildtransfer
     depends_on:
       db:
         condition: service_healthy
