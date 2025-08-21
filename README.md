@@ -28,13 +28,13 @@ Afterwards, progressively add new features with:
 
 - [x] Migrate current content to Vue.js (WIP)
 - [x] Add a Node.js/Express backend
-- [ ] Protected API with JWT Auth and Roles
+- [x] Protected API with JWT Auth and Roles
 - [x] Very detailed logs system
 - [x] Redis for caching
 - [x] Implement a database
 - [x] Containerize with Docker & Nginx reverse proxy
-- [ ] Protected back-office pages
-- [ ] Develop new features
+- [x] Protected back-office pages
+- [ ] Develop new features...
 
 ---
 
@@ -57,5 +57,5 @@ git clone git@github.com:LuckyShuii/Proudmoore-wow-website.git
 
 # 2️⃣ Start the executable file
 (may vary depending your OS)
-./sh_reload
+./sh_pull_and_reload.sh
 ```
