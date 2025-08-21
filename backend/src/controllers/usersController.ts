@@ -23,8 +23,8 @@ const UsersController = {
             const users = await UsersService.getAllUsers();
 
             await redisClient.set('allUsers', JSON.stringify(users), {
-                // Set to expire in 5 sec
-                EX: 5,
+                // Set to expire in 30 sec
+                EX: 30,
                 NX: true,
             });
 

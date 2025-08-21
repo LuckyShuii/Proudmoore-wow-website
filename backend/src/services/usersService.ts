@@ -3,7 +3,7 @@ import { Users } from "../entities/users";
 
 const UsersService = {
     getAllUsers: async (): Promise<Users[]> => {
-        const result = await Users.find({relations: ["user_roles", "user_roles.role", "created_by", "user_roles.granted_by"]});
+        const result = await Users.find({relations: ["user_roles", "user_roles.role", "created_by", "user_roles.granted_by"], order: { id: "ASC" }});
         return result;
     },
 

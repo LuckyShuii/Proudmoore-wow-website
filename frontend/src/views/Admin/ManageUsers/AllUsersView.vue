@@ -13,6 +13,7 @@ import DeleteUserDialog from '@/components/Dialog/DeleteUserDialog.vue';
 import EditUserDialog from '@/components/Dialog/EditUserDialog.vue';
 
 const users = ref<User[]>([]);
+const loading = ref<boolean>(false);
 const { isAdmin, user } = storeToRefs(useAuthStore());
 
 const infoVisible = ref<boolean>(false);
@@ -61,31 +62,55 @@ const handleEditUser = (editedUser: User) => {
     selectedUser.value = null;
 }
 
+const loadUsers = async () => {
+    loading.value = true;
+    try {
+        const response = await API.users.getUsers();
+        users.value = response.data;
+    } catch (error) {
+        console.error("Failed to load users:", error);
+    } finally {
+        loading.value = false;
+    }
+}
+
 onMounted(async () => {
+    loadUsers();
     selectedUser.value = null;
-    users.value = (await API.users.getUsers()).data;
 })
 </script>
 
 <template>
     <section class="flex flex-col items-center justify-center w-full max-w-[70rem]">
         <h1 class="text-2xl mb-4 uppercase font-marcellus">List of all the users</h1>
-        <DataTable :value="users" tableStyle="max-width: 70rem; width: 100%;" :paginator="true" :rows="10" :rowsPerPageOptions="[10, 20, 50]" class="w-full">
-            <Column field="username" header="Username"></Column>
-            <Column field="email" header="Email"></Column>
-            <Column field="lastLogin" header="Last Login">
+        <DataTable :value="users" tableStyle="max-width: 70rem; width: 100%;" :paginator="true" :rows="10" :rowsPerPageOptions="[10, 20, 50]" class="w-full" :loading="loading">
+            <template #header>
+                <div class="flex flex-wrap items-center justify-end gap-2">
+                    <Button class="refresh-button" icon="pi pi-refresh" rounded raised @click="loadUsers" label="Refresh" />
+                </div>
+            </template>
+            <Column field="username" header="Username" sortable></Column>
+            <Column field="email" header="Email" sortable></Column>
+            <Column field="lastLogin" header="Last Login" sortable>
                 <template #body="{ data }">
                     {{ data.lastLogin ? convertDate(data.lastLogin) : 'Never' }}
                 </template>
             </Column>
-            <Column field="userRoles" header="Roles">
+            <Column field="userRoles">
+                <template #header>
+                    <h3>Roles</h3>
+                    <img src="/favicon.webp" alt="Logo" class="h-6" />
+                </template>
                 <template #body="{ data }">
                     <div class="flex flex-wrap gap-2">
                         <Chip v-for="(role, index) in data.userRoles" :key="index" :label="role.role.name" :class="getRoleClass(role.role.code, 'chip')" class="text-[14px]" />
                     </div>
                 </template>
             </Column>
-            <Column header="Actions">
+            <Column>
+                <template #header>
+                    <h3>Actions</h3>
+                </template>
                 <template #body="{ data }">
                     <Button icon="pi pi-pencil" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showEditDialog(data)" />
                     <Button icon="pi pi-trash" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showDeleteDialog(data)" v-if="data.username !== 'root'" />
