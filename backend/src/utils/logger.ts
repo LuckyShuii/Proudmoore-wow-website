@@ -3,7 +3,7 @@ import path from "path";
 
 const DEFAULT_LOG_DIR =
     process.env.LOG_DIR ??
-    (process.env.PROJECT_STATUS === "production"
+    (process.env.PROJECT_STATUS === "PROD"
         ? "/var/log/wildtransfer"
         : path.join(process.cwd(), "logs")
     );
