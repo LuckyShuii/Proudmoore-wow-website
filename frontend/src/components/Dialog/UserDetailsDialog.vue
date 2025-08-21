@@ -11,6 +11,12 @@ const props = defineProps<{
 const emit = defineEmits<{
     (e: 'close'): void
 }>()
+
+const getUserLastLogin = (lastLogin: string | null): string => {
+    if (!lastLogin) return 'Never';
+    const date = new Date(lastLogin);
+    return date.toLocaleString();
+}
 </script>
 
 <template>
@@ -20,7 +26,7 @@ const emit = defineEmits<{
             <p><span class="font-extrabold">Uuid:</span> {{ props.user.uuid }}</p>
             <p><span class="font-extrabold">Username:</span> {{ props.user.username }}</p>
             <p><span class="font-extrabold">Email:</span> {{ props.user.email }}</p>
-            <p><span class="font-extrabold">Last Login:</span> {{ convertDate(props.user.lastLogin as any) }}</p>
+            <p><span class="font-extrabold">Last Login:</span> {{ getUserLastLogin(props.user.lastLogin) }}</p>
             <p><span class="font-extrabold">Created by:</span> {{ props.user.createdBy?.username ?? 'System' }}</p>
             <p><span class="font-extrabold">Updated on:</span> {{ convertDate(props.user.updatedAt as any) }}</p>
             <p><span class="font-extrabold">Created on:</span class="font-extrabold"> {{ convertDate(props.user.createdAt as any) }}</p>
