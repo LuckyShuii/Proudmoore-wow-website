@@ -1,7 +1,7 @@
 import UsersService from "../services/usersService";
 import { Request, Response } from "express";
 import { redisClient } from "../index";
-import { AuthRequest } from "src/middlewares/authMiddleware";
+import { AuthRequest } from "../middlewares/authMiddleware";
 import { AuthService } from "../services/authService";
 import { appendUserLog } from "../utils/logger";
 import RolesService from "../services/rolesService";
