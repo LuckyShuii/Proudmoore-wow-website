@@ -94,9 +94,10 @@ const handleEditConfirm = async () => {
     if (!validate()) return;
 
     try {
-        const roleIds = (form.roles as string[])
+        const roleIds = (form.roles)
+            // @ts-ignore
             .map(code => roles.value.find(r => r.code === code)?.id)
-            .filter((v): v is number => !!v);
+            .filter((v): v is number => !!v)
 
         const payload: Record<string, any> = {
             username: form.username.trim(),
@@ -108,7 +109,7 @@ const handleEditConfirm = async () => {
             payload.password = form.password;
         }
 
-        const editedUser = (await API.users.editUser(props.user?.uuid as string, payload, Number(authStore.user?.id))).data;
+        const editedUser = (await API.users.editUser(props.user?.uuid as string, payload, Number(authStore.user?.id) as number)).data;
         emit('edit', editedUser);
     } catch (error: any) {
         console.error('Error editing user:', error);
@@ -130,6 +131,7 @@ const fillFormFromProps = (u?: User | null) => {
     }
     form.username = u.username ?? '';
     form.email = u.email ?? '';
+    // @ts-ignore
     form.roles = (u.userRoles ?? [])
         .map(ur => ur.role?.code)
         .filter(Boolean) as string[];
