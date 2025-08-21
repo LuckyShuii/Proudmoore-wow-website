@@ -11,8 +11,11 @@
     "build": "tsc -p tsconfig.json",
     "migration:create": "typeorm-ts-node-commonjs migration:create",
     "migration:generate": "typeorm-ts-node-commonjs migration:generate -d src/config/db.ts",
+    "migration:generate:prod": "typeorm-ts-node-commonjs migration:generate -d dist/config/db.js",
     "migration:up": "typeorm-ts-node-commonjs migration:run -d src/config/db.ts",
-    "migration:down": "typeorm-ts-node-commonjs migration:revert -d src/config/db.ts"
+    "migration:down": "typeorm-ts-node-commonjs migration:revert -d src/config/db.ts",
+    "migration:up:prod": "typeorm-ts-node-commonjs migration:run -d dist/config/db.js",
+    "migration:down:prod": "typeorm-ts-node-commonjs migration:revert -d dist/config/db.js"
   },
   "author": "",
   "license": "ISC",

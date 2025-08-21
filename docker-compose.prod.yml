@@ -72,3 +72,9 @@ services:
       db:
         condition: service_healthy
     restart: unless-stopped
+
+  adminer:
+    image: adminer
+    container_name: prod-proudmoore-website-adminer
+    expose:
+      - 8080

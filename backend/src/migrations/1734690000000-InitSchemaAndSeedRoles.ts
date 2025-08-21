@@ -8,6 +8,7 @@ public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(`
     CREATE TABLE IF NOT EXISTS roles (
         id SERIAL PRIMARY KEY,
+        code VARCHAR(10) UNIQUE,
         name VARCHAR(255) NOT NULL UNIQUE,
         description TEXT,
         created_at timestamptz NOT NULL DEFAULT NOW(),
@@ -24,7 +25,9 @@ public async up(queryRunner: QueryRunner): Promise<void> {
         password VARCHAR(255) NOT NULL,
         created_at timestamptz NOT NULL DEFAULT NOW(),
         updated_at timestamptz NOT NULL DEFAULT NOW(),
-        last_login timestamptz NULL
+        last_login timestamptz NULL,
+        created_by INT NULL,
+        last_updated_by INT NULL
     );
     `);
 
@@ -34,6 +37,7 @@ public async up(queryRunner: QueryRunner): Promise<void> {
         role_id INT NOT NULL,
         created_at timestamptz NOT NULL DEFAULT NOW(),
         updated_at timestamptz NOT NULL DEFAULT NOW(),
+        granted_by INT NULL,
         CONSTRAINT pk_user_roles PRIMARY KEY (user_id, role_id),
         CONSTRAINT fk_user_roles_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
         CONSTRAINT fk_user_roles_role FOREIGN KEY (role_id) REFERENCES roles(id) ON DELETE CASCADE
@@ -62,8 +66,8 @@ public async down(queryRunner: QueryRunner): Promise<void> {
         'Website Developer',
         'Social Media Manager',
         'Community Manager',
+        'Head Game Master',
         'Translator',
-        'Head Game Master'
     );
     `);
 
