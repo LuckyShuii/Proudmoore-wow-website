@@ -73,6 +73,7 @@ services:
         condition: service_healthy
     restart: unless-stopped
 
+  # ONLY FOR TESTING PURPOSES, REMOVE ONCE IN PROD!!!!
   adminer:
     image: adminer
     container_name: prod-proudmoore-website-adminer
