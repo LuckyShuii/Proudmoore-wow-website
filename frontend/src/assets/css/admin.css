@@ -47,6 +47,20 @@
     background-color: #07cf00 !important;
 }
 
+.confirm-button {
+    outline: none !important;
+    width: 10rem !important;
+    background-color: #08a710 !important;
+}
+
+.confirm-button:hover {
+    background-color: #06b700 !important;
+}
+
+.confirm-button:active {
+    background-color: #07cf00 !important;
+}
+
 .delete-button {
     outline: none !important;
     width: 6rem !important;

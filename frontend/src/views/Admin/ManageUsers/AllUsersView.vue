@@ -8,13 +8,16 @@ import { getRoleClass } from '@/utils/getRoleClass';
 import UserDetailsDialog from '@/components/Dialog/UserDetailsDialog.vue';
 
 import type { User } from '@/types/userType';
+
 import DeleteUserDialog from '@/components/Dialog/DeleteUserDialog.vue';
+import EditUserDialog from '@/components/Dialog/EditUserDialog.vue';
 
 const users = ref([]);
 const { isAdmin, user } = storeToRefs(useAuthStore());
 
 const infoVisible = ref<boolean>(false);
 const deleteVisible = ref<boolean>(false);
+const editVisible = ref<boolean>(false);
 const selectedUser = ref<User | null>(null);
 
 const showUserInfo = (user: User) => {
@@ -25,6 +28,11 @@ const showUserInfo = (user: User) => {
 const showDeleteDialog = (user: User) => {
     selectedUser.value = user;
     deleteVisible.value = true;
+}
+
+const showEditDialog = (user: User) => {
+    selectedUser.value = user;
+    editVisible.value = true;
 }
 
 const handleDeleteUser = async (userUuid: string) => {
@@ -42,6 +50,15 @@ const handleDeleteUser = async (userUuid: string) => {
         deleteVisible.value = false;
         selectedUser.value = null;
     }
+}
+
+const handleEditUser = (editedUser: User) => {
+    const index = users.value.findIndex((u: User) => u.uuid === editedUser.uuid);
+    if (index !== -1) {
+        users.value[index] = editedUser;
+    }
+    editVisible.value = false;
+    selectedUser.value = null;
 }
 
 onMounted(async () => {
@@ -70,7 +87,7 @@ onMounted(async () => {
             </Column>
             <Column header="Actions">
                 <template #body="{ data }">
-                    <Button icon="pi pi-pencil" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="" />
+                    <Button icon="pi pi-pencil" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showEditDialog(data)" />
                     <Button icon="pi pi-trash" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showDeleteDialog(data)" v-if="data.username !== 'root'" />
                     <Button icon="pi pi-eye" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showUserInfo(data)" />
                 </template>
@@ -79,5 +96,7 @@ onMounted(async () => {
         <UserDetailsDialog :visible="infoVisible" :user="(selectedUser as User)" @close="infoVisible = false" />
 
         <DeleteUserDialog :user="(selectedUser as User)" :visible="deleteVisible" @close="deleteVisible = false" @delete="handleDeleteUser(selectedUser?.uuid as string)" />
+
+        <EditUserDialog :user="(selectedUser as User)" :visible="editVisible" @close="editVisible = false" @edit="handleEditUser" />
     </section>
 </template>

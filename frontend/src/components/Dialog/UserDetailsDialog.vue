@@ -12,7 +12,7 @@ const emit = defineEmits<{
     (e: 'close'): void
 }>()
 
-const getUserLastLogin = (lastLogin: string | null): string => {
+const getUserLastLogin = (lastLogin: string | undefined | Date): string => {
     if (!lastLogin) return 'Never';
     const date = new Date(lastLogin);
     return date.toLocaleString();

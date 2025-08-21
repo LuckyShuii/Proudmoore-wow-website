@@ -98,6 +98,7 @@ onMounted(() => {
                 optionValue="id"
                 class="w-full"
                 :showToggleAll="false"
+                display="chip"
             >
                 <template #option="{ option }">
                     <Chip class="text-sm" :class="getRoleClass(option.code, 'chip')">{{ option.name }} - {{ option.description }}</Chip>
