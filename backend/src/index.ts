@@ -45,7 +45,7 @@ const limiter = rateLimit({
 });
 
 app.use(limiter);
-app.set('trust proxy', false);
+app.set('trust proxy', 1);
 
 const port = 8002;
 
