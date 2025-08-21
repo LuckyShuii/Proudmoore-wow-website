@@ -46,3 +46,31 @@
 #create-user-button:active {
     background-color: #07cf00 !important;
 }
+
+.delete-button {
+    outline: none !important;
+    width: 6rem !important;
+    background-color: #d00f12 !important;
+}
+
+.delete-button:hover {
+    background-color: #b00d10 !important;
+}
+
+.delete-button:active {
+    background-color: #c00e11 !important;
+}
+
+.cancel-button {
+    outline: none !important;
+    width: 6rem !important;
+    background-color: #0f1cd0a5 !important;
+}
+
+.cancel-button:hover {
+    background-color: #0d1cd0 !important;
+}
+
+.cancel-button:active {
+    background-color: #0b1cd0 !important;
+}

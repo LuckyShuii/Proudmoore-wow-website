@@ -12,6 +12,11 @@ const UsersService = {
         return user;
     },
 
+    getUserByUuid: async (uuid: string): Promise<Users | null> => {
+        const user = await Users.findOne({ where: { uuid }, relations: ["user_roles", "user_roles.role", "created_by"] });
+        return user;
+    },
+
     getUserBy: async (searchType: string, searchValue: string): Promise<Users | null> => {
         const user = await Users.findOne({ where: { [searchType]: searchValue }, relations: ["user_roles", "user_roles.role", "created_by"] });
         return user;
@@ -25,6 +30,10 @@ const UsersService = {
 
     updateLastLogin: async (userId: number): Promise<void> => {
         await Users.update(userId, { last_login: new Date() });
+    },
+
+    deleteUser: async (userUuid: string): Promise<void> => {
+        await Users.delete({ uuid: userUuid });
     }
 }
 

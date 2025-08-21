@@ -9,6 +9,9 @@ const roles = ref([]);
 
 const { user } = storeToRefs(useAuthStore());
 
+const confirmCreationMessage = ref<boolean>(false);
+const errorMessage = ref<string>("");
+
 const loadRoles = async () => {
     try {
         const response = await API.roles.getRoles(); // GET /roles
@@ -46,12 +49,15 @@ const onSubmit = async () => {
     try {
         await API.users.createUser(form.value); // POST /users
         form.value = { username: "", email: "", password: "", roles: [], createdBy: user.value?.id, lastUpdatedBy: user.value?.id };
+        confirmCreationMessage.value = true;
     } catch (error: any) {
-        console.log(error);
+        errorMessage.value = "Failed to create user";
     }
 };
 
 onMounted(() => {
+    confirmCreationMessage.value = false;
+    errorMessage.value = "";
     loadRoles();
 });
 </script>
@@ -97,6 +103,14 @@ onMounted(() => {
                     <Chip class="text-sm" :class="getRoleClass(option.code, 'chip')">{{ option.name }} - {{ option.description }}</Chip>
                 </template>
             </MultiSelect>
+        </div>
+
+        <div v-if="confirmCreationMessage">
+            <p class="text-green-500">User created successfully!</p>
+        </div>
+
+        <div v-if="errorMessage">
+            <p class="text-red-500">{{ errorMessage }}</p>
         </div>
 
         <!-- Submit -->

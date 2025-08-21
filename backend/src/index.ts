@@ -111,3 +111,13 @@ app.get("/api/content-creators",
     authorizeRoles("ADMIN", "DEV"),
     ContentCreatorsController.getAllContentCreators
 );
+
+/**
+ * DELETE ROUTES
+ */
+
+app.delete("/api/users/:uuid",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV"),
+    UsersController.deleteUser
+);

@@ -116,6 +116,36 @@ const UsersController = {
         }
     },
 
+    async deleteUser(req: AuthRequest, res: Response) {
+        try {
+            const userUuid = req.params.uuid;
+            const whoUsername = req.body.who;
+
+            const user = await UsersService.getUserByUuid(userUuid);
+
+            if (!user) {
+                return res.status(404).json({ message: "User not found" });
+            }
+
+            if (user.username === "root") {
+                appendUserLog(
+                    `${whoUsername.toUpperCase()} attempted to delete root user ${user.username.toUpperCase()} - action denied`
+                );
+                return res.status(403).json({ message: "Cannot delete root user" });
+            }
+
+            await UsersService.deleteUser(userUuid);
+
+            appendUserLog(
+                `${whoUsername.toUpperCase()} deleted user ${user.username.toUpperCase()}`
+            );
+            return res.status(204).send();
+        } catch (err) {
+            console.error("Error in deleteUser:", err);
+            return res.status(500).json({ message: "Error deleting user" });
+        }
+    }
+
 }
 
 export default UsersController;

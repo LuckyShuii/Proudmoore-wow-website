@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export async function createDefaultUser() {
     try {
-        let user = await Users.findOne({ where: { username: "proudmoore_admin" } });
+        let user = await Users.findOne({ where: { username: "root" } });
         if (user) {
             console.log("✅ User already exists:", user.username);
             return;
@@ -15,8 +15,8 @@ export async function createDefaultUser() {
         const hashedPassword = await AuthService.hashPassword(process.env.PROUDMOORE_ADMIN_PASSWORD as string);
 
         user = Users.create({
-            username: "proudmoore_admin",
-            email: "proudmoore_admin@example.com",
+            username: "root",
+            email: "root@recovery.com",
             password: hashedPassword,
             uuid: uuidv4()
         });

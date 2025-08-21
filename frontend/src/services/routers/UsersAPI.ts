@@ -8,5 +8,9 @@ export default {
 
     createUser(data: any) {
         return APIHandler.post(`${resource}/`, data);
+    },
+
+    deleteUser(userUuid: string, whoUsername: string) {
+        return APIHandler.delete(`${resource}/${userUuid}`, { data: { who: whoUsername } });
     }
 }
