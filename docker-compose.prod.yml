@@ -15,8 +15,9 @@ services:
       PROJECT_STATUS: PROD
       JWT_SECRET: ${JWT_SECRET}
       PROUDMOORE_ADMIN_PASSWORD: ${PROUDMOORE_ADMIN_PASSWORD}
+      LOG_DIR: /var/log/wildtransfer
     volumes:
-      - ./backend/src/logs:/app/logs
+      - ./logs:/var/log/wildtransfer
     depends_on:
       db:
         condition: service_healthy

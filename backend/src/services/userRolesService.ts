@@ -1,4 +1,4 @@
-import { appendUserLog } from "src/utils/logger";
+import { appendUserLog } from "../utils/logger";
 import { dataSource } from "../config/db";
 
 const UserRolesService = {
@@ -34,7 +34,7 @@ const UserRolesService = {
       [userRoleId, userId]
     );
 
-    appendUserLog(`${grantedByUsername} removed role ${userRoleId} from user ${userId}`);
+    appendUserLog(`${grantedByUsername.toUpperCase()} removed role ${userRoleId} from user ${userId}`);
   },
 
   async addRoleToUser(userRoleId: number, userId: number, grantedByUsername: string, grantedById?: number | null) {
@@ -43,7 +43,7 @@ const UserRolesService = {
       [userRoleId, userId, grantedById]
     );
 
-    appendUserLog(`${grantedByUsername} added role ${userRoleId} to user ${userId}`);
+    appendUserLog(`${grantedByUsername.toUpperCase()} added role ${userRoleId} to user ${userId}`);
   },
 
   async editGrantedBy(userRoleId: number, grantedById: number | null) {

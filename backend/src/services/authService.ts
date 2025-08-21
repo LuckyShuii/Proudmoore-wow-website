@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import { Users } from "../entities/users";
-import { appendUserLog } from "src/utils/logger";
+import { appendUserLog } from "../utils/logger";
 
 export class AuthService {
     private static readonly jwtSecret = process.env.JWT_SECRET as string;

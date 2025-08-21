@@ -12,9 +12,11 @@ services:
       PROJECT_STATUS: ${PROJECT_STATUS}
       JWT_SECRET: ${JWT_SECRET}
       PROUDMOORE_ADMIN_PASSWORD: ${PROUDMOORE_ADMIN_PASSWORD}
+      LOG_DIR: /var/log/wildtransfer
     volumes:
       - ./backend/src:/app/src
       - ./backend/migrations:/app/migrations
+      - ./backend/src/logs:/var/log/wildtransfer
     healthcheck:
       test: 'curl --fail --request POST --header ''content-type: application/json'' --url ''http://localhost:8002/graphql'' --data ''{"query":"query { __typename }"}'' || exit 1'
       interval: 1s
