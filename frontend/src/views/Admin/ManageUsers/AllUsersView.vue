@@ -12,7 +12,7 @@ import type { User } from '@/types/userType';
 import DeleteUserDialog from '@/components/Dialog/DeleteUserDialog.vue';
 import EditUserDialog from '@/components/Dialog/EditUserDialog.vue';
 
-const users = ref([]);
+const users = ref<User[]>([]);
 const { isAdmin, user } = storeToRefs(useAuthStore());
 
 const infoVisible = ref<boolean>(false);
