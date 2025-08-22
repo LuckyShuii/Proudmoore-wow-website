@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed, watch, nextTick } from "vue";
 import { storeToRefs } from "pinia";
 import { useTwitchStore } from "@/store/twitchStore";
 import { useWsStore } from "@/store/wsStore";
@@ -8,6 +8,8 @@ import { useWsStore } from "@/store/wsStore";
 const { streamers, loadingStreamers } = storeToRefs(useTwitchStore());
 const twitchStore = useTwitchStore();
 const wsStore = useWsStore();
+const lastStreamersSize = ref(streamers.value.length);
+const currentStreamersSize = computed(() => streamers.value.length);
 
 const embed = ref<any>(null);
 const currentChannel = ref("ProudmooreLive");
@@ -23,20 +25,29 @@ const initEmbed = () => {
     });
 };
 
-const loadTwitchEmbed = () => {
+const loadTwitchEmbed = async (callback?: () => void) => {
+    await nextTick();
+
     if (!(window as any).Twitch) {
-            const existing = document.getElementById("twitch-embed-script");
-            if (!existing) {
+        const existing = document.getElementById("twitch-embed-script");
+        if (!existing) {
             const script = document.createElement("script");
             script.id = "twitch-embed-script";
             script.src = "https://embed.twitch.tv/embed/v1.js";
-            script.onload = initEmbed;
+            script.onload = () => {
+                initEmbed();
+                if (callback) callback();
+            };
             document.body.appendChild(script);
         } else {
-            existing.addEventListener("load", initEmbed, { once: true });
+            existing.addEventListener("load", () => {
+                initEmbed();
+                if (callback) callback();
+            }, { once: true });
         }
     } else {
         initEmbed();
+        if (callback) callback();
     }
 };
 
@@ -54,8 +65,21 @@ const changeChannel = (channel: string) => {
 
 onMounted(() => {
     wsStore.connect();
-    twitchStore.loadStreamers()
-    loadTwitchEmbed();
+    twitchStore.loadStreamers();
+});
+
+watch(streamers, (newStreamers) => {
+    if (newStreamers.length > 0 && !embed.value) {
+        const onlineStreamers = newStreamers.filter(s => s.online);
+        if (onlineStreamers.length > 0) {
+            const random = onlineStreamers[Math.floor(Math.random() * onlineStreamers.length)];
+            currentChannel.value = random.username;
+        } else {
+            currentChannel.value = newStreamers[0].username;
+        }
+
+        loadTwitchEmbed();
+    }
 });
 
 // --------- Styles util ---------
@@ -92,7 +116,8 @@ const StatusDot = (online: boolean) =>
 <template>
     <section
         id="faq"
-        class="mt-16 flex flex-col items-center justify-center bg-[#070A15] px-[15px] w-full pb-[5rem]"
+        class="pt-16 flex flex-col items-center justify-center bg-[#070A15] px-[15px] w-full pb-[5rem]"
+        v-show="streamers.length"
     >   
         <h3
             class="mb-4 font-marcellus text-3xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite] drop-shadow-[0_0_10px_rgba(147,197,253,0.8)]"

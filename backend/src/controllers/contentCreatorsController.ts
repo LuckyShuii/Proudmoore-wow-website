@@ -40,7 +40,7 @@ const ContentCreatorsController = {
                     creator.online = await isStreamerOnline(creator.username);
                 }
 
-                return res.status(200).send(contentCreatorsHome);
+                return res.status(200).send(contentCreatorsHome.filter((creator: any) => creator.online));
             }
 
             const contentCreatorsHome = await ContentCreatorsService.getContentCreatorsHome();
@@ -56,7 +56,7 @@ const ContentCreatorsController = {
                 creator.online = await isStreamerOnline(creator.username);
             }
 
-            return res.status(200).send(contentCreatorsHome);
+            return res.status(200).send(contentCreatorsHome.filter((creator: any) => creator.online));
 
         } catch (err) {
             appendUserLog(`[CONTENT_CREATORS] Error fetching content creators for home: ${err}`);
