@@ -35,7 +35,6 @@ export const isStreamerOnline = async (username: string): Promise<boolean> => {
         const isTitleProudmoore = data.data[0]?.title.toLowerCase().includes("proudmoore");
 
         if (!isTitleProudmoore) {
-            appendUserLog(`[TWITCH] ${username} is not streaming Proudmoore - '${data.data[0]?.title}'`);
             return false;
         }
 
