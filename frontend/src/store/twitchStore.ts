@@ -7,6 +7,7 @@ import API from "@/services/API";
 interface Streamer {
   username: string;
   online: boolean;
+  disabled?: boolean;
 }
 
 export const useTwitchStore = defineStore("twitch", () => {
@@ -22,10 +23,11 @@ export const useTwitchStore = defineStore("twitch", () => {
         (msgs) => {
             const last = msgs[msgs.length - 1];
             if (last?.type === "TWITCH_STATUS") {
-                // const s = streamers.value.find((st) => st.username === last.streamer);
-                // if (s) s.online = last.online;
+                if (last?.disabled) {
+                    streamers.value = streamers.value.filter((s) => s.username !== last.streamer);
+                }
+
                 if (last.online) {
-                    console.log("Streamer is online:", last.streamer);
                     const existing = streamers.value.find((st) => st.username === last.streamer);
                     if (existing) {
                         existing.online = last.online;
@@ -35,7 +37,6 @@ export const useTwitchStore = defineStore("twitch", () => {
                 }
 
                 if (!last.online) {
-                    console.log("Streamer is offline:", last.streamer);
                     streamers.value = streamers.value.filter((st) => st.username !== last.streamer);
                 }
 
