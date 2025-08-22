@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import NavView from './components/NavView.vue';
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import projectData from './utils/projectData';
 import router from './router';
 import AdminNavView from './components/AdminNavView.vue';
@@ -16,6 +16,7 @@ const { isAuthenticated } = storeToRefs(useAuthStore())
 const visible = ref(false);
 
 const isDev = computed(() => projectData.PROJECT_STATUS === 'DEV');
+
 </script>
 
 <template>

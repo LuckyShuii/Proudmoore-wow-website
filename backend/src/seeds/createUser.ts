@@ -3,12 +3,13 @@ import { Roles } from "../entities/roles";
 import { UserRole } from "../entities/userRole";
 import { AuthService } from "../services/authService";
 import { v4 as uuidv4 } from "uuid";
+import { appendUserLog } from "../utils/logger";
 
 export async function createDefaultUser() {
     try {
         let user = await Users.findOne({ where: { username: "root" } });
         if (user) {
-            console.log("✅ User already exists:", user.username);
+            appendUserLog(`✅ User already exists: ${user.username}`);
             return;
         }
 
@@ -22,7 +23,7 @@ export async function createDefaultUser() {
         });
         await user.save();
 
-        console.log("👤 User created:", user.username);
+        appendUserLog(`👤 User created: ${user.username}`);
 
         const adminRole = await Roles.findOne({ where: { code: "ADMIN" } });
         const devRole = await Roles.findOne({ where: { code: "DEV" } });
@@ -38,8 +39,8 @@ export async function createDefaultUser() {
 
         await UserRole.save([ur1]);
 
-        console.log("✅ Roles ADMIN & DEV assigned to user:", user.username);
+        appendUserLog(`✅ Roles ADMIN & DEV assigned to user: ${user.username}`);
     } catch (err) {
-        console.error("❌ Error creating default user:", err);
+        appendUserLog(`❌ Error creating default user: ${err}`);
     }
 }

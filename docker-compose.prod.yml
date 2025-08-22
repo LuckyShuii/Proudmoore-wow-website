@@ -16,6 +16,8 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       PROUDMOORE_ADMIN_PASSWORD: ${PROUDMOORE_ADMIN_PASSWORD}
       LOG_DIR: /var/log/wildtransfer
+      TWITCH_CLIENT_ID: ${TWITCH_CLIENT_ID}
+      TWITCH_SECRET: ${TWITCH_SECRET}
     volumes:
       - ./logs:/var/log/wildtransfer
     depends_on:

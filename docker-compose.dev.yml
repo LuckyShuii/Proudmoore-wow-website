@@ -13,6 +13,8 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       PROUDMOORE_ADMIN_PASSWORD: ${PROUDMOORE_ADMIN_PASSWORD}
       LOG_DIR: /var/log/wildtransfer
+      TWITCH_CLIENT_ID: ${TWITCH_CLIENT_ID}
+      TWITCH_SECRET: ${TWITCH_SECRET}
     volumes:
       - ./backend/src:/app/src
       - ./backend/migrations:/app/migrations
@@ -26,6 +28,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    ports:
+      - "8002:8002"
 
   frontend:
     build:

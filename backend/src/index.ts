@@ -14,16 +14,22 @@ import ContentCreatorsController from "./controllers/contentCreatorsController";
 import AuthController from "./controllers/authController";
 import { authenticateJWT, authorizeRoles } from "./middlewares/authMiddleware";
 
+import { checkAllStreamers } from "./services/twitchService";
+
+import http from "http";
+import { Ws } from "./ws";
+import { appendUserLog } from "./utils/logger";
+
 dotenv.config();
 
 export const redisClient = createClient({ url: "redis://redis" });
 
 redisClient.on("error", (err) => {
-    console.log("Redis Client Error", err);
+    appendUserLog(`[REDIS] Redis Client Error: ${err}`);
 });
 
 redisClient.on("connect", () => {
-    console.log("Redis connected");
+    appendUserLog(`[REDIS] Redis connected`);
 });
 
 const app = express();
@@ -49,20 +55,39 @@ app.set('trust proxy', 1);
 
 const port = 8002;
 
-app.listen(port, async () => {
+// Create an http server
+const server = http.createServer(app);
+
+// "server" instead of "app" cause we are using http.createServer
+server.listen(port, async () => {
     await dataSource.initialize();
     await dataSource.runMigrations();
     
     try {
         await redisClient.connect();
-        console.log("Redis connected");
+        appendUserLog(`[REDIS] Redis connected`);
     } catch (err) {
-        console.error("Impossible to connect to Redis", err);
+        appendUserLog(`[REDIS] Impossible to connect to Redis: ${err}`);
+    }
+
+    try {
+        Ws.init(server);
+        appendUserLog(`[WS] WebSocket initialized`);
+    } catch (err) {
+        appendUserLog(`[WS] Impossible to initialize WebSocket: ${err}`);
     }
     
     await createDefaultUser();
 
-    console.log(`Server is listening on port ${port}`);
+    await checkAllStreamers();
+    // Check Twitch streams every 20 seconds
+    setInterval(checkAllStreamers, 20000);
+
+    appendUserLog(`Server listening on ${port}`);
+});
+
+process.on("SIGTERM", () => {
+    server.close(() => process.exit(0));
 });
 
 app.get("/api", (_req, res) => {
@@ -110,6 +135,10 @@ app.get("/api/content-creators",
     authenticateJWT,
     authorizeRoles("ADMIN", "DEV"),
     ContentCreatorsController.getAllContentCreators
+);
+
+app.get("/api/content-creators/home",
+    ContentCreatorsController.getContentCreatorsHome
 );
 
 /**

@@ -623,3 +623,10 @@
 .translator-text {
   color: #2BA8A2 !important;
 }
+
+#twitch-embed {
+  width: 100% !important;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+} 

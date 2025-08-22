@@ -5,6 +5,7 @@ import HeroView from '@/components/Home/HeroView.vue';
 import JoinCommunityView from '@/components/Home/JoinCommunityView.vue';
 import ServerDescriptionView from '@/components/Home/ServerDescriptionView.vue';
 import TimelineView from '@/components/Home/TimelineView.vue';
+import TwitchEmbedView from '@/components/Home/Twitch/TwitchEmbedView.vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
@@ -15,6 +16,7 @@ const { t } = useI18n();
     <section class="bg-[#0E0E0E]" id="home">
         <HeroView />
         <div class="separator"></div>
+        <TwitchEmbedView />
         <ServerDescriptionView />
         <FeaturesView />
         <TimelineView />
