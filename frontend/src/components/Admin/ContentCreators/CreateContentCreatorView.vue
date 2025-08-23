@@ -95,7 +95,7 @@ onBeforeUnmount(() => {
         v-if="showForm"
         @submit.prevent="onSubmit"
         ref="formRef"
-        class="absolute right-0 top-full mt-2 flex flex-col gap-4 bg-[#18181b] w-[22rem] p-6 rounded-lg shadow-lg border border-gray-700 z-50"
+        class="absolute right-0 top-full mt-2 flex flex-col gap-4 bg-[#18181b] w-[22rem] px-6 py-4 rounded-lg shadow-lg border border-gray-700 z-50"
         >
             <div class="flex justify-between items-center">
                 <label class="font-medium text-sm tracking-wide">Creator Username</label>
