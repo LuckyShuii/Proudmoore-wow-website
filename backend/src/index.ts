@@ -113,7 +113,7 @@ app.post("/api/users",
 
 app.post("/api/content-creators",
     authenticateJWT,
-    authorizeRoles("ADMIN", "DEV", "SMM", "CM"),
+    authorizeRoles("ADMIN", "DEV", "SMM"),
     ContentCreatorsController.createContentCreator
 )
 
@@ -139,7 +139,7 @@ app.get("/api/roles",
 
 app.get("/api/content-creators",
     authenticateJWT,
-    authorizeRoles("ADMIN", "DEV"),
+    authorizeRoles("ADMIN", "DEV", "SMM"),
     ContentCreatorsController.getAllContentCreators
 );
 
@@ -149,7 +149,7 @@ app.get("/api/content-creators/home",
 
 app.get("/api/content-creators/exists/:username", 
     authenticateJWT,
-    authorizeRoles("ADMIN", "DEV", "SMM", "CM"),
+    authorizeRoles("ADMIN", "DEV", "SMM"),
     async (req, res) => {
         const { username } = req.params;
         const exists = await ContentCreatorsController.checkIfExists(username);
@@ -175,4 +175,10 @@ app.put("/api/users/:uuid",
     authenticateJWT,
     authorizeRoles("ADMIN", "DEV"),
     UsersController.updateUser
+);
+
+app.put("/api/content-creators/:id/status",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV", "SMM"),
+    ContentCreatorsController.updateContentCreatorStatus
 );

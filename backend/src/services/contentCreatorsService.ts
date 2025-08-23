@@ -5,7 +5,7 @@ import { Users } from "../entities/users";
 
 const ContentCreatorsService = {
     getAllContentCreators: async (): Promise<ContentCreators[]> => {
-        const result = await ContentCreators.find();
+        const result = await ContentCreators.find({ relations: ["created_by", "last_updated_by"] });
         return result;
     },
 
@@ -49,6 +49,22 @@ const ContentCreatorsService = {
     getContentCreatorByUsername: async (username: string): Promise<ContentCreators | null> => {
         const result = await ContentCreators.findOne({ where: { username } });
         return result;
+    },
+
+    updateContentCreatorStatus: async (id: string, isDisabled: boolean): Promise<void> => {
+        try {
+            const result = await dataSource.query(
+                `UPDATE content_creators
+                SET is_disabled = $1
+                WHERE id = $2`,
+                [isDisabled, id]
+            );
+            if (result.rowCount === 0) {
+                throw new Error("Content creator not found");
+            }
+        } catch (error) {
+            throw new Error("Error updating content creator status");
+        }
     }
 };
 

@@ -3,6 +3,7 @@ import { useAuthStore } from '@/store/authStore';
 import { computed, onMounted, reactive, ref } from 'vue';
 import API from '@/services/API'
 import CreateContentCreatorView from '@/components/Admin/ContentCreators/CreateContentCreatorView.vue';
+import AllContentCreatorsView from '@/components/Admin/ContentCreators/AllContentCreatorsView.vue';
 </script>
 
 <template>
@@ -11,5 +12,6 @@ import CreateContentCreatorView from '@/components/Admin/ContentCreators/CreateC
             <h2 class="text-2xl font-bold uppercase font-marcellus">Content Creators Management</h2>
             <CreateContentCreatorView />
         </div>
+        <AllContentCreatorsView />
     </section>
 </template>

@@ -5,7 +5,7 @@ import { appendUserLog } from "../utils/logger";
 import twitchService, { isStreamerOnline } from "../services/twitchService";
 
 const ContentCreatorsController = {
-    getAllContentCreators: async (_req: Request, res: Response) => {
+    getAllContentCreators: async (req: Request, res: Response) => {
         try {
             const cacheResult = await redisClient.get("allContentCreators");
 
@@ -17,13 +17,15 @@ const ContentCreatorsController = {
             const contentCreators = await ContentCreatorsService.getAllContentCreators();
 
             await redisClient.set('allContentCreators', JSON.stringify(contentCreators), {
-                // Set to expire in 15 sec
-                EX: 15,
+                // Set to expire in 10 sec
+                EX: 10,
                 NX: true,
             });
 
             return res.status(200).send(contentCreators);
         } catch (err) {
+            //@ts-ignore
+            appendUserLog(`[CONTENT_CREATORS] Error fetching all content creators: ${err} by user ${req.user.id}`);
             return res.status(500).send("An error has occured when trying to get all Content Creators");
         }
     },
@@ -105,6 +107,24 @@ const ContentCreatorsController = {
         } catch (err) {
             appendUserLog(`[CONTENT_CREATORS] Error creating content creator: ${err}`);
             return res.status(500).send("An error has occured when trying to create Content Creator");
+        }
+    },
+
+    updateContentCreatorStatus: async (req: Request, res: Response) => {
+        try {
+            const { id } = req.params;
+            const { isDisabled } = req.body;
+
+            if (!id || typeof isDisabled !== "boolean") {
+                appendUserLog(`[CONTENT_CREATORS] Invalid request: ${JSON.stringify(req.body)}`);
+                return res.status(400).send("Invalid request");
+            }
+
+            await ContentCreatorsService.updateContentCreatorStatus(id, isDisabled);
+            return res.status(200).send("Status updated successfully");
+        } catch (err) {
+            appendUserLog(`[CONTENT_CREATORS] Error updating content creator status: ${err}`);
+            return res.status(500).send("An error has occured when trying to update Content Creator status");
         }
     }
 }
