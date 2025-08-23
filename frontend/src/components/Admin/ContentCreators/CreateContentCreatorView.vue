@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useAuthStore } from '@/store/authStore';
-import { computed, onMounted, reactive, ref } from 'vue';
+import { computed, onBeforeUnmount, onMounted, reactive, ref } from 'vue';
 import API from '@/services/API'
+
+const showForm = ref<boolean>(false);
 
 const form = reactive<{
     username: string;
@@ -11,9 +13,17 @@ const form = reactive<{
     isDisabled: false
 })
 
-const loading = ref<boolean>(false);
+const formRef = ref<HTMLElement | null>(null);
 
-const showForm = ref<boolean>(false);
+const wrapperRef = ref<HTMLElement | null>(null);
+
+const handleClickOutside = (event: MouseEvent) => {
+  if (wrapperRef.value && !wrapperRef.value.contains(event.target as Node)) {
+    showForm.value = false;
+  }
+};
+
+const loading = ref<boolean>(false);
 
 const isDisabled = computed<boolean>(() => !form.isDisabled);
 
@@ -62,10 +72,18 @@ const onSubmit = async () => {
 
     loading.value = false;
 }
+
+onMounted(() => {
+  document.addEventListener('click', handleClickOutside);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutside);
+});
 </script>
 
 <template>
-    <div class="relative">
+    <div ref="wrapperRef" class="relative">
         <Button 
         label="Add Creator" 
         icon="pi pi-plus" 
@@ -76,14 +94,22 @@ const onSubmit = async () => {
         <form
         v-if="showForm"
         @submit.prevent="onSubmit"
-        class="absolute right-0 top-full mt-2 flex flex-col gap-6 bg-[#18181b] w-[22rem] p-6 rounded-lg shadow-lg border border-gray-700 z-50"
+        ref="formRef"
+        class="absolute right-0 top-full mt-2 flex flex-col gap-4 bg-[#18181b] w-[22rem] p-6 rounded-lg shadow-lg border border-gray-700 z-50"
         >
-            <div class="flex flex-col gap-2">
+            <div class="flex justify-between items-center">
                 <label class="font-medium text-sm tracking-wide">Creator Username</label>
+                <Button
+                    icon="pi pi-times"
+                    class="p-button-text p-button-rounded p-button-sm ml-auto !pr-0 mr-[-0.3rem]"
+                    @click="showForm = false"
+                />
+            </div>
+            <div class="flex flex-col gap-2">
                 <InputText
                 v-model="form.username"
-                class="w-full"
-                placeholder="Enter creator username"
+                class="w-full mt-[-0.5rem]"
+                placeholder=""
                 />
                 <small v-if="errors.username" class="text-red-500 text-xs">{{ errors.username }}</small>
                 <small v-if="successMessage" class="text-green-500 text-xs">{{ successMessage }}</small>
