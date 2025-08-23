@@ -2,7 +2,7 @@ import ContentCreatorsService from "../services/contentCreatorsService";
 import { Request, Response } from "express";
 import { redisClient } from "../index";
 import { appendUserLog } from "../utils/logger";
-import { isStreamerOnline } from "../services/twitchService";
+import twitchService, { isStreamerOnline } from "../services/twitchService";
 
 const ContentCreatorsController = {
     getAllContentCreators: async (_req: Request, res: Response) => {
@@ -61,6 +61,16 @@ const ContentCreatorsController = {
         } catch (err) {
             appendUserLog(`[CONTENT_CREATORS] Error fetching content creators for home: ${err}`);
             return res.status(500).send("An error has occured when trying to get Content Creators for Home");
+        }
+    },
+
+    checkIfExists: async (username: string): Promise<boolean> => {
+        try {
+            const exists = await twitchService.streamerExists(username);
+            return exists;
+        } catch (err) {
+            appendUserLog(`[CONTENT_CREATORS] Error checking if content creator exists: ${err}`);
+            return false;
         }
     }
 }

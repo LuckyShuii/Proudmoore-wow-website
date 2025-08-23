@@ -141,6 +141,12 @@ app.get("/api/content-creators/home",
     ContentCreatorsController.getContentCreatorsHome
 );
 
+app.get("/api/content-creators/exists/:username", async (req, res) => {
+    const { username } = req.params;
+    const exists = await ContentCreatorsController.checkIfExists(username);
+    res.status(200).json({ exists });
+});
+
 /**
  * DELETE ROUTES
  */

@@ -63,6 +63,22 @@
     background-color: #07cf00 !important;
 }
 
+#display-create-ct {
+    outline: none !important;
+    width: 8rem !important;
+    height: 2.4rem !important;
+    background-color: #3b82f6 !important;
+}
+
+#display-create-ct:hover {
+    background-color: #2563eb !important;
+    cursor: pointer !important;
+}
+
+#display-create-ct:active {
+    background-color: #3a6ad3 !important;
+}
+
 .confirm-button {
     outline: none !important;
     width: 10rem !important;

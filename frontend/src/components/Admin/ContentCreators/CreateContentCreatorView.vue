@@ -3,19 +3,73 @@ import { useAuthStore } from '@/store/authStore';
 import { computed, onMounted, reactive, ref } from 'vue';
 import API from '@/services/API'
 
-const form = reactive({
+const form = reactive<{
+    username: string;
+    isDisabled: boolean;
+}>({
     username: '',
     isDisabled: false
 })
 
-const showForm = ref(false)
+const loading = ref<boolean>(false);
 
-const isDisabled = computed(() => !form.isDisabled);
+const showForm = ref<boolean>(false);
+
+const isDisabled = computed<boolean>(() => !form.isDisabled);
 
 const errors = ref<{ [key: string]: string }>({});
 
-const onSubmit = () => {
+const validate = (): boolean => {
+    errors.value = {};
+    if (!form.username) errors.value.username = "Username is required";
+    return Object.keys(errors.value).length === 0;
+};
+
+const isCreatorExists = async (username: string) => {
+    try {
+        const response = (await API.contentCreators.checkCreatorExists(username)).data;
+        return response.exists;
+    } catch (error) {
+        errors.value.username = "Creator could not be found on Twitch";
+    }
+    return false;
+};
+
+const createContentCreator = async () => {
+    try {
+        return (await API.contentCreators.createContentCreator(form)).data;
+    } catch (error) {
+        errors.value.username = "Failed to create content creator";
+    }
+};
+
+const resetForm = () => {
+    form.username = '';
+    form.isDisabled = false;
+    errors.value = {};
+};
+
+const onSubmit = async () => {
+    if (!validate()) return;
+
+    loading.value = true;
+    const creatorExists = await isCreatorExists(form.username);
+
     return
+
+    if (!creatorExists) {
+        loading.value = false;
+        return;
+    }
+
+    const createdContentCreator = await createContentCreator();
+
+    if (createdContentCreator.username === form.username) {
+        // Handle successful creation
+        resetForm();
+    }
+
+    loading.value = false;
 }
 </script>
 
@@ -25,6 +79,7 @@ const onSubmit = () => {
         label="Add Creator" 
         icon="pi pi-plus" 
         @click="showForm = !showForm" 
+        id="display-create-ct"
         />
 
         <form

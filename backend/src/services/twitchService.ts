@@ -11,6 +11,39 @@ let statuses: Record<string, boolean> = {};
 
 const allStreamers = async () => await ContentCreatorsService.getContentCreatorsHome();
 
+export const streamerExists = async (username: string): Promise<boolean> => {
+    if (!clientId) {
+        appendUserLog("[TWITCH] Missing Twitch Client ID in streamerExists");
+        return false;
+    }
+
+    try {
+        const token = await getAccessToken();
+
+        const res = await fetch(
+            `https://api.twitch.tv/helix/users?login=${username.toLowerCase()}`,
+            {
+                headers: {
+                    "Client-ID": clientId,
+                    "Authorization": `Bearer ${token}`,
+                },
+            }
+        );
+
+        const data: any = await res.json();
+        const exists = data.data && data.data.length > 0;
+
+        if (!exists) {
+            appendUserLog(`[TWITCH] Creation failed - Streamer does not exist ${username}`);
+        }
+
+        return exists;
+    } catch (err) {
+        appendUserLog(`[TWITCH] Error checking if streamer exists ${username}: ${err}`);
+        return false;
+    }
+};
+
 export const isStreamerOnline = async (username: string): Promise<boolean> => {
     if (!clientId) {
         appendUserLog("[TWITCH] Missing Twitch Client ID in isStreamerOnline");
@@ -89,4 +122,5 @@ export const checkAllStreamers = async (streamers: any = []) => {
 export default {
     isStreamerOnline,
     checkAllStreamers,
+    streamerExists
 };
