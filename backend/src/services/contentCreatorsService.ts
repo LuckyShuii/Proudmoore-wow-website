@@ -62,6 +62,13 @@ const ContentCreatorsService = {
             if (result.rowCount === 0) {
                 throw new Error("Content creator not found");
             }
+
+            await dataSource.query(
+                `UPDATE content_creators
+                SET updated_at = NOW()
+                WHERE id = $1`,
+                [id]
+            );
         } catch (error) {
             throw new Error("Error updating content creator status");
         }

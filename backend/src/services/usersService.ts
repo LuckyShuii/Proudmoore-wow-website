@@ -30,6 +30,7 @@ const UsersService = {
 
     updateLastLogin: async (userId: number): Promise<void> => {
         await Users.update(userId, { last_login: new Date() });
+        await Users.update({ id: userId }, { updated_at: new Date() });
     },
 
     deleteUser: async (userUuid: string): Promise<void> => {
@@ -42,6 +43,7 @@ const UsersService = {
         if (!updatedUser) {
             throw new Error(`User with UUID ${userUuid} not found after update.`);
         }
+        await Users.update({ uuid: userUuid }, { updated_at: new Date() });
         return updatedUser;
     }
 }

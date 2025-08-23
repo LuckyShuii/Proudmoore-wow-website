@@ -174,7 +174,7 @@ const UsersController = {
             }
 
             if (Object.keys(partial).length > 0) {
-                await Users.update({ uuid: user.uuid }, partial);
+                await Users.update({ uuid: user.uuid }, { ...partial, updated_at: new Date() });
             }
 
             if (!Array.isArray(roles)) return res.status(400).json({ message: 'Invalid roles' });
