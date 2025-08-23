@@ -5,7 +5,7 @@ import { appendUserLog } from "../utils/logger";
 
 export class AuthService {
     private static readonly jwtSecret = process.env.JWT_SECRET as string;
-    private static readonly jwtExpiresIn = "1h";
+    private static readonly jwtExpiresIn = "2h";
 
     static async hashPassword(password: string): Promise<string> {
         const salt = await bcrypt.genSalt(10);

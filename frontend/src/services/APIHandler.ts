@@ -20,13 +20,23 @@ APIHandler.interceptors.request.use((config: any) => {
     return config;
 });
 
-APIHandler.interceptors.response.use((response: any) => {
-    if (response.data) {
+APIHandler.interceptors.response.use(
+    (response: any) => {
+        if (response.data) {
         response.data = snakeToCamel(response.data)
-    }
+        }
+        return response
+    },
+    (error: any) => {
+        if (error.response?.status === 401 || error.response?.data?.message === "Invalid or expired token") {
+            const authStore = useAuthStore();
+            authStore.logout();
+            window.location.replace('/admin/login');
+        }
 
-    return response
-})
+        return Promise.reject(error)
+    }
+)
 
 APIHandler.defaults.paramsSerializer = (params: any) => qs.stringify(params, { arrayFormat: "repeat" })
 
