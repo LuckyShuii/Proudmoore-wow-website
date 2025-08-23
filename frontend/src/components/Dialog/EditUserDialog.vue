@@ -172,14 +172,14 @@ onUnmounted(() => {
                     <!-- Username -->
                     <div>
                         <label class="block mb-1 font-medium">Username</label>
-                        <InputText name="username" v-model="form.username" class="w-full" />
+                        <InputText name="username" v-model="form.username" class="w-full" :disabled="form.username === 'root'" />
                         <small v-if="errors.username" class="text-red-500">{{ errors.username }}</small>
                     </div>
 
                     <!-- Email -->
                     <div>
                         <label class="block mb-1 font-medium">Email</label>
-                        <InputText name="email" v-model="form.email" class="w-full" />
+                        <InputText name="email" v-model="form.email" class="w-full" :disabled="form.username === 'root'" />
                         <small v-if="errors.email" class="text-red-500">{{ errors.email }}</small>
                     </div>
 
@@ -215,6 +215,7 @@ onUnmounted(() => {
                             type="password"
                             class="w-full"
                             placeholder="Leave empty to keep current password"
+                            :disabled="form.username === 'root'"
                         />
                         <small v-if="errors.password" class="text-red-500">{{ errors.password }}</small>
                     </div>
@@ -225,7 +226,7 @@ onUnmounted(() => {
                 </div>
 
                 <div v-if="form.username === 'root'" class="mt-5">
-                    <p class="text-red-500 text-center">Careful! You are editing the root user.</p>
+                    <p class="text-red-500 text-center">You cannot edit the root user!</p>
                 </div>
 
                 <div class="flex justify-center gap-4 mt-6">

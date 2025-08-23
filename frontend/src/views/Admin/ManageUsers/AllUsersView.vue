@@ -112,7 +112,7 @@ onMounted(async () => {
                     <h3>Actions</h3>
                 </template>
                 <template #body="{ data }">
-                    <Button icon="pi pi-pencil" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showEditDialog(data)" />
+                    <Button icon="pi pi-pencil" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showEditDialog(data)" v-if="data.username !== 'root'" />
                     <Button icon="pi pi-trash" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showDeleteDialog(data)" v-if="data.username !== 'root'" />
                     <Button icon="pi pi-eye" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showUserInfo(data)" />
                 </template>
