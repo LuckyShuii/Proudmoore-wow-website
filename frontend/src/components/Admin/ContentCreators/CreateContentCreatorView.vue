@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { useAuthStore } from '@/store/authStore';
 import { computed, onBeforeUnmount, onMounted, reactive, ref } from 'vue';
 import API from '@/services/API'
+import type { ContentCreator } from '@/types/contentCreatorType';
+
+const emit = defineEmits<{
+    (e: 'content-creator-created', creator: ContentCreator): void;
+}>();
 
 const showForm = ref<boolean>(false);
 
@@ -67,6 +71,7 @@ const onSubmit = async () => {
 
     if (createdContentCreator.username === form.username) {
         successMessage.value = 'Content Creator created successfully';
+        emit('content-creator-created', createdContentCreator);
         resetForm();
     }
 

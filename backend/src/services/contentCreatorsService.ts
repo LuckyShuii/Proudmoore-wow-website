@@ -5,7 +5,7 @@ import { Users } from "../entities/users";
 
 const ContentCreatorsService = {
     getAllContentCreators: async (): Promise<ContentCreators[]> => {
-        const result = await ContentCreators.find({ relations: ["created_by", "last_updated_by"] });
+        const result = await ContentCreators.find({ relations: ["created_by", "last_updated_by"], order: { username: "ASC" } });
         return result;
     },
 
@@ -47,7 +47,7 @@ const ContentCreatorsService = {
     },
 
     getContentCreatorByUsername: async (username: string): Promise<ContentCreators | null> => {
-        const result = await ContentCreators.findOne({ where: { username } });
+        const result = await ContentCreators.findOne({ where: { username }, relations: ["created_by", "last_updated_by"] });
         return result;
     },
 

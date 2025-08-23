@@ -17,7 +17,7 @@ const ContentCreatorsController = {
             const contentCreators = await ContentCreatorsService.getAllContentCreators();
 
             await redisClient.set('allContentCreators', JSON.stringify(contentCreators), {
-                // Set to expire in 10 sec
+                // Set to expire in 5 sec
                 EX: 10,
                 NX: true,
             });
@@ -103,7 +103,7 @@ const ContentCreatorsController = {
             const newContentCreator = await ContentCreatorsService.createContentCreator(username.toLowerCase(), isDisabled, creatorId);
 
             appendUserLog(`[CONTENT_CREATORS] New content creator created: ${newContentCreator.id} by user ${creatorId}`);
-            return res.status(201).send(newContentCreator);
+            return res.status(201).send(await ContentCreatorsService.getContentCreatorByUsername(username.toLowerCase()));
         } catch (err) {
             appendUserLog(`[CONTENT_CREATORS] Error creating content creator: ${err}`);
             return res.status(500).send("An error has occured when trying to create Content Creator");

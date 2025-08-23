@@ -80,7 +80,7 @@ const router = createRouter({
       path: '/admin/content-creators',
       name: 'content-creators',
       component: () => import('@/views/Admin/ContentCreators/ContentCreatorsView.vue'),
-      meta: { requiresAuth: true, roles: ["ADMIN", "DEV", "CM", "SMM"] }
+      meta: { requiresAuth: true, roles: ["ADMIN", "DEV", "SMM"] }
     },
     {
       path: '/admin/manager-users/all-users',

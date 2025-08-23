@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import API from '@/services/API';
 import { convertDate } from '@/utils/convertDate';
 import type { ContentCreator } from '@/types/contentCreatorType';
+
+const props = defineProps<{
+    contentCreatorsNew: ContentCreator | null;
+}>();
 
 const contentCreators = ref<Partial<ContentCreator>[]>([]);
 const errorMessage = ref('');
@@ -46,6 +50,13 @@ const handleUpdateStatus = async (contentCreator: ContentCreator) => {
 
 onMounted(async () => {
     await loadContentCreators();
+});
+
+watch(() => props.contentCreatorsNew, (newCreator) => {
+    if (newCreator) {
+        newCreator.isDisabled = !newCreator.isDisabled;
+        contentCreators.value = [newCreator, ...contentCreators.value];
+    }
 });
 
 </script>
