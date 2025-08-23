@@ -18,6 +18,7 @@ const showForm = ref<boolean>(false);
 const isDisabled = computed<boolean>(() => !form.isDisabled);
 
 const errors = ref<{ [key: string]: string }>({});
+const successMessage = ref<string>('');
 
 const validate = (): boolean => {
     errors.value = {};
@@ -25,21 +26,13 @@ const validate = (): boolean => {
     return Object.keys(errors.value).length === 0;
 };
 
-const isCreatorExists = async (username: string) => {
-    try {
-        const response = (await API.contentCreators.checkCreatorExists(username)).data;
-        return response.exists;
-    } catch (error) {
-        errors.value.username = "Creator could not be found on Twitch";
-    }
-    return false;
-};
-
 const createContentCreator = async () => {
     try {
-        return (await API.contentCreators.createContentCreator(form)).data;
-    } catch (error) {
-        errors.value.username = "Failed to create content creator";
+        return (await API.contentCreators.createContentCreator({ username: form.username, isDisabled: !form.isDisabled })).data;
+    } catch (error: any) {
+        console.log(">>", error)
+        errors.value.username = error.response.data;
+        return null;
     }
 };
 
@@ -50,22 +43,20 @@ const resetForm = () => {
 };
 
 const onSubmit = async () => {
+    successMessage.value = '';
     if (!validate()) return;
 
     loading.value = true;
-    const creatorExists = await isCreatorExists(form.username);
-
-    return
-
-    if (!creatorExists) {
-        loading.value = false;
-        return;
-    }
 
     const createdContentCreator = await createContentCreator();
 
+    if (!createdContentCreator) {
+        loading.value = false;
+        return
+    }
+
     if (createdContentCreator.username === form.username) {
-        // Handle successful creation
+        successMessage.value = 'Content Creator created successfully';
         resetForm();
     }
 
@@ -85,7 +76,7 @@ const onSubmit = async () => {
         <form
         v-if="showForm"
         @submit.prevent="onSubmit"
-        class="absolute right-0 top-full mt-2 flex flex-col gap-6 bg-[#18181b] w-[22rem] p-6 rounded-2xl shadow-lg border border-gray-700 z-50"
+        class="absolute right-0 top-full mt-2 flex flex-col gap-6 bg-[#18181b] w-[22rem] p-6 rounded-lg shadow-lg border border-gray-700 z-50"
         >
             <div class="flex flex-col gap-2">
                 <label class="font-medium text-sm tracking-wide">Creator Username</label>
@@ -95,6 +86,7 @@ const onSubmit = async () => {
                 placeholder="Enter creator username"
                 />
                 <small v-if="errors.username" class="text-red-500 text-xs">{{ errors.username }}</small>
+                <small v-if="successMessage" class="text-green-500 text-xs">{{ successMessage }}</small>
             </div>
 
             <div class="flex items-center justify-between gap-4">
@@ -110,7 +102,8 @@ const onSubmit = async () => {
                 label="Create"
                 id="create-ct-button"
                 class="ml-auto"
-                :disabled="!form.username"
+                :disabled="!form.username || loading"
+                :loading="loading"
                 />
             </div>
         </form>

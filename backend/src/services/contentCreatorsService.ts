@@ -1,6 +1,7 @@
 import { ContentCreators } from "../entities/contentCreators";
 import { dataSource } from "../config/db";
 import { redisClient } from "..";
+import { Users } from "../entities/users";
 
 const ContentCreatorsService = {
     getAllContentCreators: async (): Promise<ContentCreators[]> => {
@@ -28,6 +29,25 @@ const ContentCreatorsService = {
             NX: true,
         });
 
+        return result;
+    },
+
+    createContentCreator: async (username: string, isDisabled: boolean, creatorId: number): Promise<ContentCreators> => {
+        try {
+            const result = await ContentCreators.save({
+                username,
+                is_disabled: isDisabled,
+                created_by: { id: creatorId } as Users  ,
+                last_updated_by: { id: creatorId } as Users,
+            });
+            return result;
+        } catch (error) {
+            throw new Error("Error creating content creator");
+        }
+    },
+
+    getContentCreatorByUsername: async (username: string): Promise<ContentCreators | null> => {
+        const result = await ContentCreators.findOne({ where: { username } });
         return result;
     }
 };

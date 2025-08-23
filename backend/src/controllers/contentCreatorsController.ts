@@ -72,6 +72,40 @@ const ContentCreatorsController = {
             appendUserLog(`[CONTENT_CREATORS] Error checking if content creator exists: ${err}`);
             return false;
         }
+    },
+
+    createContentCreator: async (req: Request, res: Response) => {
+        try {
+            const { username, isDisabled } = req.body;
+            //@ts-ignore
+            const creatorId = req.user.id;
+
+            if (!username) {
+                return res.status(400).send("Username is required");
+            }
+
+            if (typeof isDisabled !== "boolean") {
+                return res.status(400).send("Invalid value for isDisabled");
+            }
+
+            const creatorExists = await twitchService.streamerExists(username);
+            if (!creatorExists) {
+                return res.status(404).send("Content Creator not found on Twitch");
+            }
+
+            const exists = await ContentCreatorsService.getContentCreatorByUsername(username);
+            if (exists) {
+                return res.status(409).send("Content Creator already exists");
+            }
+
+            const newContentCreator = await ContentCreatorsService.createContentCreator(username.toLowerCase(), isDisabled, creatorId);
+
+            appendUserLog(`[CONTENT_CREATORS] New content creator created: ${newContentCreator.id} by user ${creatorId}`);
+            return res.status(201).send(newContentCreator);
+        } catch (err) {
+            appendUserLog(`[CONTENT_CREATORS] Error creating content creator: ${err}`);
+            return res.status(500).send("An error has occured when trying to create Content Creator");
+        }
     }
 }
 

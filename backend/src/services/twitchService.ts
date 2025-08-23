@@ -54,7 +54,7 @@ export const isStreamerOnline = async (username: string): Promise<boolean> => {
         const token = await getAccessToken();
 
         const res = await fetch(
-            `https://api.twitch.tv/helix/streams?user_login=${username}`,
+            `https://api.twitch.tv/helix/streams?user_login=${username.toLowerCase()}`,
             {
                 headers: {
                     "Client-ID": clientId,
