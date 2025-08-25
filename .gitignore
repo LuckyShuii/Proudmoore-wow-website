@@ -6,3 +6,4 @@ backend/.DS_Store
 database/
 frontend/src/utils/projectData.ts
 backend/src/logs/
+logs/

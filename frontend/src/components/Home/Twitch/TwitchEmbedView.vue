@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, computed, watch, nextTick } from "vue";
+import { ref, onMounted, computed, watch, nextTick } from "vue";
 import { storeToRefs } from "pinia";
 import { useTwitchStore } from "@/store/twitchStore";
 import { useWsStore } from "@/store/wsStore";

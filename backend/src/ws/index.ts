@@ -27,7 +27,7 @@ class WsManager {
 
     public broadcast(message: any) {
         if (!this.wss) {
-            appendUserLog("[WS] No server initialized");
+            appendUserLog("[WS] No server initialized, can't broadcast to frontend!");
             return;
         }
 
@@ -42,7 +42,7 @@ class WsManager {
             }
         }
 
-        appendUserLog(`[WS] Sent ${JSON.stringify(message)} to ${count} client(s)`);
+        //appendUserLog(`[WS] Sent ${JSON.stringify(message)} to ${count} client(s)`);
     }
 }
 

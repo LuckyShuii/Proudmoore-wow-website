@@ -18,7 +18,7 @@ const ContentCreatorsController = {
 
             await redisClient.set('allContentCreators', JSON.stringify(contentCreators), {
                 // Set to expire in 5 sec
-                EX: 10,
+                EX: 5,
                 NX: true,
             });
 
