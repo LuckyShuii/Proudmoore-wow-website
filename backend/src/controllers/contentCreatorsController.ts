@@ -49,7 +49,7 @@ const ContentCreatorsController = {
 
             await redisClient.set('contentCreatorsHome', JSON.stringify(contentCreatorsHome), {
                 // Set to expire in 60 sec
-                EX: 2,
+                EX: 60,
                 NX: true,
             });
 

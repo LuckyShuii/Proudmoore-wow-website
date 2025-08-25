@@ -81,7 +81,7 @@ server.listen(port, async () => {
 
     await checkAllStreamers();
     // Check Twitch streams every 30 seconds 
-    setInterval(checkAllStreamers, 3000);
+    setInterval(checkAllStreamers, 30000);
 
     appendUserLog(`Server listening on ${port}`);
 });
