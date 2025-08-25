@@ -120,7 +120,8 @@ const ContentCreatorsController = {
                 return res.status(400).send("Invalid request");
             }
 
-            await ContentCreatorsService.updateContentCreatorStatus(id, isDisabled);
+            //@ts-ignore
+            await ContentCreatorsService.updateContentCreatorStatus(id, isDisabled, req.user.id);
             return res.status(200).send("Status updated successfully");
         } catch (err) {
             appendUserLog(`[CONTENT_CREATORS] Error updating content creator status: ${err}`);
@@ -164,7 +165,8 @@ const ContentCreatorsController = {
                 return res.status(409).send("Content Creator already exists in database");
             }
 
-            await ContentCreatorsService.updateContentCreatorUsername(id, username);
+            //@ts-ignore
+            await ContentCreatorsService.updateContentCreatorUsername(id, username, req.user.id);
             return res.status(200).send("Content Creator username updated successfully");
         } catch (err) {
             appendUserLog(`[CONTENT_CREATORS] Error updating content creator username: ${err}`);

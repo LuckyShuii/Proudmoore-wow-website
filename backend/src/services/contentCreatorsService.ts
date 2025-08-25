@@ -51,24 +51,19 @@ const ContentCreatorsService = {
         return result;
     },
 
-    updateContentCreatorStatus: async (id: string, isDisabled: boolean): Promise<void> => {
+    updateContentCreatorStatus: async (id: string, isDisabled: boolean, whoId: number): Promise<void> => {
         try {
             const result = await dataSource.query(
                 `UPDATE content_creators
-                SET is_disabled = $1
-                WHERE id = $2`,
-                [isDisabled, id]
+                SET is_disabled = $1,
+                last_updated_by = $2,
+                updated_at = NOW()
+                WHERE id = $3`,
+                [isDisabled, whoId, id]
             );
             if (result.rowCount === 0) {
                 throw new Error("Content creator not found");
             }
-
-            await dataSource.query(
-                `UPDATE content_creators
-                SET updated_at = NOW()
-                WHERE id = $1`,
-                [id]
-            );
         } catch (error) {
             throw new Error("Error updating content creator status");
         }
@@ -90,13 +85,14 @@ const ContentCreatorsService = {
         }
     },
 
-    updateContentCreatorUsername: async (id: string, username: string): Promise<void> => {
+    updateContentCreatorUsername: async (id: string, username: string, whoId: number): Promise<void> => {
         try {
             const result = await dataSource.query(
                 `UPDATE content_creators
-                SET username = $1
-                WHERE id = $2`,
-                [username, id]
+                SET username = $1,
+                last_updated_by = $2
+                WHERE id = $3`,
+                [username, whoId, id]
             );
             if (result.rowCount === 0) {
                 throw new Error("Content creator not found");
