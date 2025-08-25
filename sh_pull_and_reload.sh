@@ -9,7 +9,7 @@ echo "✅ Stack stopped."
 
 # 2. Pull latest changes from github
 echo "[1/5] Pulling latest changes..."
-# git pull origin main
+git pull origin main
 
 # 3. Build frontend (Vite) -> ./frontend/dist
 echo "[2/5] Building frontend..."
