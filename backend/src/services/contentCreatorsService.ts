@@ -72,6 +72,22 @@ const ContentCreatorsService = {
         } catch (error) {
             throw new Error("Error updating content creator status");
         }
+    },
+
+    deleteContentCreator: async (id: string): Promise<void> => {
+        try {
+            const result = await dataSource.query(
+                `DELETE FROM content_creators
+                WHERE id = $1`,
+                [id]
+            );
+
+            if (result.rowCount === 0) {
+                throw new Error("Content creator not found");
+            }
+        } catch (error) {
+            throw new Error("Error deleting content creator");
+        }
     }
 };
 

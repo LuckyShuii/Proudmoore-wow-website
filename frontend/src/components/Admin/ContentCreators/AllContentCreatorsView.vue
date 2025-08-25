@@ -3,17 +3,21 @@ import { computed, onMounted, ref, watch } from 'vue';
 import API from '@/services/API';
 import { convertDate } from '@/utils/convertDate';
 import type { ContentCreator } from '@/types/contentCreatorType';
+import DeleteEntityDialog from '@/components/Dialog/DeleteEntityDialog.vue';
 
 const props = defineProps<{
     contentCreatorsNew: ContentCreator | null;
 }>();
 
 const contentCreators = ref<Partial<ContentCreator>[]>([]);
-const errorMessage = ref('');
-const successMessage = ref('');
+const errorMessage = ref<string>('');
+const successMessage = ref<string>('');
 
-const loadingContentCreators = ref(false);
-const loadingStatusChange = ref(false);
+const loadingContentCreators = ref<boolean>(false);
+const loadingStatusChange = ref<boolean>(false);
+
+const deleteVisible = ref<boolean>(false);
+const selectedContentCreator = ref<ContentCreator | null>(null);
 
 const isMessage = computed(() => errorMessage.value || successMessage.value);
 
@@ -46,6 +50,25 @@ const handleUpdateStatus = async (contentCreator: ContentCreator) => {
     } finally {
         loadingStatusChange.value = false;
     }
+};
+
+const handleDeleteContentCreator = async (id: string) => {
+    errorMessage.value = '';
+    successMessage.value = '';
+    try {
+        await API.contentCreators.deleteContentCreator(id);
+        contentCreators.value = contentCreators.value.filter((creator: Partial<ContentCreator>) => creator.id !== id);
+        successMessage.value = 'Content creator deleted successfully';
+    } catch (error) {
+        errorMessage.value = 'Failed to delete content creator';
+    } finally {
+        deleteVisible.value = false;
+    }
+};
+
+const showDeleteDialog = (contentCreator: ContentCreator) => {
+    selectedContentCreator.value = contentCreator;
+    deleteVisible.value = true;
 };
 
 onMounted(async () => {
@@ -117,10 +140,12 @@ watch(() => props.contentCreatorsNew, (newCreator) => {
             <Column header="Actions">
                 <template #body="{ data }">
                     <Button icon="pi pi-pencil hover:scale-[1.1] transition-all duration-200" @click="" />
-                    <Button icon="pi pi-trash hover:scale-[1.1] transition-all duration-200" @click="" />
+                    <Button icon="pi pi-trash hover:scale-[1.1] transition-all duration-200" @click="showDeleteDialog(data)" />
                 </template>
             </Column>
         </DataTable>
+
+        <DeleteEntityDialog :entity="(selectedContentCreator as ContentCreator)" :visible="deleteVisible" @close="deleteVisible = false" @delete-content-creator="handleDeleteContentCreator(selectedContentCreator?.id as string)" />
     </section>
 </template>
 

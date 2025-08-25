@@ -21,4 +21,8 @@ export default {
     updateContentCreatorStatus(id: string, data: { isDisabled: boolean }) {
         return APIHandler.put(`${resource}/${id}/status`, data);
     },
+
+    deleteContentCreator(id: string) {
+        return APIHandler.delete(`${resource}/${id}`);
+    }
 }

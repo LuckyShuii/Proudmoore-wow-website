@@ -126,6 +126,23 @@ const ContentCreatorsController = {
             appendUserLog(`[CONTENT_CREATORS] Error updating content creator status: ${err}`);
             return res.status(500).send("An error has occured when trying to update Content Creator status");
         }
+    },
+
+    deleteContentCreator: async (req: Request, res: Response) => {
+        try {
+            const { id } = req.params;
+
+            if (!id) {
+                appendUserLog(`[CONTENT_CREATORS DELETE] Invalid request: ${JSON.stringify(req.body)}`);
+                return res.status(400).send("Invalid request");
+            }
+
+            await ContentCreatorsService.deleteContentCreator(id);
+            return res.status(200).send("Content Creator deleted successfully");
+        } catch (err) {
+            appendUserLog(`[CONTENT_CREATORS] Error deleting content creator: ${err}`);
+            return res.status(500).send("An error has occured when trying to delete Content Creator");
+        }
     }
 }
 

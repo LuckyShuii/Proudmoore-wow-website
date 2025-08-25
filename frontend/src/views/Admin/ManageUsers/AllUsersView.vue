@@ -9,7 +9,7 @@ import UserDetailsDialog from '@/components/Dialog/UserDetailsDialog.vue';
 
 import type { User } from '@/types/userType';
 
-import DeleteUserDialog from '@/components/Dialog/DeleteUserDialog.vue';
+import DeleteEntityDialog from '@/components/Dialog/DeleteEntityDialog.vue';
 import EditUserDialog from '@/components/Dialog/EditUserDialog.vue';
 
 const users = ref<User[]>([]);
@@ -120,7 +120,7 @@ onMounted(async () => {
         </DataTable>
         <UserDetailsDialog :visible="infoVisible" :user="(selectedUser as User)" @close="infoVisible = false" />
 
-        <DeleteUserDialog :user="(selectedUser as User)" :visible="deleteVisible" @close="deleteVisible = false" @delete="handleDeleteUser(selectedUser?.uuid as string)" />
+        <DeleteEntityDialog :entity="(selectedUser as User)" :visible="deleteVisible" @close="deleteVisible = false" @delete-user="handleDeleteUser(selectedUser?.uuid as string)" />
 
         <EditUserDialog :user="(selectedUser as User)" :visible="editVisible" @close="editVisible = false" @edit="handleEditUser" />
     </section>

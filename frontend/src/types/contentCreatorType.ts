@@ -8,4 +8,5 @@ export interface ContentCreator {
     updatedAt: string;
     createdBy: User;
     lastUpdatedBy: User;
+    uuid?: string;
 }

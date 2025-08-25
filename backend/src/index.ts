@@ -167,6 +167,12 @@ app.delete("/api/users/:uuid",
     UsersController.deleteUser
 );
 
+app.delete("/api/content-creators/:id",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV", "SMM"),
+    ContentCreatorsController.deleteContentCreator
+);
+
 /**
  * PUT ROUTES
  */
