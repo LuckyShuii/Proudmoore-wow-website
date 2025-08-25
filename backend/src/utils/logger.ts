@@ -14,7 +14,6 @@ const USER_LOG_FILE = path.join(LOG_DIR, "userLogs.txt");
 export async function appendUserLog(line: string) {
 const msg = `[${new Date().toLocaleString()}] ${line}\n`;
     try {
-        console.log("MESSAGE ADDED TO APPENDUSERLOGS: ", msg);
         await fs.mkdir(LOG_DIR, { recursive: true });
         await fs.appendFile(USER_LOG_FILE, msg, "utf8");
     } catch (err) {

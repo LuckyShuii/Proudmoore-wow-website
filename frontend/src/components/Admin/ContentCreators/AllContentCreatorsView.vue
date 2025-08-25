@@ -107,12 +107,10 @@ const onRowEditSave = async (event: any) => {
     }
 
     if (username === contentCreators.value[index].username) {
-        console.log('No changes detected');
         return;
     }
 
     const isUpdated = await updatedContentCreatorUsername(username, id);
-    console.log('is updated', isUpdated);
     if (isUpdated) {
         contentCreators.value[index] = newData;
     }

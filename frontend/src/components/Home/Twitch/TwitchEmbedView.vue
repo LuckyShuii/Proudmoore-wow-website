@@ -24,7 +24,6 @@ const initEmbed = () => {
 };
 
 const loadTwitchEmbed = async (callback?: () => void) => {
-    console.log("LOADING EMBED")
     await nextTick();
 
     if (!(window as any).Twitch) {
@@ -78,12 +77,10 @@ const startEmbedWatcher = () => {
     embedInterval.value = setInterval(() => {
         const container = document.getElementById("twitch-embed");
         if (container && container.childElementCount === 0 && streamers.value.length > 0) {
-            console.warn("[TWITCH] Embed empty, retrying init...");
             initEmbed();
         }
 
         if (container && container.childElementCount > 0) {
-            console.log("[TWITCH] Embed initialized successfully");
             clearInterval(embedInterval.value!);
             embedInterval.value = null;
         }
@@ -96,7 +93,7 @@ onMounted(() => {
 });
 
 watch(streamers, (newStreamers) => {
-    if (newStreamers.length > 0) {
+    if (newStreamers.length > 0 && !embed.value) {
         const onlineStreamers = newStreamers.filter(s => s.online);
         if (onlineStreamers.length > 0) {
             const random = onlineStreamers[Math.floor(Math.random() * onlineStreamers.length)];
