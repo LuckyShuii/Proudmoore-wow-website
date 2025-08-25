@@ -14,16 +14,22 @@ import ContentCreatorsController from "./controllers/contentCreatorsController";
 import AuthController from "./controllers/authController";
 import { authenticateJWT, authorizeRoles } from "./middlewares/authMiddleware";
 
+import { checkAllStreamers } from "./services/twitchService";
+
+import http from "http";
+import { Ws } from "./ws";
+import { appendUserLog } from "./utils/logger";
+
 dotenv.config();
 
 export const redisClient = createClient({ url: "redis://redis" });
 
 redisClient.on("error", (err) => {
-    console.log("Redis Client Error", err);
+    appendUserLog(`[REDIS] Redis Client Error: ${err}`);
 });
 
 redisClient.on("connect", () => {
-    console.log("Redis connected");
+    appendUserLog(`[REDIS] Redis connected`);
 });
 
 const app = express();
@@ -49,20 +55,39 @@ app.set('trust proxy', 1);
 
 const port = 8002;
 
-app.listen(port, async () => {
+// Create an http server
+const server = http.createServer(app);
+
+// "server" instead of "app" cause we are using http.createServer
+server.listen(port, async () => {
     await dataSource.initialize();
     await dataSource.runMigrations();
     
     try {
         await redisClient.connect();
-        console.log("Redis connected");
+        appendUserLog(`[REDIS] Redis connected`);
     } catch (err) {
-        console.error("Impossible to connect to Redis", err);
+        appendUserLog(`[REDIS] Impossible to connect to Redis: ${err}`);
+    }
+
+    try {
+        Ws.init(server);
+        appendUserLog(`[WS] WebSocket initialized`);
+    } catch (err) {
+        appendUserLog(`[WS] Impossible to initialize WebSocket: ${err}`);
     }
     
     await createDefaultUser();
 
-    console.log(`Server is listening on port ${port}`);
+    await checkAllStreamers();
+    // Check Twitch streams every 30 seconds 
+    setInterval(checkAllStreamers, 30000);
+
+    appendUserLog(`Server listening on ${port}`);
+});
+
+process.on("SIGTERM", () => {
+    server.close(() => process.exit(0));
 });
 
 app.get("/api", (_req, res) => {
@@ -84,6 +109,12 @@ app.post("/api/users",
     authenticateJWT,
     authorizeRoles("ADMIN", "DEV"),
     UsersController.createUser
+)
+
+app.post("/api/content-creators",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV", "SMM"),
+    ContentCreatorsController.createContentCreator
 )
 
 /**
@@ -108,8 +139,22 @@ app.get("/api/roles",
 
 app.get("/api/content-creators",
     authenticateJWT,
-    authorizeRoles("ADMIN", "DEV"),
+    authorizeRoles("ADMIN", "DEV", "SMM"),
     ContentCreatorsController.getAllContentCreators
+);
+
+app.get("/api/content-creators/home",
+    ContentCreatorsController.getContentCreatorsHome
+);
+
+app.get("/api/content-creators/exists/:username", 
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV", "SMM"),
+    async (req, res) => {
+        const { username } = req.params;
+        const exists = await ContentCreatorsController.checkIfExists(username);
+        res.status(200).json({ exists });
+    }
 );
 
 /**
@@ -122,6 +167,12 @@ app.delete("/api/users/:uuid",
     UsersController.deleteUser
 );
 
+app.delete("/api/content-creators/:id",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV", "SMM"),
+    ContentCreatorsController.deleteContentCreator
+);
+
 /**
  * PUT ROUTES
  */
@@ -130,4 +181,16 @@ app.put("/api/users/:uuid",
     authenticateJWT,
     authorizeRoles("ADMIN", "DEV"),
     UsersController.updateUser
+);
+
+app.put("/api/content-creators/:id/status",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV", "SMM"),
+    ContentCreatorsController.updateContentCreatorStatus
+);
+
+app.put("/api/content-creators/:id/:username",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV", "SMM"),
+    ContentCreatorsController.updateContentCreatorUsername
 );

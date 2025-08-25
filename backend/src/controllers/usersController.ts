@@ -158,6 +158,13 @@ const UsersController = {
             const user = await UsersService.getUserByUuid(userUuid);
             if (!user) return res.status(404).json({ message: 'User not found' });
 
+            if (user.username === 'root' && whoUsername !== 'root') {
+                appendUserLog(
+                    `${whoUsername.toUpperCase()} attempted to update root user ${user.username.toUpperCase()} - action denied`
+                );
+                return res.status(403).json({ message: 'Cannot update root user' });
+            }
+
             const partial: Partial<Users> = {};
 
             if (username) partial.username = username.toLowerCase();
@@ -167,7 +174,7 @@ const UsersController = {
             }
 
             if (Object.keys(partial).length > 0) {
-                await Users.update({ uuid: user.uuid }, partial);
+                await Users.update({ uuid: user.uuid }, { ...partial, updated_at: new Date() });
             }
 
             if (!Array.isArray(roles)) return res.status(400).json({ message: 'Invalid roles' });

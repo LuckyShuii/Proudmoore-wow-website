@@ -16,6 +16,10 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       PROUDMOORE_ADMIN_PASSWORD: ${PROUDMOORE_ADMIN_PASSWORD}
       LOG_DIR: /var/log/wildtransfer
+      TWITCH_CLIENT_ID: ${TWITCH_CLIENT_ID}
+      TWITCH_SECRET: ${TWITCH_SECRET}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
     volumes:
       - ./logs:/var/log/wildtransfer
     depends_on:

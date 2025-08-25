@@ -9,7 +9,7 @@ import UserDetailsDialog from '@/components/Dialog/UserDetailsDialog.vue';
 
 import type { User } from '@/types/userType';
 
-import DeleteUserDialog from '@/components/Dialog/DeleteUserDialog.vue';
+import DeleteEntityDialog from '@/components/Dialog/DeleteEntityDialog.vue';
 import EditUserDialog from '@/components/Dialog/EditUserDialog.vue';
 
 const users = ref<User[]>([]);
@@ -83,7 +83,7 @@ onMounted(async () => {
 <template>
     <section class="flex flex-col items-center justify-center w-full max-w-[70rem]">
         <h1 class="text-2xl mb-4 uppercase font-marcellus">List of all the users</h1>
-        <DataTable :value="users" tableStyle="max-width: 70rem; width: 100%;" :paginator="true" :rows="10" :rowsPerPageOptions="[10, 20, 50]" class="w-full" :loading="loading">
+        <DataTable removableSort :value="users" tableStyle="max-width: 70rem; width: 100%;" :paginator="true" :rows="10" :rowsPerPageOptions="[10, 20, 50]" class="w-full" :loading="loading">
             <template #header>
                 <div class="flex flex-wrap items-center justify-end gap-2">
                     <Button class="refresh-button" icon="pi pi-refresh" rounded raised @click="loadUsers" label="Refresh" />
@@ -112,7 +112,7 @@ onMounted(async () => {
                     <h3>Actions</h3>
                 </template>
                 <template #body="{ data }">
-                    <Button icon="pi pi-pencil" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showEditDialog(data)" />
+                    <Button icon="pi pi-pencil" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showEditDialog(data)" v-if="data.username !== 'root'" />
                     <Button icon="pi pi-trash" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showDeleteDialog(data)" v-if="data.username !== 'root'" />
                     <Button icon="pi pi-eye" class="p-button-rounded p-button-text hover:scale-[1.1] transition-all duration-200" @click="showUserInfo(data)" />
                 </template>
@@ -120,7 +120,7 @@ onMounted(async () => {
         </DataTable>
         <UserDetailsDialog :visible="infoVisible" :user="(selectedUser as User)" @close="infoVisible = false" />
 
-        <DeleteUserDialog :user="(selectedUser as User)" :visible="deleteVisible" @close="deleteVisible = false" @delete="handleDeleteUser(selectedUser?.uuid as string)" />
+        <DeleteEntityDialog :entity="(selectedUser as User)" :visible="deleteVisible" @close="deleteVisible = false" @delete-user="handleDeleteUser(selectedUser?.uuid as string)" />
 
         <EditUserDialog :user="(selectedUser as User)" :visible="editVisible" @close="editVisible = false" @edit="handleEditUser" />
     </section>

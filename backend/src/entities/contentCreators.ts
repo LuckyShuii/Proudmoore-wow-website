@@ -20,17 +20,8 @@ export class ContentCreators extends BaseEntity {
     })
     username: string;
 
-    @Column({ length: 255 })
-    @Length(1, 255, {
-        message: 'The Twitch app access token cannot be empty and must not exceed 255 characters.'
-    })
-    twitch_app_access_token: string;
-
-    @Column({ length: 255 })
-    @Length(1, 255, {
-        message: 'The Twitch client ID cannot be empty and must not exceed 255 characters.'
-    })
-    twitch_client_id: string;
+    @Column({ default: false })
+    is_disabled: boolean;
 
     @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
     created_at: Date;
