@@ -36,17 +36,24 @@ const loadTwitchEmbed = async (callback?: () => void) => {
             script.src = "https://embed.twitch.tv/embed/v1.js";
             script.onload = () => {
                 initEmbed();
+                startEmbedWatcher();
                 if (callback) callback();
             };
             document.body.appendChild(script);
         } else {
-            existing.addEventListener("load", () => {
-                initEmbed();
-                if (callback) callback();
-            }, { once: true });
+            existing.addEventListener(
+                "load",
+                () => {
+                    initEmbed();
+                    startEmbedWatcher();
+                    if (callback) callback();
+                },
+                { once: true }
+            );
         }
     } else {
         initEmbed();
+        startEmbedWatcher();
         if (callback) callback();
     }
 };
@@ -61,6 +68,27 @@ const changeChannel = (channel: string) => {
             initEmbed();
         }
     }
+};
+
+// --------- Retry mechanism ----------
+const embedInterval = ref<ReturnType<typeof setInterval> | null>(null);
+
+const startEmbedWatcher = () => {
+    if (embedInterval.value) return;
+
+    embedInterval.value = setInterval(() => {
+        const container = document.getElementById("twitch-embed");
+        if (container && container.childElementCount === 0 && streamers.value.length > 0) {
+            console.warn("[TWITCH] Embed empty, retrying init...");
+            initEmbed();
+        }
+
+        if (container && container.childElementCount > 0) {
+            console.log("[TWITCH] Embed initialized successfully");
+            clearInterval(embedInterval.value!);
+            embedInterval.value = null;
+        }
+    }, 2000);
 };
 
 onMounted(() => {

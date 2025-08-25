@@ -4,7 +4,6 @@ import { AuthService } from "../services/authService";
 import { appendUserLog } from "../utils/logger";
 import UsersService from "../services/usersService";
 import { v4 as uuidv4 } from "uuid";
-import { Ws } from "../ws";
 
 export default class AuthController {
     static async register(req: Request, res: Response) {
@@ -60,11 +59,6 @@ export default class AuthController {
 
             await UsersService.updateLastLogin(user.id);
 
-            Ws.broadcast({
-                type: "LOGIN",
-                user: username,
-                timestamp: new Date().toISOString(),
-            });
             appendUserLog(`${username.toUpperCase()} logged in successfully`);
             return res.json({ token });
         } catch (err) {
