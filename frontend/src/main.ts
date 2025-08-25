@@ -29,6 +29,7 @@ import Avatar from 'primevue/avatar';
 import Dialog from 'primevue/dialog';
 import ToggleButton from 'primevue/togglebutton';
 import ProgressSpinner from 'primevue/progressspinner';
+import Tooltip from 'primevue/tooltip';
 
 import { i18n, setupI18n } from "./i18n";
 import { createPinia } from 'pinia';
@@ -62,6 +63,8 @@ setupI18n().then(() => {
   app.component('Dialog', Dialog);
   app.component('ToggleButton', ToggleButton);
   app.component('ProgressSpinner', ProgressSpinner);
+  
+  app.directive('Tooltip', Tooltip);
 
   app.use(pinia);
   app.use(PrimeVue, {

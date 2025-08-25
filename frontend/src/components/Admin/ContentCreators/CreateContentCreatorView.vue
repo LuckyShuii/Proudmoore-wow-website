@@ -44,7 +44,6 @@ const createContentCreator = async () => {
     try {
         return (await API.contentCreators.createContentCreator({ username: form.username, isDisabled: !form.isDisabled })).data;
     } catch (error: any) {
-        console.log(">>", error)
         errors.value.username = error.response.data;
         return null;
     }

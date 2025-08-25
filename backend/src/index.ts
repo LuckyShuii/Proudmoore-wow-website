@@ -188,3 +188,9 @@ app.put("/api/content-creators/:id/status",
     authorizeRoles("ADMIN", "DEV", "SMM"),
     ContentCreatorsController.updateContentCreatorStatus
 );
+
+app.put("/api/content-creators/:id/:username",
+    authenticateJWT,
+    authorizeRoles("ADMIN", "DEV", "SMM"),
+    ContentCreatorsController.updateContentCreatorUsername
+);

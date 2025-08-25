@@ -83,7 +83,7 @@ onMounted(async () => {
 <template>
     <section class="flex flex-col items-center justify-center w-full max-w-[70rem]">
         <h1 class="text-2xl mb-4 uppercase font-marcellus">List of all the users</h1>
-        <DataTable :value="users" tableStyle="max-width: 70rem; width: 100%;" :paginator="true" :rows="10" :rowsPerPageOptions="[10, 20, 50]" class="w-full" :loading="loading">
+        <DataTable removableSort :value="users" tableStyle="max-width: 70rem; width: 100%;" :paginator="true" :rows="10" :rowsPerPageOptions="[10, 20, 50]" class="w-full" :loading="loading">
             <template #header>
                 <div class="flex flex-wrap items-center justify-end gap-2">
                     <Button class="refresh-button" icon="pi pi-refresh" rounded raised @click="loadUsers" label="Refresh" />

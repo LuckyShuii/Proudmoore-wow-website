@@ -24,5 +24,9 @@ export default {
 
     deleteContentCreator(id: string) {
         return APIHandler.delete(`${resource}/${id}`);
+    },
+
+    updateContentCreatorUsername(id: string, newUsername: string) {
+        return APIHandler.put(`${resource}/${id}/${newUsername}`);
     }
 }

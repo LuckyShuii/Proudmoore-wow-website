@@ -16,6 +16,8 @@ const successMessage = ref<string>('');
 const loadingContentCreators = ref<boolean>(false);
 const loadingStatusChange = ref<boolean>(false);
 
+const editingRows = ref([]);
+
 const deleteVisible = ref<boolean>(false);
 const selectedContentCreator = ref<ContentCreator | null>(null);
 
@@ -71,6 +73,51 @@ const showDeleteDialog = (contentCreator: ContentCreator) => {
     deleteVisible.value = true;
 };
 
+const updatedContentCreatorUsername = async (username: string, id: string) => {
+    loadingContentCreators.value = true;
+    try {
+        await API.contentCreators.updateContentCreatorUsername(id, username);
+        successMessage.value = 'Username updated successfully';
+        return true
+    } catch (error: any) {
+        errorMessage.value = error.response.data;
+        return false;
+    } finally {
+        loadingContentCreators.value = false;
+    }
+};
+
+const onRowEditSave = async (event: any) => {
+    errorMessage.value = '';
+    successMessage.value = '';
+
+    const { newData, index } = event;
+    const { username, id } = newData;
+
+    if (!username) {
+        errorMessage.value = 'Username is required';
+        return;
+    }
+
+    const creatorExists = contentCreators.value.find((creator: Partial<ContentCreator>) => creator.username === username && creator.id !== id);
+
+    if (creatorExists) {
+        errorMessage.value = 'Content Creator already exists in another row';
+        return;
+    }
+
+    if (username === contentCreators.value[index].username) {
+        console.log('No changes detected');
+        return;
+    }
+
+    const isUpdated = await updatedContentCreatorUsername(username, id);
+    console.log('is updated', isUpdated);
+    if (isUpdated) {
+        contentCreators.value[index] = newData;
+    }
+};
+
 onMounted(async () => {
     await loadContentCreators();
 });
@@ -86,7 +133,7 @@ watch(() => props.contentCreatorsNew, (newCreator) => {
 
 <template>
     <section class="w-full max-w-[1110px] flex justify-between items-center">
-        <DataTable :value="contentCreators" tableStyle="max-width: 70rem; width: 100%;" :paginator="true" :rows="10" :rowsPerPageOptions="[10, 20, 50]" class="w-full" :loading="loadingContentCreators">
+        <DataTable removableSort :value="contentCreators" tableStyle="max-width: 70rem; width: 100%;" :paginator="true" :rows="10" :rowsPerPageOptions="[10, 20, 50]" class="w-full" :loading="loadingContentCreators" v-model:editingRows="editingRows" editMode="row" @row-edit-save="onRowEditSave">
             <template #header>
                 <div class="flex flex-wrap items-center gap-2" :class="isMessage || loadingStatusChange ? 'justify-between' : 'justify-end'">
                     <span v-if="errorMessage" class="text-red-600">{{ errorMessage }}</span>
@@ -104,17 +151,24 @@ watch(() => props.contentCreatorsNew, (newCreator) => {
                     <Button class="refresh-button" icon="pi pi-refresh" rounded raised @click="loadContentCreators" label="Refresh" />
                 </div>
             </template>
-            <Column field="username" header="Username" sortable></Column>
-            <Column field="createdAt" header="Created At" sortable>
-                <template #body="{ data }">
-                    {{ convertDate(data.createdAt) }}
+            <Column field="username" header="Username" sortable class="max-w-[10rem] !w-[20%]">
+                <template #editor="{ data, field, editorSaveCallback }">
+                    <InputText v-model="data[field]" fluid @keyup.enter="editorSaveCallback(data)" />
                 </template>
             </Column>
-            <Column field="updatedAt" header="Updated At" sortable>
+            <Column header="Dates">
                 <template #body="{ data }">
-                    {{ convertDate(data.updatedAt) }}
+                    <Button 
+                    icon="pi pi-clock"
+                    class="p-button-text p-button-sm"
+                    v-tooltip.top="{
+                        value: `Created: ${convertDate(data.createdAt)} <br/> Updated: ${convertDate(data.updatedAt)}`,
+                        escape: false
+                    }"                    
+                    />
                 </template>
             </Column>
+
             <Column field="createdBy" header="Created By" sortable>
                 <template #body="{ data }">
                     {{ data.createdBy?.username || 'N/A' }}
@@ -125,7 +179,7 @@ watch(() => props.contentCreatorsNew, (newCreator) => {
                     {{ data.lastUpdatedBy?.username || 'N/A' }}
                 </template>
             </Column>
-            <Column field="isDisabled" header="Status" sortable>
+            <Column field="isDisabled" header="Status" sortable class="max-w-[100px]">
                 <template #body="{ data }">
                     <ToggleButton
                         v-model="data.isDisabled"
@@ -137,12 +191,17 @@ watch(() => props.contentCreatorsNew, (newCreator) => {
                     />
                 </template>
             </Column>
-            <Column header="Actions">
+            <Column header="" class="w-[10%] !max-w-[3rem]">
+                <template #header>
+                    <div class="text-center w-full">Actions</div>
+                </template>
                 <template #body="{ data }">
-                    <Button icon="pi pi-pencil hover:scale-[1.1] transition-all duration-200" @click="" />
-                    <Button icon="pi pi-trash hover:scale-[1.1] transition-all duration-200" @click="showDeleteDialog(data)" />
+                    <div class="w-full flex justify-center">
+                        <Button icon="pi pi-trash hover:scale-[1.1] transition-all duration-200" @click="showDeleteDialog(data)" />
+                    </div>
                 </template>
             </Column>
+            <Column :rowEditor="true" style="width: 10%; min-width: 8rem;"/>
         </DataTable>
 
         <DeleteEntityDialog :entity="(selectedContentCreator as ContentCreator)" :visible="deleteVisible" @close="deleteVisible = false" @delete-content-creator="handleDeleteContentCreator(selectedContentCreator?.id as string)" />

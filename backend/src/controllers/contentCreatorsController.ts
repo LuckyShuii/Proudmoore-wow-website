@@ -143,6 +143,33 @@ const ContentCreatorsController = {
             appendUserLog(`[CONTENT_CREATORS] Error deleting content creator: ${err}`);
             return res.status(500).send("An error has occured when trying to delete Content Creator");
         }
+    },
+
+    updateContentCreatorUsername: async (req: Request, res: Response) => {
+        try {
+            const { id, username } = req.params;
+
+            if (!id || !username) {
+                appendUserLog(`[CONTENT_CREATORS UPDATE] Invalid request: ${JSON.stringify(req.body)}`);
+                return res.status(400).send("Invalid request");
+            }
+
+            const creatorExists = await twitchService.streamerExists(username);
+            if (!creatorExists) {
+                return res.status(404).send("Content Creator not found on Twitch");
+            }
+
+            const creatorInDb = await ContentCreatorsService.getContentCreatorByUsername(username);
+            if (creatorInDb) {
+                return res.status(409).send("Content Creator already exists in database");
+            }
+
+            await ContentCreatorsService.updateContentCreatorUsername(id, username);
+            return res.status(200).send("Content Creator username updated successfully");
+        } catch (err) {
+            appendUserLog(`[CONTENT_CREATORS] Error updating content creator username: ${err}`);
+            return res.status(500).send("An error has occured when trying to update Content Creator username");
+        }
     }
 }
 

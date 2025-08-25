@@ -88,6 +88,22 @@ const ContentCreatorsService = {
         } catch (error) {
             throw new Error("Error deleting content creator");
         }
+    },
+
+    updateContentCreatorUsername: async (id: string, username: string): Promise<void> => {
+        try {
+            const result = await dataSource.query(
+                `UPDATE content_creators
+                SET username = $1
+                WHERE id = $2`,
+                [username, id]
+            );
+            if (result.rowCount === 0) {
+                throw new Error("Content creator not found");
+            }
+        } catch (error) {
+            throw new Error("Error updating content creator username");
+        }
     }
 };
 
