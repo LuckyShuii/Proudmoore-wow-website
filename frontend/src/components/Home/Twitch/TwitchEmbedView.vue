@@ -8,8 +8,6 @@ import { useWsStore } from "@/store/wsStore";
 const { streamers, loadingStreamers } = storeToRefs(useTwitchStore());
 const twitchStore = useTwitchStore();
 const wsStore = useWsStore();
-const lastStreamersSize = ref(streamers.value.length);
-const currentStreamersSize = computed(() => streamers.value.length);
 
 const embed = ref<any>(null);
 const currentChannel = ref("ProudmooreLive");
@@ -26,6 +24,7 @@ const initEmbed = () => {
 };
 
 const loadTwitchEmbed = async (callback?: () => void) => {
+    console.log("LOADING EMBED")
     await nextTick();
 
     if (!(window as any).Twitch) {
@@ -97,7 +96,7 @@ onMounted(() => {
 });
 
 watch(streamers, (newStreamers) => {
-    if (newStreamers.length > 0 && !embed.value) {
+    if (newStreamers.length > 0) {
         const onlineStreamers = newStreamers.filter(s => s.online);
         if (onlineStreamers.length > 0) {
             const random = onlineStreamers[Math.floor(Math.random() * onlineStreamers.length)];
